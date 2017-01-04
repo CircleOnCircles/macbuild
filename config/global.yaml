@@ -1,0 +1,6 @@
+# Set our development directory
+development_dir: &development_dir '~/Documents/Development'
+
+# Set our cloud application configuration and license root directories
+app_config_dir: &app_config_dir '~/Documents/System Automation/Software Settings'
+app_license_dir: &app_license_dir '~/Documents/System Automation/Software Licenses'

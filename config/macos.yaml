@@ -1,0 +1,235 @@
+# Set the appropriate timezone
+macos_timezone: Australia/Melbourne
+
+# Set the computer and display sleep times
+macos_computer_sleep_time: Never
+macos_display_sleep_time: Never
+
+# Set various defaults which will update the relevant plist files
+macos_os_defaults:
+  # System Preferences & Globals
+  - domain: Apple Global Domain
+    values:
+      # General / Appearance / Use dark menu bar and Dock
+      AppleInterfaceStyle: Dark
+      # Keyboard / Keyboard / Key Repeat
+      KeyRepeat: 2
+      # Keyboard / Keyboard / Delay Until Repeat
+      InitialKeyRepeat: 25
+      # Keyboard / Keyboard / Use all F1, F2, etc. keys as standard function keys
+      com.apple.keyboard.fnState: true
+      # Keyboard / Text / Correct spelling automatically
+      NSAutomaticSpellingCorrectionEnabled: false
+      # Keyboard / Text / Use smart quotes and dashes
+      NSAutomaticQuoteSubstitutionEnabled: false
+      NSAutomaticDashSubstitutionEnabled: false
+      # Keyboard / Shortcuts / Full Keyboard Access / All controls
+      AppleKeyboardUIMode: 3
+      # Mouse / Point & Click / Tracking
+      com.apple.mouse.scaling: 1.0
+
+      # Enable subpixel font rendering on non-Apple LCDs
+      AppleFontSmoothing: 2
+      # Expand the save panel by default
+      NSNavPanelExpandedStateForSaveMode: true
+      NSNavPanelExpandedStateForSaveMode2: true
+      # Disable the character accent menu when holding down a key
+      ApplePressAndHoldEnabled: false
+
+  # System Preferences / Accessibility
+  - domain: com.apple.universalaccess
+    values:
+      # Zoom / Use scroll gesture with modifier keys to zoom
+      closeViewScrollWheelToggle: true
+      # Display / Cursor size
+      mouseDriverCursorSize: 1.25
+
+  # System Preferences / Keyboard / Dictation
+  - domain: com.apple.HIToolbox
+    values:
+      # Disable Dictation (including prompt when pressing the Fn key)
+      AppleDictationAutoEnable: 0
+
+  # System Preferences / Mouse
+  - domain: com.apple.driver.AppleBluetoothMultitouch.mouse
+    values:
+      # Point & Click / Secondary click
+      MouseButtonMode: TwoButton
+
+  # System Preferences / App Store
+  - domain: /Library/Preferences/com.apple.SoftwareUpdate.plist
+    values:
+      # Disable 'Download newly available updates in the background'
+      AutomaticDownload: false
+    become: yes
+
+  # Launch Services
+  - domain: com.apple.LaunchServices
+    values:
+      # Disable the 'Are you sure you want to open this application?' dialog
+      LSQuarantine: false
+
+  # Login Window
+  - domain: com.apple.loginwindow
+    values:
+      # Disable 'Reopen windows when logging back in' by default
+      TALLogoutSavesState: false
+
+  # Dock
+  - domain: com.apple.dock
+    values:
+      # Set the icon size of dock items
+      tilesize: 60
+      # Enable magnificationn of icons
+      magnification: true
+      # Make hidden applications translucent in the dock
+      showhidden: true
+
+  # Finder
+  - domain: com.apple.finder
+    values:
+      # View / Show Path Bar
+      ShowPathbar: true
+      # View / Show Status Bar
+      ShowStatusBar: true
+      # Set the default Finder display mode to list
+      FXPreferredViewStyle: Nlsv
+      MyDocsLibrarySavedViewStyle: Nlsv
+      # Preferences / General / New Finder windows show / fots
+      NewWindowTarget: PfHm
+      NewWindowTargetPath: file:///Users/fots/
+      # Preferences / Advanced / Keep folders on top when sorting by name (Sierra specific)
+      # _FXSortFoldersFirst: true
+      # Preferences / Advanced / Disable 'Show warning before changing an extension'
+      FXEnableExtensionChangeWarning: false
+      # Default view settings for list view
+      StandardViewSettings: &view_settings
+        ListViewSettings:
+          columns:
+            name:
+              ascending: true
+              index: 0
+              visible: true
+              width: 450
+            size:
+              ascending: false
+              index: 1
+              visible: true
+              width: 100
+            kind:
+              ascending: true
+              index: 2
+              visible: true
+              width: 150
+            label:
+              ascending: true
+              index: 3
+              visible: false
+              width: 100
+            version:
+              ascending: true
+              index: 4
+              visible: false
+              width: 75
+            comments:
+              ascending: true
+              index: 5
+              visible: false
+              width: 300
+            dateModified:
+              ascending: false
+              index: 6
+              visible: true
+              width: 200
+            dateCreated:
+              ascending: false
+              index: 7
+              visible: false
+              width: 200
+            dateLastOpened:
+              ascending: false
+              index: 8
+              visible: false
+              width: 200
+        ExtendedListViewSettingsV2:
+          calculateAllSizes: false
+          columns:
+          - ascending: true
+            identifier: name
+            visible: true
+            width: 450
+          - ascending: false
+            identifier: size
+            visible: true
+            width: 100
+          - ascending: true
+            identifier: kind
+            visible: true
+            width: 150
+          - ascending: true
+            identifier: label
+            visible: false
+            width: 100
+          - ascending: true
+            identifier: version
+            visible: false
+            width: 75
+          - ascending: true
+            identifier: comments
+            visible: false
+            width: 300
+          - ascending: false
+            identifier: dateModified
+            visible: true
+            width: 200
+          - ascending: false
+            identifier: dateCreated
+            visible: false
+            width: 200
+          - ascending: false
+            identifier: dateLastOpened
+            visible: false
+            width: 200
+      MyDocsLibrarySearchViewSettings: *view_settings
+
+  # Menu (Clock)
+  - domain: com.apple.menuextra.clock
+    values:
+      # Open Date & Time Preferences... / Clock / Show date
+      DateFormat: "EEE d MMM  h:mm a"
+
+  # Menu (Power)
+  - domain: com.apple.menuextra.battery
+    values:
+      # Show Percentage
+      ShowPercent: 'YES'
+
+  # Symbolic Hot Keys
+  - domain: com.apple.symbolichotkeys
+    values:
+      # Disable slow motion effects
+      # (http://apple.stackexchange.com/questions/66433)
+      AppleSymbolicHotKeys:
+        34: { enabled: 0 }
+        35: { enabled: 0 }
+        37: { enabled: 0 }
+
+  # Screen Capture
+  - domain: com.apple.screencapture
+    values:
+      # Set screenshot location
+      location: ~/Pictures/Screenshots
+
+  # Safari
+  - domain: com.apple.Safari
+    values:
+      # View / Show Status Bar
+      ShowStatusBar: true
+      # General / Disable 'Open "safe" files after downloading'
+      AutoOpenSafeDownloads: false
+      # General / File download location / Ask for each download
+      AlwaysPromptForDownloadFolder: true
+      # AutoFill / Disable 'User names and passwords'
+      AutoFillPasswords: false
+      # Advanced / Show Develop menu in menu bar
+      IncludeDevelopMenu: true

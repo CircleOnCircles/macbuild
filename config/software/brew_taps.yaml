@@ -1,0 +1,8 @@
+software_brew_taps:
+  - homebrew/completions
+  - homebrew/dupes
+  - homebrew/fuse
+  - caskroom/fonts
+  - caskroom/versions
+  - OJFord/formulae
+  - fgimian/fgimian

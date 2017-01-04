@@ -1,0 +1,330 @@
+# Set various defaults which will update the relevant plist files
+software_app_defaults:
+
+  # ---------------------------------------------------------------------------
+  # General Software
+  # ---------------------------------------------------------------------------
+
+  # 1Password
+  - domain: com.agilebits.onepassword4
+    values:
+      WelcomeWindowShown: true
+      LockOnMainAppExit: false
+      LockOnIdle: true
+      ShowRichIcons: true
+      KeepHelperRunning: true
+      UserMetricsSkippedNewsletterSignupKey: true
+      CompletedEssentialSettings: true
+  - domain: 2BUA8C4S2C.com.agilebits.onepassword4-helper
+    values:
+      autosave: false
+
+  # Affinity Photo
+  - domain: com.seriflabs.affinitydesigner
+    container: com.seriflabs.affinitydesigner
+    values:
+      com.seriflabs.ShowWelcomeScreen: false
+
+  # Affinity Photo
+  - domain: com.seriflabs.affinityphoto
+    container: com.seriflabs.affinityphoto
+    values:
+      com.seriflabs.ShowWelcomeScreen: false
+
+  # Android File Transfer
+  - domain: com.google.android.mtpviewer
+    values:
+      FirstRunShown: true
+
+  # AppCleaner
+  - domain: net.freemacsoft.AppCleaner
+    values:
+      SUEnableAutomaticChecks: true
+      SUHasLaunchedBefore: true
+      SUSendProfileInfo: false
+
+  # Audio Hijack
+  - domain: com.rogueamoeba.audiohijack3
+    values:
+      homeWindowShown: true
+
+  # BetterSnapTool
+  - domain: com.hegenberg.BetterSnapTool
+    values:
+      BSTDidAlreadyLaunchOnElCapitan: true
+      BSTDidAlreadyLaunchOnce: true
+      BSTDidClickHighlightedMenuItem: true
+      # General Settings / Start BetterSnapTool everytime your Mac starts up
+      launchOnStartup: true
+      # Customizations / Use rounded corners
+      roundCorners: false
+      # Customizations / Border-width
+      previewBorderWidth: 0.0
+      # Keyboard Shortcuts
+      registeredHotkeys:
+        # maximize
+        '0':
+          keyCode: 126
+          modifiers: 8395008
+        # left half
+        '2':
+          keyCode: 123
+          modifiers: 8395008
+        # right half
+        '4':
+          keyCode: 124
+          modifiers: 8395008
+        # restore old window position
+        '10':
+          keyCode: 125
+          modifiers: 8395008
+        # center on next monitor
+        '18':
+          keyCode: 37
+          modifiers: 6400
+
+  # BootChamp
+  - domain: com.kainjow.BootChamp
+    values:
+      SUEnableAutomaticChecks: true
+      SUHasLaunchedBefore: true
+      SUSendProfileInfo: false
+
+  # Clear
+  - domain: com.realmacsoftware.clear.mac
+    container: com.realmacsoftware.clear.mac
+    values:
+      app.shown-welcome: true
+
+  # DaisyDisk
+  - domain: com.daisydiskapp.DaisyDiskStandAlone
+    values:
+      moveToApplicationsFolderAlertSuppress: true
+
+  # Dash
+  - domain: com.kapeli.dashdoc
+    values:
+      moveToApplicationsFolderAlertSuppress: true
+      didSuppressDownloadDocsetsAlert: true
+      DHNotificationNoDocsetsFound: true
+      reorderDocsetsAlertSuppressed: true
+      DHNotificationDocsetPressEnterOrClickIconTip: true
+      noDocsetsFoundAlertSuppressed: true
+      syncFolderPath: !join_path [*app_config_dir, Dash]
+      snippetSQLPath: !join_path [*app_config_dir, Dash/library.dash]
+      # Note that the following setting is required or Dash thinks it needs
+      # to set everything up again
+      migratedV2Prefs: true
+
+  # Entropy
+  - domain: com.eigenlogik.Entropy
+    values:
+      moveToApplicationsFolderAlertSuppress: true
+      SUEnableAutomaticChecks: true
+      SUSendProfileInfo: false
+      # Extraction / Auto-extract on open
+      AutoExtractOnOpen: true
+
+  # f.lux
+  - domain: org.herf.Flux
+    values:
+      moveToApplicationsFolderAlertSuppress: true
+      lateColorTemp: 2400.0
+      nightColorTemp: 2800.0
+      dayColorTemp: 3200.0
+      locationTextField: Melbourne, Australia
+      locationType: L
+      location: '-37.814107,144.963280'
+      wakeTime: 480
+
+  # Focus
+  - domain: BradJasper.focus
+    values:
+      SUEnableAutomaticChecks: true
+      SUHasLaunchedBefore: true
+
+  # Forklift
+  - domain: com.binarynights.ForkLift-3
+    values:
+      SetupDone: true
+      SUEnableAutomaticChecks: true
+      SUHasLaunchedBefore: true
+      SUSendProfileInfo: false
+      # Preferences / General / Enable dark mode
+      DarkMode: true
+      # Preferences / General / Untick Enable Forklift mini in the menubar
+      ForkLiftMiniEnabled: false
+      # View / Show Titlebar
+      ShowTitlebar: true
+
+  # MacDown
+  - domain: com.uranusjr.macdown
+    values:
+      firstVersionInstalled: '749'
+      SUEnableAutomaticChecks: true
+      # General
+      editorSyncScrolling: true
+      # Markdown
+      extensionTables: true
+      extensionFencedCode: true
+      extensionIntraEmphasis: true
+      extensionStrikethough: true
+      extensionAutolink: true
+      # Editor
+      editorBaseFontInfo:
+        name: SourceCodePro-Regular
+        size: 16.0
+      editorStyleName: Solarized (Dark)
+      editorLineSpacing: 2.0
+      editorHorizontalInset: 15.0
+      editorVerticalInset: 15.0
+      editorMaximumWidth: 800.0
+      editorConvertTabs: true
+      editorCompleteMatchingCharacters: true
+      editorInsertPrefixInBlock: true
+      editorEnsuresNewlineAtEndOfFile: true
+      editorAutoIncrementNumberedLists: true
+
+      # Rendering
+      htmlStyleName: GitHub2
+      htmlSyntaxHighlighting: true
+      htmlTaskList: true
+      htmlDetectFrontMatter: true
+      htmlDefaultDirectoryUrl: *development_dir
+
+  # Microsoft Office
+  - domain: ~/Library/Group Containers/UBF8T346G9.Office/com.microsoft.officeprefs.plist
+    values:
+      kCUIThemePreferencesThemeKeyPath: 0
+
+  - domain: com.microsoft.Excel
+    container: com.microsoft.Excel
+    values:
+      kSubUIAppCompletedFirstRunSetup1507: true
+
+  - domain: com.microsoft.Word
+    container: com.microsoft.Word
+    values:
+      kSubUIAppCompletedFirstRunSetup1507: true
+
+  - domain: com.microsoft.Powerpoint
+    container: com.microsoft.Powerpoint
+    values:
+      kSubUIAppCompletedFirstRunSetup1507: true
+
+  - domain: com.microsoft.onenote.mac
+    container: com.microsoft.onenote.mac
+    values:
+      kSubUIAppCompletedFirstRunSetup1507: true
+
+  - domain: com.microsoft.Outlook
+    container: com.microsoft.Outlook
+    values:
+      kSubUIAppCompletedFirstRunSetup1507: true
+
+  # MPlayerX
+  - domain: org.niltsh.MPlayerX
+    values:
+      SUSendProfileInfo: false
+      SUEnableAutomaticChecks: true
+      # General / Keep window on top / Never
+      OnTopMode: 0
+
+  # OpenEmu
+  - domain: org.openemu.OpenEmu
+    values:
+      setupAssistantFinished: true
+      SUEnableAutomaticChecks: true
+      videoFilter: SABR
+      fullScreen: true
+      # databasePath: ~/Library/Application Support/OpenEmu/Game Library
+
+  # Skype
+  - domain: com.skype.skype
+    values:
+      # Preferences / Contacts / Untick Show Mac Contacts
+      ShowAddressBookContacts: false
+      # View / as List
+      ContactListViewMode: 1
+
+  # SourceTree
+  - domain: com.torusknot.SourceTreeNotMAS
+    values:
+      moveToApplicationsFolderAlertSuppress: true
+      analyticsHasAgreed: false
+      agreedToEULA: true
+      showStagingTip: false
+      showFileStatusViewOptionsTip: false
+      SUEnableAutomaticChecks: true
+      globalUserFullName: Fotis Gimian
+      globalUserEmail: fgimiansoftware@gmail.com
+      diffFontName: SourceCodePro-Regular
+      diffFontSize: 13.0
+      defaultFolder: *development_dir
+      createBookmarksOnOpenRepo: false
+
+  # Textual
+  - domain: com.codeux.apps.textual
+    values:
+      SUEnableAutomaticChecks: true
+      SUSendProfileInfo: false
+      'Theme -> Invert Sidebar Colors Preference Enabled': 0
+      'Theme -> Name': 'resource:Sapientia'
+      'Text Input Prompt Suppression -> theme_override_info': true
+      'World Controller':
+        clients:
+        - autoConnect: True
+          connectionName: freenode
+          nickname: fgimian
+          realName: Fotis Gimian
+          serverAddress: chat.freenode.net
+          username: fgimian
+          channelList:
+          - channelName: '#ansible'
+          - channelName: '#chef'
+          - channelName: '#puppet'
+          - channelName: '#salt'
+          - channelName: '#python'
+          - channelName: '#terraform'
+
+  # Transmission
+  - domain: org.m0k.transmission
+    values:
+      # Transfers / Trash original torrent files
+      DeleteOriginalTorrent: true
+      # Hide the legal disclaimer
+      WarningLegal: false
+
+  # Twitter
+  - domain: com.twitter.twitter-mac
+    container: com.twitter.twitter-mac
+    values:
+      # General / Font size / 16 pt
+      FontSize1: 16
+      # General / Theme / Dark Theme
+      TMSelectedThemeIdentifier: com.twitter.twitter.themeIdentifiers.darkTheme
+
+  # VMware Fusion
+  - domain: com.vmware.fusion
+    values:
+      # Virtual Machine Library / View / Show items as icons
+      PLInventoryWindowStylePref: 1
+      # Preferences / General / Show in menu bar / Only when Fusion is running
+      showStartMenu3: 2
+
+  # ---------------------------------------------------------------------------
+  # Music Production Software
+  # ---------------------------------------------------------------------------
+
+  # Celemony Melodyne
+  - domain: com.celemony.Melodyne singletrack
+    values:
+      disableWelcomePanelOnStartup: true
+      # Preferences / Settings / Check for Updates / Never
+      updateCheckPeriode: 3
+
+  # eLicenser Control Center
+  - domain: com.Syncrosoft.LCC
+    values:
+      Show_LCC_Welcome_on_LCC_Launch: false
+      Show_Maintenance_on_LCC_Launch: false

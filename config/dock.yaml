@@ -1,0 +1,26 @@
+# Dock applications (in the left section)
+dock_apps:
+  - ForkLift
+  - Launchpad
+  - Safari
+  - Sublime Text
+  - Utilities/Terminal
+  - Cubase 9
+  - Logic Pro X
+  - Audio Hijack
+  - XLD
+  - Focusrite Control
+  - Spotify
+  - OpenEmu
+  - Skype
+  - Slack
+  - Textual
+  - Twitter
+  - Clear
+  - VMware Fusion
+  - App Store
+  - System Preferences
+
+# Dock folders (in the right section)
+dock_folders:
+  - ~/Downloads
