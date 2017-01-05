@@ -1,5 +1,5 @@
 def macos(ansible, config):
-    # Set computer sleep time
+    ansible.info('Set computer sleep time.')
     with ansible.settings(sudo=True, quiet=True):
         computer_sleep = ansible.command('systemsetup -getcomputersleep')
 
@@ -8,7 +8,7 @@ def macos(ansible, config):
         with ansible.settings(sudo=True):
             ansible.command(f'systemsetup -setcomputersleep {config.macos_computer_sleep_time}')
 
-    # Set disply sleep time
+    ansible.info('Set disply sleep time.')
     with ansible.settings(sudo=True, quiet=True):
         display_sleep = ansible.command('systemsetup -getdisplaysleep')
 
@@ -17,7 +17,7 @@ def macos(ansible, config):
         with ansible.settings(sudo=True):
             ansible.command(f'systemsetup -setdisplaysleep {config.macos_display_sleep_time}')
 
-    # Set the timezone
+    ansible.info('Set the timezone.')
     with ansible.settings(sudo=True, quiet=True):
         current_timezone = ansible.command('systemsetup -gettimezone')
 
@@ -25,20 +25,20 @@ def macos(ansible, config):
         with ansible.settings(sudo=True):
             ansible.command(f'systemsetup -settimezone {config.macos_timezone}')
 
-    # Unhide the user's Library directory
+    ansible.info("Unhide the user's Library directory.")
     with ansible.settings(quiet=True):
         library_flags = ansible.command('ls -lOd ~/Library')
 
     if 'hidden' in library_flags.stdout:
         ansible.command('chflags nohidden ~/Library')
 
-    # Create the development folder
+    ansible.info('Create the development folder.')
     ansible.file(path=config.development_dir, state='directory')
 
-    # Create the screenshots folder
+    ansible.info('Create the screenshots folder.')
     ansible.file(path='~/Pictures/Screenshots', state='directory')
 
-    # Grant permission to audio plugin paths
+    ansible.info('Grant permission to audio plugin paths.')
     for path in [
         # Documentation
         '/Library/Documentation',
@@ -58,7 +58,7 @@ def macos(ansible, config):
         with ansible.settings(sudo=True):
             ansible.file(path=path, state='directory', owner='root', group='admin', mode='0775')
 
-    # Set operating system defaults
+    ansible.info('Set operating system defaults.')
     for defaults in config.macos_defaults:
         with ansible.settings(sudo=defaults.get('become', False)):
             ansible.plist(
@@ -69,6 +69,8 @@ def macos(ansible, config):
 
 
 def default_apps(ansible, config):
+    ansible.info('Setup default app associations.')
+
     for bundle_id, utis in config.default_apps_associations.items():
         for uti in utis:
             with ansible.settings(quiet=True):
@@ -79,20 +81,20 @@ def default_apps(ansible, config):
 
 
 def startup(ansible, config):
-    # Add login items
+    ansible.info('Add login items.')
     for login_item in config.startup_login_items:
         ansible.command(f"loginitems -a '{login_item}'")
 
 
 def dock(ansible, config):
-    # Remove all items from the dock
+    ansible.info('Remove all items from the dock.')
     ansible.command('dockutil --remove all --no-restart')
 
-    # Add apps to the dock
+    ansible.info('Add apps to the dock.')
     for app in config.dock_apps:
         ansible.command(f"dockutil --add '/Applications/{app}.app' --no-restart")
 
-    # Add folders to the dock
+    ansible.info('Add folders to the dock.')
     for folder in config.dock_folders:
         if not isinstance(folder, dict):
             folder = {'dest': folder}
@@ -103,5 +105,5 @@ def dock(ansible, config):
             f"--sort {folder.get('sort', 'dateadded')} --no-restart"
         )
 
-    # Restart the dock
+    ansible.info('Restart the dock.')
     ansible.command('killall Dock')

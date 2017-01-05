@@ -1,4 +1,3 @@
-from elite.print import heading
 from elite.decorators import elite
 
 from macbuild.macos import macos, default_apps, startup, dock
@@ -9,50 +8,66 @@ from macbuild.software import sublime_text, spotify, software, native_instrument
 @elite(config_path='config', module_search_paths=['library'])
 def main(ansible, config):
     # Pre-tasks
-    heading('Update homebrew to the latest version.')
+    ansible.heading('Preparation')
+
+    ansible.info('Checking sudo rights are available.')
+    ansible.command('sudo -nv')
+
+    ansible.info('Update homebrew to the latest version.')
     ansible.homebrew(update_homebrew=True)
 
-    heading('Install Homebrew Cask.')
+    ansible.info('Install Homebrew Cask.')
     ansible.homebrew_tap(tap='caskroom/cask', state='present')
 
-    heading('Setup Homebrew taps')
+    ansible.info('Setup Homebrew taps.')
     for tap in config.software_brew_taps:
         ansible.homebrew_tap(tap=tap, state='present')
 
     # Grouped tasks
-    heading('macOS Configuration')
+    ansible.heading('macOS Configuration')
     macos(ansible, config)
 
-    heading('Install important desktop applications.')
+    ansible.heading('Sublime Text')
     sublime_text(ansible, config)
+
+    ansible.heading('Spotify')
     spotify(ansible, config)
 
-    heading('Unix software installation and configuration.')
+    ansible.heading('Unix Software')
     unix(ansible, config)
 
-    heading('Desktop software installation and configuration.')
+    ansible.heading('Desktop Software')
     software(ansible, config)
 
-    heading('Configure Native Instruments software.')
+    ansible.heading('Native Instruments Software')
     native_instruments(ansible, config)
 
-    heading('Install and configure Unix software.')
+    ansible.heading('VIM')
     vim(ansible, config)
+
+    ansible.heading('Docker')
     docker(ansible, config)
+
+    ansible.heading('SSHFS')
     sshfs(ansible, config)
 
-    heading('Install and configure programming languages.')
+    ansible.heading('Node.js')
     node_js(ansible, config)
+
+    ansible.heading('Python')
     python(ansible, config)
 
-    heading('Configure default applications.')
+    ansible.heading('Default Applications')
     default_apps(ansible, config)
 
-    heading('Configure startup items.')
+    ansible.heading('Startup Items')
     startup(ansible, config)
 
-    heading('Configure the Dock.')
+    ansible.heading('Dock')
     dock(ansible, config)
+
+    ansible.heading('Summary')
+    ansible.summary()
 
 
 if __name__ == '__main__':
