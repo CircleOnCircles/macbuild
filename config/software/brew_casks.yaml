@@ -1,9 +1,10 @@
-software_brew_casks:
-  # General Software
-
+software_brew_cask_fonts:
   # Fonts
   - font-source-code-pro
   - font-source-code-pro-for-powerline
+
+software_brew_casks:
+  # General Software
 
   # Freeware
   - android-file-transfer

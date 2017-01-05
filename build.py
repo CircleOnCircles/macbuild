@@ -24,6 +24,10 @@ def main(ansible, config, printer):
     for tap in config.software_brew_taps:
         ansible.homebrew_tap(tap=tap, state='present')
 
+    printer.info('Installing additional fonts.')
+    for cask in config.software_brew_cask_fonts:
+        ansible.homebrew_cask(name=cask, state='present')
+
     printer.info('Configuring the Terminal.')
     ansible.command('./library/terminal.js')
 
@@ -75,6 +79,7 @@ def main(ansible, config, printer):
     printer.info('Configuring Launchpad and Dashboard apps and widgets.')
     ansible.command('./library/launchpad.py build config/launchpad.yaml')
 
+    # Summary
     printer.heading('Summary')
     ansible.summary()
 
