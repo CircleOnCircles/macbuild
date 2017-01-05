@@ -42,35 +42,16 @@ def spotify(ansible, config):
     # Ensure the spotify global settings directories exist
     ansible.file(path='~/Library/Application Support/Spotify', state='directory')
 
-    # # Check if global spotify prefs file exists
-    # global_spotify_prefs = ansible.stat(path='~/Library/Application Support/Spotify/prefs')
+    # Check if global spotify prefs file exists
+    global_spotify_prefs = ansible.stat(path='~/Library/Application Support/Spotify/prefs')
 
-    # # Create the global spotify prefs file if required
-    # if not global_spotify_prefs.stat.exists:
-    #     ansible.file(
-    #         path='~/Library/Application Support/Spotify/prefs', state='touch', mode='0644'
-    #     )
+    # Create the global spotify prefs file if required
+    if not global_spotify_prefs.stat['exists']:
+        ansible.file(
+            path='~/Library/Application Support/Spotify/prefs', state='touch', mode='0644'
+        )
 
-    # nsure the spotify user settings directories exist
-    ansible.file(
-        path=f'~/Library/Application Support/Spotify/Users/{config.spotify_username}-user',
-        state='directory'
-    )
-
-    # # Check if user spotify prefs file exists
-    # user_spotify_prefs = ansible.stat(
-    #     path='~/Library/Application Support/Spotify/Users/{config.spotify_username}-user/prefs'
-    # )
-
-    # # Create the user spotify prefs file if required
-    # if not user_spotify_prefs.stat.exists:
-    #     ansible.file(
-    #         path=f'~/Library/Application Support/Spotify/Users/{config.spotify_username}-user/prefs',
-    #         state='touch',
-    #         mode='0644'
-    #     )
-
-    # Set global setting
+    # Set global settings
     for key, value in config.spotify_global_settings.items():
         ansible.lineinfile(
             dest='~/Library/Application Support/Spotify/prefs',
@@ -78,10 +59,24 @@ def spotify(ansible, config):
             line=f'{key}={spotify_value(value)}'
         )
 
-    # Set user setting
+    spotify_user_config_path = (
+        f'~/Library/Application Support/Spotify/Users/{config.spotify_username}-user'
+    )
+
+    # Ensure the spotify user settings directory exists
+    ansible.file(path=spotify_user_config_path, state='directory')
+
+    # Check if user spotify prefs file exists
+    user_spotify_prefs = ansible.stat(path=f'{spotify_user_config_path}/prefs')
+
+    # Create the user spotify prefs file if required
+    if not user_spotify_prefs.stat['exists']:
+        ansible.file(path=f'{spotify_user_config_path}/prefs', state='touch', mode='0644')
+
+    # Set user settings
     for key, value in config.spotify_user_settings.items():
         ansible.lineinfile(
-            dest=f'~/Library/Application Support/Spotify/Users/{config.spotify_username}-user/prefs',
+            dest=f'{spotify_user_config_path}/prefs',
             regexp=f'^{re.escape(key)}=',
             line=f'{key}={spotify_value(value)}'
         )
@@ -107,10 +102,10 @@ def software(ansible, config):
         ansible.homebrew_cask(name=cask, state='present')
 
     # App Store Applications
-    # for app in config.software_appstore_apps:
-    #     app_file = ansible.stat(path=f'/Applications/{app}.app/Contents/_MASReceipt/receipt')
-    #     if not app_file.stat['exists']:
-    #         ansible.fail(msg=f'Please install {app} from the App Store')
+    for app in config.software_appstore_apps:
+        app_file = ansible.stat(path=f'/Applications/{app}.app/Contents/_MASReceipt/receipt')
+        if not app_file.stat['exists']:
+            ansible.fail(msg=f'Please install {app} from the App Store')
 
     # Set application defaults
     for default in config.software_app_defaults:
@@ -121,7 +116,8 @@ def software(ansible, config):
         )
 
     # Refresh cfprefsd
-    ansible.command('killall cfprefsd')
+    with ansible.settings(ignore_errors=True):
+        ansible.command('killall cfprefsd')
 
     # Application Files
     for app_file in config.software_app_files:
@@ -141,12 +137,12 @@ def software(ansible, config):
         if app_symlink['dest'] != '/' and app_symlink['dest'] != '~':
             ansible.file(path=os.path.dirname(app_symlink['dest']), state='directory')
 
-        # # Check health of requested app symlink
-        # symlink_health = ansible.stat(path=app_symlink['dest'])
+        # Check health of requested app symlink
+        symlink_health = ansible.stat(path=app_symlink['dest'])
 
         # Clean up any files which are not symlinks
-        # if symlink_health.stat.exists and not symlink_health.stat.islnk:
-        #     ansible.file(path=app_symlink['dest'], state='absent')
+        if symlink_health.stat['exists'] and not symlink_health.stat['islnk']:
+            ansible.file(path=app_symlink['dest'], state='absent')
 
         # Symlink file to requested destination
         ansible.file(dest=app_symlink['dest'], src=app_symlink['src'], state='link')
