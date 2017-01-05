@@ -2,32 +2,32 @@ import os
 import re
 
 
-def sublime_text(ansible, config):
-    ansible.info('Install sublime text.')
+def sublime_text(ansible, config, printer):
+    printer.info('Install sublime text.')
     ansible.homebrew_cask(name='sublime-text', state='present')
 
-    ansible.info('Ensure the sublime text settings directories exist.')
+    printer.info('Ensure the sublime text settings directories exist.')
     for path in [
         '~/Library/Application Support/Sublime Text 3/Installed Packages',
         '~/Library/Application Support/Sublime Text 3/Packages/User',
     ]:
         ansible.file(path=path, state='directory')
 
-    ansible.info('Install sublime text package control.')
+    printer.info('Install sublime text package control.')
     ansible.get_url(
         url='http://packagecontrol.io/Package Control.sublime-package',
         dest='~/Library/Application Support/Sublime Text 3/Installed Packages',
         mode='0644'
     )
 
-    ansible.info('Install sublime text settings.')
+    printer.info('Install sublime text settings.')
     ansible.synchronize(
         src='files/sublime_text/',
         dest='~/Library/Application Support/Sublime Text 3/Packages/User'
     )
 
 
-def spotify(ansible, config):
+def spotify(ansible, config, printer):
     def spotify_value(value):
         if isinstance(value, str):
             return f'"{value}"'
@@ -36,22 +36,22 @@ def spotify(ansible, config):
         else:
             return str(value)
 
-    ansible.info('Install spotify.')
+    printer.info('Install spotify.')
     ansible.homebrew_cask(name='spotify', state='present')
 
-    ansible.info('Ensure the spotify global settings directories exist.')
+    printer.info('Ensure the spotify global settings directories exist.')
     ansible.file(path='~/Library/Application Support/Spotify', state='directory')
 
-    ansible.info('Check if global spotify prefs file exists.')
+    printer.info('Check if global spotify prefs file exists.')
     global_spotify_prefs = ansible.stat(path='~/Library/Application Support/Spotify/prefs')
 
     if not global_spotify_prefs.stat['exists']:
-        ansible.info('Creating the global spotify prefs file.')
+        printer.info('Creating the global spotify prefs file.')
         ansible.file(
             path='~/Library/Application Support/Spotify/prefs', state='touch', mode='0644'
         )
 
-    ansible.info('Set global settings.')
+    printer.info('Set global settings.')
     for key, value in config.spotify_global_settings.items():
         ansible.lineinfile(
             dest='~/Library/Application Support/Spotify/prefs',
@@ -63,17 +63,17 @@ def spotify(ansible, config):
         f'~/Library/Application Support/Spotify/Users/{config.spotify_username}-user'
     )
 
-    ansible.info('Ensure the spotify user settings directory exists.')
+    printer.info('Ensure the spotify user settings directory exists.')
     ansible.file(path=spotify_user_config_path, state='directory')
 
-    ansible.info('Check if user spotify prefs file exists.')
+    printer.info('Check if user spotify prefs file exists.')
     user_spotify_prefs = ansible.stat(path=f'{spotify_user_config_path}/prefs')
 
     if not user_spotify_prefs.stat['exists']:
-        ansible.info('Creating the user spotify prefs file.')
+        printer.info('Creating the user spotify prefs file.')
         ansible.file(path=f'{spotify_user_config_path}/prefs', state='touch', mode='0644')
 
-    ansible.info('Set user settings.')
+    printer.info('Set user settings.')
     for key, value in config.spotify_user_settings.items():
         ansible.lineinfile(
             dest=f'{spotify_user_config_path}/prefs',
@@ -81,7 +81,7 @@ def spotify(ansible, config):
             line=f'{key}={spotify_value(value)}'
         )
 
-    ansible.info('Check if Spotify is in login items.')
+    printer.info('Check if Spotify is in login items.')
     with ansible.settings(ignore_errors=True):
         spotify_login = ansible.command(
             'osascript -l JavaScript -e '
@@ -89,25 +89,25 @@ def spotify(ansible, config):
         )
 
     if spotify_login.rc == 0:
-        ansible.info('Remove Spotify from login items.')
+        printer.info('Remove Spotify from login items.')
         ansible.command(
             'osascript -l JavaScript -e '
             '"Application(\'System Events\').loginItems.byName(\'Spotify\').delete()"'
         )
 
 
-def software(ansible, config):
-    ansible.info('Homebrew Cask desktop applications.')
+def software(ansible, config, printer):
+    printer.info('Homebrew Cask desktop applications.')
     for cask in config.software_brew_casks:
         ansible.homebrew_cask(name=cask, state='present')
 
-    ansible.info('Check app store applications.')
+    printer.info('Check app store applications.')
     for app in config.software_appstore_apps:
         app_file = ansible.stat(path=f'/Applications/{app}.app/Contents/_MASReceipt/receipt')
         if not app_file.stat['exists']:
             ansible.fail(msg=f'Please install {app} from the App Store')
 
-    ansible.info('Set application defaults.')
+    printer.info('Set application defaults.')
     for default in config.software_app_defaults:
         ansible.plist(
             dest=default['domain'],
@@ -115,11 +115,11 @@ def software(ansible, config):
             container=default.get('container')
         )
 
-    ansible.info('Refresh cfprefsd.')
+    printer.info('Refresh cfprefsd.')
     with ansible.settings(ignore_errors=True):
         ansible.command('killall cfprefsd')
 
-    ansible.info('Install the app files requested.')
+    printer.info('Install the app files requested.')
     for app_file in config.software_app_files:
         with ansible.settings(sudo=app_file.get('become', False)):
             if app_file['dest'] != '/' and app_file['dest'] != '~':
@@ -129,7 +129,7 @@ def software(ansible, config):
                 src=app_file['src'], dest=app_file['dest'], mode=app_file.get('mode', '0644')
             )
 
-    ansible.info('Symlink file to requested destination.')
+    printer.info('Symlink file to requested destination.')
     for app_symlink in config.software_app_symlinks:
         if app_symlink['dest'] != '/' and app_symlink['dest'] != '~':
             ansible.file(path=os.path.dirname(app_symlink['dest']), state='directory')
@@ -141,8 +141,8 @@ def software(ansible, config):
         ansible.file(dest=app_symlink['dest'], src=app_symlink['src'], state='link')
 
 
-def native_instruments(ansible, config):
-    ansible.info('Place Kontakt libraries in the requested order.')
+def native_instruments(ansible, config, printer):
+    printer.info('Place Kontakt libraries in the requested order.')
     for index, library in enumerate(config.native_instruments_kontakt_library_order):
         ansible.plist(
             dest=f'com.native-instruments.{library}',

@@ -6,67 +6,67 @@ from macbuild.software import sublime_text, spotify, software, native_instrument
 
 
 @elite(config_path='config', module_search_paths=['library'])
-def main(ansible, config):
+def main(ansible, config, printer):
     # Pre-tasks
-    ansible.heading('Preparation')
+    printer.heading('Preparation')
 
-    ansible.info('Checking sudo rights are available.')
+    printer.info('Checking sudo rights are available.')
     ansible.command('sudo -nv')
 
-    ansible.info('Update homebrew to the latest version.')
+    printer.info('Update homebrew to the latest version.')
     ansible.homebrew(update_homebrew=True)
 
-    ansible.info('Install Homebrew Cask.')
+    printer.info('Install Homebrew Cask.')
     ansible.homebrew_tap(tap='caskroom/cask', state='present')
 
-    ansible.info('Setup Homebrew taps.')
+    printer.info('Setup Homebrew taps.')
     for tap in config.software_brew_taps:
         ansible.homebrew_tap(tap=tap, state='present')
 
-    # Grouped tasks
-    ansible.heading('macOS Configuration')
-    macos(ansible, config)
+    # Roles
+    printer.heading('macOS Configuration')
+    macos(ansible, config, printer)
 
-    ansible.heading('Sublime Text')
-    sublime_text(ansible, config)
+    printer.heading('Sublime Text')
+    sublime_text(ansible, config, printer)
 
-    ansible.heading('Spotify')
-    spotify(ansible, config)
+    printer.heading('Spotify')
+    spotify(ansible, config, printer)
 
-    ansible.heading('Unix Software')
-    unix(ansible, config)
+    printer.heading('Unix Software')
+    unix(ansible, config, printer)
 
-    ansible.heading('Desktop Software')
-    software(ansible, config)
+    printer.heading('Desktop Software')
+    software(ansible, config, printer)
 
-    ansible.heading('Native Instruments Software')
-    native_instruments(ansible, config)
+    printer.heading('Native Instruments Software')
+    native_instruments(ansible, config, printer)
 
-    ansible.heading('VIM')
-    vim(ansible, config)
+    printer.heading('VIM')
+    vim(ansible, config, printer)
 
-    ansible.heading('Docker')
-    docker(ansible, config)
+    printer.heading('Docker')
+    docker(ansible, config, printer)
 
-    ansible.heading('SSHFS')
-    sshfs(ansible, config)
+    printer.heading('SSHFS')
+    sshfs(ansible, config, printer)
 
-    ansible.heading('Node.js')
-    node_js(ansible, config)
+    printer.heading('Node.js')
+    node_js(ansible, config, printer)
 
-    ansible.heading('Python')
-    python(ansible, config)
+    printer.heading('Python')
+    python(ansible, config, printer)
 
-    ansible.heading('Default Applications')
-    default_apps(ansible, config)
+    printer.heading('Default Applications')
+    default_apps(ansible, config, printer)
 
-    ansible.heading('Startup Items')
-    startup(ansible, config)
+    printer.heading('Startup Items')
+    startup(ansible, config, printer)
 
-    ansible.heading('Dock')
-    dock(ansible, config)
+    printer.heading('Dock')
+    dock(ansible, config, printer)
 
-    ansible.heading('Summary')
+    printer.heading('Summary')
     ansible.summary()
 
 

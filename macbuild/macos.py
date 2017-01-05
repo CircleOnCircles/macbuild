@@ -1,5 +1,5 @@
-def macos(ansible, config):
-    ansible.info('Set computer sleep time.')
+def macos(ansible, config, printer):
+    printer.info('Set computer sleep time.')
     with ansible.settings(sudo=True, quiet=True):
         computer_sleep = ansible.command('systemsetup -getcomputersleep')
 
@@ -8,7 +8,7 @@ def macos(ansible, config):
         with ansible.settings(sudo=True):
             ansible.command(f'systemsetup -setcomputersleep {config.macos_computer_sleep_time}')
 
-    ansible.info('Set disply sleep time.')
+    printer.info('Set disply sleep time.')
     with ansible.settings(sudo=True, quiet=True):
         display_sleep = ansible.command('systemsetup -getdisplaysleep')
 
@@ -17,7 +17,7 @@ def macos(ansible, config):
         with ansible.settings(sudo=True):
             ansible.command(f'systemsetup -setdisplaysleep {config.macos_display_sleep_time}')
 
-    ansible.info('Set the timezone.')
+    printer.info('Set the timezone.')
     with ansible.settings(sudo=True, quiet=True):
         current_timezone = ansible.command('systemsetup -gettimezone')
 
@@ -25,20 +25,20 @@ def macos(ansible, config):
         with ansible.settings(sudo=True):
             ansible.command(f'systemsetup -settimezone {config.macos_timezone}')
 
-    ansible.info("Unhide the user's Library directory.")
+    printer.info("Unhide the user's Library directory.")
     with ansible.settings(quiet=True):
         library_flags = ansible.command('ls -lOd ~/Library')
 
     if 'hidden' in library_flags.stdout:
         ansible.command('chflags nohidden ~/Library')
 
-    ansible.info('Create the development folder.')
+    printer.info('Create the development folder.')
     ansible.file(path=config.development_dir, state='directory')
 
-    ansible.info('Create the screenshots folder.')
+    printer.info('Create the screenshots folder.')
     ansible.file(path='~/Pictures/Screenshots', state='directory')
 
-    ansible.info('Grant permission to audio plugin paths.')
+    printer.info('Grant permission to audio plugin paths.')
     for path in [
         # Documentation
         '/Library/Documentation',
@@ -58,7 +58,7 @@ def macos(ansible, config):
         with ansible.settings(sudo=True):
             ansible.file(path=path, state='directory', owner='root', group='admin', mode='0775')
 
-    ansible.info('Set operating system defaults.')
+    printer.info('Set operating system defaults.')
     for defaults in config.macos_defaults:
         with ansible.settings(sudo=defaults.get('become', False)):
             ansible.plist(
@@ -68,8 +68,8 @@ def macos(ansible, config):
             )
 
 
-def default_apps(ansible, config):
-    ansible.info('Setup default app associations.')
+def default_apps(ansible, config, printer):
+    printer.info('Setup default app associations.')
 
     for bundle_id, utis in config.default_apps_associations.items():
         for uti in utis:
@@ -80,21 +80,21 @@ def default_apps(ansible, config):
                 ansible.command(f'duti -s {bundle_id} {uti} all')
 
 
-def startup(ansible, config):
-    ansible.info('Add login items.')
+def startup(ansible, config, printer):
+    printer.info('Add login items.')
     for login_item in config.startup_login_items:
         ansible.command(f"loginitems -a '{login_item}'")
 
 
-def dock(ansible, config):
-    ansible.info('Remove all items from the dock.')
+def dock(ansible, config, printer):
+    printer.info('Remove all items from the dock.')
     ansible.command('dockutil --remove all --no-restart')
 
-    ansible.info('Add apps to the dock.')
+    printer.info('Add apps to the dock.')
     for app in config.dock_apps:
         ansible.command(f"dockutil --add '/Applications/{app}.app' --no-restart")
 
-    ansible.info('Add folders to the dock.')
+    printer.info('Add folders to the dock.')
     for folder in config.dock_folders:
         if not isinstance(folder, dict):
             folder = {'dest': folder}
@@ -105,5 +105,5 @@ def dock(ansible, config):
             f"--sort {folder.get('sort', 'dateadded')} --no-restart"
         )
 
-    ansible.info('Restart the dock.')
+    printer.info('Restart the dock.')
     ansible.command('killall Dock')
