@@ -1,4 +1,5 @@
 import os
+import re
 
 
 def sublime_text(ansible, config):
@@ -27,6 +28,14 @@ def sublime_text(ansible, config):
 
 
 def spotify(ansible, config):
+    def spotify_value(value):
+        if isinstance(value, str):
+            return f'"{value}"'
+        elif isinstance(value, bool):
+            return 'true' if value else 'false'
+        else:
+            return str(value)
+
     # Install spotify
     ansible.homebrew_cask(name='spotify', state='present')
 
@@ -62,13 +71,12 @@ def spotify(ansible, config):
     #     )
 
     # Set global setting
-    # TODO
-    # for key, value in ansible.spotify_global_settings.items():
-    #     ansible.lineinfile(
-    #         dest='~/Library/Application Support/Spotify/prefs',
-    #         regexp='^{{ item.key | regex_escape() }}=',
-    #         line=f'{item.key}={spotify_value(item.value)}'
-    #     )
+    for key, value in config.spotify_global_settings.items():
+        ansible.lineinfile(
+            dest='~/Library/Application Support/Spotify/prefs',
+            regexp=f'^{re.escape(key)}=',
+            line=f'{key}={spotify_value(value)}'
+        )
 
     # Set user setting
     # lineinfile:
