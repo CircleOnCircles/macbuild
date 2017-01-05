@@ -20,11 +20,11 @@ def sublime_text(ansible, config):
         mode='0644'
     )
 
-    # Install sublime text settings
-    ansible.copy(
-        src='files/sublime_text/',
-        dest='~/Library/Application Support/Sublime Text 3/Packages/User'
-    )
+    # # Install sublime text settings
+    # ansible.copy(
+    #     src='files/sublime_text/',
+    #     dest='~/Library/Application Support/Sublime Text 3/Packages/User'
+    # )
 
 
 def spotify(ansible, config):
@@ -79,11 +79,12 @@ def spotify(ansible, config):
         )
 
     # Set user setting
-    # lineinfile:
-    #   dest: "~/Library/Application Support/Spotify/Users/{{ username }}-user/prefs"
-    #   regexp: "^{{ item.key | regex_escape() }}="
-    #   line: "{{ item.key }}={{ item.value | spotify_value }}"
-    # with_dict: "{{ user_settings }}"
+    for key, value in config.spotify_user_settings.items():
+        ansible.lineinfile(
+            dest=f'~/Library/Application Support/Spotify/Users/{config.spotify_username}-user/prefs',
+            regexp=f'^{re.escape(key)}=',
+            line=f'{key}={spotify_value(value)}'
+        )
 
     # Check if Spotify is in login items
     with ansible.settings(ignore_errors=True):
