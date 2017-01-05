@@ -1,8 +1,9 @@
+#!/usr/bin/env python3
 from elite.decorators import elite
 
-from macbuild.macos import macos, default_apps, startup, dock
-from macbuild.unix import unix, vim, docker, sshfs, node_js, python
-from macbuild.software import sublime_text, spotify, software, native_instruments
+from roles.macos import macos, default_apps, startup, dock
+from roles.unix import unix, vim, docker, sshfs, node_js, python
+from roles.software import sublime_text, spotify, software, native_instruments
 
 
 @elite(config_path='config', module_search_paths=['library'])
@@ -22,6 +23,9 @@ def main(ansible, config, printer):
     printer.info('Setup Homebrew taps.')
     for tap in config.software_brew_taps:
         ansible.homebrew_tap(tap=tap, state='present')
+
+    printer.info('Configuring the Terminal.')
+    ansible.command('./library/terminal.js')
 
     # Roles
     printer.heading('macOS Configuration')
@@ -65,6 +69,11 @@ def main(ansible, config, printer):
 
     printer.heading('Dock')
     dock(ansible, config, printer)
+
+    # Post-tasks
+    printer.heading('Launchpad')
+    printer.info('Configuring Launchpad and Dashboard apps and widgets.')
+    ansible.command('./library/launchpad.py build config/launchpad.yaml')
 
     printer.heading('Summary')
     ansible.summary()
