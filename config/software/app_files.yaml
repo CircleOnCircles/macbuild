@@ -122,7 +122,7 @@ software_app_files:
     dest: ~/Library/Application Support/DMGAudio/TrackMeter/license
 
   # Focusrite Control
-  - src: focusrite_control/Focusrite Control.settings
+  - src: files/focusrite_control/Focusrite Control.settings
     dest: ~/Library/Application Support/Focusrite/Focusrite Control/Settings/Focusrite Control.settings
 
   # Focusrite Red Plugin Suite
@@ -134,7 +134,7 @@ software_app_files:
     dest: ~/Music/.GDHZ/Interface.interface
 
   # Relab LX480 Complete
-  - src: relab_lx480_complete/Preferences.xml
+  - src: files/relab_lx480_complete/Preferences.xml
     dest: /Library/Application Support/Relab Development/LX480 Complete/Preferences.xml
 
   # Reveal Sound Spire

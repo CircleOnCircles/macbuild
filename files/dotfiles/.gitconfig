@@ -1,0 +1,11 @@
+[user]
+	name = Fotis Gimian
+	email = fgimiansoftware@gmail.com
+[alias]
+	plog = log --color  --pretty=format:\"%C(red)%h %C(yellow)%ad %C(green)%an%C(reset): %s\" --date=short
+	diffc = diff --cached
+	cdiffc = cdiff --cached
+	unstage = reset HEAD --
+	uncommit = reset --soft HEAD^
+[push]
+	default = simple
