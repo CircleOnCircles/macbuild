@@ -46,7 +46,7 @@ software_app_files:
     dest: ~/Library/Preferences/VMware Fusion/preferences
   - src: !join_path [*app_license_dir, General/VMware Fusion/license-fusion-80-e1-201505]
     dest: /Library/Preferences/VMware Fusion/license-fusion-80-e1-201505
-    become: yes
+    sudo: yes
 
   # ---------------------------------------------------------------------------
   # Music Production Software
@@ -71,7 +71,7 @@ software_app_files:
   # Celemony Melodyne Editor
   - src: !join_path [*app_license_dir, Music Production/Celemony/Celemony Melodyne Editor/Melodyne singletrack.license]
     dest: /Library/Application Support/Celemony/Licenses/Melodyne singletrack.license
-    become: yes
+    sudo: yes
 
   # DMG Audio Compassion
   - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Compassion/license]
@@ -152,7 +152,7 @@ software_app_files:
   # Synapse Audio DUNE
   - src: !join_path [*app_license_dir, Music Production/Synapse Audio/Synapse Audio DUNE/.DUNE2reg]
     dest: /Library/Application Support/Synapse Audio/.DUNE2reg
-    become: yes
+    sudo: yes
 
   # u-he Hive
   - src: !join_path [*app_license_dir, Music Production/u-he/u-he Hive/com.u-he.Hive.plist]

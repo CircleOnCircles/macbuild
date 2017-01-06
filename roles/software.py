@@ -121,7 +121,7 @@ def software(ansible, config, printer):
 
     printer.info('Install the app files requested.')
     for app_file in config.software_app_files:
-        with ansible.settings(sudo=app_file.get('become', False)):
+        with ansible.settings(sudo=app_file.get('sudo', False)):
             if app_file['dest'] != '/' and app_file['dest'] != '~':
                 ansible.file(path=os.path.dirname(app_file['dest']), state='directory')
 

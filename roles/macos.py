@@ -1,33 +1,27 @@
 def macos(ansible, config, printer):
-    printer.info('Set computer sleep time.')
-    with ansible.settings(sudo=True, quiet=True):
+    with ansible.settings(sudo=True):
+        printer.info('Set computer sleep time.')
         computer_sleep = ansible.command('systemsetup -getcomputersleep')
 
-    if f'Computer Sleep: {config.macos_computer_sleep_time}' != \
-       computer_sleep.stdout.replace('after ', '').replace('minutes', ''):
-        with ansible.settings(sudo=True):
+        if f'Computer Sleep: {config.macos_computer_sleep_time}' != \
+           computer_sleep.stdout.replace('after ', '').replace('minutes', ''):
             ansible.command(f'systemsetup -setcomputersleep {config.macos_computer_sleep_time}')
 
-    printer.info('Set disply sleep time.')
-    with ansible.settings(sudo=True, quiet=True):
+        printer.info('Set disply sleep time.')
         display_sleep = ansible.command('systemsetup -getdisplaysleep')
 
-    if f'Display Sleep: {config.macos_display_sleep_time}' != \
-       display_sleep.stdout.replace('after ', '').replace('minutes', ''):
-        with ansible.settings(sudo=True):
+        if f'Display Sleep: {config.macos_display_sleep_time}' != \
+           display_sleep.stdout.replace('after ', '').replace('minutes', ''):
             ansible.command(f'systemsetup -setdisplaysleep {config.macos_display_sleep_time}')
 
-    printer.info('Set the timezone.')
-    with ansible.settings(sudo=True, quiet=True):
+        printer.info('Set the timezone.')
         current_timezone = ansible.command('systemsetup -gettimezone')
 
-    if f'Time Zone: {config.macos_timezone}' != current_timezone.stdout:
-        with ansible.settings(sudo=True):
+        if f'Time Zone: {config.macos_timezone}' != current_timezone.stdout:
             ansible.command(f'systemsetup -settimezone {config.macos_timezone}')
 
     printer.info("Unhide the user's Library directory.")
-    with ansible.settings(quiet=True):
-        library_flags = ansible.command('ls -lOd ~/Library')
+    library_flags = ansible.command('ls -lOd ~/Library')
 
     if 'hidden' in library_flags.stdout:
         ansible.command('chflags nohidden ~/Library')
@@ -60,7 +54,7 @@ def macos(ansible, config, printer):
 
     printer.info('Set operating system defaults.')
     for defaults in config.macos_defaults:
-        with ansible.settings(sudo=defaults.get('become', False)):
+        with ansible.settings(sudo=defaults.get('sudo', False)):
             ansible.plist(
                 dest=defaults['domain'],
                 values=defaults,
@@ -73,8 +67,7 @@ def default_apps(ansible, config, printer):
 
     for bundle_id, utis in config.default_apps_associations.items():
         for uti in utis:
-            with ansible.settings(quiet=True):
-                association = ansible.command(f'duti -d {uti}')
+            association = ansible.command(f'duti -d {uti}')
 
             if association.stdout != bundle_id.lower():
                 ansible.command(f'duti -s {bundle_id} {uti} all')

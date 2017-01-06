@@ -61,7 +61,7 @@ macos_defaults:
     values:
       # Disable 'Download newly available updates in the background'
       AutomaticDownload: false
-    become: yes
+    sudo: yes
 
   # Launch Services
   - domain: com.apple.LaunchServices
