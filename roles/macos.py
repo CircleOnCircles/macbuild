@@ -3,15 +3,19 @@ def macos(ansible, config, printer):
         printer.info('Set computer sleep time.')
         computer_sleep = ansible.command('systemsetup -getcomputersleep')
 
-        if f'Computer Sleep: {config.macos_computer_sleep_time}' != \
-           computer_sleep.stdout.replace('after ', '').replace('minutes', ''):
+        if (
+            f'Computer Sleep: {config.macos_computer_sleep_time}' !=
+            computer_sleep.stdout.replace('after ', '').replace('minutes', '')
+        ):
             ansible.command(f'systemsetup -setcomputersleep {config.macos_computer_sleep_time}')
 
         printer.info('Set disply sleep time.')
         display_sleep = ansible.command('systemsetup -getdisplaysleep')
 
-        if f'Display Sleep: {config.macos_display_sleep_time}' != \
-           display_sleep.stdout.replace('after ', '').replace('minutes', ''):
+        if (
+            f'Display Sleep: {config.macos_display_sleep_time}' !=
+            display_sleep.stdout.replace('after ', '').replace('minutes', '')
+        ):
             ansible.command(f'systemsetup -setdisplaysleep {config.macos_display_sleep_time}')
 
         printer.info('Set the timezone.')
@@ -91,6 +95,7 @@ def dock(ansible, config, printer):
     for folder in config.dock_folders:
         if not isinstance(folder, dict):
             folder = {'dest': folder}
+
         ansible.command(
             f"dockutil --add '{folder['dest']}' "
             f"--view {folder.get('view', 'fan')} "

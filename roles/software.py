@@ -84,15 +84,17 @@ def spotify(ansible, config, printer):
     printer.info('Check if Spotify is in login items.')
     with ansible.settings(ignore_errors=True):
         spotify_login = ansible.command(
-            'osascript -l JavaScript -e '
-            '"Application(\'System Events\').loginItems.byName(\'Spotify\').name()"'
+            'osascript -l JavaScript -e "'
+            "Application('System Events').loginItems.byName('Spotify').name()"
+            '"'
         )
 
     if spotify_login.rc == 0:
         printer.info('Remove Spotify from login items.')
         ansible.command(
-            'osascript -l JavaScript -e '
-            '"Application(\'System Events\').loginItems.byName(\'Spotify\').delete()"'
+            'osascript -l JavaScript -e "'
+            "Application('System Events').loginItems.byName('Spotify').delete()"
+            '"'
         )
 
 
