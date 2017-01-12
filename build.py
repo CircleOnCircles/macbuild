@@ -14,7 +14,6 @@ def main(elite, config, printer):
     printer.info('Checking sudo rights are available.')
     elite.run(command='sudo -nv', changed=False)
 
-    # TODO
     # printer.info('Update homebrew to the latest version.')
     # elite.homebrew(update_homebrew=True)
 

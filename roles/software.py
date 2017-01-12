@@ -52,34 +52,12 @@ def spotify(elite, config, printer):
         )
 
     printer.info('Set global settings.')
-    # for key, value in config.spotify_global_settings.items():
-    #     elite.lineinfile(
-    #         dest='~/Library/Application Support/Spotify/prefs',
-    #         regexp=f'^{re.escape(key)}=',
-    #         line=f'{key}={spotify_value(value)}'
-    #     )
-
-    spotify_user_config_path = (
-        f'~/Library/Application Support/Spotify/Users/{config.spotify_username}-user'
-    )
-
-    printer.info('Ensure the spotify user settings directory exists.')
-    elite.file(path=spotify_user_config_path, state='directory')
-
-    printer.info('Check if user spotify prefs file exists.')
-    user_spotify_prefs = elite.file_info(path=f'{spotify_user_config_path}/prefs')
-
-    if not user_spotify_prefs.exists:
-        printer.info('Creating the user spotify prefs file.')
-        elite.file(path=f'{spotify_user_config_path}/prefs', state='touch', mode='0644')
+    for pref, value in config.spotify_global_settings.items():
+        elite.spotify_pref(pref=pref, value=value)
 
     printer.info('Set user settings.')
-    # for key, value in config.spotify_user_settings.items():
-    #     elite.lineinfile(
-    #         dest=f'{spotify_user_config_path}/prefs',
-    #         regexp=f'^{re.escape(key)}=',
-    #         line=f'{key}={spotify_value(value)}'
-    #     )
+    for pref, value in config.spotify_user_settings.items():
+        elite.spotify_pref(pref=pref, value=value, username=config.spotify_username)
 
     printer.info('Check if Spotify is in login items.')
     spotify_login = elite.run(
