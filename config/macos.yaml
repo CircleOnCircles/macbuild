@@ -57,7 +57,7 @@ macos_defaults:
       MouseButtonMode: TwoButton
 
   # System Preferences / App Store
-  - domain: /Library/Preferences/com.apple.SoftwareUpdate.plist
+  - path: /Library/Preferences/com.apple.SoftwareUpdate.plist
     values:
       # Disable 'Download newly available updates in the background'
       AutomaticDownload: false
