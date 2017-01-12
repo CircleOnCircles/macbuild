@@ -124,7 +124,7 @@ def software(elite, config, printer):
         )
 
     printer.info('Refresh cfprefsd.')
-    elite.run(command='killall cfprefsd', ignore_failed=True)
+    elite.run(command='killall cfprefsd', ignore_failed=True, changed=False)
 
     printer.info('Install the app files requested.')
     for app_file in config.software_app_files:

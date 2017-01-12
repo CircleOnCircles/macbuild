@@ -1,6 +1,6 @@
 def macos(elite, config, printer):
     printer.info('Set computer sleep time.')
-    computer_sleep = elite.run(command='systemsetup -getcomputersleep', sudo=True)
+    computer_sleep = elite.run(command='systemsetup -getcomputersleep', sudo=True, changed=False)
 
     if (
         f'Computer Sleep: {config.macos_computer_sleep_time}' !=
@@ -11,7 +11,7 @@ def macos(elite, config, printer):
         )
 
     printer.info('Set disply sleep time.')
-    display_sleep = elite.run(command='systemsetup -getdisplaysleep', sudo=True)
+    display_sleep = elite.run(command='systemsetup -getdisplaysleep', sudo=True, changed=False)
 
     if (
         f'Display Sleep: {config.macos_display_sleep_time}' !=
@@ -22,13 +22,13 @@ def macos(elite, config, printer):
         )
 
     printer.info('Set the timezone.')
-    current_timezone = elite.run(command='systemsetup -gettimezone', sudo=True)
+    current_timezone = elite.run(command='systemsetup -gettimezone', sudo=True, changed=False)
 
     if f'Time Zone: {config.macos_timezone}' != current_timezone.stdout.strip():
         elite.run(command=f'systemsetup -settimezone {config.macos_timezone}', sudo=True)
 
     printer.info("Unhide the user's Library directory.")
-    library_flags = elite.run(command='ls -lOd ~/Library')
+    library_flags = elite.run(command='ls -lOd ~/Library', changed=False)
 
     if 'hidden' in library_flags.stdout:
         elite.run(command='chflags nohidden ~/Library')
@@ -109,4 +109,4 @@ def dock(elite, config, printer):
         ))
 
     printer.info('Restart the dock.')
-    elite.run(command='killall Dock')
+    elite.run(command='killall Dock', changed=False)
