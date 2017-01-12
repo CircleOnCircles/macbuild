@@ -1,25 +1,25 @@
 # Specify files which are to be symlinked to others
 software_app_symlinks:
   # Git cdiff
-  - src: /usr/local/bin/cdiff
-    dest: /usr/local/bin/git-cdiff
+  - source: /usr/local/bin/cdiff
+    path: /usr/local/bin/git-cdiff
 
   # Audio Hijack
-  - src: !join_path [*app_config_dir, Audio Hijack]
-    dest: '~/Library/Application Support/Audio Hijack'
+  - source: !join_path [*app_config_dir, Audio Hijack]
+    path: '~/Library/Application Support/Audio Hijack'
 
   # OpenEmu
-  - src: !join_path [*app_config_dir, OpenEmu/BIOS]
-    dest: '~/Library/Application Support/OpenEmu/BIOS'
-  - src: !join_path [*app_config_dir, OpenEmu/Bindings]
-    dest: '~/Library/Application Support/OpenEmu/Bindings'
-  - src: !join_path [*app_config_dir, OpenEmu/Cores]
-    dest: '~/Library/Application Support/OpenEmu/Cores'
-  - src: !join_path [*app_config_dir, OpenEmu/Game Library]
-    dest: '~/Library/Application Support/OpenEmu/Game Library'
-  - src: !join_path [*app_config_dir, OpenEmu/Save States]
-    dest: '~/Library/Application Support/OpenEmu/Save States'
+  - source: !join_path [*app_config_dir, OpenEmu/BIOS]
+    path: '~/Library/Application Support/OpenEmu/BIOS'
+  - source: !join_path [*app_config_dir, OpenEmu/Bindings]
+    path: '~/Library/Application Support/OpenEmu/Bindings'
+  - source: !join_path [*app_config_dir, OpenEmu/Cores]
+    path: '~/Library/Application Support/OpenEmu/Cores'
+  - source: !join_path [*app_config_dir, OpenEmu/Game Library]
+    path: '~/Library/Application Support/OpenEmu/Game Library'
+  - source: !join_path [*app_config_dir, OpenEmu/Save States]
+    path: '~/Library/Application Support/OpenEmu/Save States'
 
   # Cubase
-  - src: ~/Music/Presets
-    dest: ~/Library/Audio/Presets
+  - source: ~/Music/Presets
+    path: ~/Library/Audio/Presets

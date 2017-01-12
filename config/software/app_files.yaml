@@ -6,46 +6,46 @@ software_app_files:
   # ---------------------------------------------------------------------------
 
   # 1Password
-  - src: !join_path [*app_license_dir, General/1Password/License.onepassword-license]
-    dest: ~/Library/Group Containers/2BUA8C4S2C.com.agilebits/License/License.onepassword-license
+  - source: !join_path [*app_license_dir, General/1Password/License.onepassword-license]
+    path: ~/Library/Group Containers/2BUA8C4S2C.com.agilebits/License/License.onepassword-license
 
   # DaisyDisk
-  - src: !join_path [*app_license_dir, General/DaisyDisk/License.DaisyDisk]
-    dest: ~/Library/Application Support/DaisyDisk/License.DaisyDisk
+  - source: !join_path [*app_license_dir, General/DaisyDisk/License.DaisyDisk]
+    path: ~/Library/Application Support/DaisyDisk/License.DaisyDisk
 
   # Dash
-  - src: !join_path [*app_license_dir, General/Dash/license.dash-license]
-    dest: ~/Library/Application Support/Dash/License/license.dash-license
+  - source: !join_path [*app_license_dir, General/Dash/license.dash-license]
+    path: ~/Library/Application Support/Dash/License/license.dash-license
 
   # Entropy
-  - src: !join_path [*app_license_dir, General/Entropy/.els-A4AD28617A455C07768787313A53E2F79D9FA258]
-    dest: ~/Library/Application Support/.els-A4AD28617A455C07768787313A53E2F79D9FA258
+  - source: !join_path [*app_license_dir, General/Entropy/.els-A4AD28617A455C07768787313A53E2F79D9FA258]
+    path: ~/Library/Application Support/.els-A4AD28617A455C07768787313A53E2F79D9FA258
 
   # Focus
-  - src: !join_path [*app_license_dir, General/Focus/.491062.padl]
-    dest: ~/.491062.padl
-  - src: !join_path [*app_license_dir, General/Focus/paddata.padl]
-    dest: ~/Library/Application Support/Focus/paddata.padl
+  - source: !join_path [*app_license_dir, General/Focus/.491062.padl]
+    path: ~/.491062.padl
+  - source: !join_path [*app_license_dir, General/Focus/paddata.padl]
+    path: ~/Library/Application Support/Focus/paddata.padl
 
   # Spotify
-  - src: files/spotify/watch-sources.bnk
-    dest: ~/Library/Application Support/Spotify/Users/fgimian-user/watch-sources.bnk
+  - source: files/spotify/watch-sources.bnk
+    path: ~/Library/Application Support/Spotify/Users/fgimian-user/watch-sources.bnk
 
   # Sublime Text
-  - src: !join_path [*app_license_dir, General/Sublime Text/License.sublime_license]
-    dest: ~/Library/Application Support/Sublime Text 3/Local/License.sublime_license
-  - src: !join_path [*app_license_dir, General/Sublime Text/Doxy.sublime-license]
-    dest: ~/Library/Application Support/Sublime Text 3/Packages/User/Doxy.sublime-license
+  - source: !join_path [*app_license_dir, General/Sublime Text/License.sublime_license]
+    path: ~/Library/Application Support/Sublime Text 3/Local/License.sublime_license
+  - source: !join_path [*app_license_dir, General/Sublime Text/Doxy.sublime-license]
+    path: ~/Library/Application Support/Sublime Text 3/Packages/User/Doxy.sublime-license
 
   # Textual
-  - src: !join_path [*app_license_dir, General/Textual/Textual_User_License.plist]
-    dest: ~/Library/Application Support/Textual/Textual_User_License.plist
+  - source: !join_path [*app_license_dir, General/Textual/Textual_User_License.plist]
+    path: ~/Library/Application Support/Textual/Textual_User_License.plist
 
   # VMware Fusion
-  - src: files/vmware_fusion/preferences
-    dest: ~/Library/Preferences/VMware Fusion/preferences
-  - src: !join_path [*app_license_dir, General/VMware Fusion/license-fusion-80-e1-201505]
-    dest: /Library/Preferences/VMware Fusion/license-fusion-80-e1-201505
+  - source: files/vmware_fusion/preferences
+    path: ~/Library/Preferences/VMware Fusion/preferences
+  - source: !join_path [*app_license_dir, General/VMware Fusion/license-fusion-80-e1-201505]
+    path: /Library/Preferences/VMware Fusion/license-fusion-80-e1-201505
     sudo: yes
 
   # ---------------------------------------------------------------------------
@@ -53,179 +53,179 @@ software_app_files:
   # ---------------------------------------------------------------------------
 
   # Ableton Live 9 Suite
-  - src: !join_path [*app_license_dir, Music Production/Ableton/Ableton Live 9 Suite/Unlock.cfg]
-    dest: ~/Library/Application Support/Ableton/Live 9.7/Unlock/Unlock.cfg
+  - source: !join_path [*app_license_dir, Music Production/Ableton/Ableton Live 9 Suite/Unlock.cfg]
+    path: ~/Library/Application Support/Ableton/Live 9.7/Unlock/Unlock.cfg
 
   # ArtsAcoustic Reverb
-  - src: !join_path [*app_license_dir, Music Production/ArtsAcoustic/ArtsAcoustic Reverb/Preference.xml]
-    dest: ~/Library/Application Support/ArtsAcoustic/Reverb/Preference.xml
+  - source: !join_path [*app_license_dir, Music Production/ArtsAcoustic/ArtsAcoustic Reverb/Preference.xml]
+    path: ~/Library/Application Support/ArtsAcoustic/Reverb/Preference.xml
 
   # Cableguys FilterShaper
-  - src: !join_path [*app_license_dir, Music Production/Cableguys/Cableguys FilterShaper/de.cableguys.filtershaper3.plist]
-    dest: ~/Library/Preferences/de.cableguys.filtershaper3.plist
+  - source: !join_path [*app_license_dir, Music Production/Cableguys/Cableguys FilterShaper/de.cableguys.filtershaper3.plist]
+    path: ~/Library/Preferences/de.cableguys.filtershaper3.plist
 
   # Cableguys VolumeShaper
-  - src: !join_path [*app_license_dir, Music Production/Cableguys/Cableguys VolumeShaper/de.cableguys.volumeshaper4.plist]
-    dest: ~/Library/Preferences/de.cableguys.volumeshaper4.plist
+  - source: !join_path [*app_license_dir, Music Production/Cableguys/Cableguys VolumeShaper/de.cableguys.volumeshaper4.plist]
+    path: ~/Library/Preferences/de.cableguys.volumeshaper4.plist
 
   # Celemony Melodyne Editor
-  - src: !join_path [*app_license_dir, Music Production/Celemony/Celemony Melodyne Editor/Melodyne singletrack.license]
-    dest: /Library/Application Support/Celemony/Licenses/Melodyne singletrack.license
+  - source: !join_path [*app_license_dir, Music Production/Celemony/Celemony Melodyne Editor/Melodyne singletrack.license]
+    path: /Library/Application Support/Celemony/Licenses/Melodyne singletrack.license
     sudo: yes
 
   # DMG Audio Compassion
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Compassion/license]
-    dest: ~/Library/Application Support/DMGAudio/Compassion/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Compassion/license]
+    path: ~/Library/Application Support/DMGAudio/Compassion/license
 
   # DMG Audio Dualism
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Dualism/license]
-    dest: ~/Library/Application Support/DMGAudio/Dualism/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Dualism/license]
+    path: ~/Library/Application Support/DMGAudio/Dualism/license
 
   # DMG Audio EQuilibrium
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio EQuilibrium/license]
-    dest: ~/Library/Application Support/DMGAudio/EQuilibrium/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio EQuilibrium/license]
+    path: ~/Library/Application Support/DMGAudio/EQuilibrium/license
 
   # DMG Audio Essence
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Essence/license]
-    dest: ~/Library/Application Support/DMGAudio/Essence/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Essence/license]
+    path: ~/Library/Application Support/DMGAudio/Essence/license
 
   # DMG Audio Expurgate
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Expurgate/license]
-    dest: ~/Library/Application Support/DMGAudio/Expurgate/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Expurgate/license]
+    path: ~/Library/Application Support/DMGAudio/Expurgate/license
 
   # DMG Audio Limitless
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Limitless/license]
-    dest: ~/Library/Application Support/DMGAudio/Limitless/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Limitless/license]
+    path: ~/Library/Application Support/DMGAudio/Limitless/license
 
   # DMG Audio PitchFunk
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio PitchFunk/license]
-    dest: ~/Library/Application Support/DMGAudio/PitchFunk/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio PitchFunk/license]
+    path: ~/Library/Application Support/DMGAudio/PitchFunk/license
 
   # DMG Audio TrackControl
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackControl/license]
-    dest: ~/Library/Application Support/DMGAudio/TrackControl/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackControl/license]
+    path: ~/Library/Application Support/DMGAudio/TrackControl/license
 
   # DMG Audio TrackDS
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackDS/license]
-    dest: ~/Library/Application Support/DMGAudio/TrackDS/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackDS/license]
+    path: ~/Library/Application Support/DMGAudio/TrackDS/license
 
   # DMG Audio TrackGate
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackGate/license]
-    dest: ~/Library/Application Support/DMGAudio/TrackGate/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackGate/license]
+    path: ~/Library/Application Support/DMGAudio/TrackGate/license
 
   # DMG Audio TrackLimit
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackLimit/license]
-    dest: ~/Library/Application Support/DMGAudio/TrackLimit/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackLimit/license]
+    path: ~/Library/Application Support/DMGAudio/TrackLimit/license
 
   # DMG Audio TrackMeter
-  - src: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackMeter/license]
-    dest: ~/Library/Application Support/DMGAudio/TrackMeter/license
+  - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackMeter/license]
+    path: ~/Library/Application Support/DMGAudio/TrackMeter/license
 
   # Focusrite Control
-  - src: files/focusrite_control/Focusrite Control.settings
-    dest: ~/Library/Application Support/Focusrite/Focusrite Control/Settings/Focusrite Control.settings
+  - source: files/focusrite_control/Focusrite Control.settings
+    path: ~/Library/Application Support/Focusrite/Focusrite Control/Settings/Focusrite Control.settings
 
   # Focusrite Red Plugin Suite
-  - src: !join_path [*app_license_dir, Music Production/Focusrite/Focusrite Red Plugin Suite/Red2Red3Plugin.txt]
-    dest: ~/Music/Focusrite/Activation/Red2Red3Plugin.txt
+  - source: !join_path [*app_license_dir, Music Production/Focusrite/Focusrite Red Plugin Suite/Red2Red3Plugin.txt]
+    path: ~/Music/Focusrite/Activation/Red2Red3Plugin.txt
 
   # Goodhertz CanOpener
-  - src: !join_path [*app_license_dir, Music Production/Goodhertz/Goodhertz CanOpener Studio/Interface.interface]
-    dest: ~/Music/.GDHZ/Interface.interface
+  - source: !join_path [*app_license_dir, Music Production/Goodhertz/Goodhertz CanOpener Studio/Interface.interface]
+    path: ~/Music/.GDHZ/Interface.interface
 
   # Relab LX480 Complete
-  - src: files/relab_lx480_complete/Preferences.xml
-    dest: /Library/Application Support/Relab Development/LX480 Complete/Preferences.xml
+  - source: files/relab_lx480_complete/Preferences.xml
+    path: /Library/Application Support/Relab Development/LX480 Complete/Preferences.xml
 
   # Reveal Sound Spire
-  - src: !join_path [*app_license_dir, Music Production/Reveal Sound/Reveal Sound Spire/spire.lic]
-    dest: ~/Library/Application Support/RevealSound/spire.lic
+  - source: !join_path [*app_license_dir, Music Production/Reveal Sound/Reveal Sound Spire/spire.lic]
+    path: ~/Library/Application Support/RevealSound/spire.lic
 
   # Spectrasonics Omnisphere
-  - src: !join_path [*app_license_dir, Music Production/Spectrasonics/Spectrasonics Omnisphere/net.spectrasonics.V6.plist]
-    dest: ~/Library/Preferences/net.spectrasonics.V6.plist
+  - source: !join_path [*app_license_dir, Music Production/Spectrasonics/Spectrasonics Omnisphere/net.spectrasonics.V6.plist]
+    path: ~/Library/Preferences/net.spectrasonics.V6.plist
 
   # Studio Devil Amp Modeler Pro
-  - src: !join_path [*app_license_dir, Music Production/Studio Devil/Studio Devil Amp Modeler Pro/com.studiodevil.amp.plist]
-    dest: ~/Library/Preferences/com.studiodevil.amp.plist
+  - source: !join_path [*app_license_dir, Music Production/Studio Devil/Studio Devil Amp Modeler Pro/com.studiodevil.amp.plist]
+    path: ~/Library/Preferences/com.studiodevil.amp.plist
 
   # Synapse Audio DUNE
-  - src: !join_path [*app_license_dir, Music Production/Synapse Audio/Synapse Audio DUNE/.DUNE2reg]
-    dest: /Library/Application Support/Synapse Audio/.DUNE2reg
+  - source: !join_path [*app_license_dir, Music Production/Synapse Audio/Synapse Audio DUNE/.DUNE2reg]
+    path: /Library/Application Support/Synapse Audio/.DUNE2reg
     sudo: yes
 
   # u-he Hive
-  - src: !join_path [*app_license_dir, Music Production/u-he/u-he Hive/com.u-he.Hive.plist]
-    dest: ~/Library/Application Support/u-he/com.u-he.Hive.plist
+  - source: !join_path [*app_license_dir, Music Production/u-he/u-he Hive/com.u-he.Hive.plist]
+    path: ~/Library/Application Support/u-he/com.u-he.Hive.plist
 
   # u-he MFM2
-  - src: !join_path [*app_license_dir, Music Production/u-he/u-he MFM2/com.u-he.MFM2.plist]
-    dest: ~/Library/Application Support/u-he/com.u-he.MFM2.plist
+  - source: !join_path [*app_license_dir, Music Production/u-he/u-he MFM2/com.u-he.MFM2.plist]
+    path: ~/Library/Application Support/u-he/com.u-he.MFM2.plist
 
   # u-he Satin
-  - src: !join_path [*app_license_dir, Music Production/u-he/u-he Satin/com.u-he.Satin.plist]
-    dest: ~/Library/Application Support/u-he/com.u-he.Satin.plist
+  - source: !join_path [*app_license_dir, Music Production/u-he/u-he Satin/com.u-he.Satin.plist]
+    path: ~/Library/Application Support/u-he/com.u-he.Satin.plist
 
   # u-he Uhbik
-  - src: !join_path [*app_license_dir, Music Production/u-he/u-he Uhbik/com.u-he.Uhbik.plist]
-    dest: ~/Library/Application Support/u-he/com.u-he.Uhbik.plist
+  - source: !join_path [*app_license_dir, Music Production/u-he/u-he Uhbik/com.u-he.Uhbik.plist]
+    path: ~/Library/Application Support/u-he/com.u-he.Uhbik.plist
 
   # u-he Zebra
-  - src: !join_path [*app_license_dir, Music Production/u-he/u-he Zebra/com.u-he.Zebra2.plist]
-    dest: ~/Library/Application Support/u-he/com.u-he.Zebra2.plist
+  - source: !join_path [*app_license_dir, Music Production/u-he/u-he Zebra/com.u-he.Zebra2.plist]
+    path: ~/Library/Application Support/u-he/com.u-he.Zebra2.plist
 
   # ValhallaDSP ValhallaVintageVerb
-  - src: !join_path [*app_license_dir, Music Production/ValhallaDSP/ValhallaDSP ValhallaVintageVerb/ValhallaVintageVerb.settings]
-    dest: ~/Library/Preferences/ValhallaVintageVerb.settings
+  - source: !join_path [*app_license_dir, Music Production/ValhallaDSP/ValhallaDSP ValhallaVintageVerb/ValhallaVintageVerb.settings]
+    path: ~/Library/Preferences/ValhallaVintageVerb.settings
 
   # Voxengo Deft Compressor
-  - src: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Deft Compressor/product-key-name]
-    dest: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Deft Compressor/product-key-name
-  - src: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Deft Compressor/product-key-value]
-    dest: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Deft Compressor/product-key-value
+  - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Deft Compressor/product-key-name]
+    path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Deft Compressor/product-key-name
+  - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Deft Compressor/product-key-value]
+    path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Deft Compressor/product-key-value
 
   # Voxengo Elephant
-  - src: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Elephant/product-key-name]
-    dest: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Elephant/product-key-name
-  - src: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Elephant/product-key-value]
-    dest: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Elephant/product-key-value
+  - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Elephant/product-key-name]
+    path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Elephant/product-key-name
+  - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Elephant/product-key-value]
+    path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Elephant/product-key-value
 
   # Voxengo GlissEQ
-  - src: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo GlissEQ/product-key-name]
-    dest: ~/Library/Preferences/Voxengo/Audio Plug-Ins/GlissEQ/product-key-name
-  - src: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo GlissEQ/product-key-value]
-    dest: ~/Library/Preferences/Voxengo/Audio Plug-Ins/GlissEQ/product-key-value
+  - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo GlissEQ/product-key-name]
+    path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/GlissEQ/product-key-name
+  - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo GlissEQ/product-key-value]
+    path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/GlissEQ/product-key-value
 
   # Voxengo Voxformer
-  - src: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Voxformer/product-key-name]
-    dest: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer/product-key-name
-  - src: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Voxformer/product-key-value]
-    dest: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer/product-key-value
+  - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Voxformer/product-key-name]
+    path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer/product-key-name
+  - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Voxformer/product-key-value]
+    path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer/product-key-value
 
   # Xfer Records Serum
-  - src: !join_path [*app_license_dir, Music Production/Xfer Records/Xfer Records Serum/user.dat]
-    dest: ~/Library/Application Support/com.xferrecords.serum/user.dat
+  - source: !join_path [*app_license_dir, Music Production/Xfer Records/Xfer Records Serum/user.dat]
+    path: ~/Library/Application Support/com.xferrecords.serum/user.dat
 
   # ---------------------------------------------------------------------------
   # Dotfiles
   # ---------------------------------------------------------------------------
 
   # Bash Profile
-  - src: files/dotfiles/.bash_profile
-    dest: ~/.bash_profile
+  - source: files/dotfiles/.bash_profile
+    path: ~/.bash_profile
 
   # Git Configuration
-  - src: files/dotfiles/.gitconfig
-    dest: ~/.gitconfig
+  - source: files/dotfiles/.gitconfig
+    path: ~/.gitconfig
 
   # SSH Configuration (Sierra specific)
-  # - src: files/dotfiles/.ssh/config
-  #   dest: ~/.ssh/config
+  # - source: files/dotfiles/.ssh/config
+  #   path: ~/.ssh/config
 
   # Fish Profile
-  - src: files/dotfiles/.config/fish/config.fish
-    dest: ~/.config/fish/config.fish
+  - source: files/dotfiles/.config/fish/config.fish
+    path: ~/.config/fish/config.fish
 
   # IPython Configuration
-  - src: files/dotfiles/.ipython/profile_default/ipython_config.py
-    dest: ~/.ipython/profile_default/ipython_config.py
+  - source: files/dotfiles/.ipython/profile_default/ipython_config.py
+    path: ~/.ipython/profile_default/ipython_config.py

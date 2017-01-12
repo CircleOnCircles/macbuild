@@ -32,15 +32,6 @@ then
     brew install python3
 fi
 
-# Install Ansible (using pip is the officially supported way)
-if ! pip3 show ansible > /dev/null 2>&1
-then
-    echo -e "${BLUE}Installing Ansible${ENDC}"
-    # TODO: switch back to pip when Ansible 2.2.1.0 is released
-    # pip3 install ansible
-    pip3 install https://releases.ansible.com/ansible/ansible-2.2.1.0-0.2.rc2.tar.gz
-fi
-
 # Setup the source of music production software from the backup drive attached
 if [ -d "/Volumes/Backup Mac 1" ]
 then

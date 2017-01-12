@@ -128,27 +128,27 @@ def software(elite, config, printer):
 
     printer.info('Install the app files requested.')
     for app_file in config.software_app_files:
-            if app_file['dest'] != '/' and app_file['dest'] != '~':
+            if app_file['path'] != '/' and app_file['path'] != '~':
                 elite.file(
-                    path=os.path.dirname(app_file['dest']),
+                    path=os.path.dirname(app_file['path']),
                     state='directory', sudo=app_file.get('sudo', False)
                 )
 
             elite.file(
-                source=app_file['src'], path=app_file['dest'], mode=app_file.get('mode', '0644'),
+                source=app_file['source'], path=app_file['path'], mode=app_file.get('mode', '0644'),
                 sudo=app_file.get('sudo', False)
             )
 
     printer.info('Symlink file to requested destination.')
     for app_symlink in config.software_app_symlinks:
-        if app_symlink['dest'] != '/' and app_symlink['dest'] != '~':
-            elite.file(path=os.path.dirname(app_symlink['dest']), state='directory')
+        if app_symlink['path'] != '/' and app_symlink['path'] != '~':
+            elite.file(path=os.path.dirname(app_symlink['path']), state='directory')
 
-        symlink_health = elite.file_info(path=app_symlink['dest'])
+        symlink_health = elite.file_info(path=app_symlink['path'])
         if symlink_health.exists and symlink_health.file_type != 'symlink':
-            elite.file(path=app_symlink['dest'], state='absent')
+            elite.file(path=app_symlink['path'], state='absent')
 
-        elite.file(path=app_symlink['dest'], source=app_symlink['src'], state='symlink')
+        elite.file(path=app_symlink['path'], source=app_symlink['source'], state='symlink')
 
 
 def native_instruments(elite, config, printer):
