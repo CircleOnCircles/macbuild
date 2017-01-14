@@ -75,10 +75,11 @@ def main(elite, config, printer):
     printer.heading('Dock')
     dock(elite, config, printer)
 
-    # # Post-tasks
-    # printer.heading('Launchpad')
-    # printer.info('Configuring Launchpad and Dashboard apps and widgets.')
-    # elite.run(command='./library/launchpad.py build config/launchpad.yaml')
+    # Post-tasks
+    printer.heading('Launchpad')
+    launchpad = elite.launchpad(widget_layout=config.widget_layout, app_layout=config.app_layout)
+    if launchpad.changed:
+        elite.run(command='killall Dock', changed=False)
 
     # Summary
     printer.heading('Summary')
