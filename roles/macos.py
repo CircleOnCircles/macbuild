@@ -4,7 +4,7 @@ def macos(elite, config, printer):
 
     if (
         f'Computer Sleep: {config.macos_computer_sleep_time}' !=
-        computer_sleep.stdout.strip().replace('after ', '').replace('minutes', '')
+        computer_sleep.stdout.rstrip().replace('after ', '').replace('minutes', '')
     ):
         elite.run(
             command=f'systemsetup -setcomputersleep {config.macos_computer_sleep_time}', sudo=True
@@ -15,7 +15,7 @@ def macos(elite, config, printer):
 
     if (
         f'Display Sleep: {config.macos_display_sleep_time}' !=
-        display_sleep.stdout.strip().replace('after ', '').replace('minutes', '')
+        display_sleep.stdout.rstrip().replace('after ', '').replace('minutes', '')
     ):
         elite.run(
             command=f'systemsetup -setdisplaysleep {config.macos_display_sleep_time}', sudo=True
@@ -24,7 +24,7 @@ def macos(elite, config, printer):
     printer.info('Set the timezone.')
     current_timezone = elite.run(command='systemsetup -gettimezone', sudo=True, changed=False)
 
-    if f'Time Zone: {config.macos_timezone}' != current_timezone.stdout.strip():
+    if f'Time Zone: {config.macos_timezone}' != current_timezone.stdout.rstrip():
         elite.run(command=f'systemsetup -settimezone {config.macos_timezone}', sudo=True)
 
     printer.info("Unhide the user's Library directory.")
