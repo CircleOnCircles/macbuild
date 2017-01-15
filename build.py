@@ -14,8 +14,8 @@ def main(elite, config, printer):
     printer.info('Checking sudo rights are available.')
     elite.run(command='sudo -nv', changed=False)
 
-    # printer.info('Update homebrew to the latest version.')
-    # elite.homebrew(update_homebrew=True)
+    printer.info('Update homebrew to the latest version.')
+    elite.brew_update()
 
     printer.info('Install Homebrew Cask.')
     elite.tap(name='caskroom/cask', state='present')
@@ -28,7 +28,6 @@ def main(elite, config, printer):
     for cask in config.software_brew_cask_fonts:
         elite.cask(name=cask, state='present')
 
-    # TODO
     # printer.info('Configuring the Terminal.')
     # elite.run(command='./library/terminal.js')
 
