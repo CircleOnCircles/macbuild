@@ -60,24 +60,13 @@ def spotify(elite, config, printer):
         elite.spotify_pref(pref=pref, value=value, username=config.spotify_username)
 
     printer.info('Check if Spotify is in login items.')
-    spotify_login = elite.run(
-        command=(
-            'osascript -l JavaScript -e "'
-            "Application('System Events').loginItems.byName('Spotify').name()"
-            '"'
-        ),
-        ignore_failed=True
-    )
 
-    if spotify_login.ok:
+    login_items = elite.run(command='loginitems -l', changed=False)
+    login_items = login_items.stdout.rstrip().split(', ')
+
+    if 'Spotify' in login_items:
         printer.info('Remove Spotify from login items.')
-        elite.run(
-            command=(
-                'osascript -l JavaScript -e "'
-                "Application('System Events').loginItems.byName('Spotify').delete()"
-                '"'
-            )
-        )
+        elite.run(command='loginitems -d Spotify')
 
 
 def software(elite, config, printer):

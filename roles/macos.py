@@ -29,7 +29,6 @@ def macos(elite, config, printer):
 
     printer.info("Unhide the user's Library directory.")
     library_flags = elite.run(command='ls -lOd ~/Library', changed=False)
-
     if 'hidden' in library_flags.stdout:
         elite.run(command='chflags nohidden ~/Library')
 
@@ -76,16 +75,21 @@ def default_apps(elite, config, printer):
 
     for bundle_id, utis in config.default_apps_associations.items():
         for uti in utis:
-            association = elite.run(command=f'duti -d {uti}')
+            association = elite.run(command=f'duti -d {uti}', changed=False)
 
-            if association.stdout != bundle_id.lower():
+            if association.stdout.rstrip() != bundle_id.lower():
                 elite.run(command=f'duti -s {bundle_id} {uti} all')
 
 
 def startup(elite, config, printer):
     printer.info('Add login items.')
+
+    login_items = elite.run(command='loginitems -l', changed=False)
+    login_items = login_items.stdout.rstrip().split(', ')
+
     for login_item in config.startup_login_items:
-        elite.run(command=f"loginitems -a '{login_item}'")
+        if login_item not in login_items:
+            elite.run(command=f"loginitems -a '{login_item}'")
 
 
 def dock(elite, config, printer):
@@ -97,7 +101,7 @@ def dock(elite, config, printer):
         elite.run(command=f"dockutil --add '/Applications/{app}.app' --no-restart")
 
     printer.info('Add folders to the dock.')
-    for folder in config.dock_folders:
+    for folder in config.dock_other:
         if not isinstance(folder, dict):
             folder = {'dest': folder}
 
