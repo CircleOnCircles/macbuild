@@ -1,4 +1,4 @@
-app_layout:
+launchpad_app_layout:
   # Page 1: Apple
   -
     # Most Useful Apps
@@ -189,7 +189,7 @@ app_layout:
           - Reaktor 6
           - ServiceCenter
 
-widget_layout:
+launchpad_widget_layout:
   -
     - Ski Report
     - Calculator

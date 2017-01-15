@@ -90,27 +90,3 @@ def startup(elite, config, printer):
     for login_item in config.startup_login_items:
         if login_item not in login_items:
             elite.run(command=f"loginitems -a '{login_item}'")
-
-
-def dock(elite, config, printer):
-    printer.info('Remove all items from the dock.')
-    elite.run(command='dockutil --remove all --no-restart')
-
-    printer.info('Add apps to the dock.')
-    for app in config.dock_apps:
-        elite.run(command=f"dockutil --add '/Applications/{app}.app' --no-restart")
-
-    printer.info('Add folders to the dock.')
-    for folder in config.dock_other:
-        if not isinstance(folder, dict):
-            folder = {'dest': folder}
-
-        elite.run(command=(
-            f"dockutil --add '{folder['dest']}' "
-            f"--view {folder.get('view', 'fan')} "
-            f"--display {folder.get('display', 'stack')} "
-            f"--sort {folder.get('sort', 'dateadded')} --no-restart"
-        ))
-
-    printer.info('Restart the dock.')
-    elite.run(command='killall Dock', changed=False)

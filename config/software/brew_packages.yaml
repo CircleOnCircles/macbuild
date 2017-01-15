@@ -6,7 +6,6 @@ software_brew_packages:
   - ctags
   - curl
   - duti
-  - dockutil
   - dos2unix
   - ffmpeg
   - findutils

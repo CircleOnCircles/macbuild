@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from elite.decorators import elite_main
 
-from roles.macos import macos, default_apps, startup, dock
+from roles.macos import macos, default_apps, startup
 from roles.unix import unix, vim, docker, sshfs, node_js, python
 from roles.software import sublime_text, spotify, software, native_instruments
 
@@ -71,12 +71,18 @@ def main(elite, config, printer):
     printer.heading('Startup Items')
     startup(elite, config, printer)
 
-    printer.heading('Dock')
-    dock(elite, config, printer)
-
     # Post-tasks
+    printer.heading('Dock')
+    dock = elite.dock(
+        app_layout=config.dock_app_layout, other_layout=config.dock_other_layout
+    )
+    if dock.changed:
+        elite.run(command='killall Dock', changed=False)
+
     printer.heading('Launchpad')
-    launchpad = elite.launchpad(widget_layout=config.widget_layout, app_layout=config.app_layout)
+    launchpad = elite.launchpad(
+        widget_layout=config.launchpad_widget_layout, app_layout=config.launchpad_app_layout
+    )
     if launchpad.changed:
         elite.run(command='killall Dock', changed=False)
 

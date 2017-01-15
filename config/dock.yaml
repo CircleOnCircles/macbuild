@@ -1,5 +1,5 @@
 # Dock applications (in the left section)
-dock_apps:
+dock_app_layout:
   - ForkLift
   - Launchpad
   - Safari
@@ -21,6 +21,6 @@ dock_apps:
   - App Store
   - System Preferences
 
-# Dock folders (in the right section)
-dock_folders:
-  - ~/Downloads
+# Dock folders and URLs (in the right section)
+dock_other_layout:
+  - path: ~/Downloads
