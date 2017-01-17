@@ -32,6 +32,16 @@ then
     brew install python3
 fi
 
+# Install PyObjC dependencies
+for package in pyobjc-framework-Cocoa pyobjc-framework-LaunchServices pyobjc-framework-ScriptingBridge
+do
+    if ! pip3 show "$package" > /dev/null 2>&1
+    then
+        echo -e "${BLUE}Installing ${package}${ENDC}"
+        pip3 install "$package"
+    fi
+done
+
 # Setup the source of music production software from the backup drive attached
 if [ -d "/Volumes/Backup Mac 1" ]
 then
