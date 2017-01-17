@@ -79,14 +79,3 @@ def default_apps(elite, config, printer):
 
             if association.stdout.rstrip() != bundle_id.lower():
                 elite.run(command=f'duti -s {bundle_id} {uti} all')
-
-
-def startup(elite, config, printer):
-    printer.info('Add login items.')
-
-    login_items = elite.run(command='loginitems -l', changed=False)
-    login_items = login_items.stdout.rstrip().split(', ')
-
-    for login_item in config.startup_login_items:
-        if login_item not in login_items:
-            elite.run(command=f"loginitems -a '{login_item}'")

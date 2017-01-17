@@ -4,5 +4,4 @@ software_brew_taps:
   - homebrew/fuse
   - caskroom/fonts
   - caskroom/versions
-  - OJFord/formulae
   - fgimian/fgimian

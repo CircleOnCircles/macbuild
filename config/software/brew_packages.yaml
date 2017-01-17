@@ -13,7 +13,6 @@ software_brew_packages:
   - git
   - gnu-sed
   - hugo
-  - loginitems
   - mas
   - md5sha1sum
   - p7zip
