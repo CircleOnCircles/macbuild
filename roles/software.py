@@ -4,7 +4,7 @@ import re
 
 def sublime_text(elite, config, printer):
     printer.info('Install sublime text.')
-    elite.cask(name='sublime-text', state='present')
+    elite.cask(name='sublime-text')
 
     printer.info('Ensure the sublime text settings directories exist.')
     for path in [
@@ -37,7 +37,7 @@ def spotify(elite, config, printer):
             return str(value)
 
     printer.info('Install spotify.')
-    elite.cask(name='spotify', state='present')
+    elite.cask(name='spotify')
 
     printer.info('Ensure the spotify global settings directories exist.')
     elite.file(path='~/Library/Application Support/Spotify', state='directory')
@@ -48,7 +48,7 @@ def spotify(elite, config, printer):
     if not global_spotify_prefs.exists:
         printer.info('Creating the global spotify prefs file.')
         elite.file(
-            path='~/Library/Application Support/Spotify/prefs', state='touch', mode='0644'
+            path='~/Library/Application Support/Spotify/prefs', mode='0644'
         )
 
     printer.info('Set global settings.')
@@ -72,7 +72,7 @@ def spotify(elite, config, printer):
 def software(elite, config, printer):
     printer.info('Homebrew Cask desktop applications.')
     for cask in config.software_brew_casks:
-        elite.cask(name=cask, state='present')
+        elite.cask(name=cask)
 
     printer.info('Check app store applications.')
     for app in config.software_appstore_apps:

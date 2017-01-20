@@ -38,12 +38,12 @@ def docker(elite, config, printer):
         elite.run(command='docker-machine stop default')
 
     printer.info('Install kitematic.')
-    elite.cask(name='kitematic', state='present')
+    elite.cask(name='kitematic')
 
 
 def sshfs(elite, config, printer):
     printer.info('Install osxfuse.')
-    elite.cask(name='osxfuse', state='present')
+    elite.cask(name='osxfuse')
 
     printer.info('Install sshfs.')
     elite.brew(name='sshfs', state='latest')

@@ -18,15 +18,15 @@ def main(elite, config, printer):
     elite.brew_update()
 
     printer.info('Install Homebrew Cask.')
-    elite.tap(name='caskroom/cask', state='present')
+    elite.tap(name='caskroom/cask')
 
     printer.info('Setup Homebrew taps.')
     for tap in config.software_brew_taps:
-        elite.tap(name=tap, state='present')
+        elite.tap(name=tap)
 
     printer.info('Installing additional fonts.')
     for cask in config.software_brew_cask_fonts:
-        elite.cask(name=cask, state='present')
+        elite.cask(name=cask)
 
     # printer.info('Configuring the Terminal.')
     # elite.run(command='./library/terminal.js')
@@ -89,10 +89,6 @@ def main(elite, config, printer):
     )
     if launchpad.changed:
         elite.run(command='killall Dock', changed=False)
-
-    # Summary
-    printer.heading('Summary')
-    elite.summary()
 
 
 if __name__ == '__main__':
