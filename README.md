@@ -1,5 +1,11 @@
 # Mac Build Elite
 
+![License](https://img.shields.io/badge/license-Proprietary-blue.svg)
+
+![Mac Build Logo](https://raw.githubusercontent.com/fgimian/macbuild/master/images/macbuild-logo.png)
+
+Artwork courtesy of [Apple](http://www.apple.com)
+
 ## Quick Start
 
 You may wish to perform the following steps to save time and ensure everything
@@ -73,3 +79,8 @@ The following software should be deactivated before re-installing macOS:
 
 * **Celemony Melodyne Editor**
 * **LennarDigital Sylenth1**
+
+## License
+
+Mac Build is proprietary software and may not be copied and/or distributed
+without the express written permission of Fotis Gimian.
