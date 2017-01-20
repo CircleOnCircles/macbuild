@@ -1,5 +1,4 @@
 import os
-import re
 
 
 def sublime_text(elite, config, printer):
@@ -98,12 +97,13 @@ def software(elite, config, printer):
             if app_file['path'] != '/' and app_file['path'] != '~':
                 elite.file(
                     path=os.path.dirname(app_file['path']),
-                    state='directory', sudo=app_file.get('sudo', False)
+                    state='directory',
+                    sudo=app_file.get('sudo', False)
                 )
 
             elite.file(
-                source=app_file['source'], path=app_file['path'], mode=app_file.get('mode', '0644'),
-                sudo=app_file.get('sudo', False)
+                source=app_file['source'], path=app_file['path'],
+                mode=app_file.get('mode', '0644'), sudo=app_file.get('sudo', False)
             )
 
     printer.info('Symlink file to requested destination.')
