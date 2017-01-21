@@ -210,9 +210,9 @@ macos_defaults:
       # Disable slow motion effects
       # (http://apple.stackexchange.com/questions/66433)
       AppleSymbolicHotKeys:
-        34: { enabled: 0 }
-        35: { enabled: 0 }
-        37: { enabled: 0 }
+        '34': { enabled: false }
+        '35': { enabled: false }
+        '37': { enabled: false }
 
   # Screen Capture
   - domain: com.apple.screencapture
@@ -233,3 +233,34 @@ macos_defaults:
       AutoFillPasswords: false
       # Advanced / Show Develop menu in menu bar
       IncludeDevelopMenu: true
+
+  # Terminal
+  - domain: com.apple.Terminal
+    values:
+      Default Window Settings: Fots
+      Startup Window Settings: Fots
+      Window Settings:
+        Fots:
+          name: Fots
+          type: Window Settings
+          ProfileCurrentVersion: 2.04
+          ShowWindowSettingsNameInTitle: false
+
+          # Preferences / Profiles / Shell / When the shell exits: / Don't close the window
+          shellExitAction: 2
+
+          # Window Size
+          columnCount: 135
+          rowCount: 26
+
+          # Font
+          Font: !macos_font [SauceCodePowerline-Regular, 16]
+          FontAntialias: true
+
+          # Colours
+          BackgroundBlur: 0.0
+          BackgroundColor: !macos_color [0, 0, 0, 1.0]
+          TextColor: !macos_color [242, 242, 242, 1.0]
+          TextBoldColor: !macos_color [255, 255, 255, 1.0]
+          SelectionColor: !macos_color [65, 65, 65, 1.0]
+          CursorColor: !macos_color [77, 77, 77, 1.0]

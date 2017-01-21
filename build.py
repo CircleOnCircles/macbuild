@@ -28,9 +28,6 @@ def main(elite, config, printer):
     for cask in config.software_brew_cask_fonts:
         elite.cask(name=cask)
 
-    # printer.info('Configuring the Terminal.')
-    # elite.run(command='./library/terminal.js')
-
     # Roles
     printer.heading('macOS Configuration')
     macos(elite, config, printer)
@@ -69,7 +66,7 @@ def main(elite, config, printer):
     default_apps(elite, config, printer)
 
     printer.heading('Login Items')
-    login_items()
+    login_items(elite, config, printer)
 
     # Post-tasks
     printer.heading('Dock')
