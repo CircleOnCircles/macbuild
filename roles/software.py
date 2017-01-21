@@ -58,14 +58,8 @@ def spotify(elite, config, printer):
     for pref, value in config.spotify_user_settings.items():
         elite.spotify_pref(pref=pref, value=value, username=config.spotify_username)
 
-    printer.info('Check if Spotify is in login items.')
-
-    login_items = elite.run(command='loginitems -l', changed=False)
-    login_items = login_items.stdout.rstrip().split(', ')
-
-    if 'Spotify' in login_items:
-        printer.info('Remove Spotify from login items.')
-        elite.run(command='loginitems -d Spotify')
+    printer.info('Ensure that Spotify is not in login items.')
+    elite.login_item(path='/Applications/Spotify.app', state='absent')
 
 
 def software(elite, config, printer):
