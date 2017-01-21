@@ -1,10 +1,10 @@
 default_apps_associations:
   # Sublime text
-  com.sublimetext.3:
+  Sublime Text:
     - public.plain-text
 
   # Entropy
-  com.eigenlogik.Entropy:
+  Entropy:
     - public.zip-archive
     - public.tar-archive
     - org.gnu.gnu-zip-tar-archive

@@ -72,10 +72,9 @@ def macos(elite, config, printer):
 
 def default_apps(elite, config, printer):
     printer.info('Setup default app associations.')
-
-    for bundle_id, utis in config.default_apps_associations.items():
-        for uti in utis:
-            association = elite.run(command=f'duti -d {uti}', changed=False)
-
-            if association.stdout.rstrip() != bundle_id.lower():
-                elite.run(command=f'duti -s {bundle_id} {uti} all')
+    for app, content_types in config.default_apps_associations.items():
+        for content_type in content_types:
+            elite.handler(
+                path=f'/Applications/{app}.app',
+                content_type=content_type
+            )
