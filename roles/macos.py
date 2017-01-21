@@ -78,3 +78,9 @@ def default_apps(elite, config, printer):
                 path=f'/Applications/{app}.app',
                 content_type=content_type
             )
+
+
+def login_items(elite, config, printer):
+    printer.info('Add login items.')
+    for login_item in config.startup_login_items:
+        elite.login_item(path=f'/Applications/{login_item}.app')
