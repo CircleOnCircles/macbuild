@@ -20,10 +20,10 @@ def sublime_text(elite, config, printer):
     )
 
     printer.info('Install sublime text settings.')
-    # elite.file(
-    #     source='files/sublime_text/',
-    #     path='~/Library/Application Support/Sublime Text 3/Packages/User'
-    # )
+    elite.rsync(
+        source='files/sublime_text/',
+        path='~/Library/Application Support/Sublime Text 3/Packages/User'
+    )
 
 
 def spotify(elite, config, printer):
