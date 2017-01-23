@@ -246,6 +246,9 @@ macos_defaults:
           ProfileCurrentVersion: 2.04
           ShowWindowSettingsNameInTitle: false
 
+          # Preferences / Profiles / Advanced / Disable 'Audible bell'
+          Bell: false
+
           # Preferences / Profiles / Shell / When the shell exits: / Don't close the window
           shellExitAction: 2
 
