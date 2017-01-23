@@ -1,0 +1,21 @@
+favourites_layout:
+  # Special
+  - All My Files
+  - AirDrop
+
+  # Cloud Storage
+  - ~/Dropbox
+  - iCloud Drive
+  - ~/OneDrive
+
+  # Apps
+  - /Applications
+
+  # Home
+  - '~'
+  - ~/Desktop
+  - ~/Documents
+  - ~/Downloads
+  - ~/Movies
+  - ~/Pictures
+  - ~/Music

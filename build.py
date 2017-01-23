@@ -69,6 +69,10 @@ def main(elite, config, printer):
     login_items(elite, config, printer)
 
     # Post-tasks
+    printer.heading('Finder Favourites')
+    printer.info('Build Finder Favourites layout.')
+    elite.favourites(layout=config.favourites_layout)
+
     printer.heading('Dock')
     printer.info('Build Dock layout.')
     dock = elite.dock(app_layout=config.dock_app_layout, other_layout=config.dock_other_layout)
