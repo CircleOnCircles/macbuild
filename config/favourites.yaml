@@ -1,11 +1,10 @@
 favourites_layout:
   # Special
   - All My Files
-  - AirDrop
 
   # Cloud Storage
-  - ~/Dropbox
   - iCloud Drive
+  - ~/Dropbox
   - ~/OneDrive
 
   # Apps
