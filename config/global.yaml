@@ -4,3 +4,14 @@ development_dir: &development_dir '~/Documents/Development'
 # Set our cloud application configuration and license root directories
 app_config_dir: &app_config_dir '~/Documents/System Automation/Software Settings'
 app_license_dir: &app_license_dir '~/Documents/System Automation/Software Licenses'
+
+# Sample library and music production software source locations
+sample_library_sources:
+  - /Volumes/Backup Mac 1/Software/Sample Libraries
+  - /Volumes/Backup Mac 2/Software/Sample Libraries
+music_software_sources:
+  - /Volumes/Backup Mac 1/Software/Music Production
+  - /Volumes/Backup Mac 2/Software/Music Production
+
+# Destination path to install all sample libraries to
+sample_library_dir: /Volumes/Sample Libraries
