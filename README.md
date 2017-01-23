@@ -32,7 +32,6 @@ The following tasks must be performed manually.
 
 ### Installation & Configuration (macOS)
 
-* **Finder**: Setup sidebar containing favourites
 * **Services**: In System Preferences / Keyboard / Services, enable 'New Terminal at Folder' and 'New Terminal Tab at Folder'
 * **Screen Saver**: Set the screen saver to 'Flurry'
 * **Notification Centre**: Set the order of items and allow permission
