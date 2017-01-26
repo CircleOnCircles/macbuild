@@ -1,7 +1,4 @@
 {
     // Set the colour schema to something nice and dark
-    "color_scheme": "Packages/PlainTasks/tasks-eighties-dark.hidden-tmTheme",
-
-    // Override the font size (which is independent for this extension)
-    "font_size": 13
+    "color_scheme": "Packages/PlainTasks/tasks-eighties-dark.hidden-tmTheme"
 }
