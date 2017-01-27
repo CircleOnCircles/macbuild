@@ -1,0 +1,102 @@
+# Destination path to install all sample libraries to
+sample_library_dir: /Volumes/Sample Libraries
+
+# The sample libraries to install and their properties
+sample_libraries:
+  # Blakus
+  - Blakus pocketBlakus
+
+  # Cinematic Studio Series
+  - Cinematic Studio Piano
+  - Cinematic Studio Strings
+
+  # Heavyocity
+  - name: Heavyocity Gravity Pack 02 Vocalise
+    base_dir: GP02 Vocalise
+
+  # Ivy Audio
+  - name: Ivy Audio Clare Solo
+    base_dir: Ivy Audio - Clare Solo v2
+  - name: Ivy Audio Piano in 162
+    base_dir: Ivy Audio - Piano in 162
+
+  # Orchestral Tools (Berlin Series Core)
+  - name: Orchestral Tools Berlin Brass
+    installer: BBR Mac Installer.pkg
+  - name: Orchestral Tools Berlin Percussion
+    installer: BPC Mac Installer.pkg
+  - name: Orchestral Tools Berlin Strings
+    installer: BST Mac Installer.pkg
+  - name: Orchestral Tools Berlin Woodwinds
+    installer: BWW Mac Installer.pkg
+
+  # Orchestral Tools (Berlin Series Expansions)
+  - Orchestral Tools Berlin Brass Expansion C (SFX French Horns)
+  - Orchestral Tools Berlin Percussion Expansion A (Timpani)
+  - Orchestral Tools Berlin Strings Expansion A (Special Bows I)
+  - Orchestral Tools Berlin Strings Expansion B (Special Bows II)
+  - Orchestral Tools Berlin Strings Expansion D (First Chairs)
+  - Orchestral Tools Berlin Strings Expansion E (SFX)
+  - Orchestral Tools Berlin Woodwinds Expansion A (Additional Instruments)
+  - Orchestral Tools Berlin Woodwinds Expansion B (Soloists I)
+  - Orchestral Tools Berlin Woodwinds Expansion C (Soloists II)
+  - Orchestral Tools Berlin Woodwinds Expansion D (SFX)
+
+  # Orchestral Tools Metropolis Ark
+  - name: Orchestral Tools Metropolis Ark 1 (The Monumental Orchestra)
+    installer: METROPOLIS ARK I Mac Installer.pkg
+  - name: Orchestral Tools Metropolis Ark 2 (Orchestra of the Deep)
+    installer: METROPOLIS Ark 2 Mac Installer.pkg
+
+  # Orchestral Tools Soloists Series
+  - Orchestral Tools Nocturne Cello (Soloists II)
+  - Orchestral Tools Nocturne Violin (Soloists I)
+
+  # Orchestral Tools Tools Collection
+  - Orchestral Tools Orchestral String Runs
+  - Orchestral Tools Symphonic Sphere
+
+  # Orchestral Tools The Series
+  - name: Orchestral Tools The Orchestral Grands
+    extract_subdirs:
+      tog_instruments_v1.3.zip: Instruments/v1.3
+
+  # Soundiron
+  - name: Soundiron Mars Symphonic Mens Choir
+    base_dir: Soundiron_Mars_Mens_Choir
+  - name: Soundiron Venus Symphonic Womens Choir
+    base_dir: Soundiron_Venus_Womens_Choir
+
+  # Spitfire Audio
+  - Spitfire Albion ONE library
+  - Spitfire Harp library
+  - Spitfire HZ01 library
+  - Spitfire Loegria library
+
+  # Zero-G
+  - name: Zero-G ETHERA Cinematic Vocal Instrument
+    base_dir: Zero-G_ETHERA_1.1_Update
+    extract_subdirs:
+      ETHERA_ROLI_PATCHES.zip: Ethera Instruments/Extra Sounds
+
+  # Focusrite
+  - name: Focusrite 2016 Loopmasters Content
+    base_dir: Focusrite 2GB Loopmasters Content
+
+  # Vengeance
+  - Vengeance Effects Vol 1
+  - Vengeance Effects Vol 2
+  - Vengeance Electro Essentials Vol 1
+  - Vengeance Essential Clubsounds Vol 1
+  - Vengeance Essential Clubsounds Vol 2
+  - Vengeance Essential Clubsounds Vol 3
+
+  # Wave Alchemy
+  - name: Wave Alchemy Drum Machine Collection
+    base_dir: wa_drum_machine_collection
+  - name: Wave Alchemy Drum Tools 01 Deluxe
+    base_dir: wa_drum_tools_01_deluxe
+  - name: Wave Alchemy Drum Tools 02
+    base_dir: wa_drum_tools_02
+  - name: Wave Alchemy Wired Electronics
+    base_dir: wave_alchemy_wired_electronics

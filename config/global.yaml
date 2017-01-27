@@ -12,6 +12,3 @@ sample_library_sources:
 music_software_sources:
   - /Volumes/Backup Mac 1/Software/Music Production
   - /Volumes/Backup Mac 2/Software/Music Production
-
-# Destination path to install all sample libraries to
-sample_library_dir: /Volumes/Sample Libraries
