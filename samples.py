@@ -115,10 +115,6 @@ def omnisphere_steam_library(elite, config, printer, music_software_source):
 
 
 def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_source):
-    library_paths = elite.find(
-        path=sample_library_source, min_depth=2, max_depth=2, types=['directory']
-    )
-
     # Build a data structure which we may use to determine sample library properties
     sample_libraries_config = {}
     for sample_library_config in config.sample_libraries:
@@ -130,35 +126,41 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
             name = sample_library_config
             base_dir = None
             installer = None
-            extract_subdirs = []
+            extract_subdirs = {}
         else:
             name = sample_library_config['name']
             base_dir = sample_library_config.get('base_dir')
             installer = sample_library_config.get('installer')
-            extract_subdirs = sample_library_config.get('extract_subdirs', [])
+            extract_subdirs = sample_library_config.get('extract_subdirs', {})
 
         sample_libraries_config[name] = SampleLibraryConfig(base_dir, installer, extract_subdirs)
 
-    for library_path in library_paths.paths:
+    for library in sample_libraries_config:
+        printer.info(f'Processing {library}')
+
+        # Find the source directory for the library
+        library_paths = elite.find(
+            path=sample_library_source, min_depth=2, max_depth=2, types=['directory'],
+            patterns=[f'*/{library}']
+        )
+
+        if len(library_paths.paths) != 1:
+            elite.fail('unable to find sample library source directory')
+
+        library_path = library_paths.paths[0]
+
         # Find all ZIP and RAR files present in the downloaded library
         archives = elite.find(path=library_path, types=['file'], patterns=['*.zip', '*.rar'])
         if not archives.paths:
-            continue
-
-        # Check if the library should be installed
-        library = os.path.basename(library_path)
-        if library not in sample_libraries_config:
-            continue
+            elite.fail('no archives were found in the sample library source directory')
 
         # Obtain the config for the current library
         library_config = sample_libraries_config[library]
 
         # Build the destination base directory
-        destination = os.path.join(
+        destination_base_dir = os.path.join(
             config.sample_library_dir, os.path.relpath(library_path, sample_library_source)
         )
-
-        printer.info(f'Processing {library}')
 
         for archive in archives.paths:
             # Check for multipart RAR archives and only extract part 1
@@ -168,28 +170,28 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
             ):
                 continue
 
-            # Determine the destination (also taking into account sub-directories)
-            archive_relative = archive.replace(f'{library_path}/', '')
-            subdir = os.path.dirname(archive_relative)
-            if subdir == '.':
-                subdir = ''
+            # Determine the relative location of the archive being extracted
+            archive_relative = os.path.relpath(archive, library_path)
+            archive_sub_dir = os.path.dirname(archive_relative)
 
+            # Determine the destination to extract into
             if archive_relative in library_config.extract_subdirs:
-                subdir = os.path.join(
-                    subdir, library_config.base_dir,
-                    library_config.extract_subdirs[archive_relative]
+                destination = os.path.join(
+                    destination_base_dir, library_config.extract_subdirs[archive_relative]
                 )
-
-            # Determine the final destination directory for the library
-            destination_subdir = os.path.join(destination, subdir) if subdir else destination
+            elif archive_sub_dir:
+                destination = os.path.join(destination_base_dir, archive_sub_dir)
+            else:
+                destination = destination_base_dir
 
             # Extract the archive
-            elite.file(path=destination_subdir, state='directory')
+            elite.file(path=destination, state='directory')
             elite.archive(
-                path=destination_subdir,
+                path=destination,
                 source=archive,
                 ignore_files=['__MACOSX', '.DS_Store'],
-                base_dir=library_config.base_dir
+                base_dir=library_config.base_dir,
+                preserve_mode=False
             )
 
         # Run the installer package if required
@@ -215,9 +217,9 @@ def main(elite, config, printer):
     else:
         elite.fail(message='Unable to find any suitable music software source.')
 
-    # logic_pro_x_content(elite, config, printer, sample_library_source)
-    # komplete_libraries(elite, config, printer, sample_library_source)
-    # omnisphere_steam_library(elite, config, printer, music_software_source)
+    logic_pro_x_content(elite, config, printer, sample_library_source)
+    komplete_libraries(elite, config, printer, sample_library_source)
+    omnisphere_steam_library(elite, config, printer, music_software_source)
     kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_source)
 
 
