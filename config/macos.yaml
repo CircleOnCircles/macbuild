@@ -151,8 +151,7 @@ macos_defaults:
               index: 8
               visible: false
               width: 200
-        ExtendedListViewSettingsV2:
-          calculateAllSizes: false
+        ExtendedListViewSettings:
           columns:
           - ascending: true
             identifier: name
