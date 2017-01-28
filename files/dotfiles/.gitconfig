@@ -2,7 +2,8 @@
 	name = Fotis Gimian
 	email = fgimiansoftware@gmail.com
 [alias]
-	plog = log --color  --pretty=format:\"%C(red)%h %C(yellow)%ad %C(green)%an%C(reset): %s\" --date=short
+	plog = log --color --pretty=format:\"%C(red)%h %C(yellow)%ad %C(green)%an%C(reset): %s\" --date=short
+	ptag = tag --format=\"%(color:red)%(refname:short) %(color:yellow)%(taggerdate:short) %(color:green)%(*authorname)%(color:reset): %(subject)\"
 	diffc = diff --cached
 	cdiffc = cdiff --cached
 	unstage = reset HEAD --
