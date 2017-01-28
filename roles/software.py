@@ -114,7 +114,7 @@ def software(elite, config, printer):
     for app in config.software_appstore_apps:
         app_file = elite.file_info(path=f'/Applications/{app}.app/Contents/_MASReceipt/receipt')
         if not app_file.exists:
-            elite.fail(message=f'Please install {app} from the App Store')
+            elite.fail(message=f'Please install {app} from the App Store', ignore_failed=True)
 
     printer.info('Set application defaults.')
     for defaults in config.software_app_defaults:
