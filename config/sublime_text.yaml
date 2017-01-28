@@ -21,7 +21,6 @@ sublime_text_preferences:
   # Appearance Settings
   always_show_minimap_viewport: true
   fade_fold_buttons: false
-  font_size: 18
   font_face: Source Code Pro
   highlight_line: true
   highlight_modified_tabs: true
@@ -47,14 +46,11 @@ sublime_text_preferences:
   # Ensure that files are opened in a tab instead of a new window
   open_files_in_new_window: false
 
-  # Disable update checking
-  update_check: false
-
   # Directories to ignore (added the Python 3 cache directory to the list)
   folder_exclude_patterns: [.svn, .git, .hg, CVS, __pycache__]
 
   # Packages to keep disabled
-  ignored_packages: [Vintage, Markdown]
+  ignored_packages: [Markdown, Vintage]
 
 # Specify a list of packages to install via Package Control
 sublime_text_packages:
