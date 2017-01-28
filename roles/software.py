@@ -19,7 +19,41 @@ def sublime_text(elite, config, printer):
         mode='0644'
     )
 
-    printer.info('Install sublime text settings.')
+    printer.info('Configure main user preferences.')
+    elite.json(
+        path='~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings',
+        values=config.sublime_text_preferences
+    )
+
+    printer.info('Configure the color scheme.')
+
+    linter_color_scheme = elite.file_info(
+        path=os.path.join(
+            '~/Library/Application Support/Sublime Text 3',
+            config.sublime_text_linter_color_scheme
+        )
+    )
+    if linter_color_scheme.exists:
+        color_scheme = config.sublime_text_linter_color_scheme
+    else:
+        color_scheme = config.sublime_text_color_scheme
+
+    elite.json(
+        path='~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings',
+        values={
+            'color_scheme': color_scheme
+        }
+    )
+
+    printer.info('Configure packages to install with package control.')
+    elite.json(
+        path='~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings',
+        values={
+            'installed_packages': config.sublime_text_packages
+        }
+    )
+
+    printer.info('Install various other sublime text settings.')
     elite.rsync(
         source='files/sublime_text/',
         path='~/Library/Application Support/Sublime Text 3/Packages/User'
