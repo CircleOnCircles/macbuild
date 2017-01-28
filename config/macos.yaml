@@ -222,6 +222,8 @@ macos_defaults:
   # Safari
   - domain: com.apple.Safari
     values:
+      # Bookmarks / Disable 'Show Frequently Visited Sites'
+      ShowFrequentlyVisitedSites: false
       # View / Show Status Bar
       ShowStatusBar: true
       # General / Disable 'Open "safe" files after downloading'
