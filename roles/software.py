@@ -21,7 +21,10 @@ def sublime_text(elite, config, printer):
 
     printer.info('Configure main user preferences.')
     elite.json(
-        path='~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings',
+        path=(
+            '~/Library/Application Support/Sublime Text 3'
+            '/Packages/User/Preferences.sublime-settings'
+        ),
         values=config.sublime_text_preferences
     )
 
@@ -39,7 +42,10 @@ def sublime_text(elite, config, printer):
         color_scheme = config.sublime_text_color_scheme
 
     elite.json(
-        path='~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings',
+        path=(
+            '~/Library/Application Support/Sublime Text 3'
+            '/Packages/User/Preferences.sublime-settings'
+        ),
         values={
             'color_scheme': color_scheme
         }
@@ -47,7 +53,10 @@ def sublime_text(elite, config, printer):
 
     printer.info('Configure packages to install with package control.')
     elite.json(
-        path='~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings',
+        path=(
+            '~/Library/Application Support/Sublime Text 3'
+            '/Packages/User/Package Control.sublime-settings'
+        ),
         values={
             'installed_packages': config.sublime_text_packages
         }
