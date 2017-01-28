@@ -28,9 +28,7 @@ def macos(elite, config, printer):
         elite.run(command=f'systemsetup -settimezone {config.macos_timezone}', sudo=True)
 
     printer.info("Unhide the user's Library directory.")
-    library_flags = elite.run(command='ls -lOd ~/Library', changed=False)
-    if 'hidden' in library_flags.stdout:
-        elite.run(command='chflags nohidden ~/Library')
+    elite.file(path='~/Library', state='directory', flags=['hidden'])
 
     printer.info('Create the development folder.')
     elite.file(path=config.development_dir, state='directory')
@@ -68,6 +66,9 @@ def macos(elite, config, printer):
             container=defaults.get('container'),
             sudo=defaults.get('sudo', False)
         )
+
+    printer.info('Refresh cfprefsd.')
+    elite.run(command='killall cfprefsd', ignore_failed=True, changed=False)
 
 
 def default_apps(elite, config, printer):

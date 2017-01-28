@@ -46,8 +46,8 @@ def komplete_libraries(elite, config, printer, sample_library_source):
         package_name = os.path.splitext(os.path.basename(iso))[0].replace('_', ' ')
         printer.info(f'Installing Native Instruments {package_name}.')
 
-        mount_proc = elite.run(command=f'hdiutil mount "{iso}"')
-        mountpoint = mount_proc.stdout.rstrip().split('\t')[-1]
+        mount = elite.run(command=f'hdiutil mount "{iso}"')
+        mountpoint = mount.stdout.rstrip().split('\t')[-1]
 
         packages = elite.find(path=mountpoint, patterns=['* Installer Mac.pkg'])
 
@@ -86,7 +86,10 @@ def komplete_libraries(elite, config, printer, sample_library_source):
 
         elite.run(command=f'hdiutil unmount "{mountpoint}"')
 
-    elite.run(command=f'chflags hidden "{config.sample_library_dir}/Library"')
+    elite.file(
+        path=os.path.join(config.sample_library_dir, 'Library'),
+        ensure='directory', flags=['hidden']
+    )
 
 
 def omnisphere_steam_library(elite, config, printer, music_software_source):
