@@ -32,9 +32,9 @@ The following tasks must be performed manually.
 
 ### Installation & Configuration (macOS)
 
-* **Services**: In System Preferences / Keyboard / Services, enable 'New Terminal at Folder' and 'New Terminal Tab at Folder'
+* **Services**: In System Preferences / Keyboard / Shortcuts / Services, enable 'New Terminal at Folder' and 'New Terminal Tab at Folder'
 * **Screen Saver**: Set the screen saver to 'Flurry'
-* **Notification Centre**: Set the order of items and allow permission
+* **Notification Centre**: Set the order of items and allow permission after starting both World Clock and iStat Mini
 * **Safari**: Install extensions (1Password and Adblock Plus)
 * **App Store Login Items**: Start App Store menubar apps and set them to start
   at login (AppCleaner and OneDrive)
@@ -46,14 +46,17 @@ The following tasks must be performed manually.
 
 ### Installation & Configuration (General)
 
+* **Apple iWork**: Launch Pages, Keynote and Numbers and dismiss the welcome
+  screen
 * **Audio Hijack**: Start the app multiple times to dismiss welcome and mailing
-  list alerts.  You must also install Instant On to ensure the app works.
-* **Clear**: Enable iCloud
+  list alerts and install Instant On
+* **Clear**: Enable iCloud in Preferences
 * **Focus**: Start Focus manually as it won't initialise successfully with
   launchd starting it for the first time.
-* **Dropbox**: Disable camera uploads
+* **iTunes**; Start iTunes and set it up.
+* **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
-* **World Clock**: Country selection settings
+* **World Clock**: Initial setup and country selection settings
 
 ### Installation & Configuration (Music Production)
 
