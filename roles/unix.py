@@ -32,8 +32,6 @@ def docker(elite, config, printer):
         command='docker-machine create --driver virtualbox default',
         creates='~/.docker/machine/machines/default'
     )
-
-    printer.info('Stop default docker machine if it was created.')
     if docker_create.changed:
         elite.run(command='docker-machine stop default')
 

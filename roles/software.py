@@ -88,17 +88,17 @@ def software(elite, config, printer):
 
     printer.info('Install the app files requested.')
     for app_file in config.software_app_files:
-            if app_file['path'] != '/' and app_file['path'] != '~':
-                elite.file(
-                    path=os.path.dirname(app_file['path']),
-                    state='directory',
-                    sudo=app_file.get('sudo', False)
-                )
-
+        if app_file['path'] != '/' and app_file['path'] != '~':
             elite.file(
-                source=app_file['source'], path=app_file['path'],
-                mode=app_file.get('mode', '0644'), sudo=app_file.get('sudo', False)
+                path=os.path.dirname(app_file['path']),
+                state='directory',
+                sudo=app_file.get('sudo', False)
             )
+
+        elite.file(
+            source=app_file['source'], path=app_file['path'],
+            mode=app_file.get('mode', '0644'), sudo=app_file.get('sudo', False)
+        )
 
     printer.info('Symlink file to requested destination.')
     for app_symlink in config.software_app_symlinks:
