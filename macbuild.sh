@@ -32,8 +32,12 @@ then
     brew install python3
 fi
 
-# Install PyObjC dependencies
-for package in pyobjc-framework-Cocoa pyobjc-framework-LaunchServices pyobjc-framework-ScriptingBridge
+# Install Python dependencies
+for package in \
+    pyobjc-framework-Cocoa \
+    pyobjc-framework-LaunchServices \
+    pyobjc-framework-ScriptingBridge \
+    rarfile
 do
     if ! pip3 show "$package" > /dev/null 2>&1
     then
