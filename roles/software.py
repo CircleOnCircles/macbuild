@@ -106,9 +106,21 @@ def spotify(elite, config, printer):
 
 
 def software(elite, config, printer):
+    printer.info('Determining music software source.')
+    for music_software_source in config.music_software_sources:
+        source_dir = elite.file_info(path=music_software_source)
+        if source_dir.file_type == 'directory':
+            env = {'HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR': music_software_source}
+            break
+    else:
+        env = {}
+        elite.fail(
+            message='Unable to find any suitable music software source.', ignore_failed=True
+        )
+
     printer.info('Homebrew Cask desktop applications.')
     for cask in config.software_brew_casks:
-        elite.cask(name=cask)
+        elite.cask(name=cask, env=env)
 
     printer.info('Check app store applications.')
     for app in config.software_appstore_apps:

@@ -13,7 +13,12 @@ echo -e "${BOLD}Mac Build Elite${ENDC}"
 echo
 
 # Prompt the user for their sudo password
-sudo -v
+if sudo -nv 2> /dev/null
+then
+    echo -e "${GREEN}Using existing sudo session.${ENDC}"
+else
+    sudo -v -p "Enter your sudo password: "
+fi
 
 # Enable passwordless sudo for the macbuild run
 sudo sed -i -e "s/^%admin.*/%admin  ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
@@ -46,22 +51,6 @@ do
         pip3 install "$package"
     fi
 done
-
-# Setup the source of music production software from the backup drive attached
-if [ -d "/Volumes/Backup Mac 1" ]
-then
-  export HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR='/Volumes/Backup Mac 1/Software/Music Production'
-elif [ -d "/Volumes/Backup Mac 2" ]
-then
-  export HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR='/Volumes/Backup Mac 2/Software/Music Production'
-fi
-
-if [ ! -z "$HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR" ]
-then
-  echo -e "${GREEN}Using cask music software basedir of ${HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR}${ENDC}"
-else
-  echo -e "${RED}Unable to find the music software basedir${ENDC}"
-fi
 
 # Perform the build
 ./build.py
