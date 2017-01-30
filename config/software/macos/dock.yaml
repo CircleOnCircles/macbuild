@@ -1,6 +1,16 @@
 _: &dock
   name: Dock
 
+  plist:
+    - domain: com.apple.dock
+      values:
+        # Set the icon size of dock items
+        tilesize: 60
+        # Enable magnificationn of icons
+        magnification: true
+        # Make hidden applications translucent in the dock
+        showhidden: true
+
   # Dock applications (in the left section)
   apps:
     - ForkLift
@@ -27,13 +37,3 @@ _: &dock
   # Dock folders and URLs (in the right section)
   other:
     - path: ~/Downloads
-
-  plist:
-    - domain: com.apple.dock
-      values:
-        # Set the icon size of dock items
-        tilesize: 60
-        # Enable magnificationn of icons
-        magnification: true
-        # Make hidden applications translucent in the dock
-        showhidden: true

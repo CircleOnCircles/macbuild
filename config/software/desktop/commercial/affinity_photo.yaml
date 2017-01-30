@@ -1,6 +1,15 @@
 _: &affinity_photo
   name: Affinity Photo
   appstore: Affinity Photo
+  file:
+    - path: ~/Library/Containers/com.seriflabs.affinityphoto
+      state: directory
+    - path: ~/Library/Containers/com.seriflabs.affinityphoto/Data
+      state: directory
+    - path: ~/Library/Containers/com.seriflabs.affinityphoto/Data/Library
+      state: directory
+    - path: ~/Library/Containers/com.seriflabs.affinityphoto/Data/Library/Preferences
+      state: directory
   plist:
     - domain: com.seriflabs.affinityphoto
       container: com.seriflabs.affinityphoto

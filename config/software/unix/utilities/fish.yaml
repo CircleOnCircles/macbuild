@@ -3,5 +3,10 @@ _: &fish
   brew: fish
   pip: powerline-status
   file:
-    - source: files/dotfiles/.config/fish/config.fish
-      path: ~/.config/fish/config.fish
+    # Fish Profile
+    - path: ~/.config
+      state: directory
+    - path: ~/.config/fish
+      state: directory
+    - path: ~/.config/fish/config.fish
+      source: files/dotfiles/.config/fish/config.fish

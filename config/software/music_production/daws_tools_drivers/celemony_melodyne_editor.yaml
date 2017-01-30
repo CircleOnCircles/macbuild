@@ -1,13 +1,20 @@
 _: &celemony_melodyne_editor
   name: Celemony Melodyne Editor
   cask: celemony-melodyne-editor
+  file:
+    # License
+    - path: /Library/Application Support/Celemony
+      state: directory
+      sudo: true
+    - path: /Library/Application Support/Celemony/Licenses
+      state: directory
+      sudo: true
+    - path: /Library/Application Support/Celemony/Licenses/Melodyne singletrack.license
+      source: !join_path [*app_license_dir, Music Production/Celemony/Celemony Melodyne Editor/Melodyne singletrack.license]
+      sudo: true
   plist:
     - domain: com.celemony.Melodyne singletrack
       values:
         disableWelcomePanelOnStartup: true
         # Preferences / Settings / Check for Updates / Never
         updateCheckPeriode: 3
-  file:
-    - source: !join_path [*app_license_dir, Music Production/Celemony/Celemony Melodyne Editor/Melodyne singletrack.license]
-      path: /Library/Application Support/Celemony/Licenses/Melodyne singletrack.license
-      sudo: true

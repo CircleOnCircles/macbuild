@@ -1,6 +1,21 @@
 _: &openemu
   name: OpenEmu
   cask: openemu-experimental
+  file:
+    - path: '~/Library/Application Support/OpenEmu'
+      state: directory
+  symlink:
+    # Preferences
+    - path: '~/Library/Application Support/OpenEmu/BIOS'
+      source: !join_path [*app_config_dir, OpenEmu/BIOS]
+    - path: '~/Library/Application Support/OpenEmu/Bindings'
+      source: !join_path [*app_config_dir, OpenEmu/Bindings]
+    - path: '~/Library/Application Support/OpenEmu/Cores'
+      source: !join_path [*app_config_dir, OpenEmu/Cores]
+    - path: '~/Library/Application Support/OpenEmu/Game Library'
+      source: !join_path [*app_config_dir, OpenEmu/Game Library]
+    - path: '~/Library/Application Support/OpenEmu/Save States'
+      source: !join_path [*app_config_dir, OpenEmu/Save States]
   plist:
     - domain: org.openemu.OpenEmu
       values:
@@ -9,14 +24,3 @@ _: &openemu
         videoFilter: SABR
         fullScreen: true
         # databasePath: ~/Library/Application Support/OpenEmu/Game Library
-  symlink:
-    - source: !join_path [*app_config_dir, OpenEmu/BIOS]
-      path: '~/Library/Application Support/OpenEmu/BIOS'
-    - source: !join_path [*app_config_dir, OpenEmu/Bindings]
-      path: '~/Library/Application Support/OpenEmu/Bindings'
-    - source: !join_path [*app_config_dir, OpenEmu/Cores]
-      path: '~/Library/Application Support/OpenEmu/Cores'
-    - source: !join_path [*app_config_dir, OpenEmu/Game Library]
-      path: '~/Library/Application Support/OpenEmu/Game Library'
-    - source: !join_path [*app_config_dir, OpenEmu/Save States]
-      path: '~/Library/Application Support/OpenEmu/Save States'

@@ -6,5 +6,6 @@ _: &ruby
     - ruby-completion
     - rake-completion
   file:
-    - source: files/dotfiles/.bash_profile.d/rbenv.sh
-      path: ~/.bash_profile.d/rbenv.sh
+    # Bash Profile rbenv Activation
+    - path: ~/.bash_profile.d/rbenv.sh
+      source: files/dotfiles/.bash_profile.d/rbenv.sh

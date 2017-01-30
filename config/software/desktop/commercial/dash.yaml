@@ -1,6 +1,14 @@
 _: &dash
   name: Dash
   cask: dash
+  file:
+    # License
+    - path: ~/Library/Application Support/Dash
+      state: directory
+    - path: ~/Library/Application Support/Dash/License
+      state: directory
+    - path: ~/Library/Application Support/Dash/License/license.dash-license
+      source: !join_path [*app_license_dir, General/Dash/license.dash-license]
   plist:
     - domain: com.kapeli.dashdoc
       values:
@@ -15,6 +23,3 @@ _: &dash
         # Note that the following setting is required or Dash thinks it needs
         # to set everything up again
         migratedV2Prefs: true
-  file:
-    - source: !join_path [*app_license_dir, General/Dash/license.dash-license]
-      path: ~/Library/Application Support/Dash/License/license.dash-license

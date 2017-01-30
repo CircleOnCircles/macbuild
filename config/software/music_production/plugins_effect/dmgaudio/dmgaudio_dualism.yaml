@@ -2,5 +2,10 @@ _: &dmgaudio_dualism
   name: DMG Audio Dualism
   cask: dmgaudio-dualism
   file:
-    - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Dualism/license]
-      path: ~/Library/Application Support/DMGAudio/Dualism/license
+    # License
+    - path: ~/Library/Application Support/DMGAudio
+      state: directory
+    - path: ~/Library/Application Support/DMGAudio/Dualism
+      state: directory
+    - path: ~/Library/Application Support/DMGAudio/Dualism/license
+      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Dualism/license]

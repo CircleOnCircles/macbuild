@@ -2,5 +2,10 @@ _: &dmgaudio_equilibrium
   name: DMG Audio EQuilibrium
   cask: dmgaudio-equilibrium
   file:
-    - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio EQuilibrium/license]
-      path: ~/Library/Application Support/DMGAudio/EQuilibrium/license
+    # License
+    - path: ~/Library/Application Support/DMGAudio
+      state: directory
+    - path: ~/Library/Application Support/DMGAudio/EQuilibrium
+      state: directory
+    - path: ~/Library/Application Support/DMGAudio/EQuilibrium/license
+      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio EQuilibrium/license]

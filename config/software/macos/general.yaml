@@ -8,13 +8,6 @@ _: &audio_directory_properties
 _: &macos_general
   name: macOS General
 
-  # Set the appropriate timezone
-  timezone: Australia/Melbourne
-
-  # Set the computer and display sleep times
-  computer_sleep_time: Never
-  display_sleep_time: Never
-
   file:
     # Unhide the user ~/Library directory
     - path: ~/Library
@@ -147,3 +140,10 @@ _: &macos_general
       values:
         # Set screenshot location
         location: ~/Pictures/Screenshots
+
+  # Set the appropriate timezone
+  timezone: Australia/Melbourne
+
+  # Set the computer and display sleep times
+  computer_sleep_time: Never
+  display_sleep_time: Never

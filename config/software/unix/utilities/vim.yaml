@@ -7,5 +7,6 @@ _: &vim
     - path: ~/.vim/bundle
       state: directory
   git:
-    path: ~/.vim/bundle/Vundle.vim
-    repo: https://github.com/gmarik/Vundle.vim.git
+    # Vundle package manager
+    - path: ~/.vim/bundle/Vundle.vim
+      repo: https://github.com/VundleVim/Vundle.vim.git

@@ -1,6 +1,15 @@
 _: &twitter
   name: Twitter
   appstore: Twitter
+  file:
+    - path: ~/Library/Containers/com.twitter.twitter-mac
+      state: directory
+    - path: ~/Library/Containers/com.twitter.twitter-mac/Data
+      state: directory
+    - path: ~/Library/Containers/com.twitter.twitter-mac/Data/Library
+      state: directory
+    - path: ~/Library/Containers/com.twitter.twitter-mac/Data/Library/Preferences
+      state: directory
   plist:
     - domain: com.twitter.twitter-mac
       container: com.twitter.twitter-mac

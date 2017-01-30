@@ -5,5 +5,8 @@ _: &xfer_records_serum
     - xfer-records-serum-update
     - xfer-records-serumfx-update
   file:
-    - source: !join_path [*app_license_dir, Music Production/Xfer Records/Xfer Records Serum/user.dat]
-      path: ~/Library/Application Support/com.xferrecords.serum/user.dat
+    # License
+    - path: ~/Library/Application Support/com.xferrecords.serum
+      state: directory
+    - path: ~/Library/Application Support/com.xferrecords.serum/user.dat
+      source: !join_path [*app_license_dir, Music Production/Xfer Records/Xfer Records Serum/user.dat]

@@ -2,5 +2,6 @@ _: &git
   name: Git
   brew: git
   file:
-    - source: files/dotfiles/.gitconfig
-      path: ~/.gitconfig
+    # Preferences
+    - path: ~/.gitconfig
+      source: files/dotfiles/.gitconfig

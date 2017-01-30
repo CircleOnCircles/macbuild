@@ -2,5 +2,6 @@ _: &go
   name: Go
   brew: go
   file:
-    - source: files/dotfiles/.bash_profile.d/go.sh
-      path: ~/.bash_profile.d/go.sh
+    # Bash Profile GOPATH Setting
+    - path: ~/.bash_profile.d/go.sh
+      source: files/dotfiles/.bash_profile.d/go.sh

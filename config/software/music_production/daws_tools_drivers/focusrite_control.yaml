@@ -2,5 +2,12 @@ _: &focusrite_control
   name: Focusrite Control
   cask: focusrite-control
   file:
-    - source: files/focusrite_control/Focusrite Control.settings
-      path: ~/Library/Application Support/Focusrite/Focusrite Control/Settings/Focusrite Control.settings
+    # Preferences
+    - path: ~/Library/Application Support/Focusrite
+      state: directory
+    - path: ~/Library/Application Support/Focusrite/Focusrite Control
+      state: directory
+    - path: ~/Library/Application Support/Focusrite/Focusrite Control/Settings
+      state: directory
+    - path: ~/Library/Application Support/Focusrite/Focusrite Control/Settings/Focusrite Control.settings
+      source: files/focusrite_control/Focusrite Control.settings

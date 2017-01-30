@@ -2,5 +2,8 @@ _: &uhe_uhbik
   name: u-he Uhbik
   cask: u-he-uhbik
   file:
-    - source: !join_path [*app_license_dir, Music Production/u-he/u-he Uhbik/com.u-he.Uhbik.plist]
-      path: ~/Library/Application Support/u-he/com.u-he.Uhbik.plist
+    # License
+    - path: ~/Library/Application Support/u-he
+      state: directory
+    - path: ~/Library/Application Support/u-he/com.u-he.Uhbik.plist
+      source: !join_path [*app_license_dir, Music Production/u-he/u-he Uhbik/com.u-he.Uhbik.plist]

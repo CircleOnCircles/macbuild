@@ -2,5 +2,8 @@ _: &reveal_sound_spire
   name: Reveal Sound Spire
   cask: reveal-sound-spire
   file:
-    - source: !join_path [*app_license_dir, Music Production/Reveal Sound/Reveal Sound Spire/spire.lic]
-      path: ~/Library/Application Support/RevealSound/spire.lic
+    # License
+    - path: ~/Library/Application Support/RevealSound
+      state: directory
+    - path: ~/Library/Application Support/RevealSound/spire.lic
+      source: !join_path [*app_license_dir, Music Production/Reveal Sound/Reveal Sound Spire/spire.lic]

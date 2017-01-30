@@ -2,5 +2,8 @@ _: &uhe_satin
   name: u-he Satin
   cask: u-he-satin
   file:
-    - source: !join_path [*app_license_dir, Music Production/u-he/u-he Satin/com.u-he.Satin.plist]
-      path: ~/Library/Application Support/u-he/com.u-he.Satin.plist
+    # License
+    - path: ~/Library/Application Support/u-he
+      state: directory
+    - path: ~/Library/Application Support/u-he/com.u-he.Satin.plist
+      source: !join_path [*app_license_dir, Music Production/u-he/u-he Satin/com.u-he.Satin.plist]

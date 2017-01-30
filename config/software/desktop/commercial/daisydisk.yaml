@@ -1,10 +1,13 @@
 _: &daisydisk
   name: DaisyDisk
   cask: daisydisk
+  file:
+    # License
+    - path: ~/Library/Application Support/DaisyDisk
+      state: directory
+    - path: ~/Library/Application Support/DaisyDisk/License.DaisyDisk
+      source: !join_path [*app_license_dir, General/DaisyDisk/License.DaisyDisk]
   plist:
     - domain: com.daisydiskapp.DaisyDiskStandAlone
       values:
         moveToApplicationsFolderAlertSuppress: true
-  file:
-    - source: !join_path [*app_license_dir, General/DaisyDisk/License.DaisyDisk]
-      path: ~/Library/Application Support/DaisyDisk/License.DaisyDisk

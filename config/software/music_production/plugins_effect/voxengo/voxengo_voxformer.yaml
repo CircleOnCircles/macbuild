@@ -4,7 +4,14 @@ _: &voxengo_voxformer
     - voxengo-voxformer-au-aax
     - voxengo-voxformer-vst-vst3
   file:
-    - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Voxformer/product-key-name]
-      path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer/product-key-name
-    - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Voxformer/product-key-value]
-      path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer/product-key-value
+    # License
+    - path: ~/Library/Preferences/Voxengo
+      state: directory
+    - path: ~/Library/Preferences/Voxengo/Audio Plug-Ins
+      state: directory
+    - path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer
+      state: directory
+    - path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer/product-key-name
+      source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Voxformer/product-key-name]
+    - path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Voxformer/product-key-value
+      source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Voxformer/product-key-value]

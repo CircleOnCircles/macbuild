@@ -21,7 +21,7 @@ def main(elite, config, printer):
     else:
         env = {}
         elite.fail(
-            message='Unable to find any suitable music software source.', ignore_failed=True
+            message='unable to find any suitable music software source', ignore_failed=True
         )
 
     printer.info('Homebrew Update')
@@ -190,8 +190,8 @@ def main(elite, config, printer):
 
             elif name == 'Spotify':
                 global_settings = software.pop('global_settings')
-                user_settings = software.pop('user_settings')
                 username = software.pop('username')
+                user_settings = software.pop('user_settings')
 
                 for pref, value in global_settings.items():
                     elite.spotify_pref(pref=pref, value=value)

@@ -1,6 +1,49 @@
 _: &microsoft_office
   name: Microsoft Office
   cask: microsoft-office
+  file:
+    - path: ~/Library/Group Containers/UBF8T346G9.Office
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Excel
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Excel/Data
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Excel/Data/Library
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Excel/Data/Library/Preferences
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Word
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Word/Data
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Word/Data/Library
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Word/Data/Library/Preferences
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Powerpoint
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Powerpoint/Data
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Powerpoint/Data/Library
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Powerpoint/Data/Library/Preferences
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.onenote.mac
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.onenote.mac/Data
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.onenote.mac/Data/Library
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.onenote.mac/Data/Library/Preferences
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Outlook
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Outlook/Data
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Outlook/Data/Library
+      state: directory
+    - path: ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences
+      state: directory
   plist:
     - path: ~/Library/Group Containers/UBF8T346G9.Office/com.microsoft.officeprefs.plist
       values:

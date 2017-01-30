@@ -4,5 +4,6 @@ _: &steinberg_cubase_pro_9
     - steinberg-cubase-pro-9
     - steinberg-cubase-pro-9-update
   symlink:
-    - source: ~/Music/Presets
-      path: ~/Library/Audio/Presets
+    # Plug-in Presets
+    - path: ~/Library/Audio/Presets
+      source: ~/Music/Presets

@@ -5,9 +5,13 @@ _: &bash
     - bash-completion
   pip: powerline-status
   file:
-    - source: files/dotfiles/.bash_profile
-      path: ~/.bash_profile
-    - source: files/dotfiles/.bash_profile.d/bash_completion.sh
-      path: ~/.bash_profile.d/bash_completion.sh
-    - source: files/dotfiles/.bash_profile.d/powerline.sh
-      path: ~/.bash_profile.d/powerline.sh
+    # Bash Profile
+    - path: ~/.bash_profile
+      source: files/dotfiles/.bash_profile
+    # Bash Profile Bash Completion & Powerline
+    - path: ~/.bash_profile.d
+      state: directory
+    - path: ~/.bash_profile.d/bash_completion.sh
+      source: files/dotfiles/.bash_profile.d/bash_completion.sh
+    - path: ~/.bash_profile.d/powerline.sh
+      source: files/dotfiles/.bash_profile.d/powerline.sh

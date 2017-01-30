@@ -2,5 +2,6 @@ _: &cableguys_volumeshaper
   name: Cableguys VolumeShaper
   cask: cableguys-volumeshaper
   file:
-    - source: !join_path [*app_license_dir, Music Production/Cableguys/Cableguys VolumeShaper/de.cableguys.volumeshaper4.plist]
-      path: ~/Library/Preferences/de.cableguys.volumeshaper4.plist
+    # License
+    - path: ~/Library/Preferences/de.cableguys.volumeshaper4.plist
+      source: !join_path [*app_license_dir, Music Production/Cableguys/Cableguys VolumeShaper/de.cableguys.volumeshaper4.plist]

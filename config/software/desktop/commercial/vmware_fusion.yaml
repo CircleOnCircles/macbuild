@@ -1,6 +1,19 @@
 _: &vmware_fusion
   name: VMware Fusion
   cask: vmware-fusion
+  file:
+    # License
+    - path: /Library/Preferences/VMware Fusion
+      state: directory
+      sudo: true
+    - path: /Library/Preferences/VMware Fusion/license-fusion-80-e1-201505
+      source: !join_path [*app_license_dir, General/VMware Fusion/license-fusion-80-e1-201505]
+      sudo: true
+    # Preferences
+    - path: ~/Library/Preferences/VMware Fusion
+      state: directory
+    - path: ~/Library/Preferences/VMware Fusion/preferences
+      source: files/vmware_fusion/preferences
   plist:
     - domain: com.vmware.fusion
       values:
@@ -8,9 +21,3 @@ _: &vmware_fusion
         PLInventoryWindowStylePref: 1
         # Preferences / General / Show in menu bar / Only when Fusion is running
         showStartMenu3: 2
-  file:
-    - source: files/vmware_fusion/preferences
-      path: ~/Library/Preferences/VMware Fusion/preferences
-    - source: !join_path [*app_license_dir, General/VMware Fusion/license-fusion-80-e1-201505]
-      path: /Library/Preferences/VMware Fusion/license-fusion-80-e1-201505
-      sudo: true

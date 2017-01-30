@@ -1,24 +1,6 @@
 _: &finder
   name: Finder
 
-  favourites:
-    # Special
-    - All My Files
-    # Cloud Storage
-    - iCloud Drive
-    - ~/Dropbox
-    - ~/OneDrive
-    # Apps
-    - /Applications
-    # Home
-    - '~'
-    - ~/Desktop
-    - ~/Documents
-    - ~/Downloads
-    - ~/Movies
-    - ~/Pictures
-    - ~/Music
-
   plist:
     - domain: com.apple.finder
       values:
@@ -124,3 +106,21 @@ _: &finder
               visible: false
               width: 200
         MyDocsLibrarySearchViewSettings: *view_settings
+
+  favourites:
+    # Special
+    - All My Files
+    # Cloud Storage
+    - iCloud Drive
+    - ~/Dropbox
+    - ~/OneDrive
+    # Apps
+    - /Applications
+    # Home
+    - '~'
+    - ~/Desktop
+    - ~/Documents
+    - ~/Downloads
+    - ~/Movies
+    - ~/Pictures
+    - ~/Music

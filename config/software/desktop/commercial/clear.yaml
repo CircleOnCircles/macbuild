@@ -1,6 +1,15 @@
 _: &clear
   name: Clear
   appstore: Clear
+  file:
+    - path: ~/Library/Containers/com.realmacsoftware.clear.mac
+      state: directory
+    - path: ~/Library/Containers/com.realmacsoftware.clear.mac/Data
+      state: directory
+    - path: ~/Library/Containers/com.realmacsoftware.clear.mac/Data/Library
+      state: directory
+    - path: ~/Library/Containers/com.realmacsoftware.clear.mac/Data/Library/Preferences
+      state: directory
   plist:
     - domain: com.realmacsoftware.clear.mac
       container: com.realmacsoftware.clear.mac

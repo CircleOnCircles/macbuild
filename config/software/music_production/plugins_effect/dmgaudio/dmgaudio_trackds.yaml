@@ -2,5 +2,10 @@ _: &dmgaudio_trackds
   name: DMG Audio TrackDS
   cask: dmgaudio-trackds
   file:
-    - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackDS/license]
-      path: ~/Library/Application Support/DMGAudio/TrackDS/license
+    # License
+    - path: ~/Library/Application Support/DMGAudio
+      state: directory
+    - path: ~/Library/Application Support/DMGAudio/TrackDS
+      state: directory
+    - path: ~/Library/Application Support/DMGAudio/TrackDS/license
+      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackDS/license]

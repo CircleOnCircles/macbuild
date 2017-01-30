@@ -1,30 +1,36 @@
 _: &sublime_text
   name: Sublime Text
   cask: sublime-text
-  handler:
-    - public.plain-text
-
   file:
+    - path: ~/Library/Application Support/Sublime Text 3
+      state: directory
     - path: ~/Library/Application Support/Sublime Text 3/Installed Packages
       state: directory
+    - path: ~/Library/Application Support/Sublime Text 3/Packages
+      state: directory
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User
+      state: directory
+    # Sublime Text License
+    - path: ~/Library/Application Support/Sublime Text 3/Local
       state: directory
     - path: ~/Library/Application Support/Sublime Text 3/Local/License.sublime_license
       source: !join_path [*app_license_dir, General/Sublime Text/License.sublime_license]
+    # Doxy License
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Doxy.sublime-license
       source: !join_path [*app_license_dir, General/Sublime Text/Doxy.sublime-license]
+    # Bash Profile Default Editor
     - path: ~/.bash_profile.d/sublime_text.sh
       source: files/dotfiles/.bash_profile.d/sublime_text.sh
-
   download:
+    # Package Control
     - path: ~/Library/Application Support/Sublime Text 3/Installed Packages
       url: http://packagecontrol.io/Package Control.sublime-package
-
   rsync:
+    # Package Preferences
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User
       source: files/sublime_text/
 
-  # Specify our main user preferences for Sublime Text
+  # User Preferences
   json:
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings
       values:
@@ -32,8 +38,8 @@ _: &sublime_text
         color_scheme: !first_existing_path
           base_dir: ~/Library/Application Support/Sublime Text 3
           paths:
-            - Packages/Monokai Extended/Monokai Extended.tmTheme
             - Packages/User/SublimeLinter/Monokai Extended (SL).tmTheme
+            - Packages/Monokai Extended/Monokai Extended.tmTheme
 
         # Soda Theme
         theme: Soda Dark 3.sublime-theme
@@ -83,7 +89,7 @@ _: &sublime_text
         # Packages to keep disabled
         ignored_packages: [Markdown, Vintage]
 
-    # Specify a list of packages to install via Package Control
+    # Package Control Packages
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings
       values:
         installed_packages:
@@ -161,3 +167,6 @@ _: &sublime_text
           - Theme - Soda
           # Typewriter mode for centered scrolling in Markdown files
           - Typewriter
+
+  handler:
+    - public.plain-text

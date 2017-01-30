@@ -2,5 +2,8 @@ _: &uhe_mfm2
   name: u-he MFM2
   cask: u-he-mfm2
   file:
-    - source: !join_path [*app_license_dir, Music Production/u-he/u-he MFM2/com.u-he.MFM2.plist]
-      path: ~/Library/Application Support/u-he/com.u-he.MFM2.plist
+    # License
+    - path: ~/Library/Application Support/u-he
+      state: directory
+    - path: ~/Library/Application Support/u-he/com.u-he.MFM2.plist
+      source: !join_path [*app_license_dir, Music Production/u-he/u-he MFM2/com.u-he.MFM2.plist]

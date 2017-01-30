@@ -1,6 +1,12 @@
 _: &textual
   name: Textual
   cask: textual
+  file:
+    # License
+    - path: ~/Library/Application Support/Textual
+      state: directory
+    - path: ~/Library/Application Support/Textual/Textual_User_License.plist
+      source: !join_path [*app_license_dir, General/Textual/Textual_User_License.plist]
   plist:
     - domain: com.codeux.apps.textual
       values:
@@ -24,6 +30,3 @@ _: &textual
             - channelName: '#salt'
             - channelName: '#python'
             - channelName: '#terraform'
-  file:
-    - source: !join_path [*app_license_dir, General/Textual/Textual_User_License.plist]
-      path: ~/Library/Application Support/Textual/Textual_User_License.plist
