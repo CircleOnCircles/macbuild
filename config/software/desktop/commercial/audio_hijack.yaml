@@ -7,5 +7,6 @@ _: &audio_hijack
       source: !join_path [*app_config_dir, Audio Hijack]
   plist:
     - domain: com.rogueamoeba.audiohijack3
+      source: !join_path [*app_license_dir, General/Audio Hijack/com.rogueamoeba.audiohijack3.plist]
       values:
         homeWindowShown: true
