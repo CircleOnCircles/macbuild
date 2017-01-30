@@ -1,12 +1,12 @@
 _: &focus
   name: Focus
   cask: focus
-  defaults:
+  plist:
     - domain: BradJasper.focus
       values:
         SUEnableAutomaticChecks: true
         SUHasLaunchedBefore: true
-  files:
+  file:
     - source: !join_path [*app_license_dir, General/Focus/.491062.padl]
       path: ~/.491062.padl
     - source: !join_path [*app_license_dir, General/Focus/paddata.padl]

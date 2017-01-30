@@ -8,6 +8,6 @@ _: &python
     - pip
     - ipython
     - powerline-status
-  files:
+  file:
     - source: files/dotfiles/.ipython/profile_default/ipython_config.py
       path: ~/.ipython/profile_default/ipython_config.py

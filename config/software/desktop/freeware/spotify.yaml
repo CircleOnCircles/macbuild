@@ -19,6 +19,6 @@ _: &spotify
     # Preferences / Playback / Disable 'Set the same volume level for all songs'
     audio.normalize_v2: false
 
-  files:
+  file:
     - source: files/spotify/watch-sources.bnk
       path: ~/Library/Application Support/Spotify/Users/fgimian-user/watch-sources.bnk

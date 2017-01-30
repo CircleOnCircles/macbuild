@@ -1,6 +1,6 @@
 _: &dmgaudio_pitchfunk
   name: DMG Audio PitchFunk
   cask: dmgaudio-pitchfunk
-  files:
+  file:
     - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio PitchFunk/license]
       path: ~/Library/Application Support/DMGAudio/PitchFunk/license

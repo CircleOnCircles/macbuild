@@ -1,7 +1,7 @@
 _: &forklift
   name: Forklift
   cask: forklift-beta
-  defaults:
+  plist:
     - domain: com.binarynights.ForkLift-3
       values:
         SetupDone: true

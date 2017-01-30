@@ -1,6 +1,7 @@
 _: &affinity_designer
+  name: Affinity Designer
   appstore: Affinity Designer
-  defaults:
+  plist:
     - domain: com.seriflabs.affinitydesigner
       container: com.seriflabs.affinitydesigner
       values:

@@ -1,6 +1,6 @@
 _: &dmgaudio_trackmeter
   name: DMG Audio TrackMeter
   cask: dmgaudio-trackmeter
-  files:
+  file:
     - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackMeter/license]
       path: ~/Library/Application Support/DMGAudio/TrackMeter/license

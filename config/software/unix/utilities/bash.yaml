@@ -4,7 +4,7 @@ _: &bash
     - bash
     - bash-completion
   pip: powerline-status
-  files:
+  file:
     - source: files/dotfiles/.bash_profile
       path: ~/.bash_profile
     - source: files/dotfiles/.bash_profile.d/bash_completion.sh

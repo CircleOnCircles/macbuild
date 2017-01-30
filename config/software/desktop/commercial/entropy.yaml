@@ -1,7 +1,7 @@
 _: &entropy
   name: Entropy
   cask: entropy
-  handlers:
+  handler:
     - public.zip-archive
     - public.tar-archive
     - org.gnu.gnu-zip-tar-archive
@@ -9,7 +9,7 @@ _: &entropy
     - org.gnu.gnu-zip-archive
     - public.bzip2-archive
     - public.cpio-archive
-  defaults:
+  plist:
     - domain: com.eigenlogik.Entropy
       values:
         moveToApplicationsFolderAlertSuppress: true
@@ -17,6 +17,6 @@ _: &entropy
         SUSendProfileInfo: false
         # Extraction / Auto-extract on open
         AutoExtractOnOpen: true
-  files:
+  file:
     - source: !join_path [*app_license_dir, General/Entropy/.els-A4AD28617A455C07768787313A53E2F79D9FA258]
       path: ~/Library/Application Support/.els-A4AD28617A455C07768787313A53E2F79D9FA258

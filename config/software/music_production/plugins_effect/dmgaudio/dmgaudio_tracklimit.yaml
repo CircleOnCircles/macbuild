@@ -1,6 +1,6 @@
 _: &dmgaudio_tracklimit
   name: DMG Audio TrackLimit
   cask: dmgaudio-tracklimit
-  files:
+  file:
     - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackLimit/license]
       path: ~/Library/Application Support/DMGAudio/TrackLimit/license

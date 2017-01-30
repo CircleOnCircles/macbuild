@@ -5,6 +5,6 @@ _: &ruby
     - ruby-build
     - ruby-completion
     - rake-completion
-  files:
+  file:
     - source: files/dotfiles/.bash_profile.d/rbenv.sh
       path: ~/.bash_profile.d/rbenv.sh

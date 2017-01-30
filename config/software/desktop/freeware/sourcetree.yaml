@@ -1,10 +1,10 @@
 _: &sourcetree
   name: SourceTree
   cask: sourcetree
-  files:
+  file:
     - path: *development_dir
       state: directory
-  defaults:
+  plist:
     - domain: com.torusknot.SourceTreeNotMAS
       values:
         moveToApplicationsFolderAlertSuppress: true

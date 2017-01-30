@@ -1,7 +1,7 @@
 _: &skype
   name: Skype
   cask: skype
-  defaults:
+  plist:
     - domain: com.skype.skype
       values:
         # Preferences / Contacts / Untick Show Mac Contacts

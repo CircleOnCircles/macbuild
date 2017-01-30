@@ -1,7 +1,7 @@
 _: &flux
   name: Flux
   cask: flux
-  defaults:
+  plist:
     - domain: org.herf.Flux
       values:
         moveToApplicationsFolderAlertSuppress: true

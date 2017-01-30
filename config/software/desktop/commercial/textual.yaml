@@ -1,7 +1,7 @@
 _: &textual
   name: Textual
   cask: textual
-  defaults:
+  plist:
     - domain: com.codeux.apps.textual
       values:
         SUEnableAutomaticChecks: true
@@ -24,6 +24,6 @@ _: &textual
             - channelName: '#salt'
             - channelName: '#python'
             - channelName: '#terraform'
-  files:
+  file:
     - source: !join_path [*app_license_dir, General/Textual/Textual_User_License.plist]
       path: ~/Library/Application Support/Textual/Textual_User_License.plist

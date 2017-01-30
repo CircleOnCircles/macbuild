@@ -1,10 +1,10 @@
 _: &macdown
   name: MacDown
   cask: macdown
-  files:
+  file:
     - path: *development_dir
       state: directory
-  defaults:
+  plist:
     - domain: com.uranusjr.macdown
       values:
         firstVersionInstalled: '749'

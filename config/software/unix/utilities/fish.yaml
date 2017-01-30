@@ -2,6 +2,6 @@ _: &fish
   name: Fish
   brew: fish
   pip: powerline-status
-  files:
+  file:
     - source: files/dotfiles/.config/fish/config.fish
       path: ~/.config/fish/config.fish

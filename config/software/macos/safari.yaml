@@ -1,6 +1,6 @@
 _: &safari
   name: Safari
-  defaults:
+  plist:
     - domain: com.apple.Safari
       values:
         # Bookmarks / Disable 'Show Frequently Visited Sites'

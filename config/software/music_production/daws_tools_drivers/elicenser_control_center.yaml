@@ -1,6 +1,6 @@
 _: &elicenser_control_center
   name: eLicenser Control Center
-  defaults:
+  plist:
     - domain: com.Syncrosoft.LCC
       values:
         Show_LCC_Welcome_on_LCC_Launch: false

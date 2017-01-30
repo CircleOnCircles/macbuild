@@ -3,6 +3,6 @@ _: &steinberg_cubase_pro_9
   cask:
     - steinberg-cubase-pro-9
     - steinberg-cubase-pro-9-update
-  symlinks:
+  symlink:
     - source: ~/Music/Presets
       path: ~/Library/Audio/Presets

@@ -15,7 +15,7 @@ _: &macos_general
   computer_sleep_time: Never
   display_sleep_time: Never
 
-  files:
+  file:
     # Unhide the user ~/Library directory
     - path: ~/Library
       state: directory
@@ -51,7 +51,7 @@ _: &macos_general
     - path: /Library/Audio/Plug-Ins/VST3
       <<: *audio_directory_properties
 
-  defaults:
+  plist:
     # System Preferences & Globals
     - domain: Apple Global Domain
       values:

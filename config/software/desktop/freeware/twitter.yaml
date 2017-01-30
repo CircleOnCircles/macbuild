@@ -1,6 +1,7 @@
 _: &twitter
+  name: Twitter
   appstore: Twitter
-  defaults:
+  plist:
     - domain: com.twitter.twitter-mac
       container: com.twitter.twitter-mac
       values:

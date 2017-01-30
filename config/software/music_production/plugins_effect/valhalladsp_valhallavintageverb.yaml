@@ -1,6 +1,6 @@
 _: &valhalladsp_valhallavintageverb
   name: ValhallaDSP ValhallaVintageVerb
   cask: valhalladsp-valhallavintageverb
-  files:
+  file:
     - source: !join_path [*app_license_dir, Music Production/ValhallaDSP/ValhallaDSP ValhallaVintageVerb/ValhallaVintageVerb.settings]
       path: ~/Library/Preferences/ValhallaVintageVerb.settings

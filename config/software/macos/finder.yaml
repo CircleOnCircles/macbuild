@@ -19,7 +19,7 @@ _: &finder
     - ~/Pictures
     - ~/Music
 
-  defaults:
+  plist:
     - domain: com.apple.finder
       values:
         # View / Show Path Bar

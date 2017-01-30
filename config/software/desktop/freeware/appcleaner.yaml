@@ -1,7 +1,7 @@
 _: &appcleaner
   name: AppCleaner
   cask: appcleaner
-  defaults:
+  plist:
     - domain: net.freemacsoft.AppCleaner
       values:
         SUEnableAutomaticChecks: true

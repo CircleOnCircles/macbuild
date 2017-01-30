@@ -1,6 +1,6 @@
 _: &terminal
   name: Terminal
-  defaults:
+  plist:
     - domain: com.apple.Terminal
       values:
         Default Window Settings: Fots

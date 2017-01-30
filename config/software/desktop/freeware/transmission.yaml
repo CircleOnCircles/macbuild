@@ -1,7 +1,7 @@
 _: &transmission
   name: Transmission
   cask: transmission
-  defaults:
+  plist:
     - domain: org.m0k.transmission
       values:
         # Transfers / Trash original torrent files

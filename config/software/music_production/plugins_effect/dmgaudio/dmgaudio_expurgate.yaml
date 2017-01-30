@@ -1,6 +1,6 @@
 _: &dmgaudio_expurgate
   name: DMG Audio Expurgate
   cask: dmgaudio-expurgate
-  files:
+  file:
     - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Expurgate/license]
       path: ~/Library/Application Support/DMGAudio/Expurgate/license

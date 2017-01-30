@@ -1,6 +1,6 @@
 _: &dmgaudio_compassion
   name: DMG Audio Compassion
   cask: dmgaudio-compassion
-  files:
+  file:
     - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Compassion/license]
       path: ~/Library/Application Support/DMGAudio/Compassion/license

@@ -1,7 +1,7 @@
 _: &microsoft_office
   name: Microsoft Office
   cask: microsoft-office
-  defaults:
+  plist:
     - path: ~/Library/Group Containers/UBF8T346G9.Office/com.microsoft.officeprefs.plist
       values:
         kCUIThemePreferencesThemeKeyPath: 0

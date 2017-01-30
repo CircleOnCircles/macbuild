@@ -28,7 +28,7 @@ _: &dock
   other:
     - path: ~/Downloads
 
-  defaults:
+  plist:
     - domain: com.apple.dock
       values:
         # Set the icon size of dock items

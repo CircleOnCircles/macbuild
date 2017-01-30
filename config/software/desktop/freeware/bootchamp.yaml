@@ -1,7 +1,7 @@
 _: &bootchamp
   name: BootChamp
   cask: bootchamp
-  defaults:
+  plist:
     - domain: com.kainjow.BootChamp
       values:
         SUEnableAutomaticChecks: true

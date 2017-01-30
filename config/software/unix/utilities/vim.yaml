@@ -1,7 +1,7 @@
 _: &vim
   name: VIM
   vimrc_path: files/vim/.vimrc
-  files:
+  file:
     - path: ~/.vim
       state: directory
     - path: ~/.vim/bundle

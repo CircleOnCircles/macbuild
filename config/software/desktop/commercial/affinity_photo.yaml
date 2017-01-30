@@ -1,6 +1,7 @@
 _: &affinity_photo
+  name: Affinity Photo
   appstore: Affinity Photo
-  defaults:
+  plist:
     - domain: com.seriflabs.affinityphoto
       container: com.seriflabs.affinityphoto
       values:

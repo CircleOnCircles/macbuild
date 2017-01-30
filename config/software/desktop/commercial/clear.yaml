@@ -1,6 +1,7 @@
 _: &clear
+  name: Clear
   appstore: Clear
-  defaults:
+  plist:
     - domain: com.realmacsoftware.clear.mac
       container: com.realmacsoftware.clear.mac
       values:

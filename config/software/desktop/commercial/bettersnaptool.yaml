@@ -1,6 +1,7 @@
 _: &bettersnaptool
+  name: BetterSnapTool
   appstore: BetterSnapTool
-  defaults:
+  plist:
     - domain: com.hegenberg.BetterSnapTool
       values:
         BSTDidAlreadyLaunchOnElCapitan: true

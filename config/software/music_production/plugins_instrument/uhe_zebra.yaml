@@ -1,6 +1,6 @@
 _: &uhe_zebra
   name: u-he Zebra
   cask: u-he-zebra
-  files:
+  file:
     - source: !join_path [*app_license_dir, Music Production/u-he/u-he Zebra/com.u-he.Zebra2.plist]
       path: ~/Library/Application Support/u-he/com.u-he.Zebra2.plist

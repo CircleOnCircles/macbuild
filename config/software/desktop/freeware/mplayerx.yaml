@@ -1,7 +1,7 @@
 _: &mplayerx
   name: MPlayerX
   cask: mplayerx
-  defaults:
+  plist:
     - domain: org.niltsh.MPlayerX
       values:
         SUSendProfileInfo: false

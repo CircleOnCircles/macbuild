@@ -1,6 +1,6 @@
 _: &dmgaudio_trackgate
   name: DMG Audio TrackGate
   cask: dmgaudio-trackgate
-  files:
+  file:
     - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackGate/license]
       path: ~/Library/Application Support/DMGAudio/TrackGate/license

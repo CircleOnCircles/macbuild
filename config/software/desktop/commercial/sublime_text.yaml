@@ -1,10 +1,10 @@
 _: &sublime_text
   name: Sublime Text
   cask: sublime-text
-  handlers:
+  handler:
     - public.plain-text
 
-  files:
+  file:
     - path: ~/Library/Application Support/Sublime Text 3/Installed Packages
       state: directory
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User

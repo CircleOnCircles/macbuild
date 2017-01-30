@@ -1,7 +1,7 @@
 _: &openemu
   name: OpenEmu
   cask: openemu-experimental
-  defaults:
+  plist:
     - domain: org.openemu.OpenEmu
       values:
         setupAssistantFinished: true
@@ -9,7 +9,7 @@ _: &openemu
         videoFilter: SABR
         fullScreen: true
         # databasePath: ~/Library/Application Support/OpenEmu/Game Library
-  symlinks:
+  symlink:
     - source: !join_path [*app_config_dir, OpenEmu/BIOS]
       path: '~/Library/Application Support/OpenEmu/BIOS'
     - source: !join_path [*app_config_dir, OpenEmu/Bindings]
