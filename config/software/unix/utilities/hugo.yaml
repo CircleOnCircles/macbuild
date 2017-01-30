@@ -1,0 +1,4 @@
+_: &hugo
+  name: Hugo
+  brew: hugo
+  pip: Pygments

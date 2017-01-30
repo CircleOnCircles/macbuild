@@ -1,0 +1,6 @@
+_: &dmgaudio_essence
+  name: DMG Audio Essence
+  cask: dmgaudio-essence
+  files:
+    - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Essence/license]
+      path: ~/Library/Application Support/DMGAudio/Essence/license

@@ -1,0 +1,6 @@
+_: &ableton_live_9_suite
+  name: Ableton Live 9 Suite
+  cask: ableton-live-9-suite
+  files:
+    - source: !join_path [*app_license_dir, Music Production/Ableton/Ableton Live 9 Suite/Unlock.cfg]
+      path: ~/Library/Application Support/Ableton/Live 9.7/Unlock/Unlock.cfg

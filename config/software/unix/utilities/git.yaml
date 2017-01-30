@@ -1,0 +1,6 @@
+_: &git
+  name: Git
+  brew: git
+  files:
+    - source: files/dotfiles/.gitconfig
+      path: ~/.gitconfig

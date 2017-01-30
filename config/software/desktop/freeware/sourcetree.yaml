@@ -1,0 +1,21 @@
+_: &sourcetree
+  name: SourceTree
+  cask: sourcetree
+  files:
+    - path: *development_dir
+      state: directory
+  defaults:
+    - domain: com.torusknot.SourceTreeNotMAS
+      values:
+        moveToApplicationsFolderAlertSuppress: true
+        analyticsHasAgreed: false
+        agreedToEULA: true
+        showStagingTip: false
+        showFileStatusViewOptionsTip: false
+        SUEnableAutomaticChecks: true
+        globalUserFullName: Fotis Gimian
+        globalUserEmail: fgimiansoftware@gmail.com
+        diffFontName: SourceCodePro-Regular
+        diffFontSize: 13.0
+        defaultFolder: *development_dir
+        createBookmarksOnOpenRepo: false

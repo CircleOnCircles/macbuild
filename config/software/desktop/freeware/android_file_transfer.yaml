@@ -1,0 +1,7 @@
+_: &android_file_transfer
+  name: Android File Transfer
+  cask: android-file-transfer
+  defaults:
+    - domain: com.google.android.mtpviewer
+      values:
+        FirstRunShown: true

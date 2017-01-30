@@ -1,0 +1,6 @@
+_: &uhe_hive
+  name: u-he Hive
+  cask: u-he-hive
+  files:
+    - source: !join_path [*app_license_dir, Music Production/u-he/u-he Hive/com.u-he.Hive.plist]
+      path: ~/Library/Application Support/u-he/com.u-he.Hive.plist

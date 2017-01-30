@@ -1,0 +1,5 @@
+_: &voxengo_span
+  name: Voxengo SPAN
+  cask:
+    - voxengo-span-au-aax
+    - voxengo-span-vst-vst3

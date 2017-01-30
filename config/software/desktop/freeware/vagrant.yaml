@@ -1,0 +1,4 @@
+_: &vagrant
+  name: Vagrant
+  cask: vagrant
+  brew: vagrant-completion

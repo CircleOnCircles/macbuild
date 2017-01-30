@@ -1,0 +1,3 @@
+_: &virtualbox
+  name: Virtualbox
+  cask: virtualbox

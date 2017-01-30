@@ -1,0 +1,5 @@
+_: &docker
+  name: Docker
+  brew:
+    - docker
+    - docker-machine

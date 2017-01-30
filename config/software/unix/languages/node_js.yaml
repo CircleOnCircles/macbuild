@@ -1,0 +1,10 @@
+_: &node_js
+  name: Node.js
+  brew: node
+  npm:
+    - bower
+    - coffee-script
+    - csslint
+    - less
+    - jshint
+    - uglify-js

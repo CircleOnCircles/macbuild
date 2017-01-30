@@ -1,0 +1,11 @@
+_: &vim
+  name: VIM
+  vimrc_path: files/vim/.vimrc
+  files:
+    - path: ~/.vim
+      state: directory
+    - path: ~/.vim/bundle
+      state: directory
+  git:
+    path: ~/.vim/bundle/Vundle.vim
+    repo: https://github.com/gmarik/Vundle.vim.git

@@ -1,0 +1,10 @@
+_: &daisydisk
+  name: DaisyDisk
+  cask: daisydisk
+  defaults:
+    - domain: com.daisydiskapp.DaisyDiskStandAlone
+      values:
+        moveToApplicationsFolderAlertSuppress: true
+  files:
+    - source: !join_path [*app_license_dir, General/DaisyDisk/License.DaisyDisk]
+      path: ~/Library/Application Support/DaisyDisk/License.DaisyDisk

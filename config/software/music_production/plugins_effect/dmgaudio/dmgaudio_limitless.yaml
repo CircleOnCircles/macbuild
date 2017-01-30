@@ -1,0 +1,6 @@
+_: &dmgaudio_limitless
+  name: DMG Audio Limitless
+  cask: dmgaudio-limitless
+  files:
+    - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Limitless/license]
+      path: ~/Library/Application Support/DMGAudio/Limitless/license

@@ -1,0 +1,6 @@
+_: &dmgaudio_trackcontrol
+  name: DMG Audio TrackControl
+  cask: dmgaudio-trackcontrol
+  files:
+    - source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackControl/license]
+      path: ~/Library/Application Support/DMGAudio/TrackControl/license

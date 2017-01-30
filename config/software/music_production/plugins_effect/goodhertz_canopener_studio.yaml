@@ -1,0 +1,6 @@
+_: &goodhertz_canopener_studio
+  name: Goodhertz CanOpener Studio
+  cask: goodhertz-canopener-studio
+  files:
+    - source: !join_path [*app_license_dir, Music Production/Goodhertz/Goodhertz CanOpener Studio/Interface.interface]
+      path: ~/Music/.GDHZ/Interface.interface

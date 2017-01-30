@@ -1,0 +1,8 @@
+_: &steinberg_cubase_pro_9
+  name: Steinberg Cubase Pro 9
+  cask:
+    - steinberg-cubase-pro-9
+    - steinberg-cubase-pro-9-update
+  symlinks:
+    - source: ~/Music/Presets
+      path: ~/Library/Audio/Presets

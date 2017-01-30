@@ -1,0 +1,10 @@
+_: &twitter
+  appstore: Twitter
+  defaults:
+    - domain: com.twitter.twitter-mac
+      container: com.twitter.twitter-mac
+      values:
+        # General / Font size / 16 pt
+        FontSize1: 16
+        # General / Theme / Dark Theme
+        TMSelectedThemeIdentifier: com.twitter.twitter.themeIdentifiers.darkTheme

@@ -1,0 +1,3 @@
+_: &softube_tube_delay
+  name: Softube Tube Delay
+  cask: softube-tube-delay

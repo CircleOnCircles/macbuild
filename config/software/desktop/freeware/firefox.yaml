@@ -1,0 +1,3 @@
+_: &firefox
+  name: Firefox
+  cask: firefox

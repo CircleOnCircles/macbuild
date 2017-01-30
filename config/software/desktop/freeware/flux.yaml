@@ -1,0 +1,15 @@
+_: &flux
+  name: Flux
+  cask: flux
+  defaults:
+    - domain: org.herf.Flux
+      values:
+        moveToApplicationsFolderAlertSuppress: true
+        lateColorTemp: 2400.0
+        nightColorTemp: 2800.0
+        dayColorTemp: 3200.0
+        locationTextField: Melbourne, Australia
+        locationType: L
+        location: '-37.814107,144.963280'
+        wakeTime: 480
+  login_item: true

@@ -1,0 +1,10 @@
+_: &skype
+  name: Skype
+  cask: skype
+  defaults:
+    - domain: com.skype.skype
+      values:
+        # Preferences / Contacts / Untick Show Mac Contacts
+        ShowAddressBookContacts: false
+        # View / as List
+        ContactListViewMode: 1

@@ -1,0 +1,9 @@
+_: &appcleaner
+  name: AppCleaner
+  cask: appcleaner
+  defaults:
+    - domain: net.freemacsoft.AppCleaner
+      values:
+        SUEnableAutomaticChecks: true
+        SUHasLaunchedBefore: true
+        SUSendProfileInfo: false

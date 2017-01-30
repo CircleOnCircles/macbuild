@@ -1,0 +1,10 @@
+_: &voxengo_deft_compressor
+  name: Voxengo Deft Compressor
+  cask:
+    - voxengo-deft-compressor-au-aax
+    - voxengo-deft-compressor-vst-vst3
+  files:
+    - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Deft Compressor/product-key-name]
+      path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Deft Compressor/product-key-name
+    - source: !join_path [*app_license_dir, Music Production/Voxengo/Voxengo Deft Compressor/product-key-value]
+      path: ~/Library/Preferences/Voxengo/Audio Plug-Ins/Deft Compressor/product-key-value

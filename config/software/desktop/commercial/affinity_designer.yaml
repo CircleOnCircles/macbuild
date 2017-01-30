@@ -1,0 +1,7 @@
+_: &affinity_designer
+  appstore: Affinity Designer
+  defaults:
+    - domain: com.seriflabs.affinitydesigner
+      container: com.seriflabs.affinitydesigner
+      values:
+        com.seriflabs.ShowWelcomeScreen: false

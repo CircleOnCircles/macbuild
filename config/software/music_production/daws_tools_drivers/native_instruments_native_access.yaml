@@ -1,0 +1,3 @@
+_: &native_instruments_native_access
+  name: Native Instruments Native Access
+  cask: native-instruments-native-access

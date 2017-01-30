@@ -1,0 +1,6 @@
+_: &spectrasonics_omnisphere
+  name: Spectrasonics Omnisphere
+  cask: spectrasonics-omnisphere
+  files:
+    - source: !join_path [*app_license_dir, Music Production/Spectrasonics/Spectrasonics Omnisphere/net.spectrasonics.V6.plist]
+      path: ~/Library/Preferences/net.spectrasonics.V6.plist

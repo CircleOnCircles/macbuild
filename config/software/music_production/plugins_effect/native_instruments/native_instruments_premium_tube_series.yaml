@@ -1,0 +1,6 @@
+_: &native_instruments_premium_tube_series
+  name: Native Instruments Premium Tube Series
+  cask:
+    - native-instruments-enhanced-eq
+    - native-instruments-passive-eq
+    - native-instruments-vari-comp

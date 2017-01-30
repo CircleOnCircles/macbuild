@@ -1,0 +1,10 @@
+_: &transmission
+  name: Transmission
+  cask: transmission
+  defaults:
+    - domain: org.m0k.transmission
+      values:
+        # Transfers / Trash original torrent files
+        DeleteOriginalTorrent: true
+        # Hide the legal disclaimer
+        WarningLegal: false

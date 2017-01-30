@@ -1,0 +1,13 @@
+_: &bash
+  name: Bash
+  brew:
+    - bash
+    - bash-completion
+  pip: powerline-status
+  files:
+    - source: files/dotfiles/.bash_profile
+      path: ~/.bash_profile
+    - source: files/dotfiles/.bash_profile.d/bash_completion.sh
+      path: ~/.bash_profile.d/bash_completion.sh
+    - source: files/dotfiles/.bash_profile.d/powerline.sh
+      path: ~/.bash_profile.d/powerline.sh

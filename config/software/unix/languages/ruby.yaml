@@ -1,0 +1,10 @@
+_: &ruby
+  name: Ruby
+  brew:
+    - rbenv
+    - ruby-build
+    - ruby-completion
+    - rake-completion
+  files:
+    - source: files/dotfiles/.bash_profile.d/rbenv.sh
+      path: ~/.bash_profile.d/rbenv.sh

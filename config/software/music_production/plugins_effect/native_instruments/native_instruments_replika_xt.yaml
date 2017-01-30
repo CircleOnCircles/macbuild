@@ -1,0 +1,3 @@
+_: &native_instruments_replika_xt
+  name: Native Instruments Replika XT
+  cask: native-instruments-replika-xt

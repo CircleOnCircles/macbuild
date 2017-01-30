@@ -1,0 +1,7 @@
+_: &clear
+  appstore: Clear
+  defaults:
+    - domain: com.realmacsoftware.clear.mac
+      container: com.realmacsoftware.clear.mac
+      values:
+        app.shown-welcome: true

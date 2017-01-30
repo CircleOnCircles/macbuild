@@ -1,0 +1,39 @@
+_: &dock
+  name: Dock
+
+  # Dock applications (in the left section)
+  apps:
+    - ForkLift
+    - Launchpad
+    - Safari
+    - Sublime Text
+    - Utilities/Terminal
+    - Cubase 9
+    - Logic Pro X
+    - Audio Hijack
+    - XLD
+    - Focusrite Control
+    - Spotify
+    - OpenEmu
+    - Skype
+    - Slack
+    - Textual
+    - Twitter
+    - Clear
+    - VMware Fusion
+    - App Store
+    - System Preferences
+
+  # Dock folders and URLs (in the right section)
+  other:
+    - path: ~/Downloads
+
+  defaults:
+    - domain: com.apple.dock
+      values:
+        # Set the icon size of dock items
+        tilesize: 60
+        # Enable magnificationn of icons
+        magnification: true
+        # Make hidden applications translucent in the dock
+        showhidden: true

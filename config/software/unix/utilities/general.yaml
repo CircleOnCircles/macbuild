@@ -1,0 +1,22 @@
+_: &unix_general
+  name: Unix General
+  brew:
+    - android-platform-tools
+    - ctags
+    - curl
+    - dos2unix
+    - ffmpeg
+    - findutils
+    - gnu-sed
+    - mas
+    - md5sha1sum
+    - p7zip
+    - rlwrap
+    - rsync
+    - sassc
+    - shellcheck
+    - tree
+    - unrar
+    - watch
+    - wget
+    - xz

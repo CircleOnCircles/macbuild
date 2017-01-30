@@ -1,0 +1,149 @@
+_: &audio_directory_properties
+  state: directory
+  owner: root
+  group: admin
+  mode: '0775'
+  sudo: true
+
+_: &macos_general
+  name: macOS General
+
+  # Set the appropriate timezone
+  timezone: Australia/Melbourne
+
+  # Set the computer and display sleep times
+  computer_sleep_time: Never
+  display_sleep_time: Never
+
+  files:
+    # Unhide the user ~/Library directory
+    - path: ~/Library
+      state: directory
+      flags: [hidden]
+    # Create a dedicated location to store screenshots
+    - path: ~/Pictures/Screenshots
+      state: directory
+    # Create a dedicated location for development work
+    - path: *development_dir
+      state: directory
+
+    # Set permissions on all audio directories
+
+    # Documentation
+    - path: /Library/Documentation
+      <<: *audio_directory_properties
+    # Presets
+    - path: /Library/Audio/Presets
+      <<: *audio_directory_properties
+    # AAX
+    - path: /Library/Application Support/Avid/Audio/Plug-Ins
+      <<: *audio_directory_properties
+    # RTAS
+    - path: /Library/Application Support/Digidesign/Plug-Ins
+      <<: *audio_directory_properties
+    # AU
+    - path: /Library/Audio/Plug-Ins/Components
+      <<: *audio_directory_properties
+    # VST
+    - path: /Library/Audio/Plug-Ins/VST
+      <<: *audio_directory_properties
+    # VST3
+    - path: /Library/Audio/Plug-Ins/VST3
+      <<: *audio_directory_properties
+
+  defaults:
+    # System Preferences & Globals
+    - domain: Apple Global Domain
+      values:
+        # General / Appearance / Use dark menu bar and Dock
+        AppleInterfaceStyle: Dark
+        # Keyboard / Keyboard / Key Repeat
+        KeyRepeat: 2
+        # Keyboard / Keyboard / Delay Until Repeat
+        InitialKeyRepeat: 25
+        # Keyboard / Keyboard / Use all F1, F2, etc. keys as standard function keys
+        com.apple.keyboard.fnState: true
+        # Keyboard / Text / Correct spelling automatically
+        NSAutomaticSpellingCorrectionEnabled: false
+        # Keyboard / Text / Use smart quotes and dashes
+        NSAutomaticQuoteSubstitutionEnabled: false
+        NSAutomaticDashSubstitutionEnabled: false
+        # Keyboard / Shortcuts / Full Keyboard Access / All controls
+        AppleKeyboardUIMode: 3
+        # Mouse / Point & Click / Tracking
+        com.apple.mouse.scaling: 1.0
+
+        # Enable subpixel font rendering on non-Apple LCDs
+        AppleFontSmoothing: 2
+        # Expand the save panel by default
+        NSNavPanelExpandedStateForSaveMode: true
+        NSNavPanelExpandedStateForSaveMode2: true
+        # Disable the character accent menu when holding down a key
+        ApplePressAndHoldEnabled: false
+
+    # System Preferences / Accessibility
+    - domain: com.apple.universalaccess
+      values:
+        # Zoom / Use scroll gesture with modifier keys to zoom
+        closeViewScrollWheelToggle: true
+        # Display / Cursor size
+        mouseDriverCursorSize: 1.25
+
+    # System Preferences / Keyboard / Dictation
+    - domain: com.apple.HIToolbox
+      values:
+        # Disable Dictation (including prompt when pressing the Fn key)
+        AppleDictationAutoEnable: 0
+
+    # System Preferences / Mouse
+    - domain: com.apple.driver.AppleBluetoothMultitouch.mouse
+      values:
+        # Point & Click / Secondary click
+        MouseButtonMode: TwoButton
+
+    # System Preferences / App Store
+    - path: /Library/Preferences/com.apple.SoftwareUpdate.plist
+      values:
+        # Disable 'Download newly available updates in the background'
+        AutomaticDownload: false
+      sudo: true
+
+    # Launch Services
+    - domain: com.apple.LaunchServices
+      values:
+        # Disable the 'Are you sure you want to open this application?' dialog
+        LSQuarantine: false
+
+    # Login Window
+    - domain: com.apple.loginwindow
+      values:
+        # Disable 'Reopen windows when logging back in' by default
+        TALLogoutSavesState: false
+
+    # Menu (Clock)
+    - domain: com.apple.menuextra.clock
+      values:
+        # Open Date & Time Preferences... / Clock / Show date
+        DateFormat: "EEE d MMM  h:mm a"
+
+    # Menu (Power)
+    - domain: com.apple.menuextra.battery
+      values:
+        # Show Percentage
+        ShowPercent: 'YES'
+
+    # Symbolic Hot Keys
+    - domain: com.apple.symbolichotkeys
+      values:
+        # Disable slow motion effects
+        # (http://apple.stackexchange.com/questions/66433)
+        AppleSymbolicHotKeys:
+          '34': { enabled: false }
+          '35': { enabled: false }
+          '37': { enabled: false }
+
+    # Screen Capture
+    - domain: com.apple.screencapture
+      values:
+        # Set screenshot location
+        location: ~/Pictures/Screenshots

@@ -1,0 +1,6 @@
+_: &artsacoustic_reverb
+  name: ArtsAcoustic Reverb
+  cask: artsacoustic-reverb
+  files:
+    - source: !join_path [*app_license_dir, Music Production/ArtsAcoustic/ArtsAcoustic Reverb/Preference.xml]
+      path: ~/Library/Application Support/ArtsAcoustic/Reverb/Preference.xml

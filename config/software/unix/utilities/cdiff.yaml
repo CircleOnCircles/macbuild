@@ -1,0 +1,6 @@
+_: &cdiff
+  name: cdiff
+  pip: cdiff
+  symlinks:
+    - source: /usr/local/bin/cdiff
+      path: /usr/local/bin/git-cdiff

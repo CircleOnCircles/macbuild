@@ -1,0 +1,3 @@
+_: &slack
+  name: Slack
+  cask: slack

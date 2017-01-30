@@ -1,0 +1,10 @@
+_: &taps
+  name: Taps
+  tap:
+    - homebrew/completions
+    - homebrew/dupes
+    - homebrew/fuse
+    - caskroom/cask
+    - caskroom/fonts
+    - caskroom/versions
+    - fgimian/fgimian

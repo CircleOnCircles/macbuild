@@ -1,6 +1,0 @@
-python_packages:
-  - ipython
-  - powerline-status
-  - pip
-  - Pygments
-  - setuptools

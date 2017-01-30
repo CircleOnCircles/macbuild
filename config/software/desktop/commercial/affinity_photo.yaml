@@ -1,0 +1,7 @@
+_: &affinity_photo
+  appstore: Affinity Photo
+  defaults:
+    - domain: com.seriflabs.affinityphoto
+      container: com.seriflabs.affinityphoto
+      values:
+        com.seriflabs.ShowWelcomeScreen: false

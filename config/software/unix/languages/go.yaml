@@ -1,0 +1,6 @@
+_: &go
+  name: Go
+  brew: go
+  files:
+    - source: files/dotfiles/.bash_profile.d/go.sh
+      path: ~/.bash_profile.d/go.sh

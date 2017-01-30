@@ -1,0 +1,29 @@
+_: &textual
+  name: Textual
+  cask: textual
+  defaults:
+    - domain: com.codeux.apps.textual
+      values:
+        SUEnableAutomaticChecks: true
+        SUSendProfileInfo: false
+        'Theme -> Invert Sidebar Colors Preference Enabled': 0
+        'Theme -> Name': 'resource:Sapientia'
+        'Text Input Prompt Suppression -> theme_override_info': true
+        'World Controller':
+          clients:
+          - autoConnect: True
+            connectionName: freenode
+            nickname: fgimian
+            realName: Fotis Gimian
+            serverAddress: chat.freenode.net
+            username: fgimian
+            channelList:
+            - channelName: '#ansible'
+            - channelName: '#chef'
+            - channelName: '#puppet'
+            - channelName: '#salt'
+            - channelName: '#python'
+            - channelName: '#terraform'
+  files:
+    - source: !join_path [*app_license_dir, General/Textual/Textual_User_License.plist]
+      path: ~/Library/Application Support/Textual/Textual_User_License.plist

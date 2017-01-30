@@ -1,0 +1,10 @@
+_: &bootchamp
+  name: BootChamp
+  cask: bootchamp
+  defaults:
+    - domain: com.kainjow.BootChamp
+      values:
+        SUEnableAutomaticChecks: true
+        SUHasLaunchedBefore: true
+        SUSendProfileInfo: false
+  login_item: true

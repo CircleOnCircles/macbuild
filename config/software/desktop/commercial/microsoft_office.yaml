@@ -1,0 +1,27 @@
+_: &microsoft_office
+  name: Microsoft Office
+  cask: microsoft-office
+  defaults:
+    - path: ~/Library/Group Containers/UBF8T346G9.Office/com.microsoft.officeprefs.plist
+      values:
+        kCUIThemePreferencesThemeKeyPath: 0
+    - domain: com.microsoft.Excel
+      container: com.microsoft.Excel
+      values:
+        kSubUIAppCompletedFirstRunSetup1507: true
+    - domain: com.microsoft.Word
+      container: com.microsoft.Word
+      values:
+        kSubUIAppCompletedFirstRunSetup1507: true
+    - domain: com.microsoft.Powerpoint
+      container: com.microsoft.Powerpoint
+      values:
+        kSubUIAppCompletedFirstRunSetup1507: true
+    - domain: com.microsoft.onenote.mac
+      container: com.microsoft.onenote.mac
+      values:
+        kSubUIAppCompletedFirstRunSetup1507: true
+    - domain: com.microsoft.Outlook
+      container: com.microsoft.Outlook
+      values:
+        kSubUIAppCompletedFirstRunSetup1507: true

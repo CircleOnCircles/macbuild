@@ -1,0 +1,4 @@
+_: &dropbox
+  name: Dropbox
+  cask: dropbox
+  login_item: true

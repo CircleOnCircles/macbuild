@@ -1,0 +1,3 @@
+_: &valhalladsp_valhallaspacemodulator
+  name: ValhallaDSP ValhallaSpaceModulator
+  cask: valhalladsp-valhallaspacemodulator

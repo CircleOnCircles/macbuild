@@ -1,0 +1,10 @@
+_: &mplayerx
+  name: MPlayerX
+  cask: mplayerx
+  defaults:
+    - domain: org.niltsh.MPlayerX
+      values:
+        SUSendProfileInfo: false
+        SUEnableAutomaticChecks: true
+        # General / Keep window on top / Never
+        OnTopMode: 0

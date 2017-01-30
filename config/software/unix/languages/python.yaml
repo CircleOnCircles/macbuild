@@ -1,0 +1,13 @@
+_: &python
+  name: Python
+  brew:
+    - python3
+    - pip-completion
+  pip:
+    - setuptools
+    - pip
+    - ipython
+    - powerline-status
+  files:
+    - source: files/dotfiles/.ipython/profile_default/ipython_config.py
+      path: ~/.ipython/profile_default/ipython_config.py
