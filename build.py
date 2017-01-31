@@ -149,9 +149,10 @@ def main(elite, config, printer):
                 for plist in plists:
                     elite.plist(
                         domain=plist.get('domain'),
-                        values=plist.get('values'),
-                        path=plist.get('path'),
                         container=plist.get('container'),
+                        path=plist.get('path'),
+                        source=plist.get('source'),
+                        values=plist.get('values'),
                         sudo=plist.get('sudo', False)
                     )
 
