@@ -1,25 +1,32 @@
 software:
-  Preparation:
+  Essentials:
     - *taps
+    - *bash
+    - *python
     - *fonts
+    - *sublime_text
+    - *spotify
+    - *terminal
 
   macOS:
     - *macos_general
     - *finder
     - *safari
-    - *terminal
 
   Unix / Languages:
     - *go
     - *node_js
-    - *python
     - *ruby
+
+  Unix / Virtualization:
+    - *virtualbox
+    - *vagrant
+    - *docker
+    - *kitematic
 
   Unix / Utilities:
     - *unix_general
-    - *bash
     - *cdiff
-    - *docker
     - *fish
     - *git
     - *hugo
@@ -44,11 +51,8 @@ software:
     - *skype
     - *slack
     - *sourcetree
-    - *spotify
     - *transmission
     - *twitter
-    - *vagrant
-    - *virtualbox
     - *xld
 
   Desktop Software / Commercial:
@@ -66,7 +70,6 @@ software:
     - *istat_mini
     - *microsoft_office
     - *screenflow
-    - *sublime_text
     - *textual
     - *vmware_fusion
     - *world_clock
@@ -150,6 +153,7 @@ software:
     - *novation_bass_station
     - *reveal_sound_spire
     - *spectrasonics_omnisphere
+    - *steinberg_padshop
     - *steinberg_retrologue
     - *synapse_audio_dune
     - *uhe_hive
