@@ -1,6 +1,6 @@
 _: &vim
   name: VIM
-  vimrc_path: files/vim/.vimrc
+  vimrc_path: files/dotfiles/.vimrc
   file:
     - path: ~/.vim
       state: directory

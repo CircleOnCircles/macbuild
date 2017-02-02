@@ -33,4 +33,5 @@ _: &spotify
     # Preferences / Playback / Disable 'Set the same volume level for all songs'
     audio.normalize_v2: false
 
+  # TODO support this setting
   start_on_boot: false

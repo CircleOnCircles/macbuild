@@ -13,12 +13,18 @@ _: &macos_general
     - path: ~/Library
       state: directory
       flags: [hidden]
+
     # Create a dedicated location to store screenshots
     - path: ~/Pictures/Screenshots
       state: directory
+
     # Create a dedicated location for development work
     - path: *development_dir
       state: directory
+
+    # SSH Configuration (Sierra specific)
+    # - source: files/dotfiles/.ssh/config
+    #   path: ~/.ssh/config
 
     # Set permissions on all audio directories
       
@@ -163,9 +169,11 @@ _: &macos_general
         # Set screenshot location (hidden)
         location: ~/Pictures/Screenshots
 
+  # TODO support this setting
   # Set the appropriate timezone
   timezone: Australia/Melbourne
 
+  # TODO support these settings
   # Set the computer and display sleep times
   computer_sleep_time: Never
   display_sleep_time: Never
