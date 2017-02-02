@@ -12,8 +12,6 @@ _: &dock
       # Make hidden applications translucent in the dock (hidden setting)
       showhidden: true
 
-  # TODO determine how we will set permissions for dock
-
   # Dock applications (in the left section)
   apps:
     - ForkLift

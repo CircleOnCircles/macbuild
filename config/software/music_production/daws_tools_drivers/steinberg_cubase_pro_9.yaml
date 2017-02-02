@@ -8,4 +8,3 @@ _: &steinberg_cubase_pro_9
     # TODO Ableton Live doesn't like this at all
     - path: ~/Library/Audio/Presets
       source: ~/Music/Presets
-      # TODO mode: '0700'

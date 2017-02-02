@@ -17,7 +17,6 @@ _: &spotify
       source: files/spotify/watch-sources.bnk
       mode: '0644'
 
-  # TODO permissions of these files
   global_settings:
     # Preferences / Startup and Window Behaviour /
     # Open Spotify automatically after your login into the computer / No
@@ -33,5 +32,4 @@ _: &spotify
     # Preferences / Playback / Disable 'Set the same volume level for all songs'
     audio.normalize_v2: false
 
-  # TODO support this setting
-  start_on_boot: false
+  login_item: false

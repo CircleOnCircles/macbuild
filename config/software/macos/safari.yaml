@@ -1,8 +1,8 @@
 _: &safari
   name: Safari
-  mode: '0600'
   plist:
     domain: com.apple.Safari
+    mode: '0600'
     values:
       # Bookmarks / Disable 'Show Frequently Visited Sites'
       ShowFrequentlyVisitedSites: false

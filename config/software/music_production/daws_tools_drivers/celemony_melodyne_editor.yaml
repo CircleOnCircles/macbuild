@@ -3,15 +3,23 @@ _: &celemony_melodyne_editor
   cask: celemony-melodyne-editor
   file:
     # License
-    # TODO: user and group?
     - path: /Library/Application Support/Celemony
       state: directory
+      owner: root
+      group: admin
+      mode: '0755'
       sudo: true
     - path: /Library/Application Support/Celemony/Licenses
       state: directory
+      owner: root
+      group: admin
+      mode: '0755'
       sudo: true
     - path: /Library/Application Support/Celemony/Licenses/Melodyne singletrack.license
       source: !join_path [*app_license_dir, Music Production/Celemony/Celemony Melodyne Editor/Melodyne singletrack.license]
+      owner: fots
+      group: wheel
+      mode: '0644'
       sudo: true
   plist:
     domain: com.celemony.Melodyne singletrack

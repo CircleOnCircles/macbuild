@@ -1,7 +1,6 @@
 _: &launchpad
   name: Launchpad
 
-  # TODO determine how we will set permissions for the database
   apps:
     # Page 1: Apple
     -

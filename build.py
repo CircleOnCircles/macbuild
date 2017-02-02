@@ -2,6 +2,30 @@
 from elite.decorators import elite_main
 
 
+def set_macos_settings(elite, timezone, computer_sleep_time, display_sleep_time):
+    current_timezone = elite.run(command='systemsetup -gettimezone', sudo=True, changed=False)
+    if f'Time Zone: {timezone}' != current_timezone.stdout.rstrip():
+        elite.run(command=f'systemsetup -settimezone {timezone}', sudo=True)
+
+    computer_sleep = elite.run(command='systemsetup -getcomputersleep', sudo=True, changed=False)
+    if (
+        f'Computer Sleep: {computer_sleep_time}' !=
+        computer_sleep.stdout.rstrip().replace('after ', '').replace('minutes', '')
+    ):
+        elite.run(
+            command=f'systemsetup -setcomputersleep {computer_sleep_time}', sudo=True
+        )
+
+    display_sleep = elite.run(command='systemsetup -getdisplaysleep', sudo=True, changed=False)
+    if (
+        f'Display Sleep: {display_sleep_time}' !=
+        display_sleep.stdout.rstrip().replace('after ', '').replace('minutes', '')
+    ):
+        elite.run(
+            command=f'systemsetup -setdisplaysleep {display_sleep_time}', sudo=True
+        )
+
+
 @elite_main(
     config_path='config',
     config_order=['global.yaml', 'software', 'software.yaml']
@@ -160,7 +184,14 @@ def main(elite, config, printer):
                     )
 
             # Application SpecificActions
-            if name == 'Finder':
+            if name == 'macOS General':
+                timezone = software.pop('timezone')
+                computer_sleep_time = software.pop('computer_sleep_time')
+                display_sleep_time = software.pop('display_sleep_time')
+
+                set_macos_settings(elite, timezone, computer_sleep_time, display_sleep_time)
+
+            elif name == 'Finder':
                 layout = software.pop('favourites')
 
                 elite.favourites(layout=layout)
@@ -188,12 +219,10 @@ def main(elite, config, printer):
                 user_settings = software.pop('user_settings')
 
                 for pref, value in global_settings.items():
-                    elite.spotify_pref(pref=pref, value=value)
+                    elite.spotify_pref(pref=pref, value=value, mode='0644')
 
                 for pref, value in user_settings.items():
-                    elite.spotify_pref(pref=pref, value=value, username=username)
-
-                elite.login_item(path='/Applications/Spotify.app', state='absent')
+                    elite.spotify_pref(pref=pref, value=value, username=username, mode='0644')
 
             elif name == 'Native Instruments Kontakt 5':
                 library_order = software.pop('library_order')
@@ -201,14 +230,15 @@ def main(elite, config, printer):
                 for index, library in enumerate(library_order):
                     elite.plist(
                         domain=f'com.native-instruments.{library}',
-                        values={'UserListIndex': index}
+                        values={'UserListIndex': index},
+                        mode='0600'
                     )
 
             elif name == 'Dock':
                 app_layout = software.pop('apps')
                 other_layout = software.pop('other')
 
-                dock = elite.dock(app_layout=app_layout, other_layout=other_layout)
+                dock = elite.dock(app_layout=app_layout, other_layout=other_layout, mode='0600')
                 restart_dock = restart_dock or dock.changed
 
             elif name == 'Launchpad':
@@ -226,9 +256,12 @@ def main(elite, config, printer):
                     elite.handler(path=f'/Applications/{app}.app', content_type=handler)
 
             # Login items
-            login_item = software.pop('login_item', False)
-            if login_item:
-                elite.login_item(path=f'/Applications/{app}.app')
+            login_item = software.pop('login_item', None)
+            if login_item is not None:
+                elite.login_item(
+                    path=f'/Applications/{app}.app',
+                    state='present' if login_item else 'absent'
+                )
 
             # Verify that no extra keys remain after processing a piece of  software
             if software:

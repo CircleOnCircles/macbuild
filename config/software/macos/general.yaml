@@ -165,11 +165,9 @@ _: &macos_general
         # Set screenshot location (hidden)
         location: ~/Pictures/Screenshots
 
-  # TODO support this setting
   # Set the appropriate timezone
   timezone: Australia/Melbourne
 
-  # TODO support these settings
   # Set the computer and display sleep times
   computer_sleep_time: Never
   display_sleep_time: Never

@@ -5,7 +5,6 @@ _: &audio_hijack
     # Preferences
     - path: ~/Library/Application Support/Audio Hijack
       source: !join_path [*app_config_dir, Audio Hijack]
-      # TODO mode: '0755'
   plist:
     domain: com.rogueamoeba.audiohijack3
     source: !join_path [*app_license_dir, General/Audio Hijack/com.rogueamoeba.audiohijack3.plist]
