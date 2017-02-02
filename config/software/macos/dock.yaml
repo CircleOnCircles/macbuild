@@ -3,13 +3,16 @@ _: &dock
 
   plist:
     domain: com.apple.dock
+    mode: '0600'
     values:
-      # Set the icon size of dock items
+      # Preferences / Size
       tilesize: 60
-      # Enable magnificationn of icons
+      # Preferences / Magnification
       magnification: true
-      # Make hidden applications translucent in the dock
+      # Make hidden applications translucent in the dock (hidden setting)
       showhidden: true
+
+  # TODO determine how we will set permissions for dock
 
   # Dock applications (in the left section)
   apps:

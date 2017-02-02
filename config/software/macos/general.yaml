@@ -21,6 +21,15 @@ _: &macos_general
       state: directory
 
     # Set permissions on all audio directories
+      
+    # The original permissions of these folders for reference is:
+    # drwxr-xr-x  root  admin  /Library/Application Support/Avid/Audio/Plug-Ins
+    # drwxr-xr-x  root  admin  /Library/Application Support/Digidesign/Plug-Ins
+    # drwxr-xr-x  root  wheel  /Library/Audio/Plug-Ins/Components
+    # drwxr-xr-x  root  wheel  /Library/Audio/Plug-Ins/VST
+    # drwxr-xr-x  root  wheel  /Library/Audio/Plug-Ins/VST3
+    # drwxr-xr-x  root  wheel  /Library/Audio/Presets
+    # drwxr-xr-x  root  wheel  /Library/Documentation
 
     # Documentation
     - path: /Library/Documentation
@@ -47,6 +56,7 @@ _: &macos_general
   plist:
     # System Preferences & Globals
     - domain: Apple Global Domain
+      mode: '0600'
       values:
         # General / Appearance / Use dark menu bar and Dock
         AppleInterfaceStyle: Dark
@@ -62,20 +72,19 @@ _: &macos_general
         NSAutomaticQuoteSubstitutionEnabled: false
         NSAutomaticDashSubstitutionEnabled: false
         # Keyboard / Shortcuts / Full Keyboard Access / All controls
-        AppleKeyboardUIMode: 3
-        # Mouse / Point & Click / Tracking
+        AppleKeyboardUIMode: 2
+        # Mouse / Point & Click / Tracking speed
         com.apple.mouse.scaling: 1.0
 
-        # Enable subpixel font rendering on non-Apple LCDs
-        AppleFontSmoothing: 2
-        # Expand the save panel by default
-        NSNavPanelExpandedStateForSaveMode: true
-        NSNavPanelExpandedStateForSaveMode2: true
-        # Disable the character accent menu when holding down a key
+        # Expand the save panel by default (hidden setting)
+        # TODO NSNavPanelExpandedStateForSaveMode: true
+        # TODO NSNavPanelExpandedStateForSaveMode2: true
+        # Disable the character accent menu when holding down a key (hidden setting)
         ApplePressAndHoldEnabled: false
 
     # System Preferences / Accessibility
     - domain: com.apple.universalaccess
+      mode: '0600'
       values:
         # Zoom / Use scroll gesture with modifier keys to zoom
         closeViewScrollWheelToggle: true
@@ -84,18 +93,23 @@ _: &macos_general
 
     # System Preferences / Keyboard / Dictation
     - domain: com.apple.HIToolbox
+      mode: '0600'
       values:
         # Disable Dictation (including prompt when pressing the Fn key)
-        AppleDictationAutoEnable: 0
+        # TODO AppleDictationAutoEnable: 0
 
     # System Preferences / Mouse
     - domain: com.apple.driver.AppleBluetoothMultitouch.mouse
+      mode: '0600'
       values:
         # Point & Click / Secondary click
         MouseButtonMode: TwoButton
 
     # System Preferences / App Store
     - path: /Library/Preferences/com.apple.SoftwareUpdate.plist
+      mode: '0644'
+      owner: root
+      group: wheel
       values:
         # Disable 'Download newly available updates in the background'
         AutomaticDownload: false
@@ -104,41 +118,49 @@ _: &macos_general
     # Launch Services
     - domain: com.apple.LaunchServices
       values:
-        # Disable the 'Are you sure you want to open this application?' dialog
-        LSQuarantine: false
+        # Disable the 'Are you sure you want to open this application?' dialog (hidden setting)
+        # TODO LSQuarantine: false
 
-    # Login Window
+    # Log Out
     - domain: com.apple.loginwindow
+      mode: '0600'
       values:
         # Disable 'Reopen windows when logging back in' by default
         TALLogoutSavesState: false
 
     # Menu (Clock)
     - domain: com.apple.menuextra.clock
+      mode: '0600'
       values:
         # Open Date & Time Preferences... / Clock / Show date
         DateFormat: "EEE d MMM  h:mm a"
 
     # Menu (Power)
     - domain: com.apple.menuextra.battery
+      mode: '0600'
       values:
         # Show Percentage
         ShowPercent: 'YES'
 
     # Symbolic Hot Keys
     - domain: com.apple.symbolichotkeys
+      mode: '0600'
       values:
-        # Disable slow motion effects
-        # (http://apple.stackexchange.com/questions/66433)
+        # Disable slow motion effects (hidden setting)
+        # See http://apple.stackexchange.com/questions/66433 for more information
         AppleSymbolicHotKeys:
+          # Ctrl + Shift + ↑
           '34': { enabled: false }
+          # Ctrl + Shift + ↓
           '35': { enabled: false }
+          # Shift + F10
           '37': { enabled: false }
 
     # Screen Capture
     - domain: com.apple.screencapture
+      mode: '0600'
       values:
-        # Set screenshot location
+        # Set screenshot location (hidden)
         location: ~/Pictures/Screenshots
 
   # Set the appropriate timezone

@@ -30,6 +30,7 @@ _: &terminal
           rowCount: 26
 
           # Preferences / Profiles / Text / Font
+          # TODO this won't work on the first run because the font isn't installed
           Font: !macos_font [SauceCodePowerline-Regular, 16]
           # Preferences / Profiles / Text / Antialias text
           FontAntialias: true
