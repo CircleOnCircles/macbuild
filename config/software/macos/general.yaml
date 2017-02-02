@@ -27,7 +27,7 @@ _: &macos_general
     #   path: ~/.ssh/config
 
     # Set permissions on all audio directories
-      
+
     # The original permissions of these folders for reference is:
     # drwxr-xr-x  root  admin  /Library/Application Support/Avid/Audio/Plug-Ins
     # drwxr-xr-x  root  admin  /Library/Application Support/Digidesign/Plug-Ins
@@ -83,8 +83,9 @@ _: &macos_general
         com.apple.mouse.scaling: 1.0
 
         # Expand the save panel by default (hidden setting)
-        # TODO NSNavPanelExpandedStateForSaveMode: true
-        # TODO NSNavPanelExpandedStateForSaveMode2: true
+        NSNavPanelExpandedStateForSaveMode: true
+        # TODO is this useful?
+        # NSNavPanelExpandedStateForSaveMode2: true
         # Disable the character accent menu when holding down a key (hidden setting)
         ApplePressAndHoldEnabled: false
 
@@ -96,13 +97,6 @@ _: &macos_general
         closeViewScrollWheelToggle: true
         # Display / Cursor size
         mouseDriverCursorSize: 1.25
-
-    # System Preferences / Keyboard / Dictation
-    - domain: com.apple.HIToolbox
-      mode: '0600'
-      values:
-        # Disable Dictation (including prompt when pressing the Fn key)
-        # TODO AppleDictationAutoEnable: 0
 
     # System Preferences / Mouse
     - domain: com.apple.driver.AppleBluetoothMultitouch.mouse
@@ -124,8 +118,10 @@ _: &macos_general
     # Launch Services
     - domain: com.apple.LaunchServices
       values:
-        # Disable the 'Are you sure you want to open this application?' dialog (hidden setting)
-        # TODO LSQuarantine: false
+        # Disable the '"<app>" is an application downloaded from the internet.
+        # Are you sure you want to open it?' dialog.  This affects many apps downloaded from the web
+        # such as MPlayerX (hidden setting)
+        LSQuarantine: false
 
     # Log Out
     - domain: com.apple.loginwindow
