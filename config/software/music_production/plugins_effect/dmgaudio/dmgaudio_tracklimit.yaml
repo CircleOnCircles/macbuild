@@ -5,7 +5,10 @@ _: &dmgaudio_tracklimit
     # License
     - path: ~/Library/Application Support/DMGAudio
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/DMGAudio/TrackLimit
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/DMGAudio/TrackLimit/license
       source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackLimit/license]
+      mode: '0644'

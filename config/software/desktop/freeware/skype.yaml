@@ -3,8 +3,9 @@ _: &skype
   cask: skype
   plist:
     - domain: com.skype.skype
+      mode: '0600'
       values:
-        # Preferences / Contacts / Untick Show Mac Contacts
+        # Preferences / Contacts / Disable 'Show Mac Contacts'
         ShowAddressBookContacts: false
         # View / as List
         ContactListViewMode: 1

@@ -3,8 +3,8 @@ _: &bootchamp
   cask: bootchamp
   plist:
     - domain: com.kainjow.BootChamp
+      mode: '0600'
       values:
+        # Check for updates automatically? / Check Automatically
         SUEnableAutomaticChecks: true
-        SUHasLaunchedBefore: true
-        SUSendProfileInfo: false
   login_item: true

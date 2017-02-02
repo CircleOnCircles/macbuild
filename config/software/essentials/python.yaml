@@ -13,7 +13,10 @@ _: &python
     # Preferences
     - path: ~/.ipython
       state: directory
+      mode: '0755'
     - path: ~/.ipython/profile_default
       state: directory
+      mode: '0755'
     - path: ~/.ipython/profile_default/ipython_config.py
       source: files/dotfiles/.ipython/profile_default/ipython_config.py
+      mode: '0644'

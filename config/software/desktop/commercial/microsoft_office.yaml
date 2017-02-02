@@ -2,69 +2,102 @@ _: &microsoft_office
   name: Microsoft Office
   cask: microsoft-office
   file:
-    - path: ~/Library/Group Containers/UBF8T346G9.Office
-      state: directory
     - path: ~/Library/Containers/com.microsoft.Excel
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Excel/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Excel/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Excel/Data/Library/Preferences
       state: directory
+      mode: '0700'
+
     - path: ~/Library/Containers/com.microsoft.Word
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Word/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Word/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Word/Data/Library/Preferences
       state: directory
+      mode: '0700'
+
     - path: ~/Library/Containers/com.microsoft.Powerpoint
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Powerpoint/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Powerpoint/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Powerpoint/Data/Library/Preferences
       state: directory
+      mode: '0700'
+
     - path: ~/Library/Containers/com.microsoft.onenote.mac
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.onenote.mac/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.onenote.mac/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.onenote.mac/Data/Library/Preferences
       state: directory
+      mode: '0700'
+
     - path: ~/Library/Containers/com.microsoft.Outlook
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Outlook/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Outlook/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences
       state: directory
+      mode: '0700'
   plist:
-    - path: ~/Library/Group Containers/UBF8T346G9.Office/com.microsoft.officeprefs.plist
-      values:
-        kCUIThemePreferencesThemeKeyPath: 0
     - domain: com.microsoft.Excel
       container: com.microsoft.Excel
+      mode: '0600'
       values:
+        # What's New in Excel shown
         kSubUIAppCompletedFirstRunSetup1507: true
+
     - domain: com.microsoft.Word
       container: com.microsoft.Word
+      mode: '0600'
       values:
+        # What's New in Word shown
         kSubUIAppCompletedFirstRunSetup1507: true
+
     - domain: com.microsoft.Powerpoint
       container: com.microsoft.Powerpoint
+      mode: '0600'
       values:
+        # What's New in PowerPoint shown
         kSubUIAppCompletedFirstRunSetup1507: true
+
     - domain: com.microsoft.onenote.mac
       container: com.microsoft.onenote.mac
+      mode: '0600'
       values:
+        # Welcome to OneNote shown
         kSubUIAppCompletedFirstRunSetup1507: true
+
     - domain: com.microsoft.Outlook
       container: com.microsoft.Outlook
+      mode: '0600'
       values:
+        # Welcome to Outlook shown
         kSubUIAppCompletedFirstRunSetup1507: true

@@ -5,3 +5,4 @@ _: &studio_devil_amp_modeler_pro
     # License
     - path: ~/Library/Preferences/com.studiodevil.amp.plist
       source: !join_path [*app_license_dir, Music Production/Studio Devil/Studio Devil Amp Modeler Pro/com.studiodevil.amp.plist]
+      mode: '0600'

@@ -5,7 +5,10 @@ _: &dmgaudio_trackcontrol
     # License
     - path: ~/Library/Application Support/DMGAudio
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/DMGAudio/TrackControl
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/DMGAudio/TrackControl/license
       source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackControl/license]
+      mode: '0644'

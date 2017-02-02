@@ -5,9 +5,13 @@ _: &ableton_live_9_suite
     # License
     - path: ~/Library/Application Support/Ableton
       state: directory
-    - path: ~/Library/Application Support/Ableton/Live 9.7
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 9.7.1
       state: directory
-    - path: ~/Library/Application Support/Ableton/Live 9.7/Unlock
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 9.7.1/Unlock
       state: directory
-    - path: ~/Library/Application Support/Ableton/Live 9.7/Unlock/Unlock.cfg
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 9.7.1/Unlock/Unlock.cfg
       source: !join_path [*app_license_dir, Music Production/Ableton/Ableton Live 9 Suite/Unlock.cfg]
+      mode: '0644'

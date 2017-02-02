@@ -4,20 +4,64 @@ _: &sublime_text
   file:
     - path: ~/Library/Application Support/Sublime Text 3
       state: directory
+      mode: '0700'
     - path: ~/Library/Application Support/Sublime Text 3/Installed Packages
       state: directory
+      mode: '0700'
     - path: ~/Library/Application Support/Sublime Text 3/Packages
       state: directory
+      mode: '0700'
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User
       state: directory
+      mode: '0700'
+
     # Sublime Text License
     - path: ~/Library/Application Support/Sublime Text 3/Local
       state: directory
+      mode: '0700'
     - path: ~/Library/Application Support/Sublime Text 3/Local/License.sublime_license
       source: !join_path [*app_license_dir, General/Sublime Text/License.sublime_license]
+      mode: '0644'
     # Doxy License
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Doxy.sublime-license
       source: !join_path [*app_license_dir, General/Sublime Text/Doxy.sublime-license]
+      mode: '0644'
+
+    # Preferences
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap
+      source: files/sublime_text/Default (OSX).sublime-keymap
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/ColorPicker.sublime-settings
+      source: files/sublime_text/ColorPicker.sublime-settings
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Doxy.sublime-settings
+      source: files/sublime_text/Doxy.sublime-settings
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings
+      source: files/sublime_text/Markdown (Standard).sublime-settings
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings
+      source: files/sublime_text/Markdown.sublime-settings
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings
+      source: files/sublime_text/MultiMarkdown.sublime-settings
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/PlainTasks.sublime-settings
+      source: files/sublime_text/PlainTasks.sublime-settings
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-settings
+      source: files/sublime_text/Python.sublime-settings
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Soda Dark 3.sublime-theme
+      source: files/sublime_text/Soda Dark 3.sublime-theme
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings
+      source: files/sublime_text/SublimeLinter.sublime-settings
+      mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/bh_core.sublime-settings
+      source: files/sublime_text/bh_core.sublime-settings
+      mode: '0644'
+
     # Bash Profile Default Editor
     - path: ~/.bash_profile.d/sublime_text.sh
       source: files/dotfiles/.bash_profile.d/sublime_text.sh
@@ -25,14 +69,12 @@ _: &sublime_text
     # Package Control
     - path: ~/Library/Application Support/Sublime Text 3/Installed Packages
       url: http://packagecontrol.io/Package Control.sublime-package
-  rsync:
-    # Package Preferences
-    - path: ~/Library/Application Support/Sublime Text 3/Packages/User
-      source: files/sublime_text/
+      mode: '0644'
 
   # User Preferences
   json:
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings
+      mode: '0644'
       values:
         # Monokai Extended color scheme
         color_scheme: !first_existing_path
@@ -91,6 +133,7 @@ _: &sublime_text
 
     # Package Control Packages
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings
+      mode: '0644'
       values:
         installed_packages:
           # Use ctrl+alt+n to easily create a new file

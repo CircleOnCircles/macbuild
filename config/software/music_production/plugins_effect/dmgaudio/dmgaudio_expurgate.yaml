@@ -5,7 +5,10 @@ _: &dmgaudio_expurgate
     # License
     - path: ~/Library/Application Support/DMGAudio
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/DMGAudio/Expurgate
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/DMGAudio/Expurgate/license
       source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Expurgate/license]
+      mode: '0644'

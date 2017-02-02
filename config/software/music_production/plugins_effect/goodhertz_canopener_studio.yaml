@@ -5,5 +5,7 @@ _: &goodhertz_canopener_studio
     # License
     - path: ~/Music/.GDHZ
       state: directory
+      mode: '0755'
     - path: ~/Music/.GDHZ/Interface.interface
       source: !join_path [*app_license_dir, Music Production/Goodhertz/Goodhertz CanOpener Studio/Interface.interface]
+      mode: '0644'

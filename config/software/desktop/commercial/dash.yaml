@@ -5,21 +5,34 @@ _: &dash
     # License
     - path: ~/Library/Application Support/Dash
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/Dash/License
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/Dash/License/license.dash-license
       source: !join_path [*app_license_dir, General/Dash/license.dash-license]
+      mode: '0644'
   plist:
     - domain: com.kapeli.dashdoc
+      mode: '0600'
       values:
-        moveToApplicationsFolderAlertSuppress: true
-        didSuppressDownloadDocsetsAlert: true
-        DHNotificationNoDocsetsFound: true
-        reorderDocsetsAlertSuppressed: true
-        DHNotificationDocsetPressEnterOrClickIconTip: true
-        noDocsetsFoundAlertSuppressed: true
-        syncFolderPath: !join_path [*app_config_dir, Dash]
-        snippetSQLPath: !join_path [*app_config_dir, Dash/library.dash]
-        # Note that the following setting is required or Dash thinks it needs
-        # to set everything up again
+        # Initial setup complete
         migratedV2Prefs: true
+        # Download Docsets / Do not show this message again
+        didSuppressDownloadDocsetsAlert: true
+        # Preferences / No Docsets Found / Do now show this message again
+        noDocsetsFoundAlertSuppressed: true
+        # Documentation / Search / No docsets found. Open Preferences. / Don't show again
+        DHNotificationNoDocsetsFound: true
+        # Documentation / Easily Switch Docsets / Don't show again
+        DHNotificationDocsetPressEnterOrClickIconTip: true
+        # Documentation / Home / How to change your home page / Don't show again
+        DHNotificationChangeHomeTip: true
+        # Documentation / Reordering Docsets / Do not show this message again
+        reorderDocsetsAlertSuppressed: true
+        # Preferences / General / Set Up Syncing... / Sync folder / Set Sync Folder...
+        syncFolderPath: !join_path [*app_config_dir, Dash]
+        # Preferences / Snippets / Snippet library location:
+        snippetSQLPath: !join_path [*app_config_dir, Dash/library.dash]
+        # View / Enable Dark Mode
+        DHWebViewIsDark: true

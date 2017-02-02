@@ -4,23 +4,33 @@ _: &openemu
   file:
     - path: '~/Library/Application Support/OpenEmu'
       state: directory
+      mode: '0755'
   symlink:
     # Preferences
     - path: '~/Library/Application Support/OpenEmu/BIOS'
       source: !join_path [*app_config_dir, OpenEmu/BIOS]
+      # TODO mode: '0755'
     - path: '~/Library/Application Support/OpenEmu/Bindings'
       source: !join_path [*app_config_dir, OpenEmu/Bindings]
+      # TODO mode: '0755'
     - path: '~/Library/Application Support/OpenEmu/Cores'
       source: !join_path [*app_config_dir, OpenEmu/Cores]
+      # TODO mode: '0755'
     - path: '~/Library/Application Support/OpenEmu/Game Library'
       source: !join_path [*app_config_dir, OpenEmu/Game Library]
+      # TODO mode: '0755'
     - path: '~/Library/Application Support/OpenEmu/Save States'
       source: !join_path [*app_config_dir, OpenEmu/Save States]
+      # TODO mode: '0755'
   plist:
     - domain: org.openemu.OpenEmu
+      mode: '0600'
       values:
+        # Welcome to OpenEmu! shown
         setupAssistantFinished: true
+        # Check for updates automatically? / Check Automatically
         SUEnableAutomaticChecks: true
+        # Preferences / Gameplay / Filter: / SABR
         videoFilter: SABR
+        # Preferences / Gameplay / Window Management / Always launch games fullscreen
         fullScreen: true
-        # databasePath: ~/Library/Application Support/OpenEmu/Game Library

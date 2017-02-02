@@ -5,3 +5,7 @@ _: &relab_lx480_complete
     # Preferences
     - path: /Library/Application Support/Relab Development/LX480 Complete/Preferences.xml
       source: files/relab_lx480_complete/Preferences.xml
+      owner: fots
+      group: admin
+      mode: '0777'
+      sudo: true

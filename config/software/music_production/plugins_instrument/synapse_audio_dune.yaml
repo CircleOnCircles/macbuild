@@ -5,4 +5,7 @@ _: &synapse_audio_dune
     # License
     - path: /Library/Application Support/Synapse Audio/.DUNE2reg
       source: !join_path [*app_license_dir, Music Production/Synapse Audio/Synapse Audio DUNE/.DUNE2reg]
+      owner: fots
+      group: wheel
+      mode: '0644'
       sudo: true

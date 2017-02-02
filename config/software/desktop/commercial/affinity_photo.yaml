@@ -4,14 +4,20 @@ _: &affinity_photo
   file:
     - path: ~/Library/Containers/com.seriflabs.affinityphoto
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.seriflabs.affinityphoto/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.seriflabs.affinityphoto/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.seriflabs.affinityphoto/Data/Library/Preferences
       state: directory
+      mode: '0700'
   plist:
     - domain: com.seriflabs.affinityphoto
       container: com.seriflabs.affinityphoto
+      mode: '0600'
       values:
+        # Welcome screen / Disable 'Show this Panel on Startup'
         com.seriflabs.ShowWelcomeScreen: false

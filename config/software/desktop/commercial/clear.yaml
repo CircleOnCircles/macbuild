@@ -4,14 +4,20 @@ _: &clear
   file:
     - path: ~/Library/Containers/com.realmacsoftware.clear.mac
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.realmacsoftware.clear.mac/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.realmacsoftware.clear.mac/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.realmacsoftware.clear.mac/Data/Library/Preferences
       state: directory
+      mode: '0700'
   plist:
     - domain: com.realmacsoftware.clear.mac
       container: com.realmacsoftware.clear.mac
+      mode: '0600'
       values:
+        # Welcome to Clear shown
         app.shown-welcome: true

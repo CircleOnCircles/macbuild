@@ -3,6 +3,7 @@ _: &celemony_melodyne_editor
   cask: celemony-melodyne-editor
   file:
     # License
+    # TODO: user and group?
     - path: /Library/Application Support/Celemony
       state: directory
       sudo: true
@@ -14,7 +15,9 @@ _: &celemony_melodyne_editor
       sudo: true
   plist:
     - domain: com.celemony.Melodyne singletrack
+      mode: '0744'
       values:
+        # Welcome Melodyne editor / Disable 'Show this window when Melodyne opens'
         disableWelcomePanelOnStartup: true
         # Preferences / Settings / Check for Updates / Never
         updateCheckPeriode: 3

@@ -1,6 +1,7 @@
 _: &native_instruments_kontakt_5
   name: Native Instruments Kontakt 5
   cask: native-instruments-kontakt-5
+  # TODO permissions of these files
   library_order:
     # Cinematic Studio Series
     - Cinematic Studio Strings

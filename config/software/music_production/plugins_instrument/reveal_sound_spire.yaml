@@ -5,5 +5,7 @@ _: &reveal_sound_spire
     # License
     - path: ~/Library/Application Support/RevealSound
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/RevealSound/spire.lic
       source: !join_path [*app_license_dir, Music Production/Reveal Sound/Reveal Sound Spire/spire.lic]
+      mode: '0644'

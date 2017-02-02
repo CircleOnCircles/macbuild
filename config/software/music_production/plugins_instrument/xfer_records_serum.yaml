@@ -8,5 +8,7 @@ _: &xfer_records_serum
     # License
     - path: ~/Library/Application Support/com.xferrecords.serum
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/com.xferrecords.serum/user.dat
       source: !join_path [*app_license_dir, Music Production/Xfer Records/Xfer Records Serum/user.dat]
+      mode: '0644'

@@ -3,35 +3,37 @@ _: &bettersnaptool
   appstore: BetterSnapTool
   plist:
     - domain: com.hegenberg.BetterSnapTool
+      mode: '0600'
       values:
+        # Initial setup completed
         BSTDidAlreadyLaunchOnElCapitan: true
         BSTDidAlreadyLaunchOnce: true
         BSTDidClickHighlightedMenuItem: true
-        # General Settings / Start BetterSnapTool everytime your Mac starts up
+        # Preferences / General Settings / Start BetterSnapTool everytime your Mac starts up
         launchOnStartup: true
-        # Customizations / Use rounded corners
+        # Preferences / Customizations / Use rounded corners
         roundCorners: false
-        # Customizations / Border-width
+        # Preferences / Customizations / Border-width / 0px
         previewBorderWidth: 0.0
-        # Keyboard Shortcuts
+        # Preferences / Keyboard Shortcuts
         registeredHotkeys:
-          # maximize
+          # maximize / ⌃ ⌥ ⌘ ↑
           '0':
             keyCode: 126
             modifiers: 8395008
-          # left half
+          # left half / ⌃ ⌥ ⌘ ←
           '2':
             keyCode: 123
             modifiers: 8395008
-          # right half
+          # right half / ⌃ ⌥ ⌘ →
           '4':
             keyCode: 124
             modifiers: 8395008
-          # restore old window position
+          # restore old window position / ⌃ ⌥ ⌘ ↓
           '10':
             keyCode: 125
             modifiers: 8395008
-          # center on next monitor
+          # center on next monitor / ⌃ ⌥ ⌘ N
           '18':
             keyCode: 37
             modifiers: 6400

@@ -110,13 +110,6 @@ def main(elite, config, printer):
                         sudo=file.get('sudo', False)
                     )
 
-            # Folder to syncronize
-            rsync = software.pop('rsync', None)
-            if rsync:
-                rsyncs = rsync if isinstance(rsync, list) else [rsync]
-                for rsync in rsyncs:
-                    elite.rsync(path=rsync['path'], source=rsync['source'])
-
             # Dowlnoads
             download = software.pop('download', None)
             if download:

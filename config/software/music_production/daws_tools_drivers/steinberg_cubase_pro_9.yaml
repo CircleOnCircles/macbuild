@@ -7,3 +7,4 @@ _: &steinberg_cubase_pro_9
     # Plug-in Presets
     - path: ~/Library/Audio/Presets
       source: ~/Music/Presets
+      # TODO mode: '0700'

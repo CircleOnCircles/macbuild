@@ -3,8 +3,9 @@ _: &transmission
   cask: transmission
   plist:
     - domain: org.m0k.transmission
+      mode: '0600'
       values:
-        # Transfers / Trash original torrent files
-        DeleteOriginalTorrent: true
-        # Hide the legal disclaimer
+        # Welcome to Transmission / I Accept
         WarningLegal: false
+        # Preferences / Transfers / Trash original torrent files
+        DeleteOriginalTorrent: true

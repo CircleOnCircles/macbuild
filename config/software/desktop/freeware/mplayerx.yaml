@@ -3,8 +3,9 @@ _: &mplayerx
   cask: mplayerx
   plist:
     - domain: org.niltsh.MPlayerX
+      mode: '0600'
       values:
-        SUSendProfileInfo: false
+        # Check for updates automatically? / Check Automatically
         SUEnableAutomaticChecks: true
-        # General / Keep window on top / Never
+        # Preferences / General / Keep window on top / Never
         OnTopMode: 0

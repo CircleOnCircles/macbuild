@@ -4,14 +4,20 @@ _: &affinity_designer
   file:
     - path: ~/Library/Containers/com.seriflabs.affinitydesigner
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.seriflabs.affinitydesigner/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.seriflabs.affinitydesigner/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.seriflabs.affinitydesigner/Data/Library/Preferences
       state: directory
+      mode: '0700'
   plist:
     - domain: com.seriflabs.affinitydesigner
       container: com.seriflabs.affinitydesigner
+      mode: '0600'
       values:
+        # Welcome screen / Disable 'Show this Panel on Startup'
         com.seriflabs.ShowWelcomeScreen: false

@@ -4,17 +4,22 @@ _: &twitter
   file:
     - path: ~/Library/Containers/com.twitter.twitter-mac
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.twitter.twitter-mac/Data
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.twitter.twitter-mac/Data/Library
       state: directory
+      mode: '0700'
     - path: ~/Library/Containers/com.twitter.twitter-mac/Data/Library/Preferences
       state: directory
+      mode: '0700'
   plist:
     - domain: com.twitter.twitter-mac
       container: com.twitter.twitter-mac
+      mode: '0600'
       values:
-        # General / Font size / 16 pt
+        # Preferences / General / Font size / 16 pt
         FontSize1: 16
-        # General / Theme / Dark Theme
+        # Preferences / General / Theme / Dark Theme
         TMSelectedThemeIdentifier: com.twitter.twitter.themeIdentifiers.darkTheme

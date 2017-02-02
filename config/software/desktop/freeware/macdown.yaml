@@ -6,35 +6,54 @@ _: &macdown
       state: directory
   plist:
     - domain: com.uranusjr.macdown
+      mode: '0600'
       values:
-        firstVersionInstalled: '749'
+        # TODO what is this
+        # firstVersionInstalled: '749'
+        # Check for updates automatically? / Check Automatically
         SUEnableAutomaticChecks: true
-        # General
+        # Preferences / General / Sync preview scrollbar when editor scrolls
         editorSyncScrolling: true
-        # Markdown
+        # Markdown / Block formatting / Table
         extensionTables: true
+        # Markdown / Block formatting / Fenced code block
         extensionFencedCode: true
+        # Markdown / Inline formatting / Intra-word emphasis
         extensionIntraEmphasis: true
+        # Markdown / Inline formatting / Strikethrough
         extensionStrikethough: true
+        # Markdown / Inline formatting / Autolink
         extensionAutolink: true
-        # Editor
+        # Editor / Base font:
         editorBaseFontInfo:
           name: SourceCodePro-Regular
           size: 16.0
+        # Editor / Theme:
         editorStyleName: Solarized (Dark)
+        # Editor / Line spacing:
         editorLineSpacing: 2.0
+        # Editor / Text insets:
         editorHorizontalInset: 15.0
         editorVerticalInset: 15.0
+        # Editor / Limit editor width to:
         editorMaximumWidth: 800.0
+        # Editor / Behaviour / Insert spaces instead of tabs
         editorConvertTabs: true
+        # Editor / Behaviour / Auto-complete matching characters
         editorCompleteMatchingCharacters: true
+        # Editor / Behaviour / Automatically insert line prefix for the current block
         editorInsertPrefixInBlock: true
+        # Editor / Behaviour / Ensure newline at end of file on save
         editorEnsuresNewlineAtEndOfFile: true
+        # Editor / Behaviour / Auto-increment numbering on ordered lists
         editorAutoIncrementNumberedLists: true
-
-        # Rendering
+        # Rendering / CSS
         htmlStyleName: GitHub2
+        # Rendering / Syntax highlighted code block
         htmlSyntaxHighlighting: true
+        # Rendering / Task list syntax
         htmlTaskList: true
+        # Rendering / Detect Jekyll front-matter
         htmlDetectFrontMatter: true
+        # Rendering / Default path:
         htmlDefaultDirectoryUrl: *development_dir

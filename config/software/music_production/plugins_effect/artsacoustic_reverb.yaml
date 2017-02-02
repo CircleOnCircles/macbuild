@@ -5,7 +5,10 @@ _: &artsacoustic_reverb
     # License
     - path: ~/Library/Application Support/ArtsAcoustic
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/ArtsAcoustic/Reverb
       state: directory
+      mode: '0755'
     - path: ~/Library/Application Support/ArtsAcoustic/Reverb/Preference.xml
       source: !join_path [*app_license_dir, Music Production/ArtsAcoustic/ArtsAcoustic Reverb/Preference.xml]
+      mode: '0644'

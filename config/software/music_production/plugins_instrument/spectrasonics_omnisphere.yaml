@@ -5,3 +5,4 @@ _: &spectrasonics_omnisphere
     # License
     - path: ~/Library/Preferences/net.spectrasonics.V6.plist
       source: !join_path [*app_license_dir, Music Production/Spectrasonics/Spectrasonics Omnisphere/net.spectrasonics.V6.plist]
+      mode: '0600'
