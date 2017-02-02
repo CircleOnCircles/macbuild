@@ -23,10 +23,10 @@ _: &vmware_fusion
       source: files/vmware_fusion/preferences
       mode: '0600'
   plist:
-    - domain: com.vmware.fusion
-      mode: '0600'
-      values:
-        # Virtual Machine Library / View / Show items as icons
-        PLInventoryWindowStylePref: 1
-        # Preferences / General / Show in menu bar / Only when Fusion is running
-        showStartMenu3: 2
+    domain: com.vmware.fusion
+    mode: '0600'
+    values:
+      # Virtual Machine Library / View / Show items as icons
+      PLInventoryWindowStylePref: 1
+      # Preferences / General / Show in menu bar / Only when Fusion is running
+      showStartMenu3: 2

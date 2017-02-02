@@ -2,8 +2,8 @@ _: &appcleaner
   name: AppCleaner
   cask: appcleaner
   plist:
-    - domain: net.freemacsoft.AppCleaner
-      mode: '0600'
-      values:
-        # Preferences / Updates / Check updates automatically
-        SUEnableAutomaticChecks: true
+    domain: net.freemacsoft.AppCleaner
+    mode: '0600'
+    values:
+      # Preferences / Updates / Check updates automatically
+      SUEnableAutomaticChecks: true

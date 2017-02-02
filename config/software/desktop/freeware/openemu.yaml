@@ -23,14 +23,14 @@ _: &openemu
       source: !join_path [*app_config_dir, OpenEmu/Save States]
       # TODO mode: '0755'
   plist:
-    - domain: org.openemu.OpenEmu
-      mode: '0600'
-      values:
-        # Welcome to OpenEmu! shown
-        setupAssistantFinished: true
-        # Check for updates automatically? / Check Automatically
-        SUEnableAutomaticChecks: true
-        # Preferences / Gameplay / Filter: / SABR
-        videoFilter: SABR
-        # Preferences / Gameplay / Window Management / Always launch games fullscreen
-        fullScreen: true
+    domain: org.openemu.OpenEmu
+    mode: '0600'
+    values:
+      # Welcome to OpenEmu! shown
+      setupAssistantFinished: true
+      # Check for updates automatically? / Check Automatically
+      SUEnableAutomaticChecks: true
+      # Preferences / Gameplay / Filter: / SABR
+      videoFilter: SABR
+      # Preferences / Gameplay / Window Management / Always launch games fullscreen
+      fullScreen: true

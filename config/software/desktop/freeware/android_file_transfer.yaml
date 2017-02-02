@@ -2,8 +2,8 @@ _: &android_file_transfer
   name: Android File Transfer
   cask: android-file-transfer
   plist:
-    - domain: com.google.android.mtpviewer
-      mode: '0600'
-      values:
-        # Welcome to Android File Transfer / Get started
-        FirstRunShown: true
+    domain: com.google.android.mtpviewer
+    mode: '0600'
+    values:
+      # Welcome to Android File Transfer / Get started
+      FirstRunShown: true

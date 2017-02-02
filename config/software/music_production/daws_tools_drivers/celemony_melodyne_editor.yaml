@@ -14,10 +14,10 @@ _: &celemony_melodyne_editor
       source: !join_path [*app_license_dir, Music Production/Celemony/Celemony Melodyne Editor/Melodyne singletrack.license]
       sudo: true
   plist:
-    - domain: com.celemony.Melodyne singletrack
-      mode: '0744'
-      values:
-        # Welcome Melodyne editor / Disable 'Show this window when Melodyne opens'
-        disableWelcomePanelOnStartup: true
-        # Preferences / Settings / Check for Updates / Never
-        updateCheckPeriode: 3
+    domain: com.celemony.Melodyne singletrack
+    mode: '0744'
+    values:
+      # Welcome Melodyne editor / Disable 'Show this window when Melodyne opens'
+      disableWelcomePanelOnStartup: true
+      # Preferences / Settings / Check for Updates / Never
+      updateCheckPeriode: 3

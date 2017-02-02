@@ -15,9 +15,9 @@ _: &affinity_designer
       state: directory
       mode: '0700'
   plist:
-    - domain: com.seriflabs.affinitydesigner
-      container: com.seriflabs.affinitydesigner
-      mode: '0600'
-      values:
-        # Welcome screen / Disable 'Show this Panel on Startup'
-        com.seriflabs.ShowWelcomeScreen: false
+    domain: com.seriflabs.affinitydesigner
+    container: com.seriflabs.affinitydesigner
+    mode: '0600'
+    values:
+      # Welcome screen / Disable 'Show this Panel on Startup'
+      com.seriflabs.ShowWelcomeScreen: false

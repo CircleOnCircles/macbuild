@@ -2,39 +2,39 @@ _: &bettersnaptool
   name: BetterSnapTool
   appstore: BetterSnapTool
   plist:
-    - domain: com.hegenberg.BetterSnapTool
-      mode: '0600'
-      values:
-        # Initial setup completed
-        BSTDidAlreadyLaunchOnElCapitan: true
-        BSTDidAlreadyLaunchOnce: true
-        BSTDidClickHighlightedMenuItem: true
-        # Preferences / General Settings / Start BetterSnapTool everytime your Mac starts up
-        launchOnStartup: true
-        # Preferences / Customizations / Use rounded corners
-        roundCorners: false
-        # Preferences / Customizations / Border-width / 0px
-        previewBorderWidth: 0.0
-        # Preferences / Keyboard Shortcuts
-        registeredHotkeys:
-          # maximize / ⌃ ⌥ ⌘ ↑
-          '0':
-            keyCode: 126
-            modifiers: 8395008
-          # left half / ⌃ ⌥ ⌘ ←
-          '2':
-            keyCode: 123
-            modifiers: 8395008
-          # right half / ⌃ ⌥ ⌘ →
-          '4':
-            keyCode: 124
-            modifiers: 8395008
-          # restore old window position / ⌃ ⌥ ⌘ ↓
-          '10':
-            keyCode: 125
-            modifiers: 8395008
-          # center on next monitor / ⌃ ⌥ ⌘ N
-          '18':
-            keyCode: 37
-            modifiers: 6400
+    domain: com.hegenberg.BetterSnapTool
+    mode: '0600'
+    values:
+      # Initial setup completed
+      BSTDidAlreadyLaunchOnElCapitan: true
+      BSTDidAlreadyLaunchOnce: true
+      BSTDidClickHighlightedMenuItem: true
+      # Preferences / General Settings / Start BetterSnapTool everytime your Mac starts up
+      launchOnStartup: true
+      # Preferences / Customizations / Use rounded corners
+      roundCorners: false
+      # Preferences / Customizations / Border-width / 0px
+      previewBorderWidth: 0.0
+      # Preferences / Keyboard Shortcuts
+      registeredHotkeys:
+        # maximize / ⌃ ⌥ ⌘ ↑
+        '0':
+          keyCode: 126
+          modifiers: 8395008
+        # left half / ⌃ ⌥ ⌘ ←
+        '2':
+          keyCode: 123
+          modifiers: 8395008
+        # right half / ⌃ ⌥ ⌘ →
+        '4':
+          keyCode: 124
+          modifiers: 8395008
+        # restore old window position / ⌃ ⌥ ⌘ ↓
+        '10':
+          keyCode: 125
+          modifiers: 8395008
+        # center on next monitor / ⌃ ⌥ ⌘ N
+        '18':
+          keyCode: 37
+          modifiers: 6400
   login_item: true

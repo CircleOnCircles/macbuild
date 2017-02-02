@@ -15,11 +15,11 @@ _: &twitter
       state: directory
       mode: '0700'
   plist:
-    - domain: com.twitter.twitter-mac
-      container: com.twitter.twitter-mac
-      mode: '0600'
-      values:
-        # Preferences / General / Font size / 16 pt
-        FontSize1: 16
-        # Preferences / General / Theme / Dark Theme
-        TMSelectedThemeIdentifier: com.twitter.twitter.themeIdentifiers.darkTheme
+    domain: com.twitter.twitter-mac
+    container: com.twitter.twitter-mac
+    mode: '0600'
+    values:
+      # Preferences / General / Font size / 16 pt
+      FontSize1: 16
+      # Preferences / General / Theme / Dark Theme
+      TMSelectedThemeIdentifier: com.twitter.twitter.themeIdentifiers.darkTheme

@@ -2,9 +2,9 @@ _: &bootchamp
   name: BootChamp
   cask: bootchamp
   plist:
-    - domain: com.kainjow.BootChamp
-      mode: '0600'
-      values:
-        # Check for updates automatically? / Check Automatically
-        SUEnableAutomaticChecks: true
+    domain: com.kainjow.BootChamp
+    mode: '0600'
+    values:
+      # Check for updates automatically? / Check Automatically
+      SUEnableAutomaticChecks: true
   login_item: true

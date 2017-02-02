@@ -7,9 +7,9 @@ _: &audio_hijack
       source: !join_path [*app_config_dir, Audio Hijack]
       # TODO mode: '0755'
   plist:
-    - domain: com.rogueamoeba.audiohijack3
-      source: !join_path [*app_license_dir, General/Audio Hijack/com.rogueamoeba.audiohijack3.plist]
-      mode: '0600'
-      values:
-        # Welcome to Audio Hijack 3 screen shown
-        homeWindowShown: true
+    domain: com.rogueamoeba.audiohijack3
+    source: !join_path [*app_license_dir, General/Audio Hijack/com.rogueamoeba.audiohijack3.plist]
+    mode: '0600'
+    values:
+      # Welcome to Audio Hijack 3 screen shown
+      homeWindowShown: true

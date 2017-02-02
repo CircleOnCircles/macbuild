@@ -7,13 +7,13 @@ _: &entropy
       source: !join_path [*app_license_dir, General/Entropy/.els-A4AD28617A455C07768787313A53E2F79D9FA258]
       mode: '0644'
   plist:
-    - domain: com.eigenlogik.Entropy
-      mode: '0600'
-      values:
-        # Preferences / Updates / Automatically check for updates
-        SUEnableAutomaticChecks: true
-        # Preferences / Extraction / Auto-extract on open
-        AutoExtractOnOpen: true
+    domain: com.eigenlogik.Entropy
+    mode: '0600'
+    values:
+      # Preferences / Updates / Automatically check for updates
+      SUEnableAutomaticChecks: true
+      # Preferences / Extraction / Auto-extract on open
+      AutoExtractOnOpen: true
   handler:
     # Preferences / File Types / Zip Archive
     - public.zip-archive

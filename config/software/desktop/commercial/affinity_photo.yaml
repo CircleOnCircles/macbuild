@@ -15,9 +15,9 @@ _: &affinity_photo
       state: directory
       mode: '0700'
   plist:
-    - domain: com.seriflabs.affinityphoto
-      container: com.seriflabs.affinityphoto
-      mode: '0600'
-      values:
-        # Welcome screen / Disable 'Show this Panel on Startup'
-        com.seriflabs.ShowWelcomeScreen: false
+    domain: com.seriflabs.affinityphoto
+    container: com.seriflabs.affinityphoto
+    mode: '0600'
+    values:
+      # Welcome screen / Disable 'Show this Panel on Startup'
+      com.seriflabs.ShowWelcomeScreen: false

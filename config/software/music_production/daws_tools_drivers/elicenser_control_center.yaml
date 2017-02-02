@@ -1,12 +1,12 @@
 _: &elicenser_control_center
   name: eLicenser Control Center
   plist:
-    - domain: com.Syncrosoft.LCC
-      mode: '0600'
-      values:
-        # Welcome to eLicenser Control Center (eLCC) /
-        # Disable 'Always show this help window when eLCC starts up'
-        Show_LCC_Welcome_on_LCC_Launch: false
-        # Online Syncronization & Maintenance /
-        # Disable 'Always ask to perform maintenance tasks when eLCC starts up'
-        Show_Maintenance_on_LCC_Launch: false
+    domain: com.Syncrosoft.LCC
+    mode: '0600'
+    values:
+      # Welcome to eLicenser Control Center (eLCC) /
+      # Disable 'Always show this help window when eLCC starts up'
+      Show_LCC_Welcome_on_LCC_Launch: false
+      # Online Syncronization & Maintenance /
+      # Disable 'Always ask to perform maintenance tasks when eLCC starts up'
+      Show_Maintenance_on_LCC_Launch: false

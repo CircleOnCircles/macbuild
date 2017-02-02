@@ -10,35 +10,35 @@ _: &textual
       source: !join_path [*app_license_dir, General/Textual/Textual_User_License.plist]
       mode: '0644'
   plist:
-    - domain: com.codeux.apps.textual
-      mode: '0600'
-      values:
-        # Preferences / General / Updates: / Just notify if there are updates
-        SUEnableAutomaticChecks: true
-        SUAutomaticallyUpdate: false
-        # Preferences / Style / Theme / Style: / Sapientia
-        'Theme -> Name': 'resource:Sapientia'
-        # Preferences / Style / Theme / Style: / Sapientia / Preferred Selection / Do not show this message again
-        'Text Input Prompt Suppression -> theme_override_info': true
-        World Controller Client Configurations:
-          - 
-            # Server / Server Properties... / Basic Settings / Channel List
-            channelList:
-              - channelName: '#ansible'
-              - channelName: '#chef'
-              - channelName: '#puppet'
-              - channelName: '#salt'
-              - channelName: '#python'
-              - channelName: '#terraform'
-            # Server / Server Properties... / Basic Settings / General / Connection Name:
-            connectionName: freenode
-            # Server / Server Properties... / Basic Settings / General / Server Address:
-            serverAddress: chat.freenode.net
-            # Server / Server Properties... / Basic Settings / General / Connect when Textual opens
-            autoConnect: True
-            # Server / Server Properties... / Basic Settings / Identity / Nickname:
-            nickname: fgimian
-            # Server / Server Properties... / Basic Settings / Identity / Username:
-            username: fgimian
-            # Server / Server Properties... / Basic Settings / Identity / Real name:
-            realName: Fotis Gimian
+    domain: com.codeux.apps.textual
+    mode: '0600'
+    values:
+      # Preferences / General / Updates: / Just notify if there are updates
+      SUEnableAutomaticChecks: true
+      SUAutomaticallyUpdate: false
+      # Preferences / Style / Theme / Style: / Sapientia
+      'Theme -> Name': 'resource:Sapientia'
+      # Preferences / Style / Theme / Style: / Sapientia / Preferred Selection / Do not show this message again
+      'Text Input Prompt Suppression -> theme_override_info': true
+      World Controller Client Configurations:
+        -
+          # Server / Server Properties... / Basic Settings / Channel List
+          channelList:
+            - channelName: '#ansible'
+            - channelName: '#chef'
+            - channelName: '#puppet'
+            - channelName: '#salt'
+            - channelName: '#python'
+            - channelName: '#terraform'
+          # Server / Server Properties... / Basic Settings / General / Connection Name:
+          connectionName: freenode
+          # Server / Server Properties... / Basic Settings / General / Server Address:
+          serverAddress: chat.freenode.net
+          # Server / Server Properties... / Basic Settings / General / Connect when Textual opens
+          autoConnect: True
+          # Server / Server Properties... / Basic Settings / Identity / Nickname:
+          nickname: fgimian
+          # Server / Server Properties... / Basic Settings / Identity / Username:
+          username: fgimian
+          # Server / Server Properties... / Basic Settings / Identity / Real name:
+          realName: Fotis Gimian
