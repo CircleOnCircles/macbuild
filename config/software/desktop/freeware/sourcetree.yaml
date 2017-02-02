@@ -29,5 +29,3 @@ _: &sourcetree
       fileStatusStagingViewMode: 0
       # Workspace / File status / (stage a file) / You staged some changes!
       showStagingTip: false
-      # TODO: what is this one exactly?
-      showFileStatusViewOptionsTip: false

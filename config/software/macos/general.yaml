@@ -84,8 +84,6 @@ _: &macos_general
 
         # Expand the save panel by default (hidden setting)
         NSNavPanelExpandedStateForSaveMode: true
-        # TODO is this useful?
-        # NSNavPanelExpandedStateForSaveMode2: true
         # Disable the character accent menu when holding down a key (hidden setting)
         ApplePressAndHoldEnabled: false
 

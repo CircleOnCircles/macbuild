@@ -8,8 +8,8 @@ _: &macdown
     domain: com.uranusjr.macdown
     mode: '0600'
     values:
-      # TODO what is this
-      # firstVersionInstalled: '749'
+      # Specify that we've installed a Macdown version previously to avoid the welcome screen
+      firstVersionInstalled: '749'
       # Check for updates automatically? / Check Automatically
       SUEnableAutomaticChecks: true
       # Preferences / General / Sync preview scrollbar when editor scrolls
