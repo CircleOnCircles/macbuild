@@ -1,8 +1,0 @@
-_: &studio_devil_amp_modeler_pro
-  name: Studio Devil Amp Modeler Pro
-  cask: studio-devil-amp-modeler-pro
-  file:
-    # License
-    - path: ~/Library/Preferences/com.studiodevil.amp.plist
-      source: !join_path [*app_license_dir, Music Production/Studio Devil/Studio Devil Amp Modeler Pro/com.studiodevil.amp.plist]
-      mode: '0600'

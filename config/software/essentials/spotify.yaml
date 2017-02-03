@@ -3,24 +3,12 @@ _: &spotify
   cask: spotify
 
   file:
-    # Preferences (Local Files)
-    - path: ~/Library/Application Support/Spotify
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Spotify/Users
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Spotify/Users/fgimian-user
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Spotify/Users/fgimian-user/watch-sources.bnk
-      source: files/spotify/watch-sources.bnk
-      mode: '0644'
-
   global_settings:
     # Preferences / Startup and Window Behaviour /
     # Open Spotify automatically after your login into the computer / No
     app.autostart-mode: 'off'
+    app.autostart-banner-seen: true
+    app.autostart-configured: true
 
   username: fgimian
   user_settings:

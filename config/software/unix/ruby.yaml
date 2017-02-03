@@ -1,0 +1,7 @@
+_: &ruby
+  name: Ruby
+  brew:
+    - ruby
+    - ruby-completion
+  gem:
+    - pry

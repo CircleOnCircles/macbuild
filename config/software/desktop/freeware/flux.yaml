@@ -6,7 +6,7 @@ _: &flux
     mode: '0600'
     values:
       # Daytime
-      dayColorTemp: 3200.0
+      dayColorTemp: 4000.0
       # Sunset
       nightColorTemp: 2800.0
       # Bedtime

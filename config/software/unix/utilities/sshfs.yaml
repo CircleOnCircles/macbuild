@@ -1,4 +1,0 @@
-_: &sshfs
-  name: SSHFS
-  cask: osxfuse
-  brew: sshfs

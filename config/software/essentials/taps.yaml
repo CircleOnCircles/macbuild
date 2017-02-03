@@ -3,7 +3,6 @@ _: &taps
   tap:
     - homebrew/completions
     - homebrew/dupes
-    - homebrew/fuse
     - caskroom/cask
     - caskroom/fonts
     - caskroom/versions

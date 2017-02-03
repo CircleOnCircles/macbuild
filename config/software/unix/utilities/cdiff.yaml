@@ -1,7 +1,0 @@
-_: &cdiff
-  name: cdiff
-  pip: cdiff
-  symlink:
-    # Shortcut for git cdiff to work
-    - path: /usr/local/bin/git-cdiff
-      source: /usr/local/bin/cdiff

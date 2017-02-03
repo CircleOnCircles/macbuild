@@ -23,8 +23,8 @@ _: &macos_general
       state: directory
 
     # SSH Configuration (Sierra specific)
-    # - source: files/dotfiles/.ssh/config
-    #   path: ~/.ssh/config
+    - source: files/dotfiles/.ssh/config
+      path: ~/.ssh/config
 
     # Set permissions on all audio directories
 
@@ -43,10 +43,17 @@ _: &macos_general
     # Presets
     - path: /Library/Audio/Presets
       <<: *audio_directory_properties
+    # TODO double check the permissions of these parent folders
     # AAX
+    - path: /Library/Application Support/Avid
+      <<: *audio_directory_properties
+    - path: /Library/Application Support/Avid/Audio
+      <<: *audio_directory_properties
     - path: /Library/Application Support/Avid/Audio/Plug-Ins
       <<: *audio_directory_properties
     # RTAS
+    - path: /Library/Application Support/Digidesign
+      <<: *audio_directory_properties
     - path: /Library/Application Support/Digidesign/Plug-Ins
       <<: *audio_directory_properties
     # AU

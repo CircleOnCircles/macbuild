@@ -7,7 +7,6 @@ _: &launchpad
       # Most Useful Apps
       - Calculator
       - Safari
-      - iMovie
       - iTunes
       - iBooks
       - App Store
@@ -33,12 +32,9 @@ _: &launchpad
             - FaceTime
             - Photo Booth
             - Photos
-            # El Capitain specific
-            - Game Center
             - Preview
             - Dictionary
-            # Sierra specific
-            # - Siri
+            - Siri
             - Mission Control
             - Dashboard
       # Other Utilities
@@ -64,62 +60,20 @@ _: &launchpad
             - System Information
             - Automator
             - Script Editor
-            # Sierra specific
-            # - Disk Utility
+            - Disk Utility
             - Boot Camp Assistant
             - Digital Color Meter
             - ColorSync Utility
             - Grab
             - Bluetooth File Exchange
             - Audio MIDI Setup
-            # El Capitain specific
-            - X11
-            - Disk Utility
-    # Page 2: General
+    # Page 2: Desktop Software
     -
-      - 1Password 6
-      - Android File Transfer
-      - World Clock
-      # File Management
-      - AppCleaner
-      - DaisyDisk
-      - Entropy
-      - ForkLift
-      # Social
-      - Skype
-      - Slack
-      - Textual
-      - Twitter
-      # Internet
-      - Google Chrome
-      - Firefox
-      - Transmission
-      # Media Playback & Entertainment
-      - Cog
-      - Spotify
-      - MPlayerX
-      - OpenEmu
-      - folder_title: Utilities
-        folder_layout:
-          -
-            - BestRes
-            - BetterSnapTool
-            - BootChamp
-            - Dropbox
-            - Flux
-            - Focus
-            - Gmail Notifier
-            - iStat Mini
-            - OneDrive
-    # Page 3: Productivity
-    -
-      # Media Creation
+      # Proudctivity
       - Affinity Designer
       - Affinity Photo
-      - ScreenFlow
-      # GTD
       - Clear
-      # Microsoft Office
+      - Sublime Text
       - Microsoft Excel
       - Microsoft Word
       - folder_title: Microsoft Office (Other)
@@ -128,24 +82,46 @@ _: &launchpad
             - Microsoft OneNote
             - Microsoft Outlook
             - Microsoft PowerPoint
-      # Development
-      - Dash
-      - Kitematic (Beta)
-      - MacDown
-      - SourceTree
-      - Sublime Text
-      - VirtualBox
+      # General
+      - 1Password 6
+      - Android File Transfer
+      - AppCleaner
+      - DaisyDisk
+      - Entropy
+      - ForkLift
+      - World Clock
+      # Social
+      - Skype
+      - Slack
+      - Textual
+      # Internet
+      - Firefox
+      - Transmission
+      # Games
+      - OpenEmu
+      # Virtualization
       - VMware Fusion
-    # Page 4: Audio Software
+      # Media Playback & Entertainment
+      - Cog
+      - Spotify
+      - MPlayerX
+      - folder_title: Utilities
+        folder_layout:
+          -
+            - BestRes
+            - BetterSnapTool
+            - Dropbox
+            - Flux
+            - Gmail Notifier
+            - iStat Mini
+            - OneDrive
+    # Page 3: Audio Software
     -
       # DAWs
-      - Ableton Live 9 Suite
       - Cubase 9
-      - Logic Pro X
       # Tools
       - Audio Hijack
       - Melodyne singletrack
-      - ocenaudio
       - XLD
       # Hardware
       - Focusrite Control
@@ -162,12 +138,7 @@ _: &launchpad
       - folder_title: Native Instruments (Other)
         folder_layout:
           -
-            - Absynth 5
             - Battery 4
-            - Controller Editor
-            - FM8
-            - Guitar Rig 5
-            - Komplete Kontrol
             - Kontakt 5
             - Massive
             - Reaktor 6

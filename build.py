@@ -111,12 +111,12 @@ def main(elite, config, printer):
                 for pip in pips:
                     elite.pip(name=pip, state='latest', executable='pip3')
 
-            # Node.js npm packages
-            npm = software.pop('npm', None)
-            if npm:
-                npms = npm if isinstance(npm, list) else [npm]
-                for npm in npms:
-                    elite.npm(name=npm, mode='global')
+            # Ruby gem packages
+            gem = software.pop('gem', None)
+            if gem:
+                gems = gem if isinstance(gem, list) else [gem]
+                for gem in gems:
+                    elite.gem(name=gem, state='latest')
 
             # Files
             file = software.pop('file', None)
@@ -195,23 +195,6 @@ def main(elite, config, printer):
                 layout = software.pop('favourites')
 
                 elite.favourites(layout=layout)
-
-            elif name == 'Docker':
-                docker_create = elite.run(
-                    command='docker-machine create --driver virtualbox default',
-                    creates='~/.docker/machine/machines/default'
-                )
-                if docker_create.changed:
-                    elite.run(command='docker-machine stop default')
-
-            elif name == 'VIM':
-                vimrc_path = software.pop('vimrc_path')
-
-                elite.brew(name='vim', options='--with-lua', state='latest')
-
-                vimrc = elite.file(path='~', source=vimrc_path)
-                if vimrc.changed:
-                    elite.run(command='vim +PluginInstall +qall')
 
             elif name == 'Spotify':
                 global_settings = software.pop('global_settings')

@@ -5,7 +5,6 @@
 	plog = log --color --pretty=format:\"%C(red)%h %C(yellow)%ad %C(green)%an%C(reset): %s\" --date=short
 	ptag = tag --format=\"%(color:red)%(refname:short) %(color:yellow)%(taggerdate:short) %(color:green)%(*authorname)%(color:reset): %(subject)\"
 	diffc = diff --cached
-	cdiffc = cdiff --cached
 	unstage = reset HEAD --
 	uncommit = reset --soft HEAD^
 [push]

@@ -20,7 +20,6 @@ _: &dock
     - Sublime Text
     - Utilities/Terminal
     - Cubase 9
-    - Logic Pro X
     - Audio Hijack
     - XLD
     - Focusrite Control
@@ -29,7 +28,6 @@ _: &dock
     - Skype
     - Slack
     - Textual
-    - Twitter
     - Clear
     - VMware Fusion
     - App Store

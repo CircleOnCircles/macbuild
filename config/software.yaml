@@ -13,46 +13,27 @@ software:
     - *finder
     - *safari
 
-  Unix / Languages:
-    - *go
-    - *node_js
-    - *ruby
-
-  Unix / Virtualization:
-    - *virtualbox
-    - *vagrant
-    - *docker
-    - *kitematic
-
-  Unix / Utilities:
+  Unix:
     - *unix_general
-    - *cdiff
-    - *fish
     - *git
     - *hugo
-    - *sshfs
-    - *vim
+    - *ruby
 
   Desktop Software / Freeware:
     - *android_file_transfer
     - *appcleaner
     - *bestres
-    - *bootchamp
     - *cog
     - *dropbox
     - *firefox
     - *flux
     - *gmail_notifier
-    - *google_chrome
-    - *macdown
     - *mplayerx
     - *onedrive
     - *openemu
     - *skype
     - *slack
-    - *sourcetree
     - *transmission
-    - *twitter
     - *xld
 
   Desktop Software / Commercial:
@@ -63,26 +44,20 @@ software:
     - *bettersnaptool
     - *clear
     - *daisydisk
-    - *dash
     - *entropy
-    - *focus
     - *forklift
     - *istat_mini
     - *microsoft_office
-    - *screenflow
     - *textual
     - *vmware_fusion
     - *world_clock
 
   Music Production Software / DAWs, Tools & Drivers:
-    - *ableton_live_9_suite
-    - *apple_logic_pro_x
     - *celemony_melodyne_editor
     - *elicenser_control_center
     - *focusrite_control
     - *native_instruments_native_access
     - *novation_remote_sl_template_editor
-    - *ocenaudio
     - *steinberg_cubase_pro_9
 
   Music Production Software / Plug-ins (Effect):
@@ -92,25 +67,19 @@ software:
     - *cableguys_volumeshaper
     - *cytomic_the_drop
     - *cytomic_the_glue
-    - *dada_life_sausage_fattener
-    - *dmgaudio_compassion
     - *dmgaudio_dualism
     - *dmgaudio_equilibrium
     - *dmgaudio_essence
     - *dmgaudio_expurgate
     - *dmgaudio_limitless
-    - *dmgaudio_pitchfunk
     - *dmgaudio_trackcontrol
     - *dmgaudio_trackds
     - *dmgaudio_trackgate
     - *dmgaudio_tracklimit
     - *dmgaudio_trackmeter
-    - *eventide_2016_stereo_room
     - *focusrite_red_plugin_suite
-    - *goodhertz_canopener_studio
     - *illformed_glitch
     - *native_instruments_driver
-    - *native_instruments_guitar_rig_5
     - *native_instruments_premium_tube_series
     - *native_instruments_replika_xt
     - *native_instruments_reverb_classics
@@ -119,68 +88,37 @@ software:
     - *native_instruments_transient_master
     - *native_instruments_vintage_compressors
     - *relab_lx480_complete
-    - *softube_amp_room_essentials
     - *softube_drawmer_s73
     - *softube_fet_compressor
     - *softube_fix_flanger_and_doubler
     - *softube_saturation_knob
     - *softube_tsar_1r
-    - *softube_tube_delay
     - *sonalksis_studio_one_bundle
     - *soundtoys_5
-    - *studio_devil_amp_modeler_pro
     - *uhe_mfm2
     - *uhe_satin
     - *uhe_uhbik
     - *valhalladsp_valhallaspacemodulator
     - *valhalladsp_valhallavintageverb
-    - *voxengo_deft_compressor
-    - *voxengo_elephant
-    - *voxengo_glisseq
-    - *voxengo_msed
-    - *voxengo_span
-    - *voxengo_voxformer
 
   Music Production Software / Plug-ins (Instrument):
     - *lennardigital_sylenth1
-    - *native_instruments_absynth_5
     - *native_instruments_battery_4
-    - *native_instruments_fm8
-    - *native_instruments_komplete_kontrol
     - *native_instruments_kontakt_5
     - *native_instruments_massive
     - *native_instruments_reaktor_6
-    - *novation_bass_station
     - *reveal_sound_spire
     - *spectrasonics_omnisphere
-    - *steinberg_padshop
-    - *steinberg_retrologue
     - *synapse_audio_dune
     - *uhe_hive
     - *uhe_zebra
     - *xfer_records_serum
 
-  Music Production Software / Guitar Rig Effects:
-    - *native_instruments_rammfire
-    - *native_instruments_reflektor
-    - *native_instruments_traktors_12
-
-  Music Production Software / Reaktor Effects:
-    - *native_instruments_molekular
-    - *native_instruments_the_finger
-    - *native_instruments_the_mouth
-
   Music Production Software / Reaktor Instruments:
-    - *native_instruments_flesh
     - *native_instruments_form
-    - *native_instruments_kontour
     - *native_instruments_monark
     - *native_instruments_polyplex
     - *native_instruments_razor
-    - *native_instruments_reaktor_prism
-    - *native_instruments_reaktor_spark
-    - *native_instruments_rounds
-    - *native_instruments_skanner_xt
 
   macOS Dock & Launchpad:
     - *dock

@@ -6,32 +6,6 @@ from collections import namedtuple
 from elite.decorators import elite_main
 
 
-def logic_pro_x_content(elite, config, printer, sample_library_source):
-    printer.heading('Logic Pro X Content')
-
-    source = os.path.join(sample_library_source, 'Apple', 'Apple Logic Pro X Sound Library')
-    destination = os.path.join(config.sample_library_dir, 'Apple', 'Logic Pro X Sound Library')
-
-    printer.info('Building directory structure and symlinks for content.')
-    for src, dest in [
-        (os.path.join(destination, 'GarageBand'), '/Library/Application Support/GarageBand'),
-        (os.path.join(destination, 'Logic'), '/Library/Application Support/Logic'),
-        (os.path.join(destination, 'Apple Loops'), '/Library/Audio/Apple Loops'),
-        (os.path.join(destination, 'Impulse Responses'), '/Library/Audio/Impulse Responses')
-    ]:
-        elite.file(path=src, state='directory')
-
-        file_info = elite.file_info(path=dest)
-        if file_info.file_type != 'symlink':
-            elite.file(path=dest, state='absent', sudo=True)
-            elite.file(path=dest, source=src, state='symlink', sudo=True)
-
-    printer.info('Installing Logic Pro X content packages.')
-    packages = elite.find(path=source, types=['file'], patterns=['*.pkg'])
-    for package in packages.paths:
-        elite.package(path=package, sudo=True)
-
-
 def komplete_libraries(elite, config, printer, sample_library_source):
     printer.heading('Komplete Libraries')
 
@@ -44,9 +18,9 @@ def komplete_libraries(elite, config, printer, sample_library_source):
     isos = elite.find(path=source, types=['file'], patterns=['*.iso'])
     for iso in isos.paths:
         package_name = os.path.splitext(os.path.basename(iso))[0].replace('_', ' ')
-        printer.info(f'Installing Native Instruments {package_name}.')
+        printer.info(f'Native Instruments {package_name}')
 
-        mount = elite.run(command=f'hdiutil mount "{iso}"')
+        mount = elite.run(command=f'hdiutil mount "{iso}"', changed=False)
         mountpoint = mount.stdout.rstrip().split('\t')[-1]
 
         packages = elite.find(path=mountpoint, patterns=['* Installer Mac.pkg'])
@@ -84,11 +58,11 @@ def komplete_libraries(elite, config, printer, sample_library_source):
             sudo=True
         )
 
-        elite.run(command=f'hdiutil unmount "{mountpoint}"')
+        elite.run(command=f'hdiutil unmount "{mountpoint}"', changed=False, ignore_failed=True)
 
     elite.file(
         path=os.path.join(config.sample_library_dir, 'Library'),
-        ensure='directory', flags=['hidden']
+        state='directory', flags=['hidden']
     )
 
 
@@ -139,7 +113,7 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
         sample_libraries_config[name] = SampleLibraryConfig(base_dir, installer, extract_subdirs)
 
     for library in sample_libraries_config:
-        printer.info(f'Processing {library}')
+        printer.info(library)
 
         # Find the source directory for the library
         library_paths = elite.find(
@@ -164,6 +138,9 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
         destination_base_dir = os.path.join(
             config.sample_library_dir, os.path.relpath(library_path, sample_library_source)
         )
+
+        # Ensure that the parent / vendor directory exists
+        elite.file(path=os.path.dirname(destination_base_dir), state='directory')
 
         for archive in archives.paths:
             # Check for multipart RAR archives and only extract part 1
@@ -202,7 +179,7 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
             elite.package(path=os.path.join(destination, library_config.installer), sudo=True)
 
 
-@elite_main(config_path='config')
+@elite_main(config_path='config', config_order=['global.yaml', 'samples.yaml'])
 def main(elite, config, printer):
     printer.info('Determining sample library and music software sources.')
     for sample_library_source in config.sample_library_sources:
