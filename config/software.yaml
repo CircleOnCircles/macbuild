@@ -93,7 +93,9 @@ software:
     - *softube_fix_flanger_and_doubler
     - *softube_saturation_knob
     - *softube_tsar_1r
-    - *sonalksis_studio_one_bundle
+    - *sonalksis_plugin_manager
+    - *sonalksis_creative_elements
+    - *sonalksis_essentials
     - *soundtoys_5
     - *uhe_mfm2
     - *uhe_satin
