@@ -31,6 +31,7 @@ software:
     - *mplayerx
     - *onedrive
     - *openemu
+    - *osxfuse
     - *skype
     - *slack
     - *transmission
@@ -47,6 +48,7 @@ software:
     - *entropy
     - *forklift
     - *istat_mini
+    - *iwork
     - *microsoft_office
     - *textual
     - *vmware_fusion
@@ -79,7 +81,6 @@ software:
     - *dmgaudio_trackmeter
     - *focusrite_red_plugin_suite
     - *illformed_glitch
-    - *native_instruments_driver
     - *native_instruments_premium_tube_series
     - *native_instruments_replika_xt
     - *native_instruments_reverb_classics
@@ -88,7 +89,6 @@ software:
     - *native_instruments_transient_master
     - *native_instruments_vintage_compressors
     - *relab_lx480_complete
-    - *softube_drawmer_s73
     - *softube_fet_compressor
     - *softube_fix_flanger_and_doubler
     - *softube_saturation_knob

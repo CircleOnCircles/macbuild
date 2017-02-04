@@ -51,8 +51,6 @@ The following tasks must be performed manually.
 * **Audio Hijack**: Start the app multiple times to dismiss welcome and mailing
   list alerts and install Instant On
 * **Clear**: Enable iCloud in Preferences
-* **Focus**: Start Focus manually as it won't initialise successfully with
-  launchd starting it for the first time.
 * **iTunes**; Start iTunes and set it up.
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
@@ -60,12 +58,7 @@ The following tasks must be performed manually.
 
 ### Installation & Configuration (Music Production)
 
-* **Ableton Live Suite**: Preferences including skin selection
-* **Ableton Sample Packs**: Installation of Ableton Live sounds
-* **Apple Logic Pro X**: Preferences and key bindings
 * **Steinberg Cubase Pro**: Preferences and key bindings
-* **Default Plug-in Presets**: Setup default presets for your most used VST
-  effects and instruments
 
 ### Manual Licensing
 
@@ -73,7 +66,6 @@ The following tasks must be performed manually.
 * **Cytomic The Drop & The Glue**
 * **LennarDigital Sylenth1**
 * **Native Instruments Komplete**
-* **Novation Bass Station**
 
 ## Software Deactivation
 

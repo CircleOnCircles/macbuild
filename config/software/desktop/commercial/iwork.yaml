@@ -1,0 +1,6 @@
+_: &iwork
+  name: iWork
+  appstore:
+    - Pages
+    - Numbers
+    - Keynote

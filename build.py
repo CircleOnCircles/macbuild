@@ -81,14 +81,16 @@ def main(elite, config, printer):
             # App store apps
             appstore = software.pop('appstore', None)
             if appstore:
-                app_file = elite.file_info(
-                    path=f'/Applications/{appstore}.app/Contents/_MASReceipt/receipt'
-                )
-                if not app_file.exists:
-                    elite.fail(
-                        message=f'Please install {appstore} from the App Store',
-                        ignore_failed=True
+                appstores = appstore if isinstance(appstore, list) else [appstore]
+                for appstore in appstores:
+                    app_file = elite.file_info(
+                        path=f'/Applications/{appstore}.app/Contents/_MASReceipt/receipt'
                     )
+                    if not app_file.exists:
+                        elite.fail(
+                            message=f'Please install {appstore} from the App Store',
+                            ignore_failed=True
+                        )
 
             # Cask packages
             cask = software.pop('cask', None)
