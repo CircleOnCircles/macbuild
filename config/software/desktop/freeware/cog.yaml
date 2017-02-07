@@ -1,3 +1,9 @@
 _: &cog
   name: Cog
   cask: cog
+  plist:
+    domain: org.cogx.cog
+    mode: '0600'
+    values:
+      # Check for updates automatically? / Check Automatically
+      SUEnableAutomaticChecks: true

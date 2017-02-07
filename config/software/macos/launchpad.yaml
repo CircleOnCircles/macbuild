@@ -32,9 +32,12 @@ _: &launchpad
             - FaceTime
             - Photo Booth
             - Photos
+            # El Capitain specific
+            - Game Center
             - Preview
             - Dictionary
-            - Siri
+            # Sierra specific
+            # - Siri
             - Mission Control
             - Dashboard
       # Other Utilities
@@ -60,13 +63,18 @@ _: &launchpad
             - System Information
             - Automator
             - Script Editor
-            - Disk Utility
+            # Sierra specific
+            # - Disk Utility
             - Boot Camp Assistant
             - Digital Color Meter
             - ColorSync Utility
             - Grab
             - Bluetooth File Exchange
             - Audio MIDI Setup
+            # El Capitan specific
+            - X11
+            # El Capitan specific
+            - Disk Utility
     # Page 2: Desktop Software
     -
       # Proudctivity
@@ -107,13 +115,13 @@ _: &launchpad
       - folder_title: Utilities
         folder_layout:
           -
-            - BestRes
-            - BetterSnapTool
             - Dropbox
+            - OneDrive
+            - BetterSnapTool
+            - BestRes
             - Flux
             - Gmail Notifier
             - iStat Mini
-            - OneDrive
     # Page 3: Audio Software
     -
       # DAWs
