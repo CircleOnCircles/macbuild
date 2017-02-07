@@ -85,7 +85,6 @@ _: &launchpad
       # General
       - 1Password 6
       - Android File Transfer
-      - AppCleaner
       - DaisyDisk
       - Entropy
       - ForkLift
