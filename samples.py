@@ -9,16 +9,35 @@ from elite.decorators import elite_main
 def komplete_libraries(elite, config, printer, sample_library_source):
     printer.heading('Komplete Libraries')
 
-    source = os.path.join(sample_library_source, 'Native Instruments')
-    destination = os.path.join(config.sample_library_dir, 'Native Instruments')
+    for base_sample_dir in ['Native Instruments Kontakt', 'Native Instruments Battery']:
+        elite.file(
+            path=os.path.join(config.sample_library_dir, base_sample_dir), state='directory'
+        )
 
-    printer.info('Building directory structure for content.')
-    elite.file(path=destination, state='directory')
+    for library in config.komplete_libraries:
+        printer.info(f'Native Instruments {library}')
 
-    isos = elite.find(path=source, types=['file'], patterns=['*.iso'])
-    for iso in isos.paths:
-        package_name = os.path.splitext(os.path.basename(iso))[0].replace('_', ' ')
-        printer.info(f'Native Instruments {package_name}')
+        # Find the ISO for the library
+        isos = elite.find(
+            path=sample_library_source, min_depth=2, max_depth=3, types=['file'],
+            patterns=[
+                f"*/Native Instruments Kontakt/Native Instruments/{library.replace(' ', '_')}.iso",
+                f"*/Native Instruments Battery/{library.replace(' ', '_')}.iso"
+            ]
+        )
+
+        if len(isos.paths) != 1:
+            elite.fail(message='unable to find sample library iso image')
+
+        iso = isos.paths[0]
+
+        # Build the destination base directory
+        destination = os.path.join(
+            config.sample_library_dir,
+            os.path.dirname(os.path.relpath(iso, sample_library_source))
+        )
+
+        elite.file(path=destination, state='directory')
 
         mount = elite.run(command=f'hdiutil mount "{iso}"', changed=False)
         mountpoint = mount.stdout.rstrip().split('\t')[-1]
@@ -67,16 +86,18 @@ def komplete_libraries(elite, config, printer, sample_library_source):
 
 
 def omnisphere_steam_library(elite, config, printer, music_software_source):
-    printer.heading('Spectrasonics STEAM Library')
+    printer.heading('Spectrasonics Omnisphere')
+
+    printer.info('Spectrasonics STEAM Library')
 
     source = os.path.join(
-        music_software_source, 'Spectrasonics/Spectrasonics Omnisphere v2/STEAM/'
+        music_software_source, 'Spectrasonics/Spectrasonics Omnisphere v2/STEAM'
     )
-    destination = os.path.join(config.sample_library_dir, 'Spectrasonics')
+    destination = os.path.join(config.sample_library_dir, 'Spectrasonics Omnisphere')
     steam_symlink = '~/Library/Application Support/Spectrasonics/STEAM'
 
     elite.file(path=destination, state='directory')
-    elite.rsync(source=source, path=destination, options='--exclude=.DS_Store')
+    elite.rsync(source=source, path=destination, options='--exclude=.DS_Store --no-perms')
 
     for path in elite.find(path=destination, types=['directory']).paths:
         elite.file(path=path, state='directory', mode='0755')
@@ -85,13 +106,17 @@ def omnisphere_steam_library(elite, config, printer, music_software_source):
         elite.file(path=path, mode='0644')
 
     elite.file(path=os.path.dirname(steam_symlink), state='directory')
+
     file_info = elite.file_info(path=steam_symlink)
-    if file_info.file_type != 'symlink':
+    if file_info.file_type == 'directory':
         elite.file(path=steam_symlink, state='absent')
-        elite.file(source=destination, path=steam_symlink, state='symlink')
+
+    elite.file(path=steam_symlink, source=os.path.join(destination, 'STEAM'), state='symlink')
 
 
 def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_source):
+    printer.heading('Kontakt Libraries and Drum & Vocal Samples')
+
     # Build a data structure which we may use to determine sample library properties
     sample_libraries_config = {}
     for sample_library_config in config.sample_libraries:
@@ -112,24 +137,32 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
 
         sample_libraries_config[name] = SampleLibraryConfig(base_dir, installer, extract_subdirs)
 
+    for base_sample_dir in ['Native Instruments Kontakt', 'Drum & Vocal Samples']:
+        elite.file(
+            path=os.path.join(config.sample_library_dir, base_sample_dir), state='directory'
+        )
+
     for library in sample_libraries_config:
         printer.info(library)
 
         # Find the source directory for the library
         library_paths = elite.find(
-            path=sample_library_source, min_depth=2, max_depth=2, types=['directory'],
-            patterns=[f'*/{library}']
+            path=sample_library_source, min_depth=3, max_depth=3, types=['directory'],
+            patterns=[
+                f'*/Native Instruments Kontakt/*/{library}',
+                f'*/Drum & Vocal Samples/*/{library}'
+            ]
         )
 
         if len(library_paths.paths) != 1:
-            elite.fail('unable to find sample library source directory')
+            elite.fail(message='unable to find sample library source directory')
 
         library_path = library_paths.paths[0]
 
         # Find all ZIP and RAR files present in the downloaded library
         archives = elite.find(path=library_path, types=['file'], patterns=['*.zip', '*.rar'])
         if not archives.paths:
-            elite.fail('no archives were found in the sample library source directory')
+            elite.fail(message='no archives were found in the sample library source directory')
 
         # Obtain the config for the current library
         library_config = sample_libraries_config[library]
@@ -165,7 +198,6 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
                 destination = destination_base_dir
 
             # Extract the archive
-            elite.file(path=destination, state='directory')
             elite.archive(
                 path=destination,
                 source=archive,
@@ -197,7 +229,6 @@ def main(elite, config, printer):
     else:
         elite.fail(message='Unable to find any suitable music software source.')
 
-    logic_pro_x_content(elite, config, printer, sample_library_source)
     komplete_libraries(elite, config, printer, sample_library_source)
     omnisphere_steam_library(elite, config, printer, music_software_source)
     kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_source)
