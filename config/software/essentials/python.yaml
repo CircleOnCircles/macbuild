@@ -8,7 +8,6 @@ _: &python
     - pip
     - ipython
     - flake8
-    - powerline-status
   file:
     # Preferences
     - path: ~/.ipython

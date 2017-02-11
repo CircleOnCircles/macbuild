@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Aliases
 alias ll='ls -l'
 
@@ -10,8 +12,9 @@ export HISTSIZE=50000
 # Source all scripts from bash_profile.d
 if [[ -d ~/.bash_profile.d ]]
 then
-  for i in ~/.bash_profile.d/*
+  for i in ~/.bash_profile.d/*.sh
   do
-      source "$i"
+    # shellcheck source=/dev/null
+    source "$i"
   done
 fi

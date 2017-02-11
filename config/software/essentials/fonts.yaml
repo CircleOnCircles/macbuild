@@ -2,4 +2,3 @@ _: &fonts
   name: Fonts
   cask:
     - font-source-code-pro
-    - font-source-code-pro-for-powerline

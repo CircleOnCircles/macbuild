@@ -1,5 +1,8 @@
+#!/usr/bin/env bash
+
 # Enable bash completion
-if [[ -f $(brew --prefix)/etc/bash_completion ]]
+if [[ -f /usr/local/etc/bash_completion ]]
 then
-  source $(brew --prefix)/etc/bash_completion
+  # shellcheck disable=SC1091
+  source /usr/local/etc/bash_completion
 fi

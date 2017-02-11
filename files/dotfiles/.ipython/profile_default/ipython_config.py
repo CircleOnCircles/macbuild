@@ -1,6 +1,4 @@
 c = get_config()
 
-c.InteractiveShellApp.extensions = [
-    'powerline.bindings.ipython.post_0_11'
-]
+# Disable prompt upon exiting
 c.TerminalInteractiveShell.confirm_exit = False
