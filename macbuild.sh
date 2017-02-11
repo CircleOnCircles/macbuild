@@ -9,7 +9,7 @@ ENDC='\033[0m'
 
 # Display a pretty header
 echo
-echo -e "${BOLD}Mac Build Elite${ENDC}"
+echo -e "${BOLD}Mac Build${ENDC}"
 echo
 
 # Prompt the user for their sudo password
@@ -53,7 +53,7 @@ do
 done
 
 # Perform the build
-./build.py
+python3 macbuild.py
 
 # Disable passwordless sudo after the macbuild is complete
 sudo sed -i -e "s/^%admin.*/%admin  ALL=(ALL) ALL/" /etc/sudoers
