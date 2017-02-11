@@ -26,6 +26,7 @@ parent_dir()
   local working_dir
   local parent_dir
 
+  # Obtain the working directory
   working_dir=$1
 
   # If we are in the user's home directory or /, there's no parent directory
@@ -78,3 +79,6 @@ export PS1
 
 # Disable virtualenv prompt manipulation
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# Display ellipsis when deeper than 3 directories
+export PROMPT_DIRTRIM=3
