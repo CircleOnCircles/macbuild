@@ -4,6 +4,9 @@ _: &terminal
     domain: com.apple.Terminal
     mode: '0600'
     values:
+      # Preferences / General / Shells open with: Command (complete path):
+      Shell: /usr/local/bin/bash
+
       # Preferences / Profiles / Fots / Default
       Default Window Settings: Fots
       # Preferences / General / On startup open: / New window with profile:
@@ -27,7 +30,7 @@ _: &terminal
 
           # Preferences / Profiles / Window / Window Size
           columnCount: 135
-          rowCount: 26
+          rowCount: 27
 
           # Preferences / Profiles / Text / Font
           # TODO this won't work on the first run because the font isn't installed

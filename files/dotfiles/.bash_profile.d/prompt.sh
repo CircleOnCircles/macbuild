@@ -41,6 +41,9 @@ parent_dir()
   # Substitute the home directory with ~
   parent_dir="${parent_dir/#$HOME\//~/}"
 
+  # Replace ellipsis with a shorter unicode representation
+  parent_dir="${parent_dir/\/...\///…/}"
+
   # Remove the leading / if necessary as it is not required for display
   parent_dir="${parent_dir/#\//}"
 
