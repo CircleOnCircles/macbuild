@@ -21,7 +21,6 @@ software:
 
   Desktop Software / Freeware:
     - *android_file_transfer
-    - *bestres
     - *cog
     - *dropbox
     - *firefox
@@ -51,7 +50,6 @@ software:
     - *microsoft_office
     - *textual
     - *vmware_fusion
-    - *world_clock
 
   Music Production Software / DAWs, Tools & Drivers:
     - *celemony_melodyne_editor

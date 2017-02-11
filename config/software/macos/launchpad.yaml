@@ -96,7 +96,6 @@ _: &launchpad
       - DaisyDisk
       - Entropy
       - ForkLift
-      - World Clock
       # Social
       - Skype
       - Slack
@@ -118,7 +117,6 @@ _: &launchpad
             - Dropbox
             - OneDrive
             - BetterSnapTool
-            - BestRes
             - Flux
             - Gmail Notifier
             - iStat Mini

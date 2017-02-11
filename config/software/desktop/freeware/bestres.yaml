@@ -1,4 +1,0 @@
-_: &bestres
-  name: BestRes
-  cask: bestres
-  login_item: true
