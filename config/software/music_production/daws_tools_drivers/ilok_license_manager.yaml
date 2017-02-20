@@ -1,0 +1,3 @@
+_: &ilok_license_manager
+  name: iLok License Manager
+  cask: ilok-license-manager

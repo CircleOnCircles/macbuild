@@ -54,6 +54,7 @@ software:
   Music Production Software / DAWs, Tools & Drivers:
     - *elicenser_control_center
     - *focusrite_control
+    - *ilok_license_manager
     - *native_instruments_native_access
     - *novation_remote_sl_template_editor
     - *steinberg_cubase_pro_9
