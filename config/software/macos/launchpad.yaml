@@ -9,15 +9,13 @@ _: &launchpad
       - Safari
       - iTunes
       - iBooks
+      - Terminal
       - App Store
       - System Preferences
       # iWork
-      - folder_title: iWork
-        folder_layout:
-          -
-            - Pages
-            - Numbers
-            - Keynote
+      - Pages
+      - Numbers
+      - Keynote
       # Apps
       - folder_title: Apps
         folder_layout:
@@ -56,7 +54,6 @@ _: &launchpad
             - VoiceOver Utility
             - AirPort Utility
             - Migration Assistant
-            - Terminal
             - Activity Monitor
             - Console
             - Keychain Access
@@ -92,7 +89,6 @@ _: &launchpad
             - Microsoft PowerPoint
       # General
       - 1Password 6
-      - Android File Transfer
       - DaisyDisk
       - Entropy
       - ForkLift
@@ -110,7 +106,9 @@ _: &launchpad
       # Media Playback & Entertainment
       - Cog
       - Spotify
-      - MPlayerX
+      # Audio Tools
+      - Audio Hijack
+      - XLD
       - folder_title: Utilities
         folder_layout:
           -
@@ -120,18 +118,12 @@ _: &launchpad
             - Flux
             - Gmail Notifier
             - iStat Mini
-    # Page 3: Audio Software
-    -
-      # DAWs
+      # DAWs & Tools
       - Cubase 9
-      # Tools
-      - Audio Hijack
-      - Melodyne singletrack
-      - XLD
-      # Hardware
+      # Audio Hardware
       - Focusrite Control
       - ReMOTESLEditor
-      # Software Managers
+      # Audio Software Managers
       - folder_title: Software Managers
         folder_layout:
           -
@@ -146,7 +138,6 @@ _: &launchpad
             - Battery 4
             - Kontakt 5
             - Massive
-            - Reaktor 6
             - ServiceCenter
 
   widgets:
