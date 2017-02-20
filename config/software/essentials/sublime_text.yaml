@@ -31,9 +31,6 @@ _: &sublime_text
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap
       source: files/sublime_text/Default (OSX).sublime-keymap
       mode: '0644'
-    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/ColorPicker.sublime-settings
-      source: files/sublime_text/ColorPicker.sublime-settings
-      mode: '0644'
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Doxy.sublime-settings
       source: files/sublime_text/Doxy.sublime-settings
       mode: '0644'
@@ -45,9 +42,6 @@ _: &sublime_text
       mode: '0644'
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings
       source: files/sublime_text/MultiMarkdown.sublime-settings
-      mode: '0644'
-    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/PlainTasks.sublime-settings
-      source: files/sublime_text/PlainTasks.sublime-settings
       mode: '0644'
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-settings
       source: files/sublime_text/Python.sublime-settings
@@ -65,6 +59,7 @@ _: &sublime_text
     # Bash Profile Default Editor
     - path: ~/.bash_profile.d/sublime_text.sh
       source: files/dotfiles/.bash_profile.d/sublime_text.sh
+  pip: PyYAML
   download:
     # Package Control
     - path: ~/Library/Application Support/Sublime Text 3/Installed Packages
@@ -88,11 +83,6 @@ _: &sublime_text
 
         # Automatically search in selection when multiple lines are selected
         auto_find_in_selection: true
-
-        # Auto-trigger Angular.js controller completions within the ng-controller
-        auto_complete_triggers:
-          - characters: ng-controller="*
-            selector: punctuation.definition.string
 
         # Set a ruler at 99 characters to ensure we catch long lines
         rulers: [99]
@@ -142,36 +132,22 @@ _: &sublime_text
           - Alignment
           # Autocompletes symbols using all open files
           - All Autocomplete
-          # Angular.js snippets & syntax support
-          - AngularJS
           # Support for Ansible YAML files
           - Ansible
-          # CoffeeScript syntax support
-          - Better CoffeeScript
           # Support for binary plist files and syntax
           - BinaryPlist
           # Clearly highlights matching brackets tags .etc
           - BracketHighlighter
           # Color picker useful for CSS
           - ColorPicker
-          # Distraction free mode without entering full-screen
-          - DistractionFreeWindow
           # Dockerfile syntax support
           - Dockerfile Syntax Highlighting
           # Auto-generated comment blocks
           - DoxyDoxygen
-          # Emmet HTML code generation
-          - Emmet
           # .gitconfig syntax support
           - Git Config
-          # Jade syntax support
-          - Jade
-          # Additional JavaScript snippets
-          - JavaScript & NodeJS Snippets
           # Jinja2 syntax support
           - Jinja2
-          # LESS syntax support
-          - LESS
           # Live browser reloading for web development and Markdown
           - LiveReload
           # Ability to preview rendered Markdown code
@@ -183,21 +159,13 @@ _: &sublime_text
           # The package manager for Sublime Text
           - Package Control
           # A system for managing task lists in Sublime Text
-          - PlainTasks
-          # Puppet syntax support
           - Puppet
-          # SASS and SCSS syntax support
-          - Sass
           # Better title case implementation
           - Smart Title Case
           # The main sublime linter core
           - SublimeLinter
-          # Linting of CSS using CSS Lint
-          - SublimeLinter-csslint
           # Linting of Python using flake8
           - SublimeLinter-flake8
-          # Linting of JavaScript using JSHint
-          - SublimeLinter-jshint
           # Linting of JSON using the built-in JSON parser
           - SublimeLinter-json
           # Linting of YAML using PyYAML

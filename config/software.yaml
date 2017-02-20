@@ -52,7 +52,6 @@ software:
     - *vmware_fusion
 
   Music Production Software / DAWs, Tools & Drivers:
-    - *celemony_melodyne_editor
     - *elicenser_control_center
     - *focusrite_control
     - *native_instruments_native_access
@@ -105,19 +104,12 @@ software:
     - *native_instruments_battery_4
     - *native_instruments_kontakt_5
     - *native_instruments_massive
-    - *native_instruments_reaktor_6
     - *reveal_sound_spire
     - *spectrasonics_omnisphere
     - *synapse_audio_dune
     - *uhe_hive
     - *uhe_zebra
     - *xfer_records_serum
-
-  Music Production Software / Reaktor Instruments:
-    - *native_instruments_form
-    - *native_instruments_monark
-    - *native_instruments_polyplex
-    - *native_instruments_razor
 
   macOS Dock & Launchpad:
     - *dock
