@@ -1,6 +1,9 @@
 // Settings in here override those in "${packages}/DoxyDoxygen/Doxy.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
+    // Disable comment continuation as I rarely need it
+    "continuation_on_last_comment": false,
+
     // Do not specify the directory (in or out) keywords for function arguments
     "doxygen_discard_param_directions": true,
 
@@ -27,5 +30,14 @@
                 ],
             }
         ],
-    }
+    },
+
+    // Use the Sphinx style for Python code
+    "profiles": [
+        {
+            "languages":  [ "python", "cython" ],
+            "parsers":    [ "LanguagePython" ],
+            "doc_styles": [ "Sphinx" ]
+        }
+    ]
 }
