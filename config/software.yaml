@@ -20,13 +20,11 @@ software:
     - *ruby
 
   Desktop Software / Freeware:
-    - *android_file_transfer
     - *cog
     - *dropbox
     - *firefox
     - *flux
     - *gmail_notifier
-    - *mplayerx
     - *onedrive
     - *openemu
     - *osxfuse
@@ -76,7 +74,6 @@ software:
     - *dmgaudio_trackgate
     - *dmgaudio_tracklimit
     - *dmgaudio_trackmeter
-    - *focusrite_red_plugin_suite
     - *illformed_glitch
     - *native_instruments_premium_tube_series
     - *native_instruments_replika_xt
