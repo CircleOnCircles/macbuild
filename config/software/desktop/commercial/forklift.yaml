@@ -1,6 +1,6 @@
 _: &forklift
   name: Forklift
-  cask: forklift-beta
+  cask: forklift
   plist:
     domain: com.binarynights.ForkLift-3
     mode: '0600'
