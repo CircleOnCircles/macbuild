@@ -156,6 +156,9 @@ sample_libraries:
   - name: Focusrite 2016 Loopmasters Content
     base_dir: Focusrite 2GB Loopmasters Content
 
+  # Freshly Squeezed Samples
+  - Freshly Squeezed Samples Dave Parkinson Trance Essentials
+
   # Vengeance
   - Vengeance Effects Vol 1
   - Vengeance Effects Vol 2
@@ -173,3 +176,6 @@ sample_libraries:
     base_dir: wa_drum_tools_02
   - name: Wave Alchemy Wired Electronics
     base_dir: wave_alchemy_wired_electronics
+
+  # Vocals
+  - Sonic Element Vocal Trance Recordings
