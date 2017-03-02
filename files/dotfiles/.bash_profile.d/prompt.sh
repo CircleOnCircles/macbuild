@@ -21,7 +21,7 @@ BRIGHT_CYAN="\[\e[1;36m\]"
 
 ENDC="\[\e[m\]"
 
-parent_dir()
+_prompt_parent_dir()
 {
   local working_dir
   local parent_dir
@@ -55,18 +55,23 @@ parent_dir()
   fi
 }
 
+_prompt_virtualenv()
+{
+  if [[ ! -z $VIRTUAL_ENV ]]
+  then
+    virtualenv=$(basename "$VIRTUAL_ENV")
+    echo "@${virtualenv} "
+  fi
+}
+
 # User
 PS1="${GREEN}\u ${ENDC}"
 
 # Virtualenv
-if [[ ! -z $VIRTUAL_ENV ]]
-then
-  virtualenv=$(basename "$VIRTUAL_ENV")
-  PS1+="${BOLD}@${virtualenv} ${ENDC}"
-fi
+PS1+="${BOLD}\$(_prompt_virtualenv)${ENDC}"
 
 # Parent directory
-PS1+="${BRIGHT_BLUE}\$(parent_dir '\w')${ENDC}"
+PS1+="${BRIGHT_BLUE}\$(_prompt_parent_dir '\w')${ENDC}"
 
 # Current directory
 PS1+="${YELLOW}\W${ENDC} "
