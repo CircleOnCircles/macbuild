@@ -1,0 +1,14 @@
+_: &focusrite_red_plugin_suite
+  name: Focusrite Red Plugin Suite
+  cask: focusrite-red-plugin-suite
+  file:
+    # License
+    - path: ~/Music/Focusrite
+      state: directory
+      mode: '0755'
+    - path: ~/Music/Focusrite/Activation
+      state: directory
+      mode: '0755'
+    - path: ~/Music/Focusrite/Activation/Red2Red3Plugin.txt
+      source: !join_path [*app_license_dir, Music Production/Focusrite/Focusrite Red Plugin Suite/Red2Red3Plugin.txt]
+      mode: '0644'

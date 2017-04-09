@@ -1,5 +1,0 @@
-_: &soundtoys_5
-  name: Soundtoys 5
-  cask:
-    - soundtoys-echoboy-jr
-    - soundtoys-sie-q

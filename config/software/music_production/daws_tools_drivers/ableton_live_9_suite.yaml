@@ -1,0 +1,17 @@
+_: &ableton_live_9_suite
+  name: Ableton Live 9 Suite
+  cask: ableton-live-9-suite
+  file:
+    # License
+    - path: ~/Library/Application Support/Ableton
+      state: directory
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 9.7.1
+      state: directory
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 9.7.1/Unlock
+      state: directory
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 9.7.1/Unlock/Unlock.cfg
+      source: !join_path [*app_license_dir, Music Production/Ableton/Ableton Live 9 Suite/Unlock.cfg]
+      mode: '0644'

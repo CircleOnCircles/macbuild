@@ -1,0 +1,3 @@
+_: &native_instruments_reflektor
+  name: Native Instruments Reflektor
+  cask: native-instruments-reflektor
