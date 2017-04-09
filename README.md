@@ -32,7 +32,6 @@ The following tasks must be performed manually.
 
 ### Installation & Configuration (macOS)
 
-* **Services**: In System Preferences / Keyboard / Shortcuts / Services, enable 'New Terminal at Folder' and 'New Terminal Tab at Folder'
 * **Screen Saver**: Set the screen saver to 'Flurry'
 * **Notification Centre**: Set the order of items and allow permission after starting both World Clock and iStat Mini
 * **Safari**: Install extensions (1Password and Adblock Plus)

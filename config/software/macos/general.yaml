@@ -103,6 +103,20 @@ _: &macos_general
         # Display / Cursor size
         mouseDriverCursorSize: 1.25
 
+    # System Preferences / Keyboard / Shortcuts / Services
+    - domain: pbs
+      mode: '0600'
+      values:
+        NSServicesStatus:
+          # Files and Folders / New Terminal at Folder
+          com.apple.Terminal - New Terminal at Folder - newTerminalAtFolder:
+            enabled_context_menu: true
+            enabled_services_menu: true
+          # Files and Folders / New Terminal Tab at Folder
+          com.apple.Terminal - New Terminal Tab at Folder - newTerminalAtFolder:
+            enabled_context_menu: true
+            enabled_services_menu: true
+
     # System Preferences / Mouse
     - domain: com.apple.driver.AppleBluetoothMultitouch.mouse
       mode: '0600'
