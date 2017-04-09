@@ -50,11 +50,14 @@ software:
     - *vmware_fusion
 
   Music Production Software / DAWs, Tools & Drivers:
+    # - *ableton_live_9_suite
+    # - *celemony_melodyne_editor
     - *elicenser_control_center
     - *focusrite_control
     - *ilok_license_manager
     - *native_instruments_native_access
     - *novation_remote_sl_template_editor
+    # - *ocenaudio
     - *steinberg_cubase_pro_9
 
   Music Production Software / Plug-ins (Effect):
@@ -64,19 +67,28 @@ software:
     - *cableguys_volumeshaper
     - *cytomic_the_drop
     - *cytomic_the_glue
+    # - *dada_life_sausage_fattener
+    # - *dmgaudio_compassion
     - *dmgaudio_dualism
+    # - *dmgaudio_equality
+    # - *dmgaudio_equick
     - *dmgaudio_equilibrium
     - *dmgaudio_essence
     - *dmgaudio_expurgate
     - *dmgaudio_limitless
+    # - *dmgaudio_pitchfunk
     - *dmgaudio_trackcontrol
     - *dmgaudio_trackds
     - *dmgaudio_trackgate
     - *dmgaudio_tracklimit
     - *dmgaudio_trackmeter
+    # - *eventide_2016_stereo_room
     - *exponential_audio_r2_stereo
+    # - *focusrite_red_plugin_suite
+    # - *goodhertz_canopener_studio
     - *illformed_glitch
     - *klanghelm_vumt
+    # - *native_instruments_driver
     - *native_instruments_premium_tube_series
     - *native_instruments_replika_xt
     - *native_instruments_reverb_classics
@@ -85,31 +97,74 @@ software:
     - *native_instruments_transient_master
     - *native_instruments_vintage_compressors
     - *relab_lx480_complete
+    # - *softube_amp_room_essentials
+    # - *softube_drawmer_s73
     - *softube_fet_compressor
     - *softube_fix_flanger_and_doubler
     - *softube_saturation_knob
     - *softube_tsar_1r
+    # - *softube_tube_delay
     - *sonalksis_plugin_manager
     - *sonalksis_creative_elements
     - *sonalksis_essentials
-    - *soundtoys_5
-    - *uhe_mfm2
-    - *uhe_satin
-    - *uhe_uhbik
+    # - *sonalksis_freeg
+    # - *sonalksis_mastering_suite
+    # - *sonalksis_multiband_dynamics
+    - *soundtoys_echoboy_jr
+    - *soundtoys_sie_q
+    - *u_he_mfm2
+    - *u_he_satin
+    - *u_he_uhbik
     - *valhalladsp_valhallaspacemodulator
     - *valhalladsp_valhallavintageverb
+    # - *voxengo_deft_compressor
+    # - *voxengo_elephant
+    # - *voxengo_glisseq
+    # - *voxengo_msed
+    # - *voxengo_span
+    # - *voxengo_voxformer
+
+  # # Music Production Software / Plug-ins (Guitar Rig Effects):
+  #   - *native_instruments_guitar_rig_5
+  #   - *native_instruments_rammfire
+  #   - *native_instruments_reflektor
+  #   - *native_instruments_traktors_12
 
   Music Production Software / Plug-ins (Instrument):
     - *lennardigital_sylenth1
+    # - *native_instruments_absynth_5
     - *native_instruments_battery_4
+    # - *native_instruments_fm8
+    # - *native_instruments_komplete_kontrol
     - *native_instruments_kontakt_5
     - *native_instruments_massive
+    # - *novation_bass_station
     - *reveal_sound_spire
     - *spectrasonics_omnisphere
+    # - *steinberg_padshop
+    # - *steinberg_retrologue
     - *synapse_audio_dune
-    - *uhe_hive
-    - *uhe_zebra
+    - *u_he_hive
+    - *u_he_zebra
     - *xfer_records_serum
+
+  # Music Production Software / Plug-ins (Reaktor Instruments & Effects):
+  #   - *native_instruments_reaktor_6
+  #   # Reaktor Effects
+  #   - *native_instruments_molekular
+  #   - *native_instruments_the_finger
+  #   - *native_instruments_the_mouth
+  #   # Reaktor Instruments
+  #   - *native_instruments_flesh
+  #   - *native_instruments_form
+  #   - *native_instruments_kontour
+  #   - *native_instruments_monark
+  #   - *native_instruments_polyplex
+  #   - *native_instruments_razor
+  #   - *native_instruments_reaktor_prism
+  #   - *native_instruments_reaktor_spark
+  #   - *native_instruments_rounds
+  #   - *native_instruments_skanner_xt
 
   macOS Dock & Launchpad:
     - *dock
