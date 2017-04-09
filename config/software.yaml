@@ -74,7 +74,9 @@ software:
     - *dmgaudio_trackgate
     - *dmgaudio_tracklimit
     - *dmgaudio_trackmeter
+    - *exponential_audio_r2_stereo
     - *illformed_glitch
+    - *klanghelm_vumt
     - *native_instruments_premium_tube_series
     - *native_instruments_replika_xt
     - *native_instruments_reverb_classics

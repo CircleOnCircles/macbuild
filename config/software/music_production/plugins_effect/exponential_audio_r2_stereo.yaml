@@ -1,0 +1,3 @@
+_: &exponential_audio_r2_stereo
+  name: Exponential Audio R2 Stereo
+  cask: exponential-audio-r2-stereo
