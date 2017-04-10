@@ -26,11 +26,44 @@ cd macbuild
 
 It is suggested that you reboot your Mac after the first run of this tool.
 
+## Bugs & Issues
+
+* The Source Code Pro Terminal font is not available when first referenced
+* Spell check appears to still be enabled in Safari
+* The iLok update state will need to be verified and updated if necessary
+* BetterSnapTool keyboard shortcut of Ctrl+Alt+Cmd+Up seems to mute conversations in Skype
+* Spotify settings should be improved to be like plist and JSON
+* Homebrew update is very slow (could performing a full tap help this?)
+* Native Instruments Kontakt permissions appear to be boned for Service Center activations
+
+    ```bash
+    sudo chown root:admin "/Library/Application Support/Native Instruments/Service Center"
+    sudo chmod 775 "/Library/Application Support/Native Instruments/Service Center"
+    ```
+
 ## Manual Tasks
 
 The following tasks must be performed manually.
 
 ### Installation & Configuration (macOS)
+
+* **Hostname**: Set the hostname of the system
+
+    ```bash
+    sudo scutil --set LocalHostName "Fotsies-MacBook-Pro"
+    sudo scutil --set ComputerName "Fotsies MacBook Pro"
+    ```
+
+* **Screen Resolution & Layout**: Set your screen resolution and configure multi-monitor setup
+* **Wallpaper**: Add ~/Pictures/Wallpapers path to the list and choose your wallpaper
+
+    This seems to be in **com.apple.systempreferences**:
+
+    ```yaml
+    DSKDesktopPrefPane:
+      UserFolderPaths:
+      - /Users/fots/Pictures/Wallpapers
+    ```
 
 * **Screen Saver**: Set the screen saver to 'Flurry'
 * **Notification Centre**: Set the order of items and allow permission after starting iStat Mini
@@ -42,6 +75,9 @@ The following tasks must be performed manually.
     - Set 'Show Notification Center' to F15 under 'Mission Control'
     - Set 'Show Desktop' to F13 under 'Mission Control'
     - Disable 'Show Dashboard' under 'Mission Control'
+* **Menu Bar**: Add Sound and Time Machine icons to the menu bar
+* **Time Machine**: Configure Time Machine backup drive
+* **Dictation**: You may need to disable this as holding down Fn suggests it
 
 ### Installation & Configuration (General)
 
@@ -53,6 +89,12 @@ The following tasks must be performed manually.
 * **iTunes**; Start iTunes and set it up.
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
+* **Cog**: Disable notifications
+* **LennarDigital Sylenth1**: Set the default skin
+* **DMG Audio EQuality**: Set defaults by switching knobs to input boxes
+* **DMG Audio EQuilibrium**: Set the default Cubase preset to the default for the plugin too
+* **Klanghelm VUMT**: Set the default skin and interface size
+* **Native Instruments Kontakt**: Configure Quickload if you like
 
 ### Installation & Configuration (Music Production)
 
@@ -65,6 +107,7 @@ The following tasks must be performed manually.
 * **Cytomic The Drop & The Glue**
 * **LennarDigital Sylenth1**
 * **Native Instruments Komplete**
+* **Native Instruments Kontakt Sample Libraries**
 * **Novation Bass Station**
 
 ## Software Deactivation
