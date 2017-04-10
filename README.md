@@ -33,10 +33,10 @@ The following tasks must be performed manually.
 ### Installation & Configuration (macOS)
 
 * **Screen Saver**: Set the screen saver to 'Flurry'
-* **Notification Centre**: Set the order of items and allow permission after starting both World Clock and iStat Mini
+* **Notification Centre**: Set the order of items and allow permission after starting iStat Mini
 * **Safari**: Install extensions (1Password and Adblock Plus)
 * **App Store Login Items**: Start App Store menubar apps and set them to start
-  at login (AppCleaner and OneDrive)
+  at login (OneDrive)
 * **Keyboard Shortcuts**: Under System Preferences / Keyboard:
     - Set 'Show Launchpad' to F14 under 'Launchpad & Dock'
     - Set 'Show Notification Center' to F15 under 'Mission Control'
@@ -53,7 +53,6 @@ The following tasks must be performed manually.
 * **iTunes**; Start iTunes and set it up.
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
-* **World Clock**: Initial setup and country selection settings
 
 ### Installation & Configuration (Music Production)
 
@@ -61,10 +60,12 @@ The following tasks must be performed manually.
 
 ### Manual Licensing
 
+* **Forklift**
 * **Microsoft Office**
 * **Cytomic The Drop & The Glue**
 * **LennarDigital Sylenth1**
 * **Native Instruments Komplete**
+* **Novation Bass Station**
 
 ## Software Deactivation
 

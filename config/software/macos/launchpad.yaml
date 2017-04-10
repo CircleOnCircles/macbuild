@@ -106,9 +106,7 @@ _: &launchpad
       # Media Playback & Entertainment
       - Cog
       - Spotify
-      # Audio Tools
-      - Audio Hijack
-      - XLD
+      # Menu Bar Utilities
       - folder_title: Utilities
         folder_layout:
           -
@@ -118,6 +116,10 @@ _: &launchpad
             - Flux
             - Gmail Notifier
             - iStat Mini
+      # Audio Tools
+      - Audio Hijack
+      - ocenaudio
+      - XLD
       # DAWs & Tools
       - Cubase 9
       # Audio Hardware
@@ -142,11 +144,13 @@ _: &launchpad
 
   widgets:
     -
+      # El Capitan specific
       - Ski Report
       - Calculator
       - Calendar
       - Contacts
       - Dictionary
+      # El Capitan specific
       - ESPN
       - Flight Tracker
       - Movies

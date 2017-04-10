@@ -57,7 +57,7 @@ software:
     - *ilok_license_manager
     - *native_instruments_native_access
     - *novation_remote_sl_template_editor
-    # - *ocenaudio
+    - *ocenaudio
     - *steinberg_cubase_pro_9
 
   Music Production Software / Plug-ins (Effect):
@@ -124,7 +124,7 @@ software:
     # - *voxengo_span
     # - *voxengo_voxformer
 
-  # # Music Production Software / Plug-ins (Guitar Rig Effects):
+  # Music Production Software / Plug-ins (Guitar Rig Effects):
   #   - *native_instruments_guitar_rig_5
   #   - *native_instruments_rammfire
   #   - *native_instruments_reflektor
