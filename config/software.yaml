@@ -62,8 +62,8 @@ software:
 
   Music Production Software / Plug-ins (Effect):
     - *artsacoustic_reverb
-    - *audio_damage_eos
-    - *cableguys_filtershaper
+    # - *audio_damage_eos
+    # - *cableguys_filtershaper
     - *cableguys_volumeshaper
     - *cytomic_the_drop
     - *cytomic_the_glue
@@ -86,37 +86,37 @@ software:
     - *exponential_audio_r2_stereo
     # - *focusrite_red_plugin_suite
     # - *goodhertz_canopener_studio
-    - *illformed_glitch
+    # - *illformed_glitch
     - *klanghelm_vumt
     # - *native_instruments_driver
-    - *native_instruments_premium_tube_series
+    # - *native_instruments_premium_tube_series
     - *native_instruments_replika_xt
-    - *native_instruments_reverb_classics
-    - *native_instruments_solid_mix_series
+    # - *native_instruments_reverb_classics
+    # - *native_instruments_solid_mix_series
     - *native_instruments_supercharger_gt
     - *native_instruments_transient_master
     - *native_instruments_vintage_compressors
     - *relab_lx480_complete
     # - *softube_amp_room_essentials
     # - *softube_drawmer_s73
-    - *softube_fet_compressor
-    - *softube_fix_flanger_and_doubler
-    - *softube_saturation_knob
-    - *softube_tsar_1r
+    # - *softube_fet_compressor
+    # - *softube_fix_flanger_and_doubler
+    # - *softube_saturation_knob
+    # - *softube_tsar_1r
     # - *softube_tube_delay
     - *sonalksis_plugin_manager
     - *sonalksis_creative_elements
-    - *sonalksis_essentials
+    # - *sonalksis_essentials
     # - *sonalksis_freeg
     # - *sonalksis_mastering_suite
     # - *sonalksis_multiband_dynamics
-    - *soundtoys_echoboy_jr
-    - *soundtoys_sie_q
-    - *u_he_mfm2
-    - *u_he_satin
-    - *u_he_uhbik
-    - *valhalladsp_valhallaspacemodulator
-    - *valhalladsp_valhallavintageverb
+    # - *soundtoys_echoboy_jr
+    # - *soundtoys_sie_q
+    # - *u_he_mfm2
+    # - *u_he_satin
+    # - *u_he_uhbik
+    # - *valhalladsp_valhallaspacemodulator
+    # - *valhalladsp_valhallavintageverb
     # - *voxengo_deft_compressor
     # - *voxengo_elephant
     # - *voxengo_glisseq
@@ -144,8 +144,8 @@ software:
     # - *steinberg_padshop
     # - *steinberg_retrologue
     - *synapse_audio_dune
-    - *u_he_hive
-    - *u_he_zebra
+    # - *u_he_hive
+    # - *u_he_zebra
     - *xfer_records_serum
 
   # Music Production Software / Plug-ins (Reaktor Instruments & Effects):
