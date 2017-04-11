@@ -134,6 +134,15 @@ _: &macos_general
         AutomaticDownload: false
       sudo: true
 
+    # Desktop
+    - domain: com.apple.systempreferences
+      mode: '0600'
+      values:
+        # Desktop / Change Desktop Background... / + / ~/Pictures/Wallpapers
+        DSKDesktopPrefPane:
+          UserFolderPaths:
+          - /Users/fots/Pictures/Wallpapers
+
     # Launch Services
     - domain: com.apple.LaunchServices
       values:
@@ -190,3 +199,7 @@ _: &macos_general
   # Set the computer and display sleep times
   computer_sleep_time: Never
   display_sleep_time: Never
+
+  # Set the hostname
+  local_host_name: Fotsies-MacBook-Pro
+  computer_name: Fotsies MacBook Pro

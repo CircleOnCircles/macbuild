@@ -47,24 +47,8 @@ The following tasks must be performed manually.
 
 ### Installation & Configuration (macOS)
 
-* **Hostname**: Set the hostname of the system
-
-    ```bash
-    sudo scutil --set LocalHostName "Fotsies-MacBook-Pro"
-    sudo scutil --set ComputerName "Fotsies MacBook Pro"
-    ```
-
 * **Screen Resolution & Layout**: Set your screen resolution and configure multi-monitor setup
-* **Wallpaper**: Add ~/Pictures/Wallpapers path to the list and choose your wallpaper
-
-    This seems to be in **com.apple.systempreferences**:
-
-    ```yaml
-    DSKDesktopPrefPane:
-      UserFolderPaths:
-      - /Users/fots/Pictures/Wallpapers
-    ```
-
+* **Wallpaper**: Choose your wallpaper
 * **Screen Saver**: Set the screen saver to 'Flurry'
 * **Notification Centre**: Set the order of items and allow permission after starting iStat Mini
 * **Safari**: Install extensions (1Password and Adblock Plus)
@@ -86,7 +70,7 @@ The following tasks must be performed manually.
 * **Audio Hijack**: Start the app multiple times to dismiss welcome and mailing
   list alerts and install Instant On
 * **Clear**: Enable iCloud in Preferences
-* **iTunes**; Start iTunes and set it up.
+* **iTunes**; Start iTunes and set it up
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
 * **Cog**: Disable notifications

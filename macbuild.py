@@ -26,6 +26,20 @@ def set_macos_settings(elite, timezone, computer_sleep_time, display_sleep_time)
         )
 
 
+def set_macos_hostname(elite, local_host_name, computer_name):
+    current_local_host_name = elite.run(
+        command='scutil --get LocalHostName', sudo=True, changed=False
+    )
+    if local_host_name != current_local_host_name.stdout.rstrip():
+        elite.run(command=f'scutil --set LocalHostName "{local_host_name}"', sudo=True)
+
+    current_computer_name = elite.run(
+        command='scutil --get ComputerName', sudo=True, changed=False
+    )
+    if computer_name != current_computer_name.stdout.rstrip():
+        elite.run(command=f'scutil --set ComputerName "{computer_name}"', sudo=True)
+
+
 @elite_main(
     config_path='config',
     config_order=['global.yaml', 'software', 'software.yaml']
@@ -192,6 +206,11 @@ def main(elite, config, printer):
                 display_sleep_time = software.pop('display_sleep_time')
 
                 set_macos_settings(elite, timezone, computer_sleep_time, display_sleep_time)
+
+                local_host_name = software.pop('local_host_name')
+                computer_name = software.pop('computer_name')
+
+                set_macos_hostname(elite, local_host_name, computer_name)
 
             elif name == 'Finder':
                 layout = software.pop('favourites')
