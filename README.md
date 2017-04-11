@@ -59,7 +59,6 @@ The following tasks must be performed manually.
     - Set 'Show Notification Center' to F15 under 'Mission Control'
     - Set 'Show Desktop' to F13 under 'Mission Control'
     - Disable 'Show Dashboard' under 'Mission Control'
-* **Menu Bar**: Add Sound and Time Machine icons to the menu bar
 * **Time Machine**: Configure Time Machine backup drive
 * **Dictation**: You may need to disable this as holding down Fn suggests it
 
@@ -77,7 +76,6 @@ The following tasks must be performed manually.
 * **LennarDigital Sylenth1**: Set the default skin
 * **DMG Audio EQuality**: Set defaults by switching knobs to input boxes
 * **DMG Audio EQuilibrium**: Set the default Cubase preset to the default for the plugin too
-* **Klanghelm VUMT**: Set the default skin and interface size
 * **Native Instruments Kontakt**: Configure Quickload if you like
 
 ### Installation & Configuration (Music Production)

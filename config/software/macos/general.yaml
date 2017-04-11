@@ -158,6 +158,20 @@ _: &macos_general
         # Disable 'Reopen windows when logging back in' by default
         TALLogoutSavesState: false
 
+    # Menu
+    - domain: com.apple.systemuiserver
+      mode: '0600'
+      values:
+        # Configure visible items in the menu bar and their order
+        menuExtras:
+        - /System/Library/CoreServices/Menu Extras/Displays.menu
+        - /System/Library/CoreServices/Menu Extras/Volume.menu
+        - /System/Library/CoreServices/Menu Extras/TimeMachine.menu
+        - /System/Library/CoreServices/Menu Extras/AirPort.menu
+        - /System/Library/CoreServices/Menu Extras/Bluetooth.menu
+        - /System/Library/CoreServices/Menu Extras/Battery.menu
+        - /System/Library/CoreServices/Menu Extras/Clock.menu
+
     # Menu (Clock)
     - domain: com.apple.menuextra.clock
       mode: '0600'
