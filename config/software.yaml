@@ -118,7 +118,7 @@ software:
     # - *valhalladsp_valhallaspacemodulator
     # - *valhalladsp_valhallavintageverb
     # - *voxengo_deft_compressor
-    # - *voxengo_elephant
+    - *voxengo_elephant
     # - *voxengo_glisseq
     # - *voxengo_msed
     # - *voxengo_span
