@@ -5,10 +5,12 @@ _: &native_instruments_kontakt_5
     # Cinematic Studio Series
     - Cinematic Studio Strings
     - Cinematic Studio Piano
+
     # Spitfire Audio
     - Albion ONE
     - Loegria
     - HZ Percussion
+
     # Orchestral Tools
     - Berlin Strings
     - Berlin Woodwinds
@@ -16,21 +18,33 @@ _: &native_instruments_kontakt_5
     - Berlin Percussion
     - Metropolis Ark 1
     - Metropolis Ark 2
-    - Orchestral String Runs
-    - Symphonic Sphere
+    # - Orchestral String Runs
+    # - Symphonic Sphere
     - GP02 Vocalise
+
     # Native Instruments (Kontakt Factory Library)
     - Kontakt Factory Library
+
     # Native Instruments (Cinematic)
-    - Action Strikes
-    - Action Strings
-    - Emotive Strings
     - Damage
     - Evolve R2
     - Evolve Mutations
     - Evolve Mutations 2
-    - Kinetic Metal
+    - Action Strikes
+    # - Action Strings
+    # - Emotive Strings
     - Rise and Hit
+    - Kinetic Metal
+
+    # Native Instruments (Classical Instruments)
+    # - Symphony Essentials Brass Ensemble
+    # - Symphony Essentials Brass Solo
+    # - Symphony Essentials String Ensemble
+    # - Symphony Essentials Woodwind Ensemble
+    # - Symphony Essentials Woodwind Solo
+    - Session Horns Pro
+    - Session Strings Pro
+
     # Native Instruments (Acoustic Pianos)
     - Alicias Keys
     - The Gentleman
@@ -38,42 +52,38 @@ _: &native_instruments_kontakt_5
     - The Grandeur
     - The Maverick
     - Una Corda
-    # Native Instruments (Classical Instruments)
-    - Symphony Essentials Brass Ensemble
-    - Symphony Essentials Brass Solo
-    - Symphony Essentials String Ensemble
-    - Symphony Essentials Woodwind Ensemble
-    - Symphony Essentials Woodwind Solo
-    - Session Horns Pro
-    - Session Strings Pro
+
     # Native Instruments (Organs and Electric Pianos)
-    - George Duke Soul Treasures
+    # - George Duke Soul Treasures
     - Scarbee Vintage Keys
-    - Vintage Organs
+    # - Vintage Organs
+
     # Native Instruments (World Instruments)
-    - Balinese Gamelan
-    - Cuba
+    # - Balinese Gamelan
+    # - Cuba
     - India
-    - West Africa
+    # - West Africa
+
     # Native Instruments (Drums and Percussion)
-    - Abbey Road 50s Drummer
-    - Abbey Road 60s Drummer
-    - Abbey Road 70s Drummer
-    - Abbey Road 80s Drummer
-    - Abbey Road Modern Drummer
-    - Abbey Road Vintage Drummer
-    - Studio Drummer
-    - Drum Lab
-    - Maschine Drum Selection
+    # - Abbey Road 50s Drummer
+    # - Abbey Road 60s Drummer
+    # - Abbey Road 70s Drummer
+    # - Abbey Road 80s Drummer
+    # - Abbey Road Modern Drummer
+    # - Abbey Road Vintage Drummer
+    # - Studio Drummer
+    # - Drum Lab
+    # - Maschine Drum Selection
+
     # Native Instruments (Electric Bass)
-    - Scarbee Jay-Bass
-    - Scarbee MM-Bass
-    - Scarbee MM-Bass Amped
-    - Scarbee Pre-Bass
-    - Scarbee Pre-Bass Amped
-    - Scarbee Rickenbacker Bass
+    # - Scarbee Jay-Bass
+    # - Scarbee MM-Bass
+    # - Scarbee MM-Bass Amped
+    # - Scarbee Pre-Bass
+    # - Scarbee Pre-Bass Amped
+    # - Scarbee Rickenbacker Bass
     # Native Instruments (Acoustic and Electric Guitars)
-    - Scarbee Funk Guitarist
-    - Session Guitarist - Strummed Acoustic
+    # - Scarbee Funk Guitarist
+    # - Session Guitarist - Strummed Acoustic
     # Native Instruments (Synthesizers)
-    - Retro Machines Mk2
+    # - Retro Machines Mk2

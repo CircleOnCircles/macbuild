@@ -10,7 +10,7 @@ komplete_libraries:
   - Kontakt Factory Library
 
   # Synthesizers
-  - Retro Machines Mk2
+  # - Retro Machines Mk2
 
   # Acoustic Pianos
   - Alicias Keys
@@ -21,53 +21,53 @@ komplete_libraries:
   - Una Corda
 
   # Drums and Percussion
-  - Abbey Road 50s Drummer
-  - Abbey Road 60s Drummer
-  - Abbey Road 70s Drummer
-  - Abbey Road 80s Drummer
-  - Abbey Road Modern Drummer
-  - Abbey Road Vintage Drummer
-  - Drum Lab
-  - Maschine Drum Selection
-  - Studio Drummer
+  # - Abbey Road 50s Drummer
+  # - Abbey Road 60s Drummer
+  # - Abbey Road 70s Drummer
+  # - Abbey Road 80s Drummer
+  # - Abbey Road Modern Drummer
+  # - Abbey Road Vintage Drummer
+  # - Drum Lab
+  # - Maschine Drum Selection
+  # - Studio Drummer
 
   # World Instruments
-  - Balinese Gamelan
-  - Cuba
+  # - Balinese Gamelan
+  # - Cuba
   - India
-  - West Africa
+  # - West Africa
 
   # Organs and Electric Pianos
-  - George Duke Soul Treasures
+  # - George Duke Soul Treasures
   - Scarbee Vintage Keys
-  - Vintage Organs
+  # - Vintage Organs
 
   # Acoustic and Electric Guitars
-  - Scarbee Funk Guitarist
-  - Session Guitarist - Strummed Acoustic
+  # - Scarbee Funk Guitarist
+  # - Session Guitarist - Strummed Acoustic
 
   # Electric Bass
-  - Scarbee Jay-Bass
-  - Scarbee MM-Bass
-  - Scarbee MM-Bass Amped
-  - Scarbee Pre-Bass
-  - Scarbee Pre-Bass Amped
-  - Scarbee Rickenbacker Bass
+  # - Scarbee Jay-Bass
+  # - Scarbee MM-Bass
+  # - Scarbee MM-Bass Amped
+  # - Scarbee Pre-Bass
+  # - Scarbee Pre-Bass Amped
+  # - Scarbee Rickenbacker Bass
 
   # Classical Instruments
   - Session Horns Pro
   - Session Strings Pro
-  - Symphony Essentials Brass Ensemble
-  - Symphony Essentials Brass Solo
-  - Symphony Essentials String Ensemble
-  - Symphony Essentials Woodwind Ensemble
-  - Symphony Essentials Woodwind Solo
+  # - Symphony Essentials Brass Ensemble
+  # - Symphony Essentials Brass Solo
+  # - Symphony Essentials String Ensemble
+  # - Symphony Essentials Woodwind Ensemble
+  # - Symphony Essentials Woodwind Solo
 
   # Cinematic
   - Action Strikes
-  - Action Strings
+  # - Action Strings
   - Damage
-  - Emotive Strings
+  # - Emotive Strings
   - Evolve Mutations
   - Evolve Mutations 2
   - Evolve R2
@@ -77,7 +77,7 @@ komplete_libraries:
 # The sample libraries to install and their properties
 sample_libraries:
   # Blakus
-  - Blakus pocketBlakus
+  # - Blakus pocketBlakus
 
   # Cinematic Studio Series
   - Cinematic Studio Piano
@@ -126,13 +126,13 @@ sample_libraries:
   - Orchestral Tools Nocturne Violin (Soloists I)
 
   # Orchestral Tools Tools Collection
-  - Orchestral Tools Orchestral String Runs
-  - Orchestral Tools Symphonic Sphere
+  # - Orchestral Tools Orchestral String Runs
+  # - Orchestral Tools Symphonic Sphere
 
   # Orchestral Tools The Series
-  - name: Orchestral Tools The Orchestral Grands
-    extract_subdirs:
-      tog_instruments_v1.3.zip: Instruments/v1.3
+  # - name: Orchestral Tools The Orchestral Grands
+  #   extract_subdirs:
+  #     tog_instruments_v1.3.zip: Instruments/v1.3
 
   # Soundiron
   - name: Soundiron Mars Symphonic Mens Choir
@@ -153,11 +153,13 @@ sample_libraries:
       ETHERA_ROLI_PATCHES.zip: Ethera Instruments/Extra Sounds
 
   # Focusrite
-  - name: Focusrite 2016 Loopmasters Content
-    base_dir: Focusrite 2GB Loopmasters Content
+  # - name: Focusrite 2016 Loopmasters Content
+  #   base_dir: Focusrite 2GB Loopmasters Content
 
   # Freshly Squeezed Samples
   - Freshly Squeezed Samples Dave Parkinson Trance Essentials
+  - name: Freshly Squeezed Samples Sean Tyas Kick Essentials Volume 1
+    base_dir: Sean Tyas - Kick Essentials Volume 1
 
   # Vengeance
   - Vengeance Effects Vol 1
