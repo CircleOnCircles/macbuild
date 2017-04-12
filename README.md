@@ -29,7 +29,6 @@ It is suggested that you reboot your Mac after the first run of this tool.
 ## Bugs & Issues
 
 * The Source Code Pro Terminal font is not available when first referenced
-* Spell check appears to still be enabled in Safari
 * The iLok update state will need to be verified and updated if necessary
 * BetterSnapTool keyboard shortcut of Ctrl+Alt+Cmd+Up seems to mute conversations in Skype
 * Spotify settings should be improved to be like plist and JSON
@@ -50,6 +49,8 @@ The following tasks must be performed manually.
 * **Screen Resolution & Layout**: Set your screen resolution and configure multi-monitor setup
 * **Wallpaper**: Choose your wallpaper
 * **Screen Saver**: Set the screen saver to 'Flurry'
+* **Audio Device**: Set the audio interface as the default Sound device
+* **Spell Checking**: System Preferences / Keyboard / Text / Disable 'Correct spelling automatically'
 * **Notification Centre**: Set the order of items and allow permission after starting iStat Mini
 * **Safari**: Install extensions (1Password and Adblock Plus)
 * **App Store Login Items**: Start App Store menubar apps and set them to start
@@ -61,6 +62,7 @@ The following tasks must be performed manually.
     - Disable 'Show Dashboard' under 'Mission Control'
 * **Time Machine**: Configure Time Machine backup drive
 * **Dictation**: You may need to disable this as holding down Fn suggests it
+* **Automatic Updates**: System Preferences / App Store / Disable 'Download newly available updates in the background'
 
 ### Installation & Configuration (General)
 

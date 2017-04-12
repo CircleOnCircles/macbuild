@@ -79,8 +79,6 @@ _: &macos_general
         InitialKeyRepeat: 25
         # Keyboard / Keyboard / Use all F1, F2, etc. keys as standard function keys
         com.apple.keyboard.fnState: true
-        # Keyboard / Text / Correct spelling automatically
-        NSAutomaticSpellingCorrectionEnabled: false
         # Keyboard / Text / Use smart quotes and dashes
         NSAutomaticQuoteSubstitutionEnabled: false
         NSAutomaticDashSubstitutionEnabled: false
@@ -123,16 +121,6 @@ _: &macos_general
       values:
         # Point & Click / Secondary click
         MouseButtonMode: TwoButton
-
-    # System Preferences / App Store
-    - path: /Library/Preferences/com.apple.SoftwareUpdate.plist
-      mode: '0644'
-      owner: root
-      group: wheel
-      values:
-        # Disable 'Download newly available updates in the background'
-        AutomaticDownload: false
-      sudo: true
 
     # Desktop
     - domain: com.apple.systempreferences

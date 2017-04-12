@@ -29,5 +29,7 @@ _: &spotify
     audio.play_bitrate_enumeration: 4
     # Preferences / Playback / Disable 'Set the same volume level for all songs'
     audio.normalize_v2: false
+    # Preferences / Autoplay / Disable 'Autoplay similar songs when your music ends.'
+    app.player.autoplay: false
 
   login_item: false
