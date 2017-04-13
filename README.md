@@ -33,12 +33,6 @@ It is suggested that you reboot your Mac after the first run of this tool.
 * BetterSnapTool keyboard shortcut of Ctrl+Alt+Cmd+Up seems to mute conversations in Skype
 * Spotify settings should be improved to be like plist and JSON
 * Homebrew update is very slow (could performing a full tap help this?)
-* Native Instruments Kontakt permissions appear to be boned for Service Center activations
-
-    ```bash
-    sudo chown root:admin "/Library/Application Support/Native Instruments/Service Center"
-    sudo chmod 775 "/Library/Application Support/Native Instruments/Service Center"
-    ```
 
 ## Manual Tasks
 

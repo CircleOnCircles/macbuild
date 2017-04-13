@@ -1,6 +1,13 @@
 _: &native_instruments_kontakt_5
   name: Native Instruments Kontakt 5
   cask: native-instruments-kontakt-5
+  file:
+    - path: /Library/Application Support/Native Instruments/Service Center
+      state: directory
+      owner: root
+      group: admin
+      mode: '0775'
+      sudo: true
   library_order:
     # Cinematic Studio Series
     - Cinematic Studio Strings
