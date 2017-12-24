@@ -30,12 +30,9 @@ _: &launchpad
             - FaceTime
             - Photo Booth
             - Photos
-            # El Capitain specific
-            - Game Center
             - Preview
             - Dictionary
-            # Sierra specific
-            # - Siri
+            - Siri
             - Mission Control
             - Dashboard
       # Other Utilities
@@ -60,18 +57,13 @@ _: &launchpad
             - System Information
             - Automator
             - Script Editor
-            # Sierra specific
-            # - Disk Utility
+            - Disk Utility
             - Boot Camp Assistant
             - Digital Color Meter
             - ColorSync Utility
             - Grab
             - Bluetooth File Exchange
             - Audio MIDI Setup
-            # El Capitan specific
-            - X11
-            # El Capitan specific
-            - Disk Utility
     # Page 2: Desktop Software
     -
       # Proudctivity
@@ -144,20 +136,14 @@ _: &launchpad
 
   widgets:
     -
-      # El Capitan specific
-      - Ski Report
       - Calculator
       - Calendar
       - Contacts
       - Dictionary
-      # El Capitan specific
-      - ESPN
-      - Flight Tracker
       - Movies
       - Stickies
       - Stocks
       - Tile Game
-      - Translation
       - Unit Converter
       - Weather
       - Web Clip
