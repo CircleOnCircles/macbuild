@@ -96,6 +96,7 @@ _: &launchpad
       # Virtualization
       - VMware Fusion
       # Media Playback & Entertainment
+      - MPlayerX
       - Cog
       - Spotify
       # Menu Bar Utilities

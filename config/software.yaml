@@ -25,6 +25,7 @@ software:
     - *firefox
     - *flux
     - *gmail_notifier
+    - *mplayerx
     - *onedrive
     - *openemu
     - *osxfuse
