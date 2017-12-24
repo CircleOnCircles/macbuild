@@ -20,7 +20,9 @@ Now, run the following in your Terminal to use my configuration:
 
 ```bash
 git clone git@github.com:fgimian/macbuild.git
+git clone git@github.com:fgimian/elite.git
 cd macbuild
+ln -s ../elite/elite
 ./macbuild.sh
 ```
 
