@@ -1,6 +1,6 @@
 _: &cog
   name: Cog
-  cask: cog
+  cask: fgimian/general/cog
   plist:
     domain: org.cogx.cog
     mode: '0600'

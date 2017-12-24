@@ -6,4 +6,5 @@ _: &taps
     - caskroom/cask
     - caskroom/fonts
     - caskroom/versions
-    - fgimian/fgimian
+    - fgimian/general
+    - fgimian/music
