@@ -111,7 +111,9 @@ def main(elite, config, printer):
             if cask:
                 casks = cask if isinstance(cask, list) else [cask]
                 for cask in casks:
-                    elite.cask(name=cask, env=env)
+                    cask_install = elite.cask(name=cask, env=env, ignore_failed=True)
+                    if not cask_install.ok:
+                        continue
 
             # Brew packages
             brew = software.pop('brew', None)
