@@ -62,13 +62,24 @@ software:
     - *steinberg_cubase_pro_9v5
 
   Music Production Software / Plug-ins (Effect):
+    # ArtsAcoustic
     - *artsacoustic_reverb
+
+    # Audio Damage
     # - *audio_damage_eos
+
+    # Cableguys
     # - *cableguys_filtershaper
     - *cableguys_volumeshaper
+
+    # Cytomic
     - *cytomic_the_drop
     - *cytomic_the_glue
+
+    # Dada Life
     # - *dada_life_sausage_fattener
+
+    # DMG Audio
     # - *dmgaudio_compassion
     - *dmgaudio_dualism
     # - *dmgaudio_equality
@@ -84,12 +95,26 @@ software:
     - *dmgaudio_trackgate
     - *dmgaudio_tracklimit
     - *dmgaudio_trackmeter
+
+    # Eventide
     # - *eventide_2016_stereo_room
+
+    # Exponential Audio
     - *exponential_audio_r2_stereo_reverb
+
+    # Focusrite
     # - *focusrite_red_plugin_suite
+
+    # Goodhertz
     # - *goodhertz_canopener_studio
+
+    # Illformed
     # - *illformed_glitch
+
+    # Klanghelm
     - *klanghelm_vumt
+
+    # Native Instruments
     # - *native_instruments_driver
     # - *native_instruments_premium_tube_series
     - *native_instruments_replika_xt
@@ -98,7 +123,11 @@ software:
     - *native_instruments_supercharger_gt
     - *native_instruments_transient_master
     - *native_instruments_vintage_compressors
+
+    # Relab
     - *relab_lx480_complete
+
+    # Softube
     # - *softube_amp_room_essentials
     # - *softube_drawmer_s73
     # - *softube_fet_compressor
@@ -106,20 +135,30 @@ software:
     # - *softube_saturation_knob
     # - *softube_tsar_1r
     # - *softube_tube_delay
+
+    # Sonalksis
     - *sonalksis_plugin_manager
     - *sonalksis_creative_elements
     # - *sonalksis_essentials
     # - *sonalksis_freeg
     # - *sonalksis_mastering_suite
     # - *sonalksis_multiband_dynamics
+
+    # Soundtoys
     # - *soundtoys_echoboy_jr
     # - *soundtoys_little_plate
     # - *soundtoys_sie_q
+
+    # u-he
     # - *u_he_mfm2
     # - *u_he_satin
     # - *u_he_uhbik
+
+    # ValhallaDSP
     # - *valhalladsp_valhallaspacemodulator
     # - *valhalladsp_valhallavintageverb
+
+    # Voxengo
     # - *voxengo_deft_compressor
     - *voxengo_elephant
     # - *voxengo_glisseq
@@ -134,21 +173,35 @@ software:
   #   - *native_instruments_traktors_12
 
   Music Production Software / Plug-ins (Instrument):
+    # LennarDigital
     - *lennardigital_sylenth1
+
+    # Native Instruments
     # - *native_instruments_absynth_5
     - *native_instruments_battery_4
     # - *native_instruments_fm8
     # - *native_instruments_komplete_kontrol
     - *native_instruments_kontakt_5
     - *native_instruments_massive
-    # - *novation_bass_station
+
+    # Reveal Sound
     - *reveal_sound_spire
+
+    # Spectrasonics
     - *spectrasonics_omnisphere
+
+    # Steinberg
     # - *steinberg_padshop
     # - *steinberg_retrologue
+
+    # Synapse Audio
     - *synapse_audio_dune
+
+    # u-he
     # - *u_he_hive
     # - *u_he_zebra
+
+    # Xfer Records
     - *xfer_records_serum
 
   # Music Production Software / Plug-ins (Reaktor Instruments & Effects):
