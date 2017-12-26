@@ -26,6 +26,7 @@ _: &dock
     - Focusrite Control
     - Spotify
     - OpenEmu
+    - Messages
     - Skype
     - Slack
     - Textual
