@@ -108,12 +108,17 @@ def main(elite, config, printer):
 
             # Cask packages
             cask = software.pop('cask', None)
+            cask_install_failed = False
             if cask:
                 casks = cask if isinstance(cask, list) else [cask]
                 for cask in casks:
                     cask_install = elite.cask(name=cask, env=env, ignore_failed=True)
                     if not cask_install.ok:
-                        continue
+                        cask_install_failed = True
+                        break
+
+            if cask_install_failed:
+                continue
 
             # Brew packages
             brew = software.pop('brew', None)
