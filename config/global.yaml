@@ -9,6 +9,8 @@ app_license_dir: &app_license_dir '~/Documents/System Automation/Software Licens
 sample_library_sources:
   - /Volumes/Backup Mac 1/Software/Sample Libraries
   - /Volumes/Backup Mac 2/Software/Sample Libraries
+  - /Volumes/Software Archive/Sample Libraries
 music_software_sources:
   - /Volumes/Backup Mac 1/Software/Music Production
   - /Volumes/Backup Mac 2/Software/Music Production
+  - /Volumes/Software Archive/Music Production
