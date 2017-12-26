@@ -89,7 +89,7 @@ _: &launchpad
       - Slack
       - Textual
       # Internet
-      - Firefox
+      - Waterfox
       - Transmission
       # Games
       - OpenEmu

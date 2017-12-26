@@ -22,7 +22,7 @@ software:
   Desktop Software / Freeware:
     - *cog
     - *dropbox
-    - *firefox
+    - *waterfox
     - *flux
     - *gmail_notifier
     - *mplayerx

@@ -1,3 +1,0 @@
-_: &firefox
-  name: Firefox
-  cask: fgimian/general/firefox
