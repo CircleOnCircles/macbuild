@@ -52,6 +52,14 @@ do
     fi
 done
 
+# Installing essential fonts
+brew tap caskroom/fonts
+if ! brew cask list | grep ^font-source-code-pro$ > /dev/null
+then
+    echo -e "${BLUE}Installing Source Code Pro font${ENDC}"
+    brew cask install font-source-code-pro
+fi
+
 # Perform the build
 python3 macbuild.py
 
