@@ -114,7 +114,7 @@ _: &launchpad
       - ocenaudio
       - XLD
       # DAWs & Tools
-      - Cubase 9
+      - Cubase 9.5
       # Audio Hardware
       - Focusrite Control
       - ReMOTESLEditor
