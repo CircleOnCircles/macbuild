@@ -124,6 +124,7 @@ _: &launchpad
           -
             - iLok License Manager
             - eLicenser Control Center
+            - HALion Library Manager
             - Native Access
             - Sonalksis Plugin Manager
       # Native Instruments
