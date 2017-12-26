@@ -43,6 +43,7 @@ The following tasks must be performed manually.
 ### Installation & Configuration (macOS)
 
 * **Screen Resolution & Layout**: Set your screen resolution and configure multi-monitor setup
+* **Finder**: Configure favourites in the sidebar
 * **Wallpaper**: Choose your wallpaper
 * **Screen Saver**: Set the screen saver to 'Flurry'
 * **Audio Device**: Set the audio interface as the default Sound device
