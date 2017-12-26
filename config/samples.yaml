@@ -86,6 +86,8 @@ sample_libraries:
   # Heavyocity
   - name: Heavyocity Gravity Pack 02 Vocalise
     base_dir: GP02 Vocalise
+  - name: Heavyocity Gravity Pack 04 Vocalise 2
+    base_dir: GP04 Vocalise 2
 
   # Ivy Audio
   - name: Ivy Audio Clare Solo
