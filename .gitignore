@@ -2,3 +2,6 @@
 .cache
 .coverage
 .DS_Store
+
+# Symbolic link to the elite repo should be ignored
+elite
