@@ -30,7 +30,6 @@ It is suggested that you reboot your Mac after the first run of this tool.
 
 ## Bugs & Issues
 
-* The Source Code Pro Terminal font is not available when first referenced
 * The iLok update state will need to be verified and updated if necessary
 * BetterSnapTool keyboard shortcut of Ctrl+Alt+Cmd+Up seems to mute conversations in Skype
 * Spotify settings should be improved to be like plist and JSON
@@ -72,7 +71,7 @@ The following tasks must be performed manually.
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
 * **Cog**: Disable notifications
-* **LennarDigital Sylenth1**: Set the default skin
+* **LennarDigital Sylenth1**: Set the default skin to Apox and Size to 110%
 * **DMG Audio EQuality**: Set defaults by switching knobs to input boxes
 * **DMG Audio EQuilibrium**: Set the default Cubase preset to the default for the plugin too
 * **Native Instruments Kontakt**: Configure Quickload if you like
@@ -89,7 +88,6 @@ The following tasks must be performed manually.
 * **LennarDigital Sylenth1**
 * **Native Instruments Komplete**
 * **Native Instruments Kontakt Sample Libraries**
-* **Novation Bass Station**
 
 ## Software Deactivation
 
