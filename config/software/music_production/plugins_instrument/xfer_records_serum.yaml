@@ -2,7 +2,6 @@ _: &xfer_records_serum
   name: Xfer Records Serum
   cask:
     - xfer-records-serum
-    - xfer-records-serum-update
     - xfer-records-serumfx-update
   file:
     # License

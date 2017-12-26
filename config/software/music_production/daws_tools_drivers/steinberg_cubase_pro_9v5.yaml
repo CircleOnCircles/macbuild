@@ -1,8 +1,8 @@
-_: &steinberg_cubase_pro_9
-  name: Steinberg Cubase Pro 9
+_: &steinberg_cubase_pro_9v5
+  name: Steinberg Cubase Pro 9.5
   cask:
-    - steinberg-cubase-pro-9
-    - steinberg-cubase-pro-9-update
+    - steinberg-cubase-pro-9v5
+    - steinberg-cubase-pro-9v5-update
   symlink:
     # Plug-in Presets
     # TODO Ableton Live doesn't like this at all

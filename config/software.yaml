@@ -59,7 +59,7 @@ software:
     - *native_instruments_native_access
     - *novation_remote_sl_template_editor
     - *ocenaudio
-    - *steinberg_cubase_pro_9
+    - *steinberg_cubase_pro_9v5
 
   Music Production Software / Plug-ins (Effect):
     - *artsacoustic_reverb
@@ -78,13 +78,14 @@ software:
     - *dmgaudio_expurgate
     - *dmgaudio_limitless
     # - *dmgaudio_pitchfunk
+    - *dmgaudio_trackcomp
     - *dmgaudio_trackcontrol
     - *dmgaudio_trackds
     - *dmgaudio_trackgate
     - *dmgaudio_tracklimit
     - *dmgaudio_trackmeter
     # - *eventide_2016_stereo_room
-    - *exponential_audio_r2_stereo
+    - *exponential_audio_r2_stereo_reverb
     # - *focusrite_red_plugin_suite
     # - *goodhertz_canopener_studio
     # - *illformed_glitch
@@ -112,6 +113,7 @@ software:
     # - *sonalksis_mastering_suite
     # - *sonalksis_multiband_dynamics
     # - *soundtoys_echoboy_jr
+    # - *soundtoys_little_plate
     # - *soundtoys_sie_q
     # - *u_he_mfm2
     # - *u_he_satin
