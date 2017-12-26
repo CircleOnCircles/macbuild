@@ -109,6 +109,7 @@ software:
     # - *goodhertz_canopener_studio
 
     # Illformed
+    # BUGGY: Illformed Glitch crashes frequently when being inserted in Cubase
     # - *illformed_glitch
 
     # Klanghelm
@@ -145,17 +146,20 @@ software:
     # - *sonalksis_multiband_dynamics
 
     # Soundtoys
+    # BUGGY: Soundtoys plugins crash randomly when being inserted in Cubase
     # - *soundtoys_echoboy_jr
     # - *soundtoys_little_plate
     # - *soundtoys_sie_q
 
     # u-he
+    # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
     # - *u_he_mfm2
     # - *u_he_satin
     # - *u_he_uhbik
 
     # ValhallaDSP
     # - *valhalladsp_valhallaspacemodulator
+    # BUGGY: ValhallaVintageVerb crashes Cubase randomly when using multiple instances and popups
     # - *valhalladsp_valhallavintageverb
 
     # Voxengo
@@ -198,6 +202,7 @@ software:
     - *synapse_audio_dune
 
     # u-he
+    # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
     # - *u_he_hive
     # - *u_he_zebra
 
