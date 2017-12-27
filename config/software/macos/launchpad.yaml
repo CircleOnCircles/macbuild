@@ -107,6 +107,7 @@ _: &launchpad
             - OneDrive
             - BetterSnapTool
             - Flux
+            - handyPrint
             - Gmail Notifier
             - iStat Mini
       # Audio Tools

@@ -192,7 +192,7 @@ def main(elite, config, printer):
                         container=plist.get('container'),
                         path=plist.get('path'),
                         source=plist.get('source'),
-                        values=plist.get('values'),
+                        values=plist.get('values', {}),
                         sudo=plist.get('sudo', False)
                     )
 

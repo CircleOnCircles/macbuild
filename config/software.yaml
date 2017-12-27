@@ -44,6 +44,7 @@ software:
     - *daisydisk
     - *entropy
     - *forklift
+    - *handyprint
     - *istat_mini
     - *iwork
     - *microsoft_office
