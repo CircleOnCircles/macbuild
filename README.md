@@ -56,7 +56,7 @@ The following tasks must be performed manually.
     - Set 'Show Notification Center' to F15 under 'Mission Control'
     - Set 'Show Desktop' to F13 under 'Mission Control'
     - Disable 'Show Dashboard' under 'Mission Control'
-* **Time Machine**: Configure Time Machine backup drive
+* **Time Machine**: Configure Time Machine backup drive ensuring that you add an exclusion for ~/Documents/Virtual Machines.localized
 * **Dictation**: You may need to disable this as holding down Fn suggests it
 * **Automatic Updates**: System Preferences / App Store / Disable 'Download newly available updates in the background'
 
