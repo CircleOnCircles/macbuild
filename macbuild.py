@@ -206,7 +206,7 @@ def main(elite, config, printer):
                         values=json.get('values')
                     )
 
-            # Application SpecificActions
+            # Application Specific Actions
             if name == 'macOS General':
                 timezone = software.pop('timezone')
                 computer_sleep_time = software.pop('computer_sleep_time')
@@ -275,7 +275,7 @@ def main(elite, config, printer):
                     state='present' if login_item else 'absent'
                 )
 
-            # Verify that no extra keys remain after processing a piece of  software
+            # Verify that no extra keys remain after processing a piece of software
             if software:
                 elite.fail(
                     message=(
