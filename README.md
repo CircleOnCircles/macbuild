@@ -71,6 +71,7 @@ The following tasks must be performed manually.
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
 * **Cog**: Disable notifications
+* **Messages**: Disable spell checking under Edit / Spelling and Grammar
 * **LennarDigital Sylenth1**: Set the default skin to Apox and Size to 110%
 * **DMG Audio EQuality**: Set defaults by switching knobs to input boxes
 * **DMG Audio EQuilibrium**: Set the default Cubase preset to the default for the plugin too
