@@ -87,6 +87,7 @@ The following tasks must be performed manually.
 * **Microsoft Office**
 * **Cytomic The Drop & The Glue**
 * **LennarDigital Sylenth1**
+* **Modartt Pianoteq**
 * **Native Instruments Komplete**
 * **Native Instruments Kontakt Sample Libraries**
 

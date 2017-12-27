@@ -183,6 +183,9 @@ software:
     # LennarDigital
     - *lennardigital_sylenth1
 
+    # Modartt
+    - *modartt_pianoteq
+
     # Native Instruments
     # - *native_instruments_absynth_5
     - *native_instruments_battery_4
