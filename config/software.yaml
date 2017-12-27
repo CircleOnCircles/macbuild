@@ -61,6 +61,7 @@ software:
     - *novation_remote_sl_template_editor
     - *ocenaudio
     - *steinberg_cubase_pro_9v5
+    - *touchosc_editor
 
   Music Production Software / Plug-ins (Effect):
     # ArtsAcoustic
