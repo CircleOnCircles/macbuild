@@ -20,7 +20,7 @@ _: &finder
       NewWindowTargetPath: file:///Users/fots/
 
       # Preferences / Advanced / Keep folders on top when sorting by name (Sierra specific)
-      # _FXSortFoldersFirst: true
+      _FXSortFoldersFirst: true
 
       # Preferences / Advanced / Disable 'Show warning before changing an extension'
       FXEnableExtensionChangeWarning: false

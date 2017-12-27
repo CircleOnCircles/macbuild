@@ -23,8 +23,8 @@ _: &macos_general
       state: directory
 
     # SSH Configuration (Sierra specific)
-    # - source: files/dotfiles/.ssh/config
-    #   path: ~/.ssh/config
+    - source: files/dotfiles/.ssh/config
+      path: ~/.ssh/config
 
     # Set permissions on all audio directories
 

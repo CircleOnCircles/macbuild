@@ -46,7 +46,7 @@ The following tasks must be performed manually.
 * **Wallpaper**: Choose your wallpaper
 * **Screen Saver**: Set the screen saver to 'Flurry'
 * **Audio Device**: Set the audio interface as the default Sound device
-* **Spell Checking**: System Preferences / Keyboard / Text / Disable 'Correct spelling automatically'
+* **Spell Checking**: System Preferences / Keyboard / Text / Disable 'Correct spelling automatically' and 'Capitalize words automatically'
 * **Notification Centre**: Set the order of items and allow permission after starting iStat Mini
 * **Safari**: Install extensions (1Password and Adblock Plus)
 * **App Store Login Items**: Start App Store menubar apps and set them to start
