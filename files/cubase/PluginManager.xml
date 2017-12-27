@@ -3,12 +3,13 @@
 		<PluginCollection name="Category" type="FX">
 			<folder name="Analyzer">
 				<plugin name="TrackMeter" cid="5653454447544D547261636B4D657465"/>
+				<plugin name="VUMT" cid="56535456554D5476756D740000000000"/>
 			</folder>
 			<folder name="Delay">
 				<plugin name="Replika XT" cid="5653544E6924437265706C696B612078"/>
 			</folder>
 			<folder name="Distortion">
-				<plugin name="Saturation Knob" cid="F73F44A696F440AFB1871EAFA5E2AF01"/>
+				<plugin name="Quadrafuzz v2" cid="D849FEF360204F3EA7D907CFBD2D5631"/>
 				<plugin name="Sonalksis Digital Grimebox Stereo" cid="5653545442324E736F6E616C6B736973"/>
 			</folder>
 			<folder name="Dynamics">
@@ -18,39 +19,27 @@
 				</folder>
 				<folder name="Gate">
 					<plugin name="Expurgate" cid="56534544474578457870757267617465"/>
-					<plugin name="Sonalksis SV-719 Stereo Gate SC" cid="5653543731396B736F6E616C6B736973"/>
-					<plugin name="Sonalksis SV-719 Stereo Gate" cid="56535437313969736F6E616C6B736973"/>
 					<plugin name="TrackGate" cid="56534544475447547261636B47617465"/>
 				</folder>
 				<folder name="Limiter">
+					<plugin name="Elephant" cid="1C3A662167D347A99F7D797EA4911CDB"/>
 					<plugin name="Limitless" cid="56534544474C6C4C696D69746C657373"/>
 					<plugin name="TrackLimit" cid="5653454447544C547261636B4C696D69"/>
 				</folder>
-				<plugin name="FET Compressor" cid="41BE6870B69448B28D4DAF0B5BD43DFA"/>
-				<plugin name="Red 3 Compressor" cid="1887D1AD82174BDAB55C9797DF13213E"/>
-				<plugin name="Solid Bus Comp" cid="5653544E692436736F6C696420627573"/>
-				<plugin name="Solid Dynamics" cid="5653544E692437736F6C69642064796E"/>
-				<plugin name="Sonalksis SV-315Mk2 Stereo Cmp SC" cid="5653543331356B736F6E616C6B736973"/>
-				<plugin name="Sonalksis SV-315Mk2 Stereo Cmp" cid="5653543331356E736F6E616C6B736973"/>
 				<plugin name="Sonalksis Uber Compressor Stereo" cid="5653545442334E736F6E616C6B736973"/>
 				<plugin name="Supercharger GT" cid="5653544E692441737570657263686172"/>
 				<plugin name="The Glue" cid="5653544379546774686520676C756500"/>
+				<plugin name="TrackComp" cid="56534544475443547261636B436F6D70"/>
 				<plugin name="Transient Master" cid="5653544E6924357472616E7369656E74"/>
-				<plugin name="Vari Comp" cid="5653544E69243B7661726920636F6D70"/>
 				<plugin name="VC 160" cid="5653544E692432766320313630000000"/>
 				<plugin name="VC 2A" cid="5653544E692433766320326100000000"/>
 				<plugin name="VC 76" cid="5653544E692434766320373600000000"/>
 			</folder>
 			<folder name="EQ">
-				<plugin name="Enhanced EQ" cid="5653544E69243A656E68616E63656420"/>
 				<plugin name="EQuilibrium" cid="5653454551696C455175696C69627269"/>
-				<plugin name="Passive EQ" cid="5653544E692439706173736976652065"/>
-				<plugin name="Red 2 EQ" cid="834D36AA9E944C5DA84EE95BD4FA43A0"/>
-				<plugin name="Solid EQ" cid="5653544E692438736F6C696420657100"/>
-				<plugin name="Sonalksis SV-517Mk2 Stereo EQ" cid="5653543131396E736F6E616C6B736973"/>
+				<plugin name="Frequency" cid="01F6CCC94CAE4668B7C6EC85E681E419"/>
 			</folder>
 			<folder name="Filter">
-				<plugin name="FilterShaper3" cid="5653544347463366696C746572736861"/>
 				<plugin name="Sonalksis Creative Filter Stereo" cid="56535454424B4E736F6E616C6B736973"/>
 				<plugin name="The Drop" cid="565354447270317468652064726F7000"/>
 			</folder>
@@ -58,123 +47,68 @@
 				<plugin name="UV22HR" cid="56535455564852757632326872000000"/>
 			</folder>
 			<folder name="Modulation">
-				<plugin name="Fix Doubler" cid="048D51804B2049B0BFF8E66CA70F51EC"/>
-				<plugin name="Fix Flanger" cid="C1F930B46C784A3F82733F76C766F26E"/>
-				<plugin name="ValhallaSpaceModulator" cid="56535453704D6476616C68616C6C6173"/>
 				<plugin name="VolumeShaper4" cid="56535443475634766F6C756D65736861"/>
 			</folder>
 			<folder name="Other">
 				<plugin name="Dualism" cid="5653454475616C4475616C69736D0000"/>
-				<plugin name="Reaktor 6 FX" cid="5653544E52366A7265616B746F722036"/>
 				<plugin name="SerumFX" cid="56535458667359736572756D66780000"/>
-			</folder>
-			<folder name="Pitch Shift">
 			</folder>
 			<folder name="Reverb">
 				<plugin name="ArtsAcousticReverb" cid="565354414152626172747361636F7573"/>
-				<plugin name="Eos" cid="56535441446530656F73000000000000"/>
 				<plugin name="LX480" cid="5653545F4C58346C7834383000000000"/>
-				<plugin name="RC 24" cid="5653544E69243E726320323400000000"/>
-				<plugin name="RC 48" cid="5653544E69243F726320343800000000"/>
-				<plugin name="TSAR-1R Reverb" cid="B8E2D81ACB0A4E7F84993181EF5242B6"/>
-				<plugin name="ValhallaVintageVerb" cid="5653547665653376616C68616C6C6176"/>
+				<plugin name="R2" cid="5653544D437332723200000000000000"/>
 			</folder>
 			<folder name="Tools">
 				<plugin name="TrackControl" cid="56534544475443547261636B436F6E74"/>
 			</folder>
 		</PluginCollection>
 		<PluginCollection name="Vendor" type="FX">
-			<folder name="ArtsAcoustic">
-				<plugin name="ArtsAcousticReverb" cid="565354414152626172747361636F7573"/>
-			</folder>
-			<folder name="Audio Damage">
-				<plugin name="Eos" cid="56535441446530656F73000000000000"/>
-			</folder>
-			<folder name="Cableguys">
-				<plugin name="FilterShaper3" cid="5653544347463366696C746572736861"/>
-				<plugin name="VolumeShaper4" cid="56535443475634766F6C756D65736861"/>
-			</folder>
 			<folder name="Cytomic">
 				<plugin name="The Drop" cid="565354447270317468652064726F7000"/>
 				<plugin name="The Glue" cid="5653544379546774686520676C756500"/>
 			</folder>
-			<folder name="DMGAudio">
+			<folder name="DMG Audio General">
 				<plugin name="Dualism" cid="5653454475616C4475616C69736D0000"/>
 				<plugin name="EQuilibrium" cid="5653454551696C455175696C69627269"/>
 				<plugin name="Essence" cid="56534544474573457373656E63650000"/>
 				<plugin name="Expurgate" cid="56534544474578457870757267617465"/>
 				<plugin name="Limitless" cid="56534544474C6C4C696D69746C657373"/>
 			</folder>
-			<folder name="DMGAudio Track Range">
+			<folder name="DMG Audio Track Range">
+				<plugin name="TrackComp" cid="56534544475443547261636B436F6D70"/>
 				<plugin name="TrackControl" cid="56534544475443547261636B436F6E74"/>
 				<plugin name="TrackDS" cid="56534544475453547261636B44530000"/>
 				<plugin name="TrackGate" cid="56534544475447547261636B47617465"/>
 				<plugin name="TrackLimit" cid="5653454447544C547261636B4C696D69"/>
 				<plugin name="TrackMeter" cid="5653454447544D547261636B4D657465"/>
 			</folder>
-			<folder name="Focusrite">
-				<plugin name="Red 2 EQ" cid="834D36AA9E944C5DA84EE95BD4FA43A0"/>
-				<plugin name="Red 3 Compressor" cid="1887D1AD82174BDAB55C9797DF13213E"/>
-			</folder>
-			<folder name="Native Instruments">
-				<plugin name="Reaktor 6 FX" cid="5653544E52366A7265616B746F722036"/>
+			<folder name="Native Instruments General">
 				<plugin name="Replika XT" cid="5653544E6924437265706C696B612078"/>
 				<plugin name="Supercharger GT" cid="5653544E692441737570657263686172"/>
 				<plugin name="Transient Master" cid="5653544E6924357472616E7369656E74"/>
-			</folder>
-			<folder name="Native Instruments Premium Tube Series">
-				<plugin name="Enhanced EQ" cid="5653544E69243A656E68616E63656420"/>
-				<plugin name="Passive EQ" cid="5653544E692439706173736976652065"/>
-				<plugin name="Vari Comp" cid="5653544E69243B7661726920636F6D70"/>
-			</folder>
-			<folder name="Native Instruments Reverb Classics">
-				<plugin name="RC 24" cid="5653544E69243E726320323400000000"/>
-				<plugin name="RC 48" cid="5653544E69243F726320343800000000"/>
-			</folder>
-			<folder name="Native Instruments Solid Mix Series">
-				<plugin name="Solid Bus Comp" cid="5653544E692436736F6C696420627573"/>
-				<plugin name="Solid Dynamics" cid="5653544E692437736F6C69642064796E"/>
-				<plugin name="Solid EQ" cid="5653544E692438736F6C696420657100"/>
 			</folder>
 			<folder name="Native Instruments Vintage Compressors">
 				<plugin name="VC 160" cid="5653544E692432766320313630000000"/>
 				<plugin name="VC 2A" cid="5653544E692433766320326100000000"/>
 				<plugin name="VC 76" cid="5653544E692434766320373600000000"/>
 			</folder>
-			<folder name="Relab Development">
-				<plugin name="LX480" cid="5653545F4C58346C7834383000000000"/>
-			</folder>
-			<folder name="Softube">
-				<plugin name="FET Compressor" cid="41BE6870B69448B28D4DAF0B5BD43DFA"/>
-				<plugin name="Fix Flanger" cid="C1F930B46C784A3F82733F76C766F26E"/>
-				<plugin name="Fix Doubler" cid="048D51804B2049B0BFF8E66CA70F51EC"/>
-				<plugin name="Saturation Knob" cid="F73F44A696F440AFB1871EAFA5E2AF01"/>
-				<plugin name="TSAR-1R Reverb" cid="B8E2D81ACB0A4E7F84993181EF5242B6"/>
-			</folder>
 			<folder name="Sonalksis Creative Elements">
 				<plugin name="Sonalksis Creative Filter Stereo" cid="56535454424B4E736F6E616C6B736973"/>
 				<plugin name="Sonalksis Digital Grimebox Stereo" cid="5653545442324E736F6E616C6B736973"/>
 				<plugin name="Sonalksis Uber Compressor Stereo" cid="5653545442334E736F6E616C6B736973"/>
 			</folder>
-			<folder name="Sonalksis Essentials">
-				<plugin name="Sonalksis SV-315Mk2 Stereo Cmp" cid="5653543331356E736F6E616C6B736973"/>
-				<plugin name="Sonalksis SV-315Mk2 Stereo Cmp SC" cid="5653543331356B736F6E616C6B736973"/>
-				<plugin name="Sonalksis SV-517Mk2 Stereo EQ" cid="5653543131396E736F6E616C6B736973"/>
-				<plugin name="Sonalksis SV-719 Stereo Gate" cid="56535437313969736F6E616C6B736973"/>
-				<plugin name="Sonalksis SV-719 Stereo Gate SC" cid="5653543731396B736F6E616C6B736973"/>
-			</folder>
-			<folder name="Soundtoys">
-			</folder>
 			<folder name="Steinberg">
+				<plugin name="Frequency" cid="01F6CCC94CAE4668B7C6EC85E681E419"/>
+				<plugin name="Quadrafuzz v2" cid="D849FEF360204F3EA7D907CFBD2D5631"/>
 				<plugin name="UV22HR" cid="56535455564852757632326872000000"/>
 			</folder>
-			<folder name="Valhalla DSP">
-				<plugin name="ValhallaSpaceModulator" cid="56535453704D6476616C68616C6C6173"/>
-				<plugin name="ValhallaVintageVerb" cid="5653547665653376616C68616C6C6176"/>
-			</folder>
-			<folder name="Xfer Records">
-				<plugin name="SerumFX" cid="56535458667359736572756D66780000"/>
-			</folder>
+			<plugin name="ArtsAcousticReverb" cid="565354414152626172747361636F7573"/>
+			<plugin name="Elephant" cid="1C3A662167D347A99F7D797EA4911CDB"/>
+			<plugin name="LX480" cid="5653545F4C58346C7834383000000000"/>
+			<plugin name="R2" cid="5653544D437332723200000000000000"/>
+			<plugin name="SerumFX" cid="56535458667359736572756D66780000"/>
+			<plugin name="VolumeShaper4" cid="56535443475634766F6C756D65736861"/>
+			<plugin name="VUMT" cid="56535456554D5476756D740000000000"/>
 		</PluginCollection>
 		<PluginCollection name="Category" type="Instrument">
 			<folder name="Sampler">
@@ -194,12 +128,14 @@
 			</folder>
 		</PluginCollection>
 		<PluginCollection name="Vendor" type="Instrument">
-			<plugin name="Battery 4" cid="5653544E426134626174746572792034"/>
+			<folder name="Native Instruments">
+				<plugin name="Battery 4" cid="5653544E426134626174746572792034"/>
+				<plugin name="Kontakt 5 16out" cid="5653544E694F376B6F6E74616B742035"/>
+				<plugin name="Massive" cid="5653544E694D616D6173736976650000"/>
+			</folder>
 			<plugin name="Groove Agent SE" cid="91585860BA1748E581441ECD96B153ED"/>
-			<plugin name="Kontakt 5 16out" cid="5653544E694F376B6F6E74616B742035"/>
 			<plugin name="Omnisphere" cid="565354416D62726F6D6E697370686572"/>
 			<plugin name="DUNE2" cid="5653544455453264756E653200000000"/>
-			<plugin name="Massive" cid="5653544E694D616D6173736976650000"/>
 			<plugin name="Serum" cid="56535458667358736572756D00000000"/>
 			<plugin name="Spire-1.1" cid="5653545370723273706972652D312E31"/>
 			<plugin name="Sylenth1" cid="56535473796C3173796C656E74683100"/>
@@ -207,7 +143,7 @@
 	</PluginCollections>
 	<PluginManagerSettings>
 		<activeFxCollection id="1"/>
-		<activeVstiCollection id="2"/>
+		<activeVstiCollection id="1"/>
 		<sortType id="1"/>
 	</PluginManagerSettings>
 </PluginManager>
