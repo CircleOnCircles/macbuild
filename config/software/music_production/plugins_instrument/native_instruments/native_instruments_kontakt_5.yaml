@@ -28,6 +28,7 @@ _: &native_instruments_kontakt_5
     # - Orchestral String Runs
     # - Symphonic Sphere
     - GP02 Vocalise
+    - GP04 Vocalise 2
 
     # Native Instruments (Kontakt Factory Library)
     - Kontakt Factory Library
