@@ -137,12 +137,13 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
 
         sample_libraries_config[name] = SampleLibraryConfig(base_dir, installer, extract_subdirs)
 
+    printer.info('Base Directories')
     for base_sample_dir in ['Native Instruments Kontakt', 'Drum & Vocal Samples']:
         elite.file(
             path=os.path.join(config.sample_library_dir, base_sample_dir), state='directory'
         )
 
-    for library in sample_libraries_config:
+    for library, library_config in sample_libraries_config.items():
         printer.info(library)
 
         # Find the source directory for the library
@@ -163,9 +164,6 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
         archives = elite.find(path=library_path, types=['file'], patterns=['*.zip', '*.rar'])
         if not archives.paths:
             elite.fail(message='no archives were found in the sample library source directory')
-
-        # Obtain the config for the current library
-        library_config = sample_libraries_config[library]
 
         # Build the destination base directory
         destination_base_dir = os.path.join(
