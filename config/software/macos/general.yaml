@@ -1,6 +1,8 @@
 _: &audio_directory_properties
   state: directory
   owner: root
+  # Please note that typically the group of these folders is wheel, but we use admin to ensure
+  # that regular user accounts can write to them
   group: admin
   mode: '0775'
   sudo: true
@@ -28,22 +30,12 @@ _: &macos_general
 
     # Set permissions on all audio directories
 
-    # The original permissions of these folders for reference is:
-    # drwxr-xr-x  root  admin  /Library/Application Support/Avid/Audio/Plug-Ins
-    # drwxr-xr-x  root  admin  /Library/Application Support/Digidesign/Plug-Ins
-    # drwxr-xr-x  root  wheel  /Library/Audio/Plug-Ins/Components
-    # drwxr-xr-x  root  wheel  /Library/Audio/Plug-Ins/VST
-    # drwxr-xr-x  root  wheel  /Library/Audio/Plug-Ins/VST3
-    # drwxr-xr-x  root  wheel  /Library/Audio/Presets
-    # drwxr-xr-x  root  wheel  /Library/Documentation
-
     # Documentation
     - path: /Library/Documentation
       <<: *audio_directory_properties
     # Presets
     - path: /Library/Audio/Presets
       <<: *audio_directory_properties
-    # TODO double check the permissions of these parent folders
     # AAX
     - path: /Library/Application Support/Avid
       <<: *audio_directory_properties
