@@ -222,7 +222,7 @@ def main(elite, config, printer):
             elif name == 'Finder':
                 layout = software.pop('favourites')
 
-                # TODO: The libraries used for the favorites action are deprecated since Sierra
+                # TODO: The libraries used for setting up Finder favorites are deprecated since Sierra
                 # elite.favourites(layout=layout)
 
             elif name == 'Spotify':
