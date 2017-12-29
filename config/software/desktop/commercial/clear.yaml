@@ -21,3 +21,5 @@ _: &clear
     values:
       # Welcome to Clear shown
       app.shown-welcome: true
+      # Themes / Night Owl
+      behaviour.theme-identifier: 9
