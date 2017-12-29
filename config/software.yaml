@@ -120,6 +120,7 @@ software:
 
     # Native Instruments
     # - *native_instruments_driver
+    - *native_instruments_phasis
     # - *native_instruments_premium_tube_series
     - *native_instruments_replika_xt
     # - *native_instruments_reverb_classics

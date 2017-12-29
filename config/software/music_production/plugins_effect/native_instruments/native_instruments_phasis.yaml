@@ -1,0 +1,3 @@
+_: &native_instruments_phasis
+  name: Native Instruments Phasis
+  cask: native-instruments-phasis
