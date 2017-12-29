@@ -30,6 +30,7 @@ _: &finder
         IconViewSettings:
           arrangeBy: name
 
+      # TODO: The following settings seem to change on every run and don't feel complete
       # Default view settings for list view
       ComputerViewSettings: &view_settings
         ListViewSettings:

@@ -20,6 +20,7 @@ _: &textual
       'Theme -> Name': 'resource:Sapientia'
       # Preferences / Style / Theme / Style: / Sapientia / Preferred Selection / Do not show this message again
       'Text Input Prompt Suppression -> theme_override_info': true
+      # TODO: The following changes on every run due to it being a list (and more items are added by Textual)
       World Controller Client Configurations:
         -
           # Server / Server Properties... / Basic Settings / Channel List

@@ -71,6 +71,7 @@ The following tasks must be performed manually.
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
 * **Cog**: Disable notifications
+* **Textual**: Right click on freenode and select Server Properties; under Basic Settings / General, enter your Server Password (NickServ password)
 * **Messages**: Disable spell checking under Edit / Spelling and Grammar
 * **LennarDigital Sylenth1**: Set the default skin to Apox and Size to 110%
 * **DMG Audio EQuality**: Set defaults by switching knobs to input boxes

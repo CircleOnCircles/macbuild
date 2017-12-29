@@ -146,6 +146,7 @@ _: &macos_general
         # Disable 'Reopen windows when logging back in' by default
         TALLogoutSavesState: false
 
+    # TODO: The following changes on each run with High Sierra
     # Menu
     - domain: com.apple.systemuiserver
       mode: '0600'
