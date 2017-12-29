@@ -31,7 +31,7 @@ _: &finder
           arrangeBy: name
 
       # Default view settings for list view
-      StandardViewSettings: &view_settings
+      ComputerViewSettings: &view_settings
         ListViewSettings:
           columns:
             name: {ascending: true, index: 0, visible: true, width: 450}

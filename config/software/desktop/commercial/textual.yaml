@@ -25,11 +25,23 @@ _: &textual
           # Server / Server Properties... / Basic Settings / Channel List
           channelList:
             - channelName: '#ansible'
+              notifications: {}
+              uniqueIdentifier: E098773D-3D12-4A74-A41E-AB10BFF8F3C6
             - channelName: '#chef'
+              notifications: {}
+              uniqueIdentifier: D1147EB5-800E-4964-AA0F-A1A46AE605DE
             - channelName: '#puppet'
+              notifications: {}
+              uniqueIdentifier: 53A803F9-AC92-4451-9F76-0EB295D86AC2
             - channelName: '#salt'
+              notifications: {}
+              uniqueIdentifier: 882298B8-3A7D-4C85-A6D0-F84B2495A7BB
             - channelName: '#python'
+              notifications: {}
+              uniqueIdentifier: 3EEE5D4F-5F9F-4662-9B5C-72E32D1B9FBF
             - channelName: '#terraform'
+              notifications: {}
+              uniqueIdentifier: 3ADD3253-F023-4CAA-B3E1-C8823F89251F
           # Server / Server Properties... / Basic Settings / General / Connection Name:
           connectionName: freenode
           # Server / Server Properties... / Basic Settings / General / Server Address:

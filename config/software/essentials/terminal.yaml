@@ -17,7 +17,7 @@ _: &terminal
           # Preferences / Profiles / Add Profile
           name: Fots
           type: Window Settings
-          ProfileCurrentVersion: 2.04
+          ProfileCurrentVersion: 2.05
 
           # Preferences / Profiles / Advanced / Bell / Disable 'Audible bell'
           Bell: false
