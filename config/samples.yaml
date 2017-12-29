@@ -129,7 +129,7 @@ sample_libraries:
 
   # Orchestral Tools Tools Collection
   # - Orchestral Tools Orchestral String Runs
-  # - Orchestral Tools Symphonic Sphere
+  - Orchestral Tools Symphonic Sphere
 
   # Orchestral Tools The Series
   # - name: Orchestral Tools The Orchestral Grands
