@@ -5,6 +5,6 @@ _: &steinberg_cubase_pro_9v5
     - steinberg-cubase-pro-9v5-update
   symlink:
     # Plug-in Presets
-    # TODO Ableton Live doesn't like presets in a symlinked directory
+    # TODO: Ableton Live doesn't like presets in a symlinked directory
     - path: ~/Library/Audio/Presets
       source: ~/Music/Presets
