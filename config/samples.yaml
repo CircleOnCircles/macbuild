@@ -81,8 +81,9 @@ sample_libraries:
 
   # Cinematic Studio Series
   - Cinematic Studio Piano
-  # TODO: Instruments in CSS extract in a sub-directory CSS_Instruments which needs to be made a basedir
-  - Cinematic Studio Strings
+  - name: Cinematic Studio Strings
+    base_dirs:
+      CSS_Instruments.rar: CSS_Instruments
 
   # Heavyocity
   - name: Heavyocity Gravity Pack 02 Vocalise
@@ -144,8 +145,11 @@ sample_libraries:
     base_dir: Soundiron_Venus_Womens_Choir
 
   # Spitfire Audio
-  # TODO: Spitfire Albion ONE has a subdir "Albion ONE" that should be called "Ostinatum Presets"
-  - Spitfire Albion ONE library
+  - name: Spitfire Albion ONE library
+    base_dirs:
+      albionone_ostinatumpresets.zip: Albion ONE
+    extract_subdirs:
+      albionone_ostinatumpresets.zip: Ostinatum Presets
   - Spitfire Harp library
   - Spitfire HZ01 library
   - Spitfire Loegria library

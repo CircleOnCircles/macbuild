@@ -121,21 +121,25 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
     sample_libraries_config = {}
     for sample_library_config in config.sample_libraries:
         SampleLibraryConfig = namedtuple(
-            'SampleLibraryConfig', ['base_dir', 'installer', 'extract_subdirs']
+            'SampleLibraryConfig', ['base_dir', 'base_dirs', 'installer', 'extract_subdirs']
         )
 
         if isinstance(sample_library_config, str):
             name = sample_library_config
             base_dir = None
+            base_dirs = {}
             installer = None
             extract_subdirs = {}
         else:
             name = sample_library_config['name']
             base_dir = sample_library_config.get('base_dir')
+            base_dirs = sample_library_config.get('base_dirs')
             installer = sample_library_config.get('installer')
             extract_subdirs = sample_library_config.get('extract_subdirs', {})
 
-        sample_libraries_config[name] = SampleLibraryConfig(base_dir, installer, extract_subdirs)
+        sample_libraries_config[name] = SampleLibraryConfig(
+            base_dir, base_dirs, installer, extract_subdirs
+        )
 
     printer.info('Base Directories')
     for base_sample_dir in ['Native Instruments Kontakt', 'Drum & Vocal Samples']:
@@ -195,12 +199,18 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
             else:
                 destination = destination_base_dir
 
+            # Determine the base directory of the archive
+            if archive_relative in library_config.base_dirs:
+                base_dir = library_config.base_dirs[archive_relative]
+            else:
+                base_dir = library_config.base_dir
+
             # Extract the archive
             elite.archive(
                 path=destination,
                 source=archive,
                 ignore_files=['__MACOSX', '.DS_Store'],
-                base_dir=library_config.base_dir,
+                base_dir=base_dir,
                 preserve_mode=False
             )
 
