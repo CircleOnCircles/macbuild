@@ -138,20 +138,24 @@ _: &macos_general
         # Disable 'Reopen windows when logging back in' by default
         TALLogoutSavesState: false
 
-    # TODO: The following changes on each run with High Sierra
     # Menu
     - domain: com.apple.systemuiserver
       mode: '0600'
       values:
         # Configure visible items in the menu bar and their order
+        NSStatusItem Visible com.apple.menuextra.clock: true
+        NSStatusItem Visible com.apple.menuextra.battery: true
+        NSStatusItem Visible com.apple.menuextra.airport: true
+        NSStatusItem Visible com.apple.menuextra.volume: true
+        NSStatusItem Visible com.apple.menuextra.bluetooth: true
+        NSStatusItem Visible com.apple.menuextra.TimeMachine: true
         menuExtras:
-        - /System/Library/CoreServices/Menu Extras/Displays.menu
-        - /System/Library/CoreServices/Menu Extras/Volume.menu
-        - /System/Library/CoreServices/Menu Extras/TimeMachine.menu
-        - /System/Library/CoreServices/Menu Extras/AirPort.menu
-        - /System/Library/CoreServices/Menu Extras/Bluetooth.menu
-        - /System/Library/CoreServices/Menu Extras/Battery.menu
         - /System/Library/CoreServices/Menu Extras/Clock.menu
+        - /System/Library/CoreServices/Menu Extras/Battery.menu
+        - /System/Library/CoreServices/Menu Extras/AirPort.menu
+        - /System/Library/CoreServices/Menu Extras/Volume.menu
+        - /System/Library/CoreServices/Menu Extras/Bluetooth.menu
+        - /System/Library/CoreServices/Menu Extras/TimeMachine.menu
 
     # Menu (Clock)
     - domain: com.apple.menuextra.clock
