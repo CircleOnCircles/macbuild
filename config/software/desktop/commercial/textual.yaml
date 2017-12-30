@@ -20,10 +20,13 @@ _: &textual
       'Theme -> Name': 'resource:Sapientia'
       # Preferences / Style / Theme / Style: / Sapientia / Preferred Selection / Do not show this message again
       'Text Input Prompt Suppression -> theme_override_info': true
-      # TODO: The following changes on every run due to it being a list (and more items are added by Textual)
+
+      # Server / Server Properties...
       World Controller Client Configurations:
-        -
-          # Server / Server Properties... / Basic Settings / Channel List
+        - uniqueIdentifier: 17240721-0832-49A0-B64D-FE72E101810F
+          dictionaryVersion: 704
+
+          # Basic Settings / Channel List
           channelList:
             - channelName: '#ansible'
               notifications: {}
@@ -43,15 +46,30 @@ _: &textual
             - channelName: '#terraform'
               notifications: {}
               uniqueIdentifier: 3ADD3253-F023-4CAA-B3E1-C8823F89251F
-          # Server / Server Properties... / Basic Settings / General / Connection Name:
+
+          # Basic Settings / Connect Commands
+          onConnectCommands: []
+
+          # Basic Settings / General
           connectionName: freenode
-          # Server / Server Properties... / Basic Settings / General / Server Address:
           serverAddress: chat.freenode.net
-          # Server / Server Properties... / Basic Settings / General / Connect when Textual opens
+          serverList:
+          - uniqueIdentifier: 0AF6BC0D-0CA4-4C38-ABCF-A6101DC79322
+            prefersSecuredConnection: false
+            serverAddress: chat.freenode.net
+            serverPort: 6667
           autoConnect: True
-          # Server / Server Properties... / Basic Settings / Identity / Nickname:
+
+          # Basic Settings / Identity
           nickname: fgimian
-          # Server / Server Properties... / Basic Settings / Identity / Username:
+          awayNickname: ''
+          alternateNicknames: []
           username: fgimian
-          # Server / Server Properties... / Basic Settings / Identity / Real name:
           realName: Fotis Gimian
+
+          # Advanced / Proxy Server
+          proxyAddress: ''
+          proxyUsername: ''
+
+          # Advanced / Network Socket
+          connectionPrefersModernCiphers: true
