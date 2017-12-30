@@ -42,7 +42,20 @@ The following tasks must be performed manually.
 ### Installation & Configuration (macOS)
 
 * **Screen Resolution & Layout**: Set your screen resolution and configure multi-monitor setup
-* **Finder**: Configure favourites in the sidebar
+* **Finder**: Configure favourites in the sidebar as follows:
+    - Recents
+    - AirDrop
+    - iCloud Drive
+    - Dropbox
+    - OneDrive
+    - Applications
+    - fots
+    - Desktop
+    - Documents
+    - Downloads
+    - Movies
+    - Music
+    - Pictures
 * **Wallpaper**: Choose your wallpaper
 * **Screen Saver**: Set the screen saver to 'Flurry'
 * **Audio Device**: Set the audio interface as the default Sound device

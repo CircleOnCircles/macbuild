@@ -219,12 +219,6 @@ def main(elite, config, printer):
 
                 set_macos_hostname(elite, local_host_name, computer_name)
 
-            elif name == 'Finder':
-                layout = software.pop('favourites')
-
-                # TODO: The libraries used for setting up Finder favorites are deprecated since Sierra
-                # elite.favourites(layout=layout)
-
             elif name == 'Spotify':
                 global_settings = software.pop('global_settings')
                 username = software.pop('username')
