@@ -133,7 +133,7 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
         else:
             name = sample_library_config['name']
             base_dir = sample_library_config.get('base_dir')
-            base_dirs = sample_library_config.get('base_dirs')
+            base_dirs = sample_library_config.get('base_dirs', {})
             installer = sample_library_config.get('installer')
             extract_subdirs = sample_library_config.get('extract_subdirs', {})
 
