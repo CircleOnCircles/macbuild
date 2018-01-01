@@ -116,6 +116,7 @@ _: &launchpad
       - XLD
       # DAWs & Tools
       - Cubase 9.5
+      - MuseScore 2
       - Pianoteq 6
       # Audio Hardware
       - Focusrite Control
