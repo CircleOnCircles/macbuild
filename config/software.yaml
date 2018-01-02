@@ -11,7 +11,6 @@ software:
   macOS:
     - *macos_general
     - *finder
-    - *messages
     - *safari
 
   Unix:

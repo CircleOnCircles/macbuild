@@ -105,12 +105,16 @@ The following tasks must be performed manually.
 * **Native Instruments Komplete**
 * **Native Instruments Kontakt Sample Libraries**
 
-## Software Deactivation
+## Software Deactivation & Backups
 
 The following software should be deactivated before re-installing macOS:
 
 * **Celemony Melodyne Editor**
 * **LennarDigital Sylenth1**
+
+You will need to backup the following folders before re-installing:
+
+* **Apple Messages**: Backup the folder ~/Library/Messages to ensure you don't lose your messages when re-installing the OS
 
 ## License
 

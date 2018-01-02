@@ -1,5 +1,0 @@
-_: &messages
-  name: Messages
-  symlink:
-    - path: ~/Library/Messages
-      source: !join_path [*app_config_dir, Messages]
