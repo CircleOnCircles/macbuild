@@ -146,6 +146,8 @@ _: &sublime_text
           - DoxyDoxygen
           # .gitconfig syntax support
           - Git Config
+          # Ability to create incrementing numbered lists
+          - Increment Selection
           # Jinja2 syntax support
           - Jinja2
           # Live browser reloading for web development and Markdown
