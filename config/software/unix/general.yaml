@@ -12,3 +12,4 @@ _: &unix_general
     - unrar
     - watch
     - wget
+    - youtube-dl
