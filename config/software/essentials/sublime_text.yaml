@@ -72,11 +72,7 @@ _: &sublime_text
       mode: '0644'
       values:
         # Monokai Extended color scheme
-        color_scheme: !first_existing_path
-          base_dir: ~/Library/Application Support/Sublime Text 3
-          paths:
-            - Packages/User/SublimeLinter/Monokai Extended (SL).tmTheme
-            - Packages/Monokai Extended/Monokai Extended.tmTheme
+        color_scheme: Packages/Monokai Extended/Monokai Extended.tmTheme
 
         # Soda Theme
         theme: Soda Dark 3.sublime-theme
@@ -171,7 +167,7 @@ _: &sublime_text
           # Linting of JSON using the built-in JSON parser
           - SublimeLinter-json
           # Linting of YAML using PyYAML
-          - SublimeLinter-pyyaml
+          - SublimeLinter-contrib-yamllint
           # Linting of Bash scripts using shellcheck
           - SublimeLinter-shellcheck
           # Terraform syntax support

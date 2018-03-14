@@ -1,9 +1,26 @@
+// SublimeLinter Settings - User
 {
-    "user": {
-        // Make errors more visible
-        "error_color": "F08060",
-
-        // Underline errors instead of outlining them
-        "mark_style": "squiggly underline"
-    }
+    // Styles have been updated to underline errors instead of outlining them
+    "styles": [
+        {
+            "mark_style": "squiggly_underline",
+            "priority": 1,
+            "scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
+            "icon": "dot",
+            "types": [
+                "warning"
+            ]
+        },
+        // The error style below has additionally been updated to display errors in a brighter
+        // colour instead of the red default
+        {
+            "mark_style": "squiggly_underline",
+            "priority": 1,
+            "scope": "region.orangish markup.inserted.sublime_linter markup.error.sublime_linter",
+            "icon": "dot",
+            "types": [
+                "error"
+            ]
+        }
+    ]
 }

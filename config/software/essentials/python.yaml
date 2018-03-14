@@ -8,6 +8,7 @@ _: &python
     - pip
     - ipython
     - flake8
+    - yamllint
   file:
     # Preferences
     - path: ~/.ipython
