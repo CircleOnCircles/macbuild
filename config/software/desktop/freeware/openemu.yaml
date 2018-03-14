@@ -8,15 +8,15 @@ _: &openemu
   symlink:
     # Preferences
     - path: ~/Library/Application Support/OpenEmu/BIOS
-      source: !join_path [*app_config_dir, OpenEmu/BIOS]
+      source: ~/Documents/OpenEmu/BIOS
     - path: ~/Library/Application Support/OpenEmu/Bindings
-      source: !join_path [*app_config_dir, OpenEmu/Bindings]
+      source: ~/Documents/OpenEmu/Bindings
     - path: ~/Library/Application Support/OpenEmu/Cores
-      source: !join_path [*app_config_dir, OpenEmu/Cores]
+      source: ~/Documents/OpenEmu/Cores
     - path: ~/Library/Application Support/OpenEmu/Game Library
-      source: !join_path [*app_config_dir, OpenEmu/Game Library]
+      source: ~/Documents/OpenEmu/Game Library
     - path: ~/Library/Application Support/OpenEmu/Save States
-      source: !join_path [*app_config_dir, OpenEmu/Save States]
+      source: ~/Documents/OpenEmu/Save States
   plist:
     domain: org.openemu.OpenEmu
     mode: '0600'
