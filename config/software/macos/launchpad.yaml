@@ -118,6 +118,7 @@ _: &launchpad
       - Cubase 9.5
       - MuseScore 2
       - Pianoteq 6
+      - Omnisphere
       # Audio Hardware
       - Focusrite Control
       - ReMOTESLEditor
