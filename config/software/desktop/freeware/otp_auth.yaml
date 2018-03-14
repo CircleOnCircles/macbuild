@@ -1,0 +1,3 @@
+_: &otp_auth
+  name: OTP Auth
+  cask: otp-auth

@@ -29,6 +29,7 @@ software:
     - *onedrive
     - *openemu
     - *osxfuse
+    - *otp_auth
     - *skype
     - *slack
     - *transmission

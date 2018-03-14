@@ -110,6 +110,7 @@ _: &launchpad
             - handyPrint
             - Gmail Notifier
             - iStat Mini
+            - OTP Auth
       # Audio Tools
       - Audio Hijack
       - ocenaudio
