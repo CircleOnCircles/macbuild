@@ -1,0 +1,10 @@
+{
+    // Configure the Python interpreter to use Homebrew's Python 3.6 install
+    "python_interpreter": "/usr/local/bin/python3.6",
+
+    // Disable linting in favour of SublimeLinter
+    "anaconda_linting": false,
+
+    // Set the default test framework to be pytest
+    "test_command": "pytest"
+}

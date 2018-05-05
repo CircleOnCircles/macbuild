@@ -28,6 +28,9 @@ _: &sublime_text
       mode: '0644'
 
     # Preferences
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings
+      source: files/sublime_text/Anaconda.sublime-settings
+      mode: '0644'
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap
       source: files/sublime_text/Default (OSX).sublime-keymap
       mode: '0644'
@@ -122,42 +125,34 @@ _: &sublime_text
       mode: '0644'
       values:
         installed_packages:
-          # Use ctrl+alt+n to easily create a new file
-          - AdvancedNewFile
-          # Ability to easily align definitions (handy with Puppet code)
-          - Alignment
           # Autocompletes symbols using all open files
           - All Autocomplete
+          # Python autocomplete and IDE features
+          - Anaconda
           # Support for Ansible YAML files
           - Ansible
-          # Support for binary plist files and syntax
-          - BinaryPlist
           # Clearly highlights matching brackets tags .etc
           - BracketHighlighter
-          # Color picker useful for CSS
-          - ColorPicker
+          # Makes URLs clickable
+          - Clickable URLs
           # Dockerfile syntax support
           - Dockerfile Syntax Highlighting
           # Auto-generated comment blocks
           - DoxyDoxygen
           # .gitconfig syntax support
           - Git Config
-          # Ability to create incrementing numbered lists
-          - Increment Selection
+          # INI syntax support
+          - INI
           # Jinja2 syntax support
           - Jinja2
-          # Live browser reloading for web development and Markdown
-          - LiveReload
-          # Ability to preview rendered Markdown code
-          - Markdown Preview
+          # Provides a way to re-indent JSON data
+          - JSON Reindent
           # Markdown themes and syntax highlighting
           - MarkdownEditing
           # An improved Soda-flavoured Monokai theme with Markdown support
           - Monokai Extended
           # The package manager for Sublime Text
           - Package Control
-          # A system for managing task lists in Sublime Text
-          - Puppet
           # Better title case implementation
           - Smart Title Case
           # The main sublime linter core
