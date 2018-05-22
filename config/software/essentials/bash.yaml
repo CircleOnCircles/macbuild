@@ -10,6 +10,8 @@ _: &bash
     # Bash Profile Bash Completion & Prompt
     - path: ~/.bash_profile.d
       state: directory
+    - path: ~/.bash_profile.d/aliases.sh
+      source: files/dotfiles/.bash_profile.d/aliases.sh
     - path: ~/.bash_profile.d/bash_completion.sh
       source: files/dotfiles/.bash_profile.d/bash_completion.sh
     - path: ~/.bash_profile.d/prompt.sh

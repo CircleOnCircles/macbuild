@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Aliases
-alias ll='ls -l'
-
 # Avoid duplicates in history
 export HISTCONTROL=ignoredups
 
