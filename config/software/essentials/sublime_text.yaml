@@ -124,6 +124,10 @@ _: &sublime_text
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings
       mode: '0644'
       values:
+        # Use curl for downloads to work around https://github.com/20Tauri/DoxyDoxygen/issues/103
+        downloader_precedence:
+          osx: [curl, urllib]
+
         installed_packages:
           # Autocompletes symbols using all open files
           - All Autocomplete
@@ -153,6 +157,8 @@ _: &sublime_text
           - Monokai Extended
           # The package manager for Sublime Text
           - Package Control
+          # Spec syntax support
+          - RPM Spec Syntax
           # Better title case implementation
           - Smart Title Case
           # The main sublime linter core
