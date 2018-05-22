@@ -1,13 +1,17 @@
 _: &unix_general
   name: Unix General
   brew:
+    - connect
+    - coreutils
     - dos2unix
     - ffmpeg
     - findutils
     - gnu-sed
+    - jq
     - md5sha1sum
     - p7zip
     - shellcheck
+    - telnet
     - tree
     - unrar
     - watch
