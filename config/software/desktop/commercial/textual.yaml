@@ -46,6 +46,9 @@ _: &textual
             - channelName: '#terraform'
               notifications: {}
               uniqueIdentifier: 3ADD3253-F023-4CAA-B3E1-C8823F89251F
+            - channelName: '#falcon'
+              notifications: {}
+              uniqueIdentifier: 06211E93-B877-47B8-8029-28F1BA110E4F
 
           # Basic Settings / Connect Commands
           onConnectCommands: []
