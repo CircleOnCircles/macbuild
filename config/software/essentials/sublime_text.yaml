@@ -58,6 +58,9 @@ _: &sublime_text
     - path: ~/Library/Application Support/Sublime Text 3/Packages/User/bh_core.sublime-settings
       source: files/sublime_text/bh_core.sublime-settings
       mode: '0644'
+    - path: ~/Library/Application Support/Sublime Text 3/Packages/Python/Completion Rules.tmPreferences
+      source: files/sublime_text/Completion Rules.tmPreferences
+      mode: '0644'
 
     # Bash Profile Default Editor
     - path: ~/.bash_profile.d/sublime_text.sh
