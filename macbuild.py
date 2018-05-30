@@ -40,10 +40,7 @@ def set_macos_hostname(elite, local_host_name, computer_name):
         elite.run(command=f'scutil --set ComputerName "{computer_name}"', sudo=True)
 
 
-@elite_main(
-    config_path='config',
-    config_order=['global.yaml', 'software', 'software.yaml']
-)
+@elite_main(config_path='config', config_order=['global.yaml', 'software', 'software.yaml'])
 def main(elite, config, printer):
     printer.heading('Initialization')
 
