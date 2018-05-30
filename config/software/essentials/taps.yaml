@@ -1,10 +1,10 @@
 _: &taps
   name: Taps
   tap:
+    - homebrew/cask
+    - homebrew/cask-fonts
+    - homebrew/cask-versions
     - homebrew/completions
     - homebrew/dupes
-    - caskroom/cask
-    - caskroom/fonts
-    - caskroom/versions
     - fgimian/general
     - fgimian/music
