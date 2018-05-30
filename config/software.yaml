@@ -33,6 +33,7 @@ software:
     - *skype
     - *slack
     - *transmission
+    - *whatsapp
     - *xld
 
   Desktop Software / Commercial:

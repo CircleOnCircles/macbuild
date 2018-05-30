@@ -83,22 +83,23 @@ _: &launchpad
       - 1Password 6
       - DaisyDisk
       - Entropy
-      - ForkLift
       # Social
+      - Textual
       - Skype
       - Slack
-      - Textual
+      - WhatsApp
       # Internet
       - Waterfox
+      - ForkLift
       - Transmission
-      # Games
-      - OpenEmu
       # Virtualization
       - VMware Fusion
       # Media Playback & Entertainment
       - MPlayerX
       - Cog
       - Spotify
+      # Games
+      - OpenEmu
       # Menu Bar Utilities
       - folder_title: Utilities
         folder_layout:
