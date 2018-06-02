@@ -12,18 +12,14 @@ def set_macos_settings(elite, timezone, computer_sleep_time, display_sleep_time)
         f'Computer Sleep: {computer_sleep_time}' !=
         computer_sleep.stdout.rstrip().replace('after ', '').replace('minutes', '')
     ):
-        elite.run(
-            command=f'systemsetup -setcomputersleep {computer_sleep_time}', sudo=True
-        )
+        elite.run(command=f'systemsetup -setcomputersleep {computer_sleep_time}', sudo=True)
 
     display_sleep = elite.run(command='systemsetup -getdisplaysleep', sudo=True, changed=False)
     if (
         f'Display Sleep: {display_sleep_time}' !=
         display_sleep.stdout.rstrip().replace('after ', '').replace('minutes', '')
     ):
-        elite.run(
-            command=f'systemsetup -setdisplaysleep {display_sleep_time}', sudo=True
-        )
+        elite.run(command=f'systemsetup -setdisplaysleep {display_sleep_time}', sudo=True)
 
 
 def set_macos_hostname(elite, local_host_name, computer_name):
@@ -200,10 +196,7 @@ def main(elite, config, printer):
             if json:
                 jsons = json if isinstance(json, list) else [json]
                 for json in jsons:
-                    elite.json(
-                        path=json.get('path'),
-                        values=json.get('values')
-                    )
+                    elite.json(path=json.get('path'), values=json.get('values'))
 
             # Application Specific Actions
             if name == 'macOS General':
@@ -264,16 +257,14 @@ def main(elite, config, printer):
             login_item = software.pop('login_item', None)
             if login_item is not None:
                 elite.login_item(
-                    path=f'/Applications/{app}.app',
-                    state='present' if login_item else 'absent'
+                    path=f'/Applications/{app}.app', state='present' if login_item else 'absent'
                 )
 
             # Verify that no extra keys remain after processing a piece of software
             if software:
                 elite.fail(
                     message=(
-                        'the software item contained unsupported keys '
-                        f'{list(software.keys())}'
+                        'the software item contained unsupported keys {list(software.keys())}'
                     ),
                     ignore_failed=True
                 )
