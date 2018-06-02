@@ -142,6 +142,8 @@ _: &sublime_text
           - BracketHighlighter
           # Makes URLs clickable
           - Clickable URLs
+          # Crystal syntax support
+          - Crystal
           # Dockerfile syntax support
           - Dockerfile Syntax Highlighting
           # Auto-generated comment blocks
