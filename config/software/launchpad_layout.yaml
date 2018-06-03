@@ -1,6 +1,4 @@
-_: &launchpad
-  name: Launchpad
-
+_: &launchpad_layout
   apps:
     # Page 1: Apple
     -

@@ -1,17 +1,4 @@
-_: &dock
-  name: Dock
-
-  plist:
-    domain: com.apple.dock
-    mode: '0600'
-    values:
-      # Preferences / Size
-      tilesize: 60
-      # Preferences / Magnification
-      magnification: true
-      # Make hidden applications translucent in the dock (hidden setting)
-      showhidden: true
-
+_: &dock_layout
   # Dock applications (in the left section)
   apps:
     - ForkLift

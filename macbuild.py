@@ -2,40 +2,6 @@
 from elite.decorators import elite_main
 
 
-def set_macos_settings(elite, timezone, computer_sleep_time, display_sleep_time):
-    current_timezone = elite.run(command='systemsetup -gettimezone', sudo=True, changed=False)
-    if f'Time Zone: {timezone}' != current_timezone.stdout.rstrip():
-        elite.run(command=f'systemsetup -settimezone {timezone}', sudo=True)
-
-    computer_sleep = elite.run(command='systemsetup -getcomputersleep', sudo=True, changed=False)
-    if (
-        f'Computer Sleep: {computer_sleep_time}' !=
-        computer_sleep.stdout.rstrip().replace('after ', '').replace('minutes', '')
-    ):
-        elite.run(command=f'systemsetup -setcomputersleep {computer_sleep_time}', sudo=True)
-
-    display_sleep = elite.run(command='systemsetup -getdisplaysleep', sudo=True, changed=False)
-    if (
-        f'Display Sleep: {display_sleep_time}' !=
-        display_sleep.stdout.rstrip().replace('after ', '').replace('minutes', '')
-    ):
-        elite.run(command=f'systemsetup -setdisplaysleep {display_sleep_time}', sudo=True)
-
-
-def set_macos_hostname(elite, local_host_name, computer_name):
-    current_local_host_name = elite.run(
-        command='scutil --get LocalHostName', sudo=True, changed=False
-    )
-    if local_host_name != current_local_host_name.stdout.rstrip():
-        elite.run(command=f'scutil --set LocalHostName "{local_host_name}"', sudo=True)
-
-    current_computer_name = elite.run(
-        command='scutil --get ComputerName', sudo=True, changed=False
-    )
-    if computer_name != current_computer_name.stdout.rstrip():
-        elite.run(command=f'scutil --set ComputerName "{computer_name}"', sudo=True)
-
-
 @elite_main(config_path='config', config_order=['global.yaml', 'software', 'software.yaml'])
 def main(elite, config, printer):
     printer.heading('Initialization')
@@ -58,7 +24,24 @@ def main(elite, config, printer):
     printer.info('Homebrew Update')
     elite.brew_update()
 
-    restart_dock = False
+    printer.info('macOS System')
+    timezone = config.macos_system['timezone']
+    computer_sleep_time = config.macos_system['computer_sleep_time']
+    display_sleep_time = config.macos_system['display_sleep_time']
+
+    elite.system_setup(
+        timezone=timezone,
+        computer_sleep_time=computer_sleep_time,
+        display_sleep_time=display_sleep_time,
+        sudo=True
+    )
+
+    local_host_name = config.macos_system['local_host_name']
+    computer_name = config.macos_system['computer_name']
+
+    elite.hostname(
+        local_host_name=local_host_name, computer_name=computer_name, sudo=True
+    )
 
     for group, software_items in config.software.items():
         # Print the software group heading
@@ -199,19 +182,7 @@ def main(elite, config, printer):
                     elite.json(path=json.get('path'), values=json.get('values'))
 
             # Application Specific Actions
-            if name == 'macOS General':
-                timezone = software.pop('timezone')
-                computer_sleep_time = software.pop('computer_sleep_time')
-                display_sleep_time = software.pop('display_sleep_time')
-
-                set_macos_settings(elite, timezone, computer_sleep_time, display_sleep_time)
-
-                local_host_name = software.pop('local_host_name')
-                computer_name = software.pop('computer_name')
-
-                set_macos_hostname(elite, local_host_name, computer_name)
-
-            elif name == 'Spotify':
+            if name == 'Spotify':
                 global_settings = software.pop('global_settings')
                 username = software.pop('username')
                 user_settings = software.pop('user_settings')
@@ -231,20 +202,6 @@ def main(elite, config, printer):
                         values={'UserListIndex': index},
                         mode='0600'
                     )
-
-            elif name == 'Dock':
-                app_layout = software.pop('apps')
-                other_layout = software.pop('other')
-
-                dock = elite.dock(app_layout=app_layout, other_layout=other_layout, mode='0600')
-                restart_dock = restart_dock or dock.changed
-
-            elif name == 'Launchpad':
-                widget_layout = software.pop('widgets')
-                app_layout = software.pop('apps')
-
-                launchpad = elite.launchpad(widget_layout=widget_layout, app_layout=app_layout)
-                restart_dock = restart_dock or launchpad.changed
 
             # File handlers
             handler = software.pop('handler', None)
@@ -272,7 +229,23 @@ def main(elite, config, printer):
     printer.info('cfprefsd Restart')
     elite.run(command='killall cfprefsd', ignore_failed=True, changed=False)
 
-    if restart_dock:
+    # Build the Dock and Launchpad layouts
+    printer.heading('macOS Dock & Launchpad')
+
+    printer.info('Dock')
+    dock = elite.dock(
+        app_layout=config.dock_layout['apps'],
+        other_layout=config.dock_layout['other'],
+        mode='0600'
+    )
+
+    printer.info('Launchpad')
+    launchpad = elite.launchpad(
+        widget_layout=config.launchpad_layout['widgets'],
+        app_layout=config.launchpad_layout['apps']
+    )
+
+    if dock.changed or launchpad.changed:
         printer.info('Dock Restart')
         elite.run(command='killall Dock', changed=False)
 

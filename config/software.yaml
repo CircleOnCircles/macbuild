@@ -1,3 +1,5 @@
+macos_system: *macos_system
+
 software:
   Essentials:
     - *taps
@@ -240,6 +242,5 @@ software:
   #   - *native_instruments_rounds
   #   - *native_instruments_skanner_xt
 
-  macOS Dock & Launchpad:
-    - *dock
-    - *launchpad
+dock_layout: *dock_layout
+launchpad_layout: *launchpad_layout
