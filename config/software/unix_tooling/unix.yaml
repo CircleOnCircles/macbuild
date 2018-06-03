@@ -1,5 +1,5 @@
-_: &unix_general
-  name: Unix General
+_: &unix
+  name: Unix
   brew:
     - connect
     - coreutils

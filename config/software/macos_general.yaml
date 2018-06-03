@@ -1,15 +1,3 @@
-_: &macos_system
-  # Set the appropriate timezone
-  timezone: Australia/Melbourne
-
-  # Set the computer and display sleep times
-  computer_sleep_time: Never
-  display_sleep_time: Never
-
-  # Set the hostname
-  local_host_name: Fotsies-MacBook-Pro
-  computer_name: Fotsies MacBook Pro
-
 _: &audio_directory_properties
   state: directory
   owner: root
@@ -133,7 +121,7 @@ _: &macos_general
         # Desktop / Change Desktop Background... / + / ~/Pictures/Wallpapers
         DSKDesktopPrefPane:
           UserFolderPaths:
-          - /Users/fots/Pictures/Wallpapers
+            - /Users/fots/Pictures/Wallpapers
 
     # Launch Services
     - domain: com.apple.LaunchServices
@@ -162,12 +150,12 @@ _: &macos_general
         NSStatusItem Visible com.apple.menuextra.bluetooth: true
         NSStatusItem Visible com.apple.menuextra.TimeMachine: true
         menuExtras:
-        - /System/Library/CoreServices/Menu Extras/Clock.menu
-        - /System/Library/CoreServices/Menu Extras/Battery.menu
-        - /System/Library/CoreServices/Menu Extras/AirPort.menu
-        - /System/Library/CoreServices/Menu Extras/Volume.menu
-        - /System/Library/CoreServices/Menu Extras/Bluetooth.menu
-        - /System/Library/CoreServices/Menu Extras/TimeMachine.menu
+          - /System/Library/CoreServices/Menu Extras/Clock.menu
+          - /System/Library/CoreServices/Menu Extras/Battery.menu
+          - /System/Library/CoreServices/Menu Extras/AirPort.menu
+          - /System/Library/CoreServices/Menu Extras/Volume.menu
+          - /System/Library/CoreServices/Menu Extras/Bluetooth.menu
+          - /System/Library/CoreServices/Menu Extras/TimeMachine.menu
 
     # Menu (Clock)
     - domain: com.apple.menuextra.clock
@@ -191,11 +179,11 @@ _: &macos_general
         # See http://apple.stackexchange.com/questions/66433 for more information
         AppleSymbolicHotKeys:
           # Ctrl + Shift + ↑
-          '34': { enabled: false }
+          '34': {enabled: false}
           # Ctrl + Shift + ↓
-          '35': { enabled: false }
+          '35': {enabled: false}
           # Shift + F10
-          '37': { enabled: false }
+          '37': {enabled: false}
 
     # Screen Capture
     - domain: com.apple.screencapture

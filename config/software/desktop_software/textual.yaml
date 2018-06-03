@@ -57,11 +57,11 @@ _: &textual
           connectionName: freenode
           serverAddress: chat.freenode.net
           serverList:
-          - uniqueIdentifier: 0AF6BC0D-0CA4-4C38-ABCF-A6101DC79322
-            prefersSecuredConnection: false
-            serverAddress: chat.freenode.net
-            serverPort: 6667
-          autoConnect: True
+            - uniqueIdentifier: 0AF6BC0D-0CA4-4C38-ABCF-A6101DC79322
+              prefersSecuredConnection: false
+              serverAddress: chat.freenode.net
+              serverPort: 6667
+          autoConnect: true
 
           # Basic Settings / Identity
           nickname: fgimian

@@ -16,7 +16,7 @@ software:
     - *safari
 
   Unix:
-    - *unix_general
+    - *unix
     - *git
     - *hugo
     - *ruby
