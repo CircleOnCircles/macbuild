@@ -9,6 +9,7 @@ from elite.decorators import elite_main
 def komplete_libraries(elite, config, printer, sample_library_source):
     printer.heading('Komplete Libraries')
 
+    printer.info('Library Directories')
     for base_sample_dir in ['Native Instruments Kontakt', 'Native Instruments Battery']:
         elite.file(
             path=os.path.join(config.sample_library_dir, base_sample_dir), state='directory'
@@ -222,20 +223,18 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
 @elite_main(config_path='config', config_order=['global.yaml', 'samples.yaml'])
 def main(elite, config, printer):
     printer.info('Determining sample library and music software sources.')
-    for sample_library_source in config.sample_library_sources:
-        source_dir = elite.file_info(path=sample_library_source)
-        if source_dir.file_type == 'directory':
-            break
-    else:
-        elite.fail(message='Unable to find any suitable sample library source.')
 
-    # Determine the music software source path
-    for music_software_source in config.music_software_sources:
-        source_dir = elite.file_info(path=music_software_source)
-        if source_dir.file_type == 'directory':
-            break
+    sample_library_source = config.sample_library_source
+    if sample_library_source:
+        elite.info(message=f'using sample library source {sample_library_source}')
     else:
-        elite.fail(message='Unable to find any suitable music software source.')
+        elite.fail(message='unable to find any suitable sample library software source')
+
+    music_software_source = config.music_software_source
+    if music_software_source:
+        elite.info(message=f'using music software software {music_software_source}')
+    else:
+        elite.fail(message='unable to find any suitable music software source')
 
     komplete_libraries(elite, config, printer, sample_library_source)
     omnisphere_steam_library(elite, config, printer, music_software_source)

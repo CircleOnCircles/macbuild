@@ -10,16 +10,13 @@ def main(elite, config, printer):
     elite.run(command='sudo -nv', changed=False)
 
     printer.info('Music Software Source')
-    for music_software_source in config.music_software_sources:
-        source_dir = elite.file_info(path=music_software_source)
-        if source_dir.file_type == 'directory':
-            env = {'HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR': music_software_source}
-            break
+    music_software_source = config.music_software_source
+    if music_software_source:
+        env = {'HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR': music_software_source}
+        elite.info(message=f'using music software software {music_software_source}')
     else:
         env = {}
-        elite.fail(
-            message='unable to find any suitable music software source', ignore_failed=True
-        )
+        elite.fail(message='unable to find any suitable music software source', ignore_failed=True)
 
     printer.info('Homebrew Update')
     elite.brew_update()
