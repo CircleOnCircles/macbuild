@@ -27,7 +27,14 @@ sudo sed -i -e "s/^%admin.*/%admin  ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 if ! which brew > /dev/null 2>&1
 then
     echo -e "${BLUE}Installing Homebrew${ENDC}"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+fi
+
+# Install the addressable gem (required for URI encoding file locations in music production casks)
+if ! /usr/bin/ruby -e "require 'addressable'" > /dev/null 2>&1
+then
+    echo -e "${BLUE}Installing the Addressable Gem${ENDC}"
+    sudo /usr/bin/gem install addressable
 fi
 
 # Install Python
