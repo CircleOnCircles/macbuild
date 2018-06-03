@@ -110,11 +110,14 @@ _: &launchpad_layout
             - Gmail Notifier
             - iStat Mini
             - OTP Auth
+    # Page 3: Music Production Software
+    -
       # Audio Tools
       - Audio Hijack
       - ocenaudio
       - XLD
       # DAWs & Tools
+      - Ableton Live 10 Suite
       - Cubase 9.5
       - MuseScore 2
       - Pianoteq 6
