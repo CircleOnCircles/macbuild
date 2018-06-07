@@ -44,7 +44,6 @@ software:
     - *affinity_photo
     - *audio_hijack
     - *bettersnaptool
-    - *clear
     - *daisydisk
     - *entropy
     - *forklift
@@ -53,6 +52,7 @@ software:
     - *iwork
     - *microsoft_office
     - *textual
+    - *things
     - *vmware_fusion
 
   Music Production Software / DAWs, Tools & Drivers:

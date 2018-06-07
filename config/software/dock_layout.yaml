@@ -17,7 +17,7 @@ _: &dock_layout
     - Skype
     - Slack
     - Textual
-    - Clear
+    - Things3
     - VMware Fusion
     - App Store
     - System Preferences

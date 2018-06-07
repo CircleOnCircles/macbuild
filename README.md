@@ -79,7 +79,6 @@ The following tasks must be performed manually.
   screen
 * **Audio Hijack**: Start the app multiple times to dismiss welcome and mailing
   list alerts and install Instant On
-* **Clear**: Enable iCloud in Preferences
 * **iTunes**; Start iTunes and set it up
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
