@@ -24,7 +24,6 @@ software:
   Desktop Software / Freeware:
     - *cog
     - *dropbox
-    - *waterfox
     - *flux
     - *gmail_notifier
     - *mplayerx
@@ -35,6 +34,7 @@ software:
     - *skype
     - *slack
     - *transmission
+    - *waterfox
     - *whatsapp
     - *xld
 
@@ -56,7 +56,7 @@ software:
     - *vmware_fusion
 
   Music Production Software / DAWs, Tools & Drivers:
-    # - *ableton_live_9_suite
+    - *ableton_live_10_suite
     # - *celemony_melodyne_editor
     - *elicenser_control_center
     - *focusrite_control

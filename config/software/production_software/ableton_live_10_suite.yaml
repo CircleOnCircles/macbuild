@@ -1,0 +1,17 @@
+_: &ableton_live_10_suite
+  name: Ableton Live 10 Suite
+  cask: ableton-live-10-suite
+  file:
+    # License
+    - path: ~/Library/Application Support/Ableton
+      state: directory
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 10.0.2
+      state: directory
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 10.0.2/Unlock
+      state: directory
+      mode: '0755'
+    - path: ~/Library/Application Support/Ableton/Live 10.0.2/Unlock/Unlock.cfg
+      source: !join_path [*app_license_dir, Music Production/Ableton/Ableton Live 10 Suite/Unlock.cfg]
+      mode: '0644'
