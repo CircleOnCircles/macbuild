@@ -20,5 +20,11 @@
         "class": "tab_label",
         "fg": [255, 255, 255],
         "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+    },
+    // Window title bar
+    {
+        "class": "title_bar",
+        "fg": [215, 215, 215],
+        "bg": [55, 55, 55]
     }
 ]
