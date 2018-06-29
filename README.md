@@ -47,7 +47,6 @@ The following tasks must be performed manually.
     - AirDrop
     - iCloud Drive
     - Dropbox
-    - OneDrive
     - Applications
     - fots
     - Desktop
@@ -62,8 +61,6 @@ The following tasks must be performed manually.
 * **Spell Checking**: System Preferences / Keyboard / Text / Disable 'Correct spelling automatically', 'Capitalize words automatically' and 'Add period with double-space'
 * **Notification Centre**: Set the order of items and allow permission after starting iStat Mini
 * **Safari**: Install extensions (1Password and Adblock Plus)
-* **App Store Login Items**: Start App Store menubar apps and set them to start
-  at login (OneDrive)
 * **Keyboard Shortcuts**: Under System Preferences / Keyboard:
     - Set 'Show Launchpad' to F14 under 'Launchpad & Dock'
     - Set 'Show Notification Center' to F15 under 'Mission Control'

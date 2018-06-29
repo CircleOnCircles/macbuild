@@ -27,7 +27,6 @@ software:
     - *flux
     - *gmail_notifier
     - *mplayerx
-    - *onedrive
     - *openemu
     - *osxfuse
     - *otp_auth

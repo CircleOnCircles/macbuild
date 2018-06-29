@@ -103,7 +103,6 @@ _: &launchpad_layout
         folder_layout:
           -
             - Dropbox
-            - OneDrive
             - BetterSnapTool
             - Flux
             - handyPrint
