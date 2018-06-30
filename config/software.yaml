@@ -13,6 +13,7 @@ software:
 
   macOS:
     - *macos_general
+    - *dock
     - *finder
     - *safari
 
