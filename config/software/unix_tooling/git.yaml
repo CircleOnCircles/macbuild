@@ -2,7 +2,6 @@ _: &git
   name: Git
   brew:
     - git
-    - git-flow
   file:
     # Preferences
     - path: ~/.gitconfig

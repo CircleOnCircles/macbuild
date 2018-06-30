@@ -1,13 +1,11 @@
 _: &unix
   name: Unix
   brew:
-    - connect
     - coreutils
     - dos2unix
     - ffmpeg
     - findutils
     - gnu-sed
-    - jq
     - md5sha1sum
     - p7zip
     - shellcheck
