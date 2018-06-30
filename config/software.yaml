@@ -4,6 +4,7 @@ software:
   Essentials:
     - *taps
     - *bash
+    - *crystal
     - *python
     - *fonts
     - *sublime_text
