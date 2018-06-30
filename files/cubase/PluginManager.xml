@@ -38,6 +38,7 @@
 			<folder name="EQ">
 				<plugin name="EQuilibrium" cid="5653454551696C455175696C69627269"/>
 				<plugin name="Frequency" cid="01F6CCC94CAE4668B7C6EC85E681E419"/>
+				<plugin name="Reveal" cid="56535452564C3172657665616C000000"/>
 			</folder>
 			<folder name="Filter">
 				<plugin name="Sonalksis Creative Filter Stereo" cid="56535454424B4E736F6E616C6B736973"/>
@@ -47,6 +48,8 @@
 				<plugin name="UV22HR" cid="56535455564852757632326872000000"/>
 			</folder>
 			<folder name="Modulation">
+				<plugin name="Phasis" cid="5653544E69244A706861736973000000"/>
+				<plugin name="ShaperBox" cid="56535443474C31736861706572626F78"/>
 				<plugin name="VolumeShaper4" cid="56535443475634766F6C756D65736861"/>
 			</folder>
 			<folder name="Other">
@@ -122,6 +125,7 @@
 				<plugin name="DUNE2" cid="5653544455453264756E653200000000"/>
 				<plugin name="Massive" cid="5653544E694D616D6173736976650000"/>
 				<plugin name="Omnisphere" cid="565354416D62726F6D6E697370686572"/>
+				<plugin name="Pianoteq 6" cid="565354507436717069616E6F74657120"/>
 				<plugin name="Serum" cid="56535458667358736572756D00000000"/>
 				<plugin name="Spire-1.1" cid="5653545370723273706972652D312E31"/>
 				<plugin name="Sylenth1" cid="56535473796C3173796C656E74683100"/>
