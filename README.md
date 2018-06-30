@@ -33,7 +33,6 @@ It is suggested that you reboot your Mac after the first run of this tool.
 * The iLok update state will need to be verified and updated if necessary
 * BetterSnapTool keyboard shortcut of Ctrl+Alt+Cmd+Up seems to mute conversations in Skype
 * Spotify settings should be improved to be like plist and JSON
-* Homebrew update is very slow (could performing a full tap help this?)
 
 ## Manual Tasks
 
@@ -107,10 +106,6 @@ The following software should be deactivated before re-installing macOS:
 
 * **Celemony Melodyne Editor**
 * **LennarDigital Sylenth1**
-
-You will need to backup the following folders before re-installing:
-
-* **Apple Messages**: Backup the folder ~/Library/Messages to ensure you don't lose your messages when re-installing the OS
 
 ## License
 
