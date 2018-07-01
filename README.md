@@ -80,7 +80,7 @@ The following tasks must be performed manually.
 * **Forklift**: Sidebar containing favourites and view settings
 * **Cog**: Disable notifications
 * **Textual**: Right click on freenode and select Server Properties; under Basic Settings / General, enter your Server Password (NickServ password)
-* **Messages**: Disable spell checking under Edit / Spelling and Grammar
+* **Messages**: Disable spell checking under Edit / Spelling and Grammar, and change the message receive sound under Preferences / General
 * **LennarDigital Sylenth1**: Set the default skin to Apox and Size to 110%
 * **DMG Audio EQuality**: Set defaults by switching knobs to input boxes
 * **DMG Audio EQuilibrium**: Set the default Cubase preset to the default for the plugin too
