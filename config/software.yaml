@@ -36,7 +36,6 @@ software:
     - *slack
     - *transmission
     - *waterfox
-    - *whatsapp
     - *xld
 
   Desktop Software / Commercial:
