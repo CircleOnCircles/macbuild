@@ -2,6 +2,11 @@
 from elite.decorators import elite_main
 
 
+def software_config(software, key):
+    key = software.pop(key, [])
+    return key if isinstance(key, list) else [key]
+
+
 @elite_main(config_path='config', config_order=['global.yaml', 'software', 'software.yaml'])
 def main(elite, config, printer):
     printer.heading('Initialization')
@@ -59,130 +64,93 @@ def main(elite, config, printer):
             app = software.pop('app', name)
 
             # Taps
-            tap = software.pop('tap', None)
-            if tap:
-                taps = tap if isinstance(tap, list) else [tap]
-                for tap in taps:
-                    elite.tap(name=tap)
+            for tap in software_config(software, 'tap'):
+                elite.tap(name=tap)
 
             # App store apps
-            appstore = software.pop('appstore', None)
-            if appstore:
-                appstores = appstore if isinstance(appstore, list) else [appstore]
-                for appstore in appstores:
-                    app_file = elite.file_info(
-                        path=f'/Applications/{appstore}.app/Contents/_MASReceipt/receipt'
+            for appstore in software_config(software, 'appstore'):
+                app_file = elite.file_info(
+                    path=f'/Applications/{appstore}.app/Contents/_MASReceipt/receipt'
+                )
+                if not app_file.exists:
+                    elite.fail(
+                        message=f'Please install {appstore} from the App Store',
+                        ignore_failed=True
                     )
-                    if not app_file.exists:
-                        elite.fail(
-                            message=f'Please install {appstore} from the App Store',
-                            ignore_failed=True
-                        )
 
             # Cask packages
-            cask = software.pop('cask', None)
             cask_install_failed = False
-            if cask:
-                casks = cask if isinstance(cask, list) else [cask]
-                for cask in casks:
-                    cask_install = elite.cask(
-                        name=cask, env=env, ignore_failed=True, state='latest'
-                    )
-                    if not cask_install.ok:
-                        cask_install_failed = True
-                        break
+            for cask in software_config(software, 'cask'):
+                cask_install = elite.cask(
+                    name=cask, env=env, ignore_failed=True, state='latest'
+                )
+                if not cask_install.ok:
+                    cask_install_failed = True
+                    break
 
             if cask_install_failed:
                 continue
 
             # Brew packages
-            brew = software.pop('brew', None)
-            if brew:
-                brews = brew if isinstance(brew, list) else [brew]
-                for brew in brews:
-                    elite.brew(name=brew, state='latest')
+            for brew in software_config(software, 'brew'):
+                elite.brew(name=brew, state='latest')
 
             # Python pip packages
-            pip = software.pop('pip', None)
-            if pip:
-                pips = pip if isinstance(pip, list) else [pip]
-                for pip in pips:
-                    elite.pip(name=pip, state='latest', executable='pip3')
+            for pip in software_config(software, 'pip'):
+                elite.pip(name=pip, state='latest', executable='pip3')
 
             # Ruby gem packages
-            gem = software.pop('gem', None)
-            if gem:
-                gems = gem if isinstance(gem, list) else [gem]
-                for gem in gems:
-                    elite.gem(name=gem, state='latest')
+            for gem in software_config(software, 'gem'):
+                elite.gem(name=gem, state='latest')
 
             # Files
-            file = software.pop('file', None)
-            if file:
-                files = file if isinstance(file, list) else [file]
-                for file in files:
-                    elite.file(
-                        path=file['path'],
-                        source=file.get('source'),
-                        state=file.get('state', 'file'),
-                        mode=file.get('mode'),
-                        owner=file.get('owner'),
-                        group=file.get('group'),
-                        flags=file.get('flags'),
-                        sudo=file.get('sudo', False)
-                    )
+            for file in software_config(software, 'file'):
+                elite.file(
+                    path=file['path'],
+                    source=file.get('source'),
+                    state=file.get('state', 'file'),
+                    mode=file.get('mode'),
+                    owner=file.get('owner'),
+                    group=file.get('group'),
+                    flags=file.get('flags'),
+                    sudo=file.get('sudo', False)
+                )
 
             # Dowlnoads
-            download = software.pop('download', None)
-            if download:
-                downloads = download if isinstance(download, list) else [download]
-                for download in downloads:
-                    elite.download(path=download['path'], url=download['url'])
+            for download in software_config(software, 'download'):
+                elite.download(path=download['path'], url=download['url'])
 
             # Git repositories
-            git = software.pop('git', None)
-            if git:
-                gits = git if isinstance(git, list) else [git]
-                for git in gits:
-                    elite.git(path=git['path'], repo=git['repo'])
+            for git in software_config(software, 'git'):
+                elite.git(path=git['path'], repo=git['repo'])
 
             # Symbolic links
-            symlink = software.pop('symlink', None)
-            if symlink:
-                symlinks = symlink if isinstance(symlink, list) else [symlink]
-
-                for symlink in symlinks:
-                    symlink_health = elite.file_info(path=symlink['path'])
-                    if symlink_health.exists and symlink_health.file_type != 'symlink':
-                        elite.file(path=symlink['path'], state='absent')
-                    elite.file(path=symlink['path'], source=symlink['source'], state='symlink')
+            for symlink in software_config(software, 'symlink'):
+                symlink_health = elite.file_info(path=symlink['path'])
+                if symlink_health.exists and symlink_health.file_type != 'symlink':
+                    elite.file(path=symlink['path'], state='absent')
+                elite.file(path=symlink['path'], source=symlink['source'], state='symlink')
 
             # plist settings
-            plist = software.pop('plist', None)
-            if plist:
-                plists = plist if isinstance(plist, list) else [plist]
-                for plist in plists:
-                    elite.plist(
-                        domain=plist.get('domain'),
-                        container=plist.get('container'),
-                        path=plist.get('path'),
-                        source=plist.get('source'),
-                        values=plist.get('values', {}),
-                        sudo=plist.get('sudo', False)
-                    )
+            for plist in software_config(software, 'plist'):
+                elite.plist(
+                    domain=plist.get('domain'),
+                    container=plist.get('container'),
+                    path=plist.get('path'),
+                    source=plist.get('source'),
+                    values=plist.get('values', {}),
+                    sudo=plist.get('sudo', False)
+                )
 
             # JSON settings
-            json = software.pop('json', None)
-            if json:
-                jsons = json if isinstance(json, list) else [json]
-                for json in jsons:
-                    elite.json(path=json.get('path'), values=json.get('values'))
+            for json in software_config(software, 'json'):
+                elite.json(path=json.get('path'), values=json.get('values'))
 
             # Application Specific Actions
             if name == 'Spotify':
-                global_settings = software.pop('global_settings')
                 username = software.pop('username')
-                user_settings = software.pop('user_settings')
+                global_settings = software.pop('global_settings', {})
+                user_settings = software.pop('user_settings', {})
 
                 for pref, value in global_settings.items():
                     elite.spotify_pref(pref=pref, value=value, mode='0644')
@@ -201,11 +169,8 @@ def main(elite, config, printer):
                     )
 
             # File handlers
-            handler = software.pop('handler', None)
-            if handler:
-                handlers = handler if isinstance(handler, list) else [handler]
-                for handler in handlers:
-                    elite.handler(path=f'/Applications/{app}.app', content_type=handler)
+            for handler in software_config(software, 'handler'):
+                elite.handler(path=f'/Applications/{app}.app', content_type=handler)
 
             # Login items
             login_item = software.pop('login_item', None)
@@ -218,7 +183,7 @@ def main(elite, config, printer):
             if software:
                 elite.fail(
                     message=(
-                        'the software item contained unsupported keys {list(software.keys())}'
+                        f'the software item contained unsupported keys {list(software.keys())}'
                     ),
                     ignore_failed=True
                 )
