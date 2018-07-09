@@ -3,7 +3,7 @@ import os
 import re
 from collections import namedtuple
 
-from elite.decorators import elite_main
+import elite
 
 
 def komplete_libraries(elite, config, printer, sample_library_source):
@@ -220,7 +220,7 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
             elite.package(path=os.path.join(destination, library_config.installer), sudo=True)
 
 
-@elite_main(config_path='config', config_order=['global.yaml', 'samples.yaml'])
+@elite.main(config_path='config', config_order=['global.yaml', 'samples.yaml'])
 def main(elite, config, printer):
     printer.info('Determining sample library and music software sources.')
 

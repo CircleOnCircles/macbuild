@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from elite.decorators import elite_main
+import elite
 
 
 def software_config(software, key):
@@ -7,7 +7,7 @@ def software_config(software, key):
     return key if isinstance(key, list) else [key]
 
 
-@elite_main(config_path='config', config_order=['global.yaml', 'software', 'software.yaml'])
+@elite.main(config_path='config', config_order=['global.yaml', 'software', 'software.yaml'])
 def main(elite, config, printer):
     printer.heading('Initialization')
 
