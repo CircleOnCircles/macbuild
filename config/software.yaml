@@ -33,7 +33,6 @@ software:
     - *osxfuse
     - *otp_auth
     - *skype
-    - *slack
     - *transmission
     - *waterfox
     - *xld

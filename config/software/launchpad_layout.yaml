@@ -85,7 +85,6 @@ _: &launchpad_layout
       # Social
       - Textual
       - Skype
-      - Slack
       # Internet
       - Waterfox
       - ForkLift

@@ -15,7 +15,6 @@ _: &dock_layout
     - OpenEmu
     - Messages
     - Skype
-    - Slack
     - Textual
     - Things3
     - VMware Fusion
