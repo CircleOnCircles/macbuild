@@ -1,18 +1,18 @@
-_: &bash
-  name: Bash
-  brew:
-    - bash
-    - bash-completion
-  file:
-    # Bash Profile
-    - path: ~/.bash_profile
-      source: files/dotfiles/.bash_profile
-    # Bash Profile Bash Completion & Prompt
-    - path: ~/.bash_profile.d
-      state: directory
-    - path: ~/.bash_profile.d/aliases.sh
-      source: files/dotfiles/.bash_profile.d/aliases.sh
-    - path: ~/.bash_profile.d/bash_completion.sh
-      source: files/dotfiles/.bash_profile.d/bash_completion.sh
-    - path: ~/.bash_profile.d/prompt.sh
-      source: files/dotfiles/.bash_profile.d/prompt.sh
+---
+name: Bash
+brew:
+  - bash
+  - bash-completion
+file:
+  # Bash Profile
+  - path: ~/.bash_profile
+    source: files/dotfiles/.bash_profile
+  # Bash Profile Bash Completion & Prompt
+  - path: ~/.bash_profile.d
+    state: directory
+  - path: ~/.bash_profile.d/aliases.sh
+    source: files/dotfiles/.bash_profile.d/aliases.sh
+  - path: ~/.bash_profile.d/bash_completion.sh
+    source: files/dotfiles/.bash_profile.d/bash_completion.sh
+  - path: ~/.bash_profile.d/prompt.sh
+    source: files/dotfiles/.bash_profile.d/prompt.sh

@@ -1,3 +1,3 @@
-_: &illformed_glitch
-  name: Illformed Glitch
-  cask: illformed-glitch
+---
+name: Illformed Glitch
+cask: illformed-glitch

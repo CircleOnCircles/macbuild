@@ -1,8 +1,8 @@
-_: &valhalladsp_valhallavintageverb
-  name: ValhallaDSP ValhallaVintageVerb
-  cask: valhalladsp-valhallavintageverb
-  file:
-    # License
-    - path: ~/Library/Preferences/ValhallaVintageVerb.settings
-      source: !join_path [*app_license_dir, Music Production/ValhallaDSP/ValhallaDSP ValhallaVintageVerb/ValhallaVintageVerb.settings]
-      mode: '0644'
+---
+name: ValhallaDSP ValhallaVintageVerb
+cask: valhalladsp-valhallavintageverb
+file:
+  # License
+  - path: ~/Library/Preferences/ValhallaVintageVerb.settings
+    source: !join_path [*app_license_dir, Music Production/ValhallaDSP/ValhallaDSP ValhallaVintageVerb/ValhallaVintageVerb.settings]
+    mode: '0644'

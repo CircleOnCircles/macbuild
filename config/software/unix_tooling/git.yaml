@@ -1,8 +1,8 @@
-_: &git
-  name: Git
-  brew:
-    - git
-  file:
-    # Preferences
-    - path: ~/.gitconfig
-      source: files/dotfiles/.gitconfig
+---
+name: Git
+brew:
+  - git
+file:
+  # Preferences
+  - path: ~/.gitconfig
+    source: files/dotfiles/.gitconfig

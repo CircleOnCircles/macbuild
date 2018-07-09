@@ -1,14 +1,14 @@
-_: &dmgaudio_equilibrium
-  name: DMG Audio EQuilibrium
-  cask: dmgaudio-equilibrium
-  file:
-    # License
-    - path: ~/Library/Application Support/DMGAudio
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/EQuilibrium
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/EQuilibrium/license
-      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio EQuilibrium/license]
-      mode: '0644'
+---
+name: DMG Audio EQuilibrium
+cask: dmgaudio-equilibrium
+file:
+  # License
+  - path: ~/Library/Application Support/DMGAudio
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/EQuilibrium
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/EQuilibrium/license
+    source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio EQuilibrium/license]
+    mode: '0644'

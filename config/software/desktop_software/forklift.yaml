@@ -1,17 +1,17 @@
-_: &forklift
-  name: Forklift
-  cask: forklift
-  plist:
-    domain: com.binarynights.ForkLift-3
-    mode: '0600'
-    values:
-      # Welcome to Forklift 3 screen shown
-      SetupDone: true
-      # Preferences / General / Check for updates automatically
-      SUEnableAutomaticChecks: true
-      # Preferences / General / Enable dark mode
-      DarkMode: true
-      # Preferences / General / Enable Forklift mini in the menubar
-      ForkLiftMiniEnabled: true
-      # View / Show Titlebar
-      ShowTitlebar: true
+---
+name: Forklift
+cask: forklift
+plist:
+  domain: com.binarynights.ForkLift-3
+  mode: '0600'
+  values:
+    # Welcome to Forklift 3 screen shown
+    SetupDone: true
+    # Preferences / General / Check for updates automatically
+    SUEnableAutomaticChecks: true
+    # Preferences / General / Enable dark mode
+    DarkMode: true
+    # Preferences / General / Enable Forklift mini in the menubar
+    ForkLiftMiniEnabled: true
+    # View / Show Titlebar
+    ShowTitlebar: true

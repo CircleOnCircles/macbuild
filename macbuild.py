@@ -7,7 +7,7 @@ def software_config(software, key):
     return key if isinstance(key, list) else [key]
 
 
-@elite.main(config_path='config', config_order=['global.yaml', 'software', 'software.yaml'])
+@elite.main(config_path='config/software.yaml')
 def main(elite, config, printer):
     printer.heading('Initialization')
 
@@ -15,7 +15,7 @@ def main(elite, config, printer):
     elite.run(command='sudo -nv', changed=False)
 
     printer.info('Music Software Source')
-    music_software_source = config.music_software_source
+    music_software_source = config.globals['music_software_source']
     if music_software_source:
         env = {'HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR': music_software_source}
         elite.info(message=f'using music software software {music_software_source}')

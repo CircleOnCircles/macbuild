@@ -46,7 +46,7 @@ fi
 
 # Install Python dependencies
 for package in \
-    PyYAML \
+    ruamel.yaml \
     pyobjc-framework-Cocoa \
     pyobjc-framework-LaunchServices \
     pyobjc-framework-ScriptingBridge \

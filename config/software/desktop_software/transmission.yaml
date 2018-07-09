@@ -1,11 +1,11 @@
-_: &transmission
-  name: Transmission
-  cask: transmission
-  plist:
-    domain: org.m0k.transmission
-    mode: '0600'
-    values:
-      # Welcome to Transmission / I Accept
-      WarningLegal: false
-      # Preferences / Transfers / Trash original torrent files
-      DeleteOriginalTorrent: true
+---
+name: Transmission
+cask: transmission
+plist:
+  domain: org.m0k.transmission
+  mode: '0600'
+  values:
+    # Welcome to Transmission / I Accept
+    WarningLegal: false
+    # Preferences / Transfers / Trash original torrent files
+    DeleteOriginalTorrent: true

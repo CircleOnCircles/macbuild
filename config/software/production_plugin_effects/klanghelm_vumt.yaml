@@ -1,3 +1,3 @@
-_: &klanghelm_vumt
-  name: Klanghelm VUMT
-  cask: klanghelm-vumt
+---
+name: Klanghelm VUMT
+cask: klanghelm-vumt

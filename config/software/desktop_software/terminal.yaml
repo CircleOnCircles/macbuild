@@ -1,50 +1,50 @@
-_: &terminal
-  name: Terminal
-  plist:
-    domain: com.apple.Terminal
-    mode: '0600'
-    values:
-      # Preferences / General / Shells open with: Command (complete path):
-      Shell: /usr/local/bin/bash
+---
+name: Terminal
+plist:
+  domain: com.apple.Terminal
+  mode: '0600'
+  values:
+    # Preferences / General / Shells open with: Command (complete path):
+    Shell: /usr/local/bin/bash
 
-      # Preferences / Profiles / Fots / Default
-      Default Window Settings: Fots
-      # Preferences / General / On startup open: / New window with profile:
-      Startup Window Settings: Fots
+    # Preferences / Profiles / Fots / Default
+    Default Window Settings: Fots
+    # Preferences / General / On startup open: / New window with profile:
+    Startup Window Settings: Fots
 
-      Window Settings:
-        Fots:
-          # Preferences / Profiles / Add Profile
-          name: Fots
-          type: Window Settings
-          ProfileCurrentVersion: 2.05
+    Window Settings:
+      Fots:
+        # Preferences / Profiles / Add Profile
+        name: Fots
+        type: Window Settings
+        ProfileCurrentVersion: 2.05
 
-          # Preferences / Profiles / Advanced / Bell / Disable 'Audible bell'
-          Bell: false
+        # Preferences / Profiles / Advanced / Bell / Disable 'Audible bell'
+        Bell: false
 
-          # Preferences / Profiles / Shell / When the shell exits: / Don't close the window
-          shellExitAction: 2
+        # Preferences / Profiles / Shell / When the shell exits: / Don't close the window
+        shellExitAction: 2
 
-          # Preferences / Profiles / Window / Title / Disable 'Profile name'
-          ShowWindowSettingsNameInTitle: false
+        # Preferences / Profiles / Window / Title / Disable 'Profile name'
+        ShowWindowSettingsNameInTitle: false
 
-          # Preferences / Profiles / Window / Window Size
-          columnCount: 135
-          rowCount: 27
+        # Preferences / Profiles / Window / Window Size
+        columnCount: 135
+        rowCount: 27
 
-          # Preferences / Profiles / Text / Font
-          Font: !macos_font [SourceCodePro-Regular, 16]
-          # Preferences / Profiles / Text / Antialias text
-          FontAntialias: true
+        # Preferences / Profiles / Text / Font
+        Font: !macos_font [SourceCodePro-Regular, 16]
+        # Preferences / Profiles / Text / Antialias text
+        FontAntialias: true
 
-          # Preferences / Profiles / Text / Background
-          BackgroundBlur: 0.0
-          BackgroundColor: !macos_color [0, 0, 0, 1.0]
-          # Preferences / Profiles / Text / Text / Text
-          TextColor: !macos_color [242, 242, 242, 1.0]
-          # Preferences / Profiles / Text / Text / Bold Text
-          TextBoldColor: !macos_color [255, 255, 255, 1.0]
-          # Preferences / Profiles / Text / Text / Selection
-          SelectionColor: !macos_color [65, 65, 65, 1.0]
-          # Preferences / Profiles / Text / Cursor / Cursor
-          CursorColor: !macos_color [77, 77, 77, 1.0]
+        # Preferences / Profiles / Text / Background
+        BackgroundBlur: 0.0
+        BackgroundColor: !macos_color [0, 0, 0, 1.0]
+        # Preferences / Profiles / Text / Text / Text
+        TextColor: !macos_color [242, 242, 242, 1.0]
+        # Preferences / Profiles / Text / Text / Bold Text
+        TextBoldColor: !macos_color [255, 255, 255, 1.0]
+        # Preferences / Profiles / Text / Text / Selection
+        SelectionColor: !macos_color [65, 65, 65, 1.0]
+        # Preferences / Profiles / Text / Cursor / Cursor
+        CursorColor: !macos_color [77, 77, 77, 1.0]

@@ -1,18 +1,18 @@
-_: &safari
-  name: Safari
-  plist:
-    domain: com.apple.Safari
-    mode: '0600'
-    values:
-      # Bookmarks / Disable 'Show Frequently Visited Sites'
-      ShowFrequentlyVisitedSites: false
-      # View / Show Status Bar
-      ShowOverlayStatusBar: true
-      # Preferences / General / Disable 'Open "safe" files after downloading'
-      AutoOpenSafeDownloads: false
-      # Preferences / General / File download location / Ask for each download
-      AlwaysPromptForDownloadFolder: true
-      # Preferences / AutoFill / Disable 'User names and passwords'
-      AutoFillPasswords: false
-      # Preferences / Advanced / Show Develop menu in menu bar
-      IncludeDevelopMenu: true
+---
+name: Safari
+plist:
+  domain: com.apple.Safari
+  mode: '0600'
+  values:
+    # Bookmarks / Disable 'Show Frequently Visited Sites'
+    ShowFrequentlyVisitedSites: false
+    # View / Show Status Bar
+    ShowOverlayStatusBar: true
+    # Preferences / General / Disable 'Open "safe" files after downloading'
+    AutoOpenSafeDownloads: false
+    # Preferences / General / File download location / Ask for each download
+    AlwaysPromptForDownloadFolder: true
+    # Preferences / AutoFill / Disable 'User names and passwords'
+    AutoFillPasswords: false
+    # Preferences / Advanced / Show Develop menu in menu bar
+    IncludeDevelopMenu: true

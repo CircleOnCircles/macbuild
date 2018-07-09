@@ -1,43 +1,43 @@
-_: &musescore
-  name: Musescore
-  cask: musescore
-  file:
-    - path: ~/Library/Application Support/MuseScore
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/MuseScore/MuseScore2
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/MuseScore/MuseScore2/workspaces
-      state: directory
-      mode: '0755'
+---
+name: Musescore
+cask: musescore
+file:
+  - path: ~/Library/Application Support/MuseScore
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/MuseScore/MuseScore2
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/MuseScore/MuseScore2/workspaces
+    state: directory
+    mode: '0755'
 
-    # Fotsies Workspace
-    - path: ~/Library/Application Support/MuseScore/MuseScore2/workspaces/Fotsies Workspace.workspace
-      source: files/musescore/Fotsies Workspace.workspace
-      mode: '0644'
-  plist:
-    domain: org.musescore.MuseScore2
-    mode: '0600'
-    values:
-      # Preferences / General / Programme Start / Start empty
-      sessionStart: empty
-      # Preferences / General / Folders
-      myScoresPath: /Users/fots/Music/MuseScore2/Scores
-      myStylesPath: /Users/fots/Music/MuseScore2/Styles
-      myTemplatesPath: /Users/fots/Music/MuseScore2/Templates
-      myPluginsPath: /Users/fots/Music/MuseScore2/Plugins
-      mySoundfontsPath: /Users/fots/Music/MuseScore2/Soundfonts
-      myImagesPath: /Users/fots/Music/MuseScore2/Images
-      # Preferences / General / Theme / Dark
-      style: dark
-      # Preferences / Canvas / Background
-      bgUseColor: false
-      bgWallpaper: /Users/fots/Music/MuseScore2/Images/Wood Desk Texture.jpg
-      # Preferences / Canvas / Paper
-      fgUseColor: false
-      fgWallpaper: /Users/fots/Music/MuseScore2/Images/Yellowed Cotton Soft.png
-      # Preferences / Canvas / Scroll pages / Vertically
-      verticalPageOrientation: true
-      # Edit / Workspaces / Fotsies Workspace
-      workspace: Fotsies Workspace
+  # Fotsies Workspace
+  - path: ~/Library/Application Support/MuseScore/MuseScore2/workspaces/Fotsies Workspace.workspace
+    source: files/musescore/Fotsies Workspace.workspace
+    mode: '0644'
+plist:
+  domain: org.musescore.MuseScore2
+  mode: '0600'
+  values:
+    # Preferences / General / Programme Start / Start empty
+    sessionStart: empty
+    # Preferences / General / Folders
+    myScoresPath: /Users/fots/Music/MuseScore2/Scores
+    myStylesPath: /Users/fots/Music/MuseScore2/Styles
+    myTemplatesPath: /Users/fots/Music/MuseScore2/Templates
+    myPluginsPath: /Users/fots/Music/MuseScore2/Plugins
+    mySoundfontsPath: /Users/fots/Music/MuseScore2/Soundfonts
+    myImagesPath: /Users/fots/Music/MuseScore2/Images
+    # Preferences / General / Theme / Dark
+    style: dark
+    # Preferences / Canvas / Background
+    bgUseColor: false
+    bgWallpaper: /Users/fots/Music/MuseScore2/Images/Wood Desk Texture.jpg
+    # Preferences / Canvas / Paper
+    fgUseColor: false
+    fgWallpaper: /Users/fots/Music/MuseScore2/Images/Yellowed Cotton Soft.png
+    # Preferences / Canvas / Scroll pages / Vertically
+    verticalPageOrientation: true
+    # Edit / Workspaces / Fotsies Workspace
+    workspace: Fotsies Workspace

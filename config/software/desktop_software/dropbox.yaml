@@ -1,4 +1,4 @@
-_: &dropbox
-  name: Dropbox
-  cask: dropbox
-  login_item: true
+---
+name: Dropbox
+cask: dropbox
+login_item: true

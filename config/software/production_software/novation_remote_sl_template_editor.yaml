@@ -1,3 +1,3 @@
-_: &novation_remote_sl_template_editor
-  name: Novation ReMOTE SL Editor
-  cask: novation-remote-sl-template-editor
+---
+name: Novation ReMOTE SL Editor
+cask: novation-remote-sl-template-editor

@@ -1,58 +1,57 @@
-_: &finder
-  name: Finder
+---
+name: Finder
+plist:
+  domain: com.apple.finder
+  mode: '0600'
+  values:
+    # View / Show Path Bar
+    ShowPathbar: true
 
-  plist:
-    domain: com.apple.finder
-    mode: '0600'
-    values:
-      # View / Show Path Bar
-      ShowPathbar: true
+    # View / Show Status Bar
+    ShowStatusBar: true
 
-      # View / Show Status Bar
-      ShowStatusBar: true
+    # Set the default Finder display mode to list
+    FXPreferredViewStyle: Nlsv
+    MyDocsLibrarySavedViewStyle: Nlsv
 
-      # Set the default Finder display mode to list
-      FXPreferredViewStyle: Nlsv
-      MyDocsLibrarySavedViewStyle: Nlsv
+    # Preferences / General / New Finder windows show / fots
+    NewWindowTarget: PfHm
+    NewWindowTargetPath: file:///Users/fots/
 
-      # Preferences / General / New Finder windows show / fots
-      NewWindowTarget: PfHm
-      NewWindowTargetPath: file:///Users/fots/
+    # Preferences / Advanced / Keep folders on top when sorting by name (Sierra specific)
+    _FXSortFoldersFirst: true
 
-      # Preferences / Advanced / Keep folders on top when sorting by name (Sierra specific)
-      _FXSortFoldersFirst: true
+    # Preferences / Advanced / Disable 'Show warning before changing an extension'
+    FXEnableExtensionChangeWarning: false
 
-      # Preferences / Advanced / Disable 'Show warning before changing an extension'
-      FXEnableExtensionChangeWarning: false
+    # Desktop icons to be arranged by Name
+    DesktopViewSettings:
+      IconViewSettings:
+        arrangeBy: name
 
-      # Desktop icons to be arranged by Name
-      DesktopViewSettings:
-        IconViewSettings:
-          arrangeBy: name
-
-      # TODO: The following settings seem to change on every run and don't feel complete
-      # Default view settings for list view
-      ComputerViewSettings: &view_settings
-        ListViewSettings:
-          columns:
-            name: {ascending: true, index: 0, visible: true, width: 450}
-            size: {ascending: false, index: 1, visible: true, width: 100}
-            kind: {ascending: true, index: 2, visible: true, width: 150}
-            label: {ascending: true, index: 3, visible: false, width: 100}
-            version: {ascending: true, index: 4, visible: false, width: 75}
-            comments: {ascending: true, index: 5, visible: false, width: 300}
-            dateModified: {ascending: false, index: 6, visible: true, width: 200}
-            dateCreated: {ascending: false, index: 7, visible: false, width: 200}
-            dateLastOpened: {ascending: false, index: 8, visible: false, width: 200}
-        ExtendedListViewSettings:
-          columns:
-            - {identifier: name, ascending: true, visible: true, width: 450}
-            - {identifier: size, ascending: false, visible: true, width: 100}
-            - {identifier: kind, ascending: true, visible: true, width: 150}
-            - {identifier: label, ascending: true, visible: false, width: 100}
-            - {identifier: version, ascending: true, visible: false, width: 75}
-            - {identifier: comments, ascending: true, visible: false, width: 300}
-            - {identifier: dateModified, ascending: false, visible: true, width: 200}
-            - {identifier: dateCreated, ascending: false, visible: false, width: 200}
-            - {identifier: dateLastOpened, ascending: false, visible: false, width: 200}
-      MyDocsLibrarySearchViewSettings: *view_settings
+    # TODO: The following settings seem to change on every run and don't feel complete
+    # Default view settings for list view
+    ComputerViewSettings: &view_settings
+      ListViewSettings:
+        columns:
+          name: {ascending: true, index: 0, visible: true, width: 450}
+          size: {ascending: false, index: 1, visible: true, width: 100}
+          kind: {ascending: true, index: 2, visible: true, width: 150}
+          label: {ascending: true, index: 3, visible: false, width: 100}
+          version: {ascending: true, index: 4, visible: false, width: 75}
+          comments: {ascending: true, index: 5, visible: false, width: 300}
+          dateModified: {ascending: false, index: 6, visible: true, width: 200}
+          dateCreated: {ascending: false, index: 7, visible: false, width: 200}
+          dateLastOpened: {ascending: false, index: 8, visible: false, width: 200}
+      ExtendedListViewSettings:
+        columns:
+          - {identifier: name, ascending: true, visible: true, width: 450}
+          - {identifier: size, ascending: false, visible: true, width: 100}
+          - {identifier: kind, ascending: true, visible: true, width: 150}
+          - {identifier: label, ascending: true, visible: false, width: 100}
+          - {identifier: version, ascending: true, visible: false, width: 75}
+          - {identifier: comments, ascending: true, visible: false, width: 300}
+          - {identifier: dateModified, ascending: false, visible: true, width: 200}
+          - {identifier: dateCreated, ascending: false, visible: false, width: 200}
+          - {identifier: dateLastOpened, ascending: false, visible: false, width: 200}
+    MyDocsLibrarySearchViewSettings: *view_settings

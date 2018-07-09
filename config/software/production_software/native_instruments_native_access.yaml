@@ -1,9 +1,9 @@
-_: &native_instruments_native_access
-  name: Native Instruments Native Access
-  cask: native-instruments-native-access
-  plist:
-    domain: com.native-instruments.Native Access
-    mode: '0600'
-    values:
-      # Switch to list view for displaying items instead of tiles
-      ListViewStyle: 1
+---
+name: Native Instruments Native Access
+cask: native-instruments-native-access
+plist:
+  domain: com.native-instruments.Native Access
+  mode: '0600'
+  values:
+    # Switch to list view for displaying items instead of tiles
+    ListViewStyle: 1

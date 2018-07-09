@@ -1,14 +1,14 @@
-_: &dmgaudio_limitless
-  name: DMG Audio Limitless
-  cask: dmgaudio-limitless
-  file:
-    # License
-    - path: ~/Library/Application Support/DMGAudio
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/Limitless
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/Limitless/license
-      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Limitless/license]
-      mode: '0644'
+---
+name: DMG Audio Limitless
+cask: dmgaudio-limitless
+file:
+  # License
+  - path: ~/Library/Application Support/DMGAudio
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/Limitless
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/Limitless/license
+    source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Limitless/license]
+    mode: '0644'

@@ -1,31 +1,31 @@
-_: &openemu
-  name: OpenEmu
-  cask: openemu-experimental
-  file:
-    - path: '~/Library/Application Support/OpenEmu'
-      state: directory
-      mode: '0755'
-  symlink:
-    # Preferences
-    - path: ~/Library/Application Support/OpenEmu/BIOS
-      source: ~/Documents/OpenEmu/BIOS
-    - path: ~/Library/Application Support/OpenEmu/Bindings
-      source: ~/Documents/OpenEmu/Bindings
-    - path: ~/Library/Application Support/OpenEmu/Cores
-      source: ~/Documents/OpenEmu/Cores
-    - path: ~/Library/Application Support/OpenEmu/Game Library
-      source: ~/Documents/OpenEmu/Game Library
-    - path: ~/Library/Application Support/OpenEmu/Save States
-      source: ~/Documents/OpenEmu/Save States
-  plist:
-    domain: org.openemu.OpenEmu
-    mode: '0600'
-    values:
-      # Welcome to OpenEmu! shown
-      setupAssistantFinished: true
-      # Check for updates automatically? / Check Automatically
-      SUEnableAutomaticChecks: true
-      # Preferences / Gameplay / Filter: / SABR
-      videoFilter: SABR
-      # Preferences / Gameplay / Window Management / Always launch games fullscreen
-      fullScreen: true
+---
+name: OpenEmu
+cask: openemu-experimental
+file:
+  - path: '~/Library/Application Support/OpenEmu'
+    state: directory
+    mode: '0755'
+symlink:
+  # Preferences
+  - path: ~/Library/Application Support/OpenEmu/BIOS
+    source: ~/Documents/OpenEmu/BIOS
+  - path: ~/Library/Application Support/OpenEmu/Bindings
+    source: ~/Documents/OpenEmu/Bindings
+  - path: ~/Library/Application Support/OpenEmu/Cores
+    source: ~/Documents/OpenEmu/Cores
+  - path: ~/Library/Application Support/OpenEmu/Game Library
+    source: ~/Documents/OpenEmu/Game Library
+  - path: ~/Library/Application Support/OpenEmu/Save States
+    source: ~/Documents/OpenEmu/Save States
+plist:
+  domain: org.openemu.OpenEmu
+  mode: '0600'
+  values:
+    # Welcome to OpenEmu! shown
+    setupAssistantFinished: true
+    # Check for updates automatically? / Check Automatically
+    SUEnableAutomaticChecks: true
+    # Preferences / Gameplay / Filter: / SABR
+    videoFilter: SABR
+    # Preferences / Gameplay / Window Management / Always launch games fullscreen
+    fullScreen: true

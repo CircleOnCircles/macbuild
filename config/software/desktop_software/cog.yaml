@@ -1,9 +1,9 @@
-_: &cog
-  name: Cog
-  cask: cog-kode54
-  plist:
-    domain: org.cogx.cog
-    mode: '0600'
-    values:
-      # Check for updates automatically? / Check Automatically
-      SUEnableAutomaticChecks: true
+---
+name: Cog
+cask: cog-kode54
+plist:
+  domain: org.cogx.cog
+  mode: '0600'
+  values:
+    # Check for updates automatically? / Check Automatically
+    SUEnableAutomaticChecks: true

@@ -1,187 +1,187 @@
-_: &macos_general
-  name: macOS General
+---
+name: macOS General
 
-  file:
-    # Unhide the user ~/Library directory
-    - path: ~/Library
-      state: directory
-      flags: []
+file:
+  # Unhide the user ~/Library directory
+  - path: ~/Library
+    state: directory
+    flags: []
 
-    # Create a dedicated location to store screenshots
-    - path: ~/Pictures/Screenshots
-      state: directory
+  # Create a dedicated location to store screenshots
+  - path: ~/Pictures/Screenshots
+    state: directory
 
-    # SSH Configuration (Sierra specific)
-    - source: files/dotfiles/.ssh/config
-      path: ~/.ssh/config
+  # SSH Configuration (Sierra specific)
+  - source: files/dotfiles/.ssh/config
+    path: ~/.ssh/config
 
-    # Set permissions on all audio directories
+  # Set permissions on all audio directories
 
-    # Documentation
-    - &audio_directory_properties
-      path: /Library/Documentation
-      state: directory
-      owner: root
-      # Please note that typically the group of these folders is wheel, but we use admin to ensure
-      # that regular user accounts can write to them
-      group: admin
-      mode: '0775'
-      sudo: true
-    # Presets
-    - path: /Library/Audio/Presets
-      <<: *audio_directory_properties
-    # AAX
-    - path: /Library/Application Support/Avid
-      <<: *audio_directory_properties
-    - path: /Library/Application Support/Avid/Audio
-      <<: *audio_directory_properties
-    - path: /Library/Application Support/Avid/Audio/Plug-Ins
-      <<: *audio_directory_properties
-    # RTAS
-    - path: /Library/Application Support/Digidesign
-      <<: *audio_directory_properties
-    - path: /Library/Application Support/Digidesign/Plug-Ins
-      <<: *audio_directory_properties
-    # AU
-    - path: /Library/Audio/Plug-Ins/Components
-      <<: *audio_directory_properties
-    # VST
-    - path: /Library/Audio/Plug-Ins/VST
-      <<: *audio_directory_properties
-    # VST3
-    - path: /Library/Audio/Plug-Ins/VST3
-      <<: *audio_directory_properties
+  # Documentation
+  - &audio_directory_properties
+    path: /Library/Documentation
+    state: directory
+    owner: root
+    # Please note that typically the group of these folders is wheel, but we use admin to ensure
+    # that regular user accounts can write to them
+    group: admin
+    mode: '0775'
+    sudo: true
+  # Presets
+  - path: /Library/Audio/Presets
+    <<: *audio_directory_properties
+  # AAX
+  - path: /Library/Application Support/Avid
+    <<: *audio_directory_properties
+  - path: /Library/Application Support/Avid/Audio
+    <<: *audio_directory_properties
+  - path: /Library/Application Support/Avid/Audio/Plug-Ins
+    <<: *audio_directory_properties
+  # RTAS
+  - path: /Library/Application Support/Digidesign
+    <<: *audio_directory_properties
+  - path: /Library/Application Support/Digidesign/Plug-Ins
+    <<: *audio_directory_properties
+  # AU
+  - path: /Library/Audio/Plug-Ins/Components
+    <<: *audio_directory_properties
+  # VST
+  - path: /Library/Audio/Plug-Ins/VST
+    <<: *audio_directory_properties
+  # VST3
+  - path: /Library/Audio/Plug-Ins/VST3
+    <<: *audio_directory_properties
 
-  plist:
-    # System Preferences & Globals
-    - domain: Apple Global Domain
-      mode: '0600'
-      values:
-        # General / Appearance / Use dark menu bar and Dock
-        AppleInterfaceStyle: Dark
-        # Keyboard / Keyboard / Key Repeat
-        KeyRepeat: 2
-        # Keyboard / Keyboard / Delay Until Repeat
-        InitialKeyRepeat: 25
-        # Keyboard / Keyboard / Use all F1, F2, etc. keys as standard function keys
-        com.apple.keyboard.fnState: true
-        # Keyboard / Text / Use smart quotes and dashes
-        NSAutomaticQuoteSubstitutionEnabled: false
-        NSAutomaticDashSubstitutionEnabled: false
-        # Keyboard / Shortcuts / Full Keyboard Access / All controls
-        AppleKeyboardUIMode: 2
-        # Mouse / Point & Click / Tracking speed
-        com.apple.mouse.scaling: 1.0
+plist:
+  # System Preferences & Globals
+  - domain: Apple Global Domain
+    mode: '0600'
+    values:
+      # General / Appearance / Use dark menu bar and Dock
+      AppleInterfaceStyle: Dark
+      # Keyboard / Keyboard / Key Repeat
+      KeyRepeat: 2
+      # Keyboard / Keyboard / Delay Until Repeat
+      InitialKeyRepeat: 25
+      # Keyboard / Keyboard / Use all F1, F2, etc. keys as standard function keys
+      com.apple.keyboard.fnState: true
+      # Keyboard / Text / Use smart quotes and dashes
+      NSAutomaticQuoteSubstitutionEnabled: false
+      NSAutomaticDashSubstitutionEnabled: false
+      # Keyboard / Shortcuts / Full Keyboard Access / All controls
+      AppleKeyboardUIMode: 2
+      # Mouse / Point & Click / Tracking speed
+      com.apple.mouse.scaling: 1.0
 
-        # Expand the save panel by default (hidden setting)
-        NSNavPanelExpandedStateForSaveMode: true
-        # Disable the character accent menu when holding down a key (hidden setting)
-        ApplePressAndHoldEnabled: false
+      # Expand the save panel by default (hidden setting)
+      NSNavPanelExpandedStateForSaveMode: true
+      # Disable the character accent menu when holding down a key (hidden setting)
+      ApplePressAndHoldEnabled: false
 
-    # System Preferences / Accessibility
-    - domain: com.apple.universalaccess
-      mode: '0600'
-      values:
-        # Zoom / Use scroll gesture with modifier keys to zoom
-        closeViewScrollWheelToggle: true
-        # Display / Cursor size
-        mouseDriverCursorSize: 1.25
+  # System Preferences / Accessibility
+  - domain: com.apple.universalaccess
+    mode: '0600'
+    values:
+      # Zoom / Use scroll gesture with modifier keys to zoom
+      closeViewScrollWheelToggle: true
+      # Display / Cursor size
+      mouseDriverCursorSize: 1.25
 
-    # System Preferences / Keyboard / Shortcuts / Services
-    - domain: pbs
-      mode: '0600'
-      values:
-        NSServicesStatus:
-          # Files and Folders / New Terminal at Folder
-          com.apple.Terminal - New Terminal at Folder - newTerminalAtFolder:
-            enabled_context_menu: true
-            enabled_services_menu: true
-          # Files and Folders / New Terminal Tab at Folder
-          com.apple.Terminal - New Terminal Tab at Folder - newTerminalAtFolder:
-            enabled_context_menu: true
-            enabled_services_menu: true
+  # System Preferences / Keyboard / Shortcuts / Services
+  - domain: pbs
+    mode: '0600'
+    values:
+      NSServicesStatus:
+        # Files and Folders / New Terminal at Folder
+        com.apple.Terminal - New Terminal at Folder - newTerminalAtFolder:
+          enabled_context_menu: true
+          enabled_services_menu: true
+        # Files and Folders / New Terminal Tab at Folder
+        com.apple.Terminal - New Terminal Tab at Folder - newTerminalAtFolder:
+          enabled_context_menu: true
+          enabled_services_menu: true
 
-    # System Preferences / Mouse
-    - domain: com.apple.driver.AppleBluetoothMultitouch.mouse
-      mode: '0600'
-      values:
-        # Point & Click / Secondary click
-        MouseButtonMode: TwoButton
+  # System Preferences / Mouse
+  - domain: com.apple.driver.AppleBluetoothMultitouch.mouse
+    mode: '0600'
+    values:
+      # Point & Click / Secondary click
+      MouseButtonMode: TwoButton
 
-    # Desktop
-    - domain: com.apple.systempreferences
-      mode: '0600'
-      values:
-        # Desktop / Change Desktop Background... / + / ~/Pictures/Wallpapers
-        DSKDesktopPrefPane:
-          UserFolderPaths:
-            - /Users/fots/Pictures/Wallpapers
+  # Desktop
+  - domain: com.apple.systempreferences
+    mode: '0600'
+    values:
+      # Desktop / Change Desktop Background... / + / ~/Pictures/Wallpapers
+      DSKDesktopPrefPane:
+        UserFolderPaths:
+          - /Users/fots/Pictures/Wallpapers
 
-    # Launch Services
-    - domain: com.apple.LaunchServices
-      values:
-        # Disable the '"<app>" is an application downloaded from the internet.
-        # Are you sure you want to open it?' dialog.  This affects many apps downloaded from the web
-        # such as MPlayerX (hidden setting)
-        LSQuarantine: false
+  # Launch Services
+  - domain: com.apple.LaunchServices
+    values:
+      # Disable the '"<app>" is an application downloaded from the internet.
+      # Are you sure you want to open it?' dialog.  This affects many apps downloaded from the web
+      # such as MPlayerX (hidden setting)
+      LSQuarantine: false
 
-    # Log Out
-    - domain: com.apple.loginwindow
-      mode: '0600'
-      values:
-        # Disable 'Reopen windows when logging back in' by default
-        TALLogoutSavesState: false
+  # Log Out
+  - domain: com.apple.loginwindow
+    mode: '0600'
+    values:
+      # Disable 'Reopen windows when logging back in' by default
+      TALLogoutSavesState: false
 
-    # Menu
-    - domain: com.apple.systemuiserver
-      mode: '0600'
-      values:
-        # Configure visible items in the menu bar and their order
-        NSStatusItem Visible com.apple.menuextra.clock: true
-        NSStatusItem Visible com.apple.menuextra.battery: true
-        NSStatusItem Visible com.apple.menuextra.airport: true
-        NSStatusItem Visible com.apple.menuextra.volume: true
-        NSStatusItem Visible com.apple.menuextra.bluetooth: true
-        NSStatusItem Visible com.apple.menuextra.TimeMachine: true
-        menuExtras:
-          - /System/Library/CoreServices/Menu Extras/Clock.menu
-          - /System/Library/CoreServices/Menu Extras/Battery.menu
-          - /System/Library/CoreServices/Menu Extras/AirPort.menu
-          - /System/Library/CoreServices/Menu Extras/Volume.menu
-          - /System/Library/CoreServices/Menu Extras/Bluetooth.menu
-          - /System/Library/CoreServices/Menu Extras/TimeMachine.menu
+  # Menu
+  - domain: com.apple.systemuiserver
+    mode: '0600'
+    values:
+      # Configure visible items in the menu bar and their order
+      NSStatusItem Visible com.apple.menuextra.clock: true
+      NSStatusItem Visible com.apple.menuextra.battery: true
+      NSStatusItem Visible com.apple.menuextra.airport: true
+      NSStatusItem Visible com.apple.menuextra.volume: true
+      NSStatusItem Visible com.apple.menuextra.bluetooth: true
+      NSStatusItem Visible com.apple.menuextra.TimeMachine: true
+      menuExtras:
+        - /System/Library/CoreServices/Menu Extras/Clock.menu
+        - /System/Library/CoreServices/Menu Extras/Battery.menu
+        - /System/Library/CoreServices/Menu Extras/AirPort.menu
+        - /System/Library/CoreServices/Menu Extras/Volume.menu
+        - /System/Library/CoreServices/Menu Extras/Bluetooth.menu
+        - /System/Library/CoreServices/Menu Extras/TimeMachine.menu
 
-    # Menu (Clock)
-    - domain: com.apple.menuextra.clock
-      mode: '0600'
-      values:
-        # Open Date & Time Preferences... / Clock / Show date
-        DateFormat: "EEE d MMM  h:mm a"
+  # Menu (Clock)
+  - domain: com.apple.menuextra.clock
+    mode: '0600'
+    values:
+      # Open Date & Time Preferences... / Clock / Show date
+      DateFormat: "EEE d MMM  h:mm a"
 
-    # Menu (Power)
-    - domain: com.apple.menuextra.battery
-      mode: '0600'
-      values:
-        # Show Percentage
-        ShowPercent: 'YES'
+  # Menu (Power)
+  - domain: com.apple.menuextra.battery
+    mode: '0600'
+    values:
+      # Show Percentage
+      ShowPercent: 'YES'
 
-    # Symbolic Hot Keys
-    - domain: com.apple.symbolichotkeys
-      mode: '0600'
-      values:
-        # Disable slow motion effects (hidden setting)
-        # See http://apple.stackexchange.com/questions/66433 for more information
-        AppleSymbolicHotKeys:
-          # Ctrl + Shift + ↑
-          '34': {enabled: false}
-          # Ctrl + Shift + ↓
-          '35': {enabled: false}
-          # Shift + F10
-          '37': {enabled: false}
+  # Symbolic Hot Keys
+  - domain: com.apple.symbolichotkeys
+    mode: '0600'
+    values:
+      # Disable slow motion effects (hidden setting)
+      # See http://apple.stackexchange.com/questions/66433 for more information
+      AppleSymbolicHotKeys:
+        # Ctrl + Shift + ↑
+        '34': {enabled: false}
+        # Ctrl + Shift + ↓
+        '35': {enabled: false}
+        # Shift + F10
+        '37': {enabled: false}
 
-    # Screen Capture
-    - domain: com.apple.screencapture
-      mode: '0600'
-      values:
-        # Set screenshot location (hidden)
-        location: ~/Pictures/Screenshots
+  # Screen Capture
+  - domain: com.apple.screencapture
+    mode: '0600'
+    values:
+      # Set screenshot location (hidden)
+      location: ~/Pictures/Screenshots

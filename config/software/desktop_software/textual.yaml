@@ -1,78 +1,78 @@
-_: &textual
-  name: Textual
-  cask: textual
-  file:
-    # License
-    - path: ~/Library/Application Support/Textual
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Textual/Textual_User_License_v2.plist
-      source: !join_path [*app_license_dir, General/Textual/Textual_User_License_v2.plist]
-      mode: '0644'
-  plist:
-    domain: com.codeux.apps.textual
-    mode: '0600'
-    values:
-      # Preferences / General / Updates: / Just notify if there are updates
-      SUEnableAutomaticChecks: true
-      SUAutomaticallyUpdate: false
-      # Preferences / Style / Theme / Style: / Sapientia
-      'Theme -> Name': 'resource:Sapientia'
-      # Preferences / Style / Theme / Style: / Sapientia / Preferred Selection / Do not show this message again
-      'Text Input Prompt Suppression -> theme_override_info': true
+---
+name: Textual
+cask: textual
+file:
+  # License
+  - path: ~/Library/Application Support/Textual
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/Textual/Textual_User_License_v2.plist
+    source: !join_path [*app_license_dir, General/Textual/Textual_User_License_v2.plist]
+    mode: '0644'
+plist:
+  domain: com.codeux.apps.textual
+  mode: '0600'
+  values:
+    # Preferences / General / Updates: / Just notify if there are updates
+    SUEnableAutomaticChecks: true
+    SUAutomaticallyUpdate: false
+    # Preferences / Style / Theme / Style: / Sapientia
+    'Theme -> Name': 'resource:Sapientia'
+    # Preferences / Style / Theme / Style: / Sapientia / Preferred Selection / Do not show this message again
+    'Text Input Prompt Suppression -> theme_override_info': true
 
-      # Server / Server Properties...
-      World Controller Client Configurations:
-        - uniqueIdentifier: 17240721-0832-49A0-B64D-FE72E101810F
-          dictionaryVersion: 704
+    # Server / Server Properties...
+    World Controller Client Configurations:
+      - uniqueIdentifier: 17240721-0832-49A0-B64D-FE72E101810F
+        dictionaryVersion: 704
 
-          # Basic Settings / Channel List
-          channelList:
-            - channelName: '#ansible'
-              notifications: {}
-              uniqueIdentifier: E098773D-3D12-4A74-A41E-AB10BFF8F3C6
-            - channelName: '#chef'
-              notifications: {}
-              uniqueIdentifier: D1147EB5-800E-4964-AA0F-A1A46AE605DE
-            - channelName: '#puppet'
-              notifications: {}
-              uniqueIdentifier: 53A803F9-AC92-4451-9F76-0EB295D86AC2
-            - channelName: '#salt'
-              notifications: {}
-              uniqueIdentifier: 882298B8-3A7D-4C85-A6D0-F84B2495A7BB
-            - channelName: '#python'
-              notifications: {}
-              uniqueIdentifier: 3EEE5D4F-5F9F-4662-9B5C-72E32D1B9FBF
-            - channelName: '#terraform'
-              notifications: {}
-              uniqueIdentifier: 3ADD3253-F023-4CAA-B3E1-C8823F89251F
-            - channelName: '#falcon'
-              notifications: {}
-              uniqueIdentifier: 06211E93-B877-47B8-8029-28F1BA110E4F
+        # Basic Settings / Channel List
+        channelList:
+          - channelName: '#ansible'
+            notifications: {}
+            uniqueIdentifier: E098773D-3D12-4A74-A41E-AB10BFF8F3C6
+          - channelName: '#chef'
+            notifications: {}
+            uniqueIdentifier: D1147EB5-800E-4964-AA0F-A1A46AE605DE
+          - channelName: '#puppet'
+            notifications: {}
+            uniqueIdentifier: 53A803F9-AC92-4451-9F76-0EB295D86AC2
+          - channelName: '#salt'
+            notifications: {}
+            uniqueIdentifier: 882298B8-3A7D-4C85-A6D0-F84B2495A7BB
+          - channelName: '#python'
+            notifications: {}
+            uniqueIdentifier: 3EEE5D4F-5F9F-4662-9B5C-72E32D1B9FBF
+          - channelName: '#terraform'
+            notifications: {}
+            uniqueIdentifier: 3ADD3253-F023-4CAA-B3E1-C8823F89251F
+          - channelName: '#falcon'
+            notifications: {}
+            uniqueIdentifier: 06211E93-B877-47B8-8029-28F1BA110E4F
 
-          # Basic Settings / Connect Commands
-          onConnectCommands: []
+        # Basic Settings / Connect Commands
+        onConnectCommands: []
 
-          # Basic Settings / General
-          connectionName: freenode
-          serverAddress: chat.freenode.net
-          serverList:
-            - uniqueIdentifier: 0AF6BC0D-0CA4-4C38-ABCF-A6101DC79322
-              prefersSecuredConnection: false
-              serverAddress: chat.freenode.net
-              serverPort: 6667
-          autoConnect: true
+        # Basic Settings / General
+        connectionName: freenode
+        serverAddress: chat.freenode.net
+        serverList:
+          - uniqueIdentifier: 0AF6BC0D-0CA4-4C38-ABCF-A6101DC79322
+            prefersSecuredConnection: false
+            serverAddress: chat.freenode.net
+            serverPort: 6667
+        autoConnect: true
 
-          # Basic Settings / Identity
-          nickname: fgimian
-          awayNickname: ''
-          alternateNicknames: []
-          username: fgimian
-          realName: Fotis Gimian
+        # Basic Settings / Identity
+        nickname: fgimian
+        awayNickname: ''
+        alternateNicknames: []
+        username: fgimian
+        realName: Fotis Gimian
 
-          # Advanced / Proxy Server
-          proxyAddress: ''
-          proxyUsername: ''
+        # Advanced / Proxy Server
+        proxyAddress: ''
+        proxyUsername: ''
 
-          # Advanced / Network Socket
-          connectionPrefersModernCiphers: true
+        # Advanced / Network Socket
+        connectionPrefersModernCiphers: true

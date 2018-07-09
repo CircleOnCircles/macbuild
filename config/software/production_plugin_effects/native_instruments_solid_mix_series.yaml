@@ -1,6 +1,6 @@
-_: &native_instruments_solid_mix_series
-  name: Native Instruments Solid Mix Series
-  cask:
-    - native-instruments-solid-bus-comp-fx
-    - native-instruments-solid-dynamics-fx
-    - native-instruments-solid-eq-fx
+---
+name: Native Instruments Solid Mix Series
+cask:
+  - native-instruments-solid-bus-comp-fx
+  - native-instruments-solid-dynamics-fx
+  - native-instruments-solid-eq-fx

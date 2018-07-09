@@ -1,3 +1,3 @@
-_: &native_instruments_komplete_kontrol
-  name: Native Instruments Komplete Kontrol
-  cask: native-instruments-komplete-kontrol
+---
+name: Native Instruments Komplete Kontrol
+cask: native-instruments-komplete-kontrol

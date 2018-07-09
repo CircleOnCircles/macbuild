@@ -1,11 +1,11 @@
-_: &u_he_uhbik
-  name: u-he Uhbik
-  cask: u-he-uhbik
-  file:
-    # License
-    - path: ~/Library/Application Support/u-he
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/u-he/com.u-he.Uhbik.plist
-      source: !join_path [*app_license_dir, Music Production/u-he/u-he Uhbik/com.u-he.Uhbik.plist]
-      mode: '0644'
+---
+name: u-he Uhbik
+cask: u-he-uhbik
+file:
+  # License
+  - path: ~/Library/Application Support/u-he
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/u-he/com.u-he.Uhbik.plist
+    source: !join_path [*app_license_dir, Music Production/u-he/u-he Uhbik/com.u-he.Uhbik.plist]
+    mode: '0644'

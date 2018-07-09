@@ -1,9 +1,9 @@
-_: &ilok_license_manager
-  name: iLok License Manager
-  cask: ilok-license-manager
-  plist:
-    domain: com.paceap.iLokLicenseManager
-    mode: '0600'
-    values:
-      # Preferences / General / Automatic Updates
-      "AutoUpdater\xB7Enabled": true
+---
+name: iLok License Manager
+cask: ilok-license-manager
+plist:
+  domain: com.paceap.iLokLicenseManager
+  mode: '0600'
+  values:
+    # Preferences / General / Automatic Updates
+    "AutoUpdater\xB7Enabled": true

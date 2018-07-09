@@ -1,5 +1,5 @@
-_: &steinberg_padshop
-  name: Steinberg Padshop
-  cask:
-    - steinberg-padshop
-    - steinberg-padshop-update
+---
+name: Steinberg Padshop
+cask:
+  - steinberg-padshop
+  - steinberg-padshop-update

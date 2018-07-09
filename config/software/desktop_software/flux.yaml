@@ -1,20 +1,20 @@
-_: &flux
-  name: Flux
-  cask: flux
-  plist:
-    domain: org.herf.Flux
-    mode: '0600'
-    values:
-      # Daytime
-      dayColorTemp: 4000.0
-      # Sunset
-      nightColorTemp: 2800.0
-      # Bedtime
-      lateColorTemp: 2400.0
-      # Location
-      locationTextField: Melbourne, Australia
-      locationType: L
-      location: '-37.814107,144.963280'
-      # 8:00 AM is when I wake up
-      wakeTime: 480
-  login_item: true
+---
+name: Flux
+cask: flux
+plist:
+  domain: org.herf.Flux
+  mode: '0600'
+  values:
+    # Daytime
+    dayColorTemp: 4000.0
+    # Sunset
+    nightColorTemp: 2800.0
+    # Bedtime
+    lateColorTemp: 2400.0
+    # Location
+    locationTextField: Melbourne, Australia
+    locationType: L
+    location: '-37.814107,144.963280'
+    # 8:00 AM is when I wake up
+    wakeTime: 480
+login_item: true

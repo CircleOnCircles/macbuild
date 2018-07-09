@@ -1,20 +1,20 @@
-_: &handyprint
-  name: handyPrint (AirPrint Activator)
-  cask: handyprint
-  file:
-    - path: ~/Library/Application Support/handyPrint
-      state: directory
-      mode: '0755'
-  plist:
-    - domain: com.netputing.handyPrintPreferences
-      source: !join_path [*app_license_dir, General/handyPrint/com.netputing.handyPrintPreferences.plist]
-      mode: '0644'
-    - path: ~/Library/Application Support/handyPrint/printers.plist
-      mode: '0644'
-      values:
-        # Preferences / Printers
-        Save in folder Sheet Music:
-          FOLDER: /Users/fots/Music/Sheet Music
-          NAME: Save in folder Sheet Music
-          SHARING: 'YES'
-          TYPE: STF
+---
+name: handyPrint (AirPrint Activator)
+cask: handyprint
+file:
+  - path: ~/Library/Application Support/handyPrint
+    state: directory
+    mode: '0755'
+plist:
+  - domain: com.netputing.handyPrintPreferences
+    source: !join_path [*app_license_dir, General/handyPrint/com.netputing.handyPrintPreferences.plist]
+    mode: '0644'
+  - path: ~/Library/Application Support/handyPrint/printers.plist
+    mode: '0644'
+    values:
+      # Preferences / Printers
+      Save in folder Sheet Music:
+        FOLDER: /Users/fots/Music/Sheet Music
+        NAME: Save in folder Sheet Music
+        SHARING: 'YES'
+        TYPE: STF

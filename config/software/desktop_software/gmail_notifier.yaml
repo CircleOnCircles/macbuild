@@ -1,4 +1,4 @@
-_: &gmail_notifier
-  name: Gmail Notifier
-  cask: gmail-notifier
-  login_item: true
+---
+name: Gmail Notifier
+cask: gmail-notifier
+login_item: true

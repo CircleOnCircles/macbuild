@@ -1,3 +1,3 @@
-_: &native_instruments_battery_4
-  name: Native Instruments Battery 4
-  cask: native-instruments-battery-4
+---
+name: Native Instruments Battery 4
+cask: native-instruments-battery-4

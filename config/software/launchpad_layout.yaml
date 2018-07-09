@@ -1,158 +1,158 @@
-_: &launchpad_layout
-  apps:
-    # Page 1: Apple
-    -
-      # Most Useful Apps
-      - Calculator
-      - Safari
-      - iTunes
-      - iBooks
-      - Terminal
-      - App Store
-      - System Preferences
-      # iWork
-      - Pages
-      - Numbers
-      - Keynote
-      # Apps
-      - folder_title: Apps
-        folder_layout:
-          -
-            - Mail
-            - Contacts
-            - Calendar
-            - Reminders
-            - Notes
-            - Maps
-            - Messages
-            - FaceTime
-            - Photo Booth
-            - Photos
-            - Preview
-            - Dictionary
-            - Siri
-            - Mission Control
-            - Dashboard
-      # Other Utilities
-      - folder_title: Other
-        folder_layout:
-          -
-            - QuickTime Player
-            - TextEdit
-            - Grapher
-            - DVD Player
-            - Time Machine
-            - Font Book
-            - Chess
-            - Stickies
-            - Image Capture
-            - VoiceOver Utility
-            - AirPort Utility
-            - Migration Assistant
-            - Activity Monitor
-            - Console
-            - Keychain Access
-            - System Information
-            - Automator
-            - Script Editor
-            - Disk Utility
-            - Boot Camp Assistant
-            - Digital Color Meter
-            - ColorSync Utility
-            - Grab
-            - Bluetooth File Exchange
-            - Audio MIDI Setup
-    # Page 2: Desktop Software
-    -
-      # Proudctivity
-      - Affinity Designer
-      - Affinity Photo
-      - Things
-      - Sublime Text
-      - Microsoft Excel
-      - Microsoft Word
-      - folder_title: Microsoft Office (Other)
-        folder_layout:
-          -
-            - OneDrive
-            - Microsoft OneNote
-            - Microsoft Outlook
-            - Microsoft PowerPoint
-      # General
-      - 1Password 6
-      - DaisyDisk
-      - Entropy
-      # Social
-      - Textual
-      - Skype
-      # Internet
-      - Waterfox
-      - ForkLift
-      - Transmission
-      # Virtualization
-      - VMware Fusion
-      # Media Playback & Entertainment
-      - MPlayerX
-      - Cog
-      - Spotify
-      # Games
-      - OpenEmu
-      # Menu Bar Utilities
-      - folder_title: Utilities
-        folder_layout:
-          -
-            - Dropbox
-            - BetterSnapTool
-            - Flux
-            - handyPrint
-            - Gmail Notifier
-            - iStat Mini
-            - OTP Auth
-    # Page 3: Music Production Software
-    -
-      # Audio Tools
-      - Audio Hijack
-      - ocenaudio
-      - XLD
-      # DAWs & Tools
-      - Ableton Live 10 Suite
-      - Cubase 9.5
-      - MuseScore 2
-      - Pianoteq 6
-      - Omnisphere
-      # Audio Hardware
-      - Focusrite Control
-      - ReMOTESLEditor
-      - TouchOSC Editor
-      # Audio Software Managers
-      - folder_title: Software Managers
-        folder_layout:
-          -
-            - iLok License Manager
-            - eLicenser Control Center
-            - HALion Library Manager
-            - Native Access
-            - Sonalksis Plugin Manager
-      # Native Instruments
-      - folder_title: Native Instruments (Other)
-        folder_layout:
-          -
-            - Battery 4
-            - Kontakt 5
-            - Massive
-            - ServiceCenter
+---
+apps:
+  # Page 1: Apple
+  -
+    # Most Useful Apps
+    - Calculator
+    - Safari
+    - iTunes
+    - iBooks
+    - Terminal
+    - App Store
+    - System Preferences
+    # iWork
+    - Pages
+    - Numbers
+    - Keynote
+    # Apps
+    - folder_title: Apps
+      folder_layout:
+        -
+          - Mail
+          - Contacts
+          - Calendar
+          - Reminders
+          - Notes
+          - Maps
+          - Messages
+          - FaceTime
+          - Photo Booth
+          - Photos
+          - Preview
+          - Dictionary
+          - Siri
+          - Mission Control
+          - Dashboard
+    # Other Utilities
+    - folder_title: Other
+      folder_layout:
+        -
+          - QuickTime Player
+          - TextEdit
+          - Grapher
+          - DVD Player
+          - Time Machine
+          - Font Book
+          - Chess
+          - Stickies
+          - Image Capture
+          - VoiceOver Utility
+          - AirPort Utility
+          - Migration Assistant
+          - Activity Monitor
+          - Console
+          - Keychain Access
+          - System Information
+          - Automator
+          - Script Editor
+          - Disk Utility
+          - Boot Camp Assistant
+          - Digital Color Meter
+          - ColorSync Utility
+          - Grab
+          - Bluetooth File Exchange
+          - Audio MIDI Setup
+  # Page 2: Desktop Software
+  -
+    # Proudctivity
+    - Affinity Designer
+    - Affinity Photo
+    - Things
+    - Sublime Text
+    - Microsoft Excel
+    - Microsoft Word
+    - folder_title: Microsoft Office (Other)
+      folder_layout:
+        -
+          - OneDrive
+          - Microsoft OneNote
+          - Microsoft Outlook
+          - Microsoft PowerPoint
+    # General
+    - 1Password 6
+    - DaisyDisk
+    - Entropy
+    # Social
+    - Textual
+    - Skype
+    # Internet
+    - Waterfox
+    - ForkLift
+    - Transmission
+    # Virtualization
+    - VMware Fusion
+    # Media Playback & Entertainment
+    - MPlayerX
+    - Cog
+    - Spotify
+    # Games
+    - OpenEmu
+    # Menu Bar Utilities
+    - folder_title: Utilities
+      folder_layout:
+        -
+          - Dropbox
+          - BetterSnapTool
+          - Flux
+          - handyPrint
+          - Gmail Notifier
+          - iStat Mini
+          - OTP Auth
+  # Page 3: Music Production Software
+  -
+    # Audio Tools
+    - Audio Hijack
+    - ocenaudio
+    - XLD
+    # DAWs & Tools
+    - Ableton Live 10 Suite
+    - Cubase 9.5
+    - MuseScore 2
+    - Pianoteq 6
+    - Omnisphere
+    # Audio Hardware
+    - Focusrite Control
+    - ReMOTESLEditor
+    - TouchOSC Editor
+    # Audio Software Managers
+    - folder_title: Software Managers
+      folder_layout:
+        -
+          - iLok License Manager
+          - eLicenser Control Center
+          - HALion Library Manager
+          - Native Access
+          - Sonalksis Plugin Manager
+    # Native Instruments
+    - folder_title: Native Instruments (Other)
+      folder_layout:
+        -
+          - Battery 4
+          - Kontakt 5
+          - Massive
+          - ServiceCenter
 
-  widgets:
-    -
-      - Calculator
-      - Calendar
-      - Contacts
-      - Dictionary
-      - Movies
-      - Stickies
-      - Stocks
-      - Tile Game
-      - Unit Converter
-      - Weather
-      - Web Clip
-      - World Clock
+widgets:
+  -
+    - Calculator
+    - Calendar
+    - Contacts
+    - Dictionary
+    - Movies
+    - Stickies
+    - Stocks
+    - Tile Game
+    - Unit Converter
+    - Weather
+    - Web Clip
+    - World Clock

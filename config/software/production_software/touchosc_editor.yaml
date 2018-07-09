@@ -1,5 +1,5 @@
-_: &touchosc_editor
-  name: TouchOSC Editor
-  cask:
-    - java6
-    - touchosc-editor
+---
+name: TouchOSC Editor
+cask:
+  - java6
+  - touchosc-editor

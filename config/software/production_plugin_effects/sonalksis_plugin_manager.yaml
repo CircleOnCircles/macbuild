@@ -1,3 +1,3 @@
-_: &sonalksis_plugin_manager
-  name: Sonalksis Plugin Manager
-  cask: sonalksis-plugin-manager
+---
+name: Sonalksis Plugin Manager
+cask: sonalksis-plugin-manager

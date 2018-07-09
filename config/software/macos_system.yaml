@@ -1,11 +1,11 @@
-_: &macos_system
-  # Set the appropriate timezone
-  timezone: Australia/Melbourne
+---
+# Set the appropriate timezone
+timezone: Australia/Melbourne
 
-  # Set the computer and display sleep times
-  computer_sleep_time: Never
-  display_sleep_time: Never
+# Set the computer and display sleep times
+computer_sleep_time: Never
+display_sleep_time: Never
 
-  # Set the hostname
-  local_host_name: Fotsies-MacBook-Pro
-  computer_name: Fotsies MacBook Pro
+# Set the hostname
+local_host_name: Fotsies-MacBook-Pro
+computer_name: Fotsies MacBook Pro

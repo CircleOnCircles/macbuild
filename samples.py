@@ -220,17 +220,17 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
             elite.package(path=os.path.join(destination, library_config.installer), sudo=True)
 
 
-@elite.main(config_path='config', config_order=['global.yaml', 'samples.yaml'])
+@elite.main(config_path='config/samples.yaml')
 def main(elite, config, printer):
     printer.info('Determining sample library and music software sources.')
 
-    sample_library_source = config.sample_library_source
+    sample_library_source = config.globals['sample_library_source']
     if sample_library_source:
         elite.info(message=f'using sample library source {sample_library_source}')
     else:
         elite.fail(message='unable to find any suitable sample library software source')
 
-    music_software_source = config.music_software_source
+    music_software_source = config.globals['music_software_source']
     if music_software_source:
         elite.info(message=f'using music software software {music_software_source}')
     else:

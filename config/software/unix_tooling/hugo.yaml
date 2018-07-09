@@ -1,4 +1,4 @@
-_: &hugo
-  name: Hugo
-  brew: hugo
-  pip: Pygments
+---
+name: Hugo
+brew: hugo
+pip: Pygments

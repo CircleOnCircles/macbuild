@@ -1,3 +1,6 @@
+---
+globals: !include globals.yaml
+
 # Destination path to install all sample libraries to
 sample_library_dir: /Volumes/Sample Libraries
 

@@ -1,35 +1,35 @@
-_: &spotify
-  name: Spotify
-  cask: spotify
+---
+name: Spotify
+cask: spotify
 
-  file:
-    - path: ~/Library/Application Support/Spotify
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Spotify/Users
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Spotify/Users/fgimian-user
-      state: directory
-      mode: '0755'
+file:
+  - path: ~/Library/Application Support/Spotify
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/Spotify/Users
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/Spotify/Users/fgimian-user
+    state: directory
+    mode: '0755'
 
-  global_settings:
-    # Preferences / Startup and Window Behaviour /
-    # Open Spotify automatically after your login into the computer / No
-    app.autostart-mode: 'off'
-    app.autostart-banner-seen: true
-    app.autostart-configured: true
+global_settings:
+  # Preferences / Startup and Window Behaviour /
+  # Open Spotify automatically after your login into the computer / No
+  app.autostart-mode: 'off'
+  app.autostart-banner-seen: true
+  app.autostart-configured: true
 
-  username: fgimian
-  user_settings:
-    # View / Disable 'Right Sidebar'
-    ui.show_friend_feed: false
-    # Preferences / Music Quality / High quality streaming (Premium only)
-    audio.sync_bitrate_enumeration: 4
-    audio.play_bitrate_enumeration: 4
-    # Preferences / Playback / Disable 'Set the same volume level for all songs'
-    audio.normalize_v2: false
-    # Preferences / Autoplay / Disable 'Autoplay similar songs when your music ends.'
-    app.player.autoplay: false
+username: fgimian
+user_settings:
+  # View / Disable 'Right Sidebar'
+  ui.show_friend_feed: false
+  # Preferences / Music Quality / High quality streaming (Premium only)
+  audio.sync_bitrate_enumeration: 4
+  audio.play_bitrate_enumeration: 4
+  # Preferences / Playback / Disable 'Set the same volume level for all songs'
+  audio.normalize_v2: false
+  # Preferences / Autoplay / Disable 'Autoplay similar songs when your music ends.'
+  app.player.autoplay: false
 
-  login_item: false
+login_item: false

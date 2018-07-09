@@ -1,14 +1,14 @@
-_: &audio_hijack
-  name: Audio Hijack
-  cask: audio-hijack
-  symlink:
-    # Preferences
-    - path: ~/Library/Application Support/Audio Hijack
-      source: ~/Documents/Audio Hijack
-  plist:
-    domain: com.rogueamoeba.audiohijack3
-    source: !join_path [*app_license_dir, General/Audio Hijack/com.rogueamoeba.audiohijack3.plist]
-    mode: '0600'
-    values:
-      # Welcome to Audio Hijack 3 screen shown
-      homeWindowShown: true
+---
+name: Audio Hijack
+cask: audio-hijack
+symlink:
+  # Preferences
+  - path: ~/Library/Application Support/Audio Hijack
+    source: ~/Documents/Audio Hijack
+plist:
+  domain: com.rogueamoeba.audiohijack3
+  source: !join_path [*app_license_dir, General/Audio Hijack/com.rogueamoeba.audiohijack3.plist]
+  mode: '0600'
+  values:
+    # Welcome to Audio Hijack 3 screen shown
+    homeWindowShown: true

@@ -1,26 +1,26 @@
-_: &dock_layout
-  # Dock applications (in the left section)
-  apps:
-    - ForkLift
-    - Siri
-    - Launchpad
-    - Safari
-    - Sublime Text
-    - Utilities/Terminal
-    - Cubase 9.5
-    - MuseScore 2
-    - XLD
-    - Focusrite Control
-    - Spotify
-    - OpenEmu
-    - Messages
-    - Skype
-    - Textual
-    - Things3
-    - VMware Fusion
-    - App Store
-    - System Preferences
+---
+# Dock applications (in the left section)
+apps:
+- ForkLift
+- Siri
+- Launchpad
+- Safari
+- Sublime Text
+- Utilities/Terminal
+- Cubase 9.5
+- MuseScore 2
+- XLD
+- Focusrite Control
+- Spotify
+- OpenEmu
+- Messages
+- Skype
+- Textual
+- Things3
+- VMware Fusion
+- App Store
+- System Preferences
 
-  # Dock folders and URLs (in the right section)
-  other:
-    - path: ~/Downloads
+# Dock folders and URLs (in the right section)
+other:
+- path: ~/Downloads

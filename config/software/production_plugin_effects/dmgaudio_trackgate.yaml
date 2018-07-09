@@ -1,14 +1,14 @@
-_: &dmgaudio_trackgate
-  name: DMG Audio TrackGate
-  cask: dmgaudio-trackgate
-  file:
-    # License
-    - path: ~/Library/Application Support/DMGAudio
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/TrackGate
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/TrackGate/license
-      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackGate/license]
-      mode: '0644'
+---
+name: DMG Audio TrackGate
+cask: dmgaudio-trackgate
+file:
+  # License
+  - path: ~/Library/Application Support/DMGAudio
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/TrackGate
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/TrackGate/license
+    source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackGate/license]
+    mode: '0644'

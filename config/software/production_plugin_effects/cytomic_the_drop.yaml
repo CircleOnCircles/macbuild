@@ -1,3 +1,3 @@
-_: &cytomic_the_drop
-  name: Cytomic The Drop
-  cask: cytomic-the-drop
+---
+name: Cytomic The Drop
+cask: cytomic-the-drop

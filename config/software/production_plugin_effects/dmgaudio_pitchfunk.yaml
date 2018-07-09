@@ -1,14 +1,14 @@
-_: &dmgaudio_pitchfunk
-  name: DMG Audio PitchFunk
-  cask: dmgaudio-pitchfunk
-  file:
-    # License
-    - path: ~/Library/Application Support/DMGAudio
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/PitchFunk
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/PitchFunk/license
-      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio PitchFunk/license]
-      mode: '0644'
+---
+name: DMG Audio PitchFunk
+cask: dmgaudio-pitchfunk
+file:
+  # License
+  - path: ~/Library/Application Support/DMGAudio
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/PitchFunk
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/PitchFunk/license
+    source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio PitchFunk/license]
+    mode: '0644'

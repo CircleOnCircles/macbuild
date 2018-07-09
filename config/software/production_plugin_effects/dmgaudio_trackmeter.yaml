@@ -1,14 +1,14 @@
-_: &dmgaudio_trackmeter
-  name: DMG Audio TrackMeter
-  cask: dmgaudio-trackmeter
-  file:
-    # License
-    - path: ~/Library/Application Support/DMGAudio
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/TrackMeter
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/TrackMeter/license
-      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackMeter/license]
-      mode: '0644'
+---
+name: DMG Audio TrackMeter
+cask: dmgaudio-trackmeter
+file:
+  # License
+  - path: ~/Library/Application Support/DMGAudio
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/TrackMeter
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/TrackMeter/license
+    source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio TrackMeter/license]
+    mode: '0644'

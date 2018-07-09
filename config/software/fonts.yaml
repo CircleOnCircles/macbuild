@@ -1,5 +1,5 @@
-_: &fonts
-  name: Fonts
-  cask:
-    - font-source-code-pro
-    - font-lato
+---
+name: Fonts
+cask:
+  - font-source-code-pro
+  - font-lato

@@ -1,14 +1,14 @@
-_: &dmgaudio_compassion
-  name: DMG Audio Compassion
-  cask: dmgaudio-compassion
-  file:
-    # License
-    - path: ~/Library/Application Support/DMGAudio
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/Compassion
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/DMGAudio/Compassion/license
-      source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Compassion/license]
-      mode: '0644'
+---
+name: DMG Audio Compassion
+cask: dmgaudio-compassion
+file:
+  # License
+  - path: ~/Library/Application Support/DMGAudio
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/Compassion
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/DMGAudio/Compassion/license
+    source: !join_path [*app_license_dir, Music Production/DMGAudio/DMGAudio Compassion/license]
+    mode: '0644'

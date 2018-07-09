@@ -1,3 +1,3 @@
-_: &native_instruments_reaktor_spark
-  name: Native Instruments Reaktor Spark
-  cask: native-instruments-reaktor-spark-r2
+---
+name: Native Instruments Reaktor Spark
+cask: native-instruments-reaktor-spark-r2

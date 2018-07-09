@@ -1,3 +1,4 @@
+---
 # Set license root directory
 app_license_dir: &app_license_dir '~/Documents/Software Licenses'
 

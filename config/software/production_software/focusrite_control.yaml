@@ -1,17 +1,17 @@
-_: &focusrite_control
-  name: Focusrite Control
-  cask: focusrite-control
-  file:
-    # Preferences
-    - path: ~/Library/Application Support/Focusrite
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Focusrite/Focusrite Control
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Focusrite/Focusrite Control/Settings
-      state: directory
-      mode: '0755'
-    - path: ~/Library/Application Support/Focusrite/Focusrite Control/Settings/Focusrite Control.settings
-      source: files/focusrite_control/Focusrite Control.settings
-      mode: '0644'
+---
+name: Focusrite Control
+cask: focusrite-control
+file:
+  # Preferences
+  - path: ~/Library/Application Support/Focusrite
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/Focusrite/Focusrite Control
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/Focusrite/Focusrite Control/Settings
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/Focusrite/Focusrite Control/Settings/Focusrite Control.settings
+    source: files/focusrite_control/Focusrite Control.settings
+    mode: '0644'
