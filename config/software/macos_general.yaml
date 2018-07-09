@@ -20,10 +20,6 @@ _: &macos_general
     - path: ~/Pictures/Screenshots
       state: directory
 
-    # Create a dedicated location for development work
-    - path: *development_dir
-      state: directory
-
     # SSH Configuration (Sierra specific)
     - source: files/dotfiles/.ssh/config
       path: ~/.ssh/config
