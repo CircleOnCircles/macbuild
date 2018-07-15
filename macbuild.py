@@ -74,7 +74,7 @@ def main(elite, config, printer):
                 )
                 if not app_file.exists:
                     elite.fail(
-                        message=f'Please install {appstore} from the App Store',
+                        message=f'please install {appstore} from the App Store',
                         ignore_failed=True
                     )
 
