@@ -3,7 +3,7 @@ import os
 import re
 from collections import namedtuple
 
-import elite
+from elite import Config, automate
 
 
 def komplete_libraries(elite, config, printer, sample_library_source):
@@ -27,10 +27,10 @@ def komplete_libraries(elite, config, printer, sample_library_source):
             ]
         )
 
-        if len(isos.paths) != 1:
+        if len(isos.data['paths']) != 1:
             elite.fail(message='unable to find sample library iso image')
 
-        iso = isos.paths[0]
+        iso = isos.data['paths'][0]
 
         # Build the destination base directory
         destination = os.path.join(
@@ -40,21 +40,22 @@ def komplete_libraries(elite, config, printer, sample_library_source):
 
         elite.file(path=destination, state='directory')
 
-        mount = elite.run(command=f'hdiutil mount "{iso}"', changed=False)
-        mountpoint = mount.stdout.rstrip().split('\t')[-1]
+        with elite.options(changed=False):
+            mount = elite.run(command=['hdiutil', 'mount', iso])
+            mountpoint = mount.data['stdout'].rstrip().split('\t')[-1]
 
         packages = elite.find(path=mountpoint, patterns=['* Installer Mac.pkg'])
 
-        if len(packages.paths) != 1:
+        if len(packages.data['paths']) != 1:
             elite.fail(
                 message='Unable to determine the installer package for this library, skipping'
             )
 
-        package = packages.paths[0]
+        package = packages.data['paths'][0]
 
         # Obtain all installer choices
         choices = elite.package_choices(path=package)
-        for choice in choices.choices:
+        for choice in choices.data['choices']:
             if (
                 choice['choiceAttribute'] == 'customLocation' and
                 choice['attributeSetting'] == '/Users/Shared'
@@ -66,19 +67,20 @@ def komplete_libraries(elite, config, printer, sample_library_source):
                 'Unable to identify install location choice identifier for this library, skipping'
             ))
 
-        elite.package(
-            path=package,
-            choices=[
-                {
-                    'choiceIdentifier': choice_library_identifier,
-                    'choiceAttribute': 'customLocation',
-                    'attributeSetting': destination
-                }
-            ],
-            sudo=True
-        )
+        with elite.options(sudo=True):
+            elite.package(
+                path=package,
+                choices=[
+                    {
+                        'choiceIdentifier': choice_library_identifier,
+                        'choiceAttribute': 'customLocation',
+                        'attributeSetting': destination
+                    }
+                ]
+            )
 
-        elite.run(command=f'hdiutil unmount "{mountpoint}"', changed=False, ignore_failed=True)
+        with elite.options(changed=False, ignore_failed=True):
+            elite.run(command=['hdiutil', 'unmount', mountpoint])
 
     elite.file(
         path=os.path.join(config.sample_library_dir, 'Library'),
@@ -98,18 +100,18 @@ def omnisphere_steam_library(elite, config, printer, music_software_source):
     steam_symlink = '~/Library/Application Support/Spectrasonics/STEAM'
 
     elite.file(path=destination, state='directory')
-    elite.rsync(source=source, path=destination, options='--exclude=.DS_Store --no-perms')
+    elite.rsync(source=source, path=destination, options=['--exclude=.DS_Store', '--no-perms'])
 
-    for path in elite.find(path=destination, types=['directory']).paths:
+    for path in elite.find(path=destination, types=['directory']).data['paths']:
         elite.file(path=path, state='directory', mode='0755')
 
-    for path in elite.find(path=destination, types=['file']).paths:
+    for path in elite.find(path=destination, types=['file']).data['paths']:
         elite.file(path=path, mode='0644')
 
     elite.file(path=os.path.dirname(steam_symlink), state='directory')
 
     file_info = elite.file_info(path=steam_symlink)
-    if file_info.file_type == 'directory':
+    if file_info.data['file_type'] == 'directory':
         elite.file(path=steam_symlink, state='absent')
 
     elite.file(path=steam_symlink, source=os.path.join(destination, 'STEAM'), state='symlink')
@@ -160,14 +162,14 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
             ]
         )
 
-        if len(library_paths.paths) != 1:
+        if len(library_paths.data['paths']) != 1:
             elite.fail(message='unable to find sample library source directory')
 
-        library_path = library_paths.paths[0]
+        library_path = library_paths.data['paths'][0]
 
         # Find all ZIP and RAR files present in the downloaded library
         archives = elite.find(path=library_path, types=['file'], patterns=['*.zip', '*.rar'])
-        if not archives.paths:
+        if not archives.data['paths']:
             elite.fail(message='no archives were found in the sample library source directory')
 
         # Build the destination base directory
@@ -178,11 +180,11 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
         # Ensure that the parent / vendor directory exists
         elite.file(path=os.path.dirname(destination_base_dir), state='directory')
 
-        for archive in archives.paths:
+        for archive in archives.data['paths']:
             # Check for multipart RAR archives and only extract part 1
             if (
-                re.search('\.part[0-9]+\.rar$', archive) and
-                not re.search('\.part0*1\.rar$', archive)
+                re.search(r'\.part[0-9]+\.rar$', archive) and
+                not re.search(r'\.part0*1\.rar$', archive)
             ):
                 continue
 
@@ -217,11 +219,14 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
 
         # Run the installer package if required
         if library_config.installer:
-            elite.package(path=os.path.join(destination, library_config.installer), sudo=True)
+            with elite.options(sudo=True):
+                elite.package(path=os.path.join(destination, library_config.installer))
 
 
-@elite.main(config_path='config/samples.yaml')
-def main(elite, config, printer):
+@automate()
+def main(elite, printer):
+    config = Config('config/samples.yaml')
+
     printer.info('Determining sample library and music software sources.')
 
     sample_library_source = config.globals['sample_library_source']

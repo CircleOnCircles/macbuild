@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import elite
+from elite import ActionError, Config, automate
 
 
 def software_config(software, key):
@@ -7,12 +7,17 @@ def software_config(software, key):
     return key if isinstance(key, list) else [key]
 
 
-@elite.main(config_path='config/software.yaml')
-def main(elite, config, printer):
-    printer.heading('Initialization')
+@automate()
+def main(elite, printer):
+    printer.heading('Preparation')
 
-    printer.info('Sudo')
-    elite.run(command='sudo -nv', changed=False)
+    printer.info('Homebrew Update')
+    elite.brew_update()
+
+    elite.tap(name='homebrew/cask-fonts')
+    elite.cask(name='font-source-code-pro', state='latest')
+
+    config = Config('config/software.yaml')
 
     printer.info('Music Software Source')
     music_software_source = config.globals['music_software_source']
@@ -21,29 +26,28 @@ def main(elite, config, printer):
         elite.info(message=f'using music software software {music_software_source}')
     else:
         env = {}
-        elite.fail(message='unable to find any suitable music software source', ignore_failed=True)
+        with elite.options(ignore_failed=True):
+            elite.fail(message='unable to find any suitable music software source')
 
-    printer.info('Homebrew Update')
-    elite.brew_update()
+    printer.heading('macOS')
 
     printer.info('macOS System')
     timezone = config.macos_system['timezone']
     computer_sleep_time = config.macos_system['computer_sleep_time']
     display_sleep_time = config.macos_system['display_sleep_time']
 
-    elite.system_setup(
-        timezone=timezone,
-        computer_sleep_time=computer_sleep_time,
-        display_sleep_time=display_sleep_time,
-        sudo=True
-    )
+    with elite.options(sudo=True):
+        elite.system_setup(
+            timezone=timezone,
+            computer_sleep_time=computer_sleep_time,
+            display_sleep_time=display_sleep_time
+        )
 
     local_host_name = config.macos_system['local_host_name']
     computer_name = config.macos_system['computer_name']
 
-    elite.hostname(
-        local_host_name=local_host_name, computer_name=computer_name, sudo=True
-    )
+    with elite.options(sudo=True):
+        elite.hostname(local_host_name=local_host_name, computer_name=computer_name)
 
     for group, software_items in config.software.items():
         # Print the software group heading
@@ -72,21 +76,17 @@ def main(elite, config, printer):
                 app_file = elite.file_info(
                     path=f'/Applications/{appstore}.app/Contents/_MASReceipt/receipt'
                 )
-                if not app_file.exists:
-                    elite.fail(
-                        message=f'please install {appstore} from the App Store',
-                        ignore_failed=True
-                    )
+                if not app_file.data['exists']:
+                    with elite.options(ignore_failed=True):
+                        elite.fail(message=f'please install {appstore} from the App Store')
 
             # Cask packages
             cask_install_failed = False
             for cask in software_config(software, 'cask'):
-                cask_install = elite.cask(
-                    name=cask, env=env, ignore_failed=True, state='latest'
-                )
-                if not cask_install.ok:
-                    cask_install_failed = True
-                    break
+                with elite.options(env=env, ignore_failed=True):
+                    cask_install = elite.cask(name=cask, state='latest')
+                    if not cask_install.ok:
+                        cask_install_failed = True
 
             if cask_install_failed:
                 continue
@@ -105,16 +105,16 @@ def main(elite, config, printer):
 
             # Files
             for file in software_config(software, 'file'):
-                elite.file(
-                    path=file['path'],
-                    source=file.get('source'),
-                    state=file.get('state', 'file'),
-                    mode=file.get('mode'),
-                    owner=file.get('owner'),
-                    group=file.get('group'),
-                    flags=file.get('flags'),
-                    sudo=file.get('sudo', False)
-                )
+                with elite.options(sudo=file.get('sudo', False)):
+                    elite.file(
+                        path=file['path'],
+                        source=file.get('source'),
+                        state=file.get('state', 'file'),
+                        mode=file.get('mode'),
+                        owner=file.get('owner'),
+                        group=file.get('group'),
+                        flags=file.get('flags')
+                    )
 
             # Dowlnoads
             for download in software_config(software, 'download'):
@@ -127,20 +127,20 @@ def main(elite, config, printer):
             # Symbolic links
             for symlink in software_config(software, 'symlink'):
                 symlink_health = elite.file_info(path=symlink['path'])
-                if symlink_health.exists and symlink_health.file_type != 'symlink':
+                if symlink_health.data['exists'] and symlink_health.data['file_type'] != 'symlink':
                     elite.file(path=symlink['path'], state='absent')
                 elite.file(path=symlink['path'], source=symlink['source'], state='symlink')
 
             # plist settings
             for plist in software_config(software, 'plist'):
-                elite.plist(
-                    domain=plist.get('domain'),
-                    container=plist.get('container'),
-                    path=plist.get('path'),
-                    source=plist.get('source'),
-                    values=plist.get('values', {}),
-                    sudo=plist.get('sudo', False)
-                )
+                with elite.options(sudo=plist.get('sudo', False)):
+                    elite.plist(
+                        domain=plist.get('domain'),
+                        container=plist.get('container'),
+                        path=plist.get('path'),
+                        source=plist.get('source'),
+                        values=plist.get('values', {})
+                    )
 
             # JSON settings
             for json in software_config(software, 'json'):
@@ -152,11 +152,8 @@ def main(elite, config, printer):
                 global_settings = software.pop('global_settings', {})
                 user_settings = software.pop('user_settings', {})
 
-                for pref, value in global_settings.items():
-                    elite.spotify_pref(pref=pref, value=value, mode='0644')
-
-                for pref, value in user_settings.items():
-                    elite.spotify_pref(pref=pref, value=value, username=username, mode='0644')
+                elite.spotify(values=global_settings, mode='0644')
+                elite.spotify(values=user_settings, username=username, mode='0644')
 
             elif name == 'Native Instruments Kontakt 5':
                 library_order = software.pop('library_order')
@@ -181,15 +178,16 @@ def main(elite, config, printer):
 
             # Verify that no extra keys remain after processing a piece of software
             if software:
-                elite.fail(
-                    message=(
-                        f'the software item contained unsupported keys {list(software.keys())}'
-                    ),
-                    ignore_failed=True
-                )
+                with elite.options(ignore_failed=True):
+                    elite.fail(
+                        message=(
+                            f'the software item contained unsupported keys {list(software.keys())}'
+                        )
+                    )
 
     printer.info('cfprefsd Restart')
-    elite.run(command='killall cfprefsd', ignore_failed=True, changed=False)
+    with elite.options(ignore_failed=True, changed=False):
+        elite.run(command=['killall', 'cfprefsd'])
 
     # Build the Dock and Launchpad layouts
     printer.heading('macOS Dock & Launchpad')
@@ -209,7 +207,8 @@ def main(elite, config, printer):
 
     if dock.changed or launchpad.changed:
         printer.info('Dock Restart')
-        elite.run(command='killall Dock', changed=False)
+        with elite.options(changed=False):
+            elite.run(command=['killall', 'Dock'])
 
 
 if __name__ == '__main__':

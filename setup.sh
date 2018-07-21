@@ -9,19 +9,8 @@ ENDC='\033[0m'
 
 # Display a pretty header
 echo
-echo -e "${BOLD}Mac Build${ENDC}"
+echo -e "${BOLD}Mac Build Bootstrap${ENDC}"
 echo
-
-# Prompt the user for their sudo password
-if sudo -nv 2> /dev/null
-then
-    echo -e "${GREEN}Using existing sudo session.${ENDC}"
-else
-    sudo -v -p "Enter your sudo password: "
-fi
-
-# Enable passwordless sudo for the macbuild run
-sudo sed -i -e "s/^%admin.*/%admin  ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 
 # Install Homebrew
 if ! which brew > /dev/null 2>&1
@@ -58,17 +47,3 @@ do
         pip3 install "$package"
     fi
 done
-
-# Installing essential fonts
-brew tap caskroom/fonts
-if ! brew cask list | grep ^font-source-code-pro$ > /dev/null
-then
-    echo -e "${BLUE}Installing Source Code Pro font${ENDC}"
-    brew cask install font-source-code-pro
-fi
-
-# Perform the build
-python3 macbuild.py
-
-# Disable passwordless sudo after the macbuild is complete
-sudo sed -i -e "s/^%admin.*/%admin  ALL=(ALL) ALL/" /etc/sudoers
