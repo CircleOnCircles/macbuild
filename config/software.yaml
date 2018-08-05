@@ -1,247 +1,298 @@
 ---
 globals: !include globals.yaml
-macos_system: !include software/macos_system.yaml
+macos_system: !include software/macos/system.yaml
 
 software:
-  Essentials:
+  Homebrew:
     - !include software/taps.yaml
-    - !include software/unix_tooling/bash.yaml
-    - !include software/unix_tooling/crystal.yaml
-    - !include software/unix_tooling/python.yaml
-    - !include software/fonts.yaml
-    - !include software/desktop_software/sublime_text.yaml
-    - !include software/desktop_software/spotify.yaml
-    - !include software/desktop_software/terminal.yaml
+
+  Essential Unix:
+    !include
+    path: software/unix_tooling
+    extension: yaml
+    files:
+      - bash
+      - crystal
+      - python
+
+  Essential Desktop Software:
+    !include
+    path: software/desktop_software
+    extension: yaml
+    files:
+      - sublime_text
+      - spotify
 
   macOS:
-    - !include software/macos_general.yaml
-    - !include software/desktop_software/dock.yaml
-    - !include software/desktop_software/finder.yaml
-    - !include software/desktop_software/safari.yaml
+    !include
+    path: software/macos
+    extension: yaml
+    files:
+      - general
+      - dock
+      - finder
+      - safari
+      - terminal
 
   Unix:
-    - !include software/unix_tooling/unix.yaml
-    - !include software/unix_tooling/git.yaml
-    - !include software/unix_tooling/hugo.yaml
-    - !include software/unix_tooling/ruby.yaml
+    !include
+    path: software/unix_tooling
+    extension: yaml
+    files:
+      - unix
+      - git
+      - hugo
+      - ruby
 
   Desktop Software / Freeware:
-    - !include software/desktop_software/cog.yaml
-    - !include software/desktop_software/dropbox.yaml
-    - !include software/desktop_software/flux.yaml
-    - !include software/desktop_software/gmail_notifier.yaml
-    - !include software/desktop_software/mplayerx.yaml
-    - !include software/desktop_software/openemu.yaml
-    - !include software/desktop_software/osxfuse.yaml
-    - !include software/desktop_software/otp_auth.yaml
-    - !include software/desktop_software/skype.yaml
-    - !include software/desktop_software/transmission.yaml
-    - !include software/desktop_software/waterfox.yaml
-    - !include software/desktop_software/xld.yaml
+    !include
+    path: software/desktop_software
+    extension: yaml
+    files:
+      - cog
+      - dropbox
+      - flux
+      - gmail_notifier
+      - mplayerx
+      - openemu
+      - osxfuse
+      - otp_auth
+      - skype
+      - transmission
+      - waterfox
+      - xld
 
   Desktop Software / Commercial:
-    - !include software/desktop_software/1password.yaml
-    - !include software/desktop_software/affinity_designer.yaml
-    - !include software/desktop_software/affinity_photo.yaml
-    - !include software/desktop_software/audio_hijack.yaml
-    - !include software/desktop_software/bettersnaptool.yaml
-    - !include software/desktop_software/daisydisk.yaml
-    - !include software/desktop_software/entropy.yaml
-    - !include software/desktop_software/forklift.yaml
-    - !include software/desktop_software/handyprint.yaml
-    - !include software/desktop_software/istat_mini.yaml
-    - !include software/desktop_software/iwork.yaml
-    - !include software/desktop_software/microsoft_office.yaml
-    - !include software/desktop_software/textual.yaml
-    - !include software/desktop_software/things.yaml
-    - !include software/desktop_software/vmware_fusion.yaml
+    !include
+    path: software/desktop_software
+    extension: yaml
+    files:
+      - 1password
+      - affinity_designer
+      - affinity_photo
+      - audio_hijack
+      - bettersnaptool
+      - daisydisk
+      - entropy
+      - forklift
+      - handyprint
+      - istat_mini
+      - iwork
+      - microsoft_office
+      - textual
+      - things
+      - vmware_fusion
 
   Music Production Software / DAWs, Tools & Drivers:
-    - !include software/production_software/ableton_live_10_suite.yaml
-    # - !include software/production_software/celemony_melodyne_editor.yaml
-    - !include software/production_software/elicenser_control_center.yaml
-    - !include software/production_software/focusrite_control.yaml
-    - !include software/production_software/ilok_license_manager.yaml
-    - !include software/production_software/native_instruments_native_access.yaml
-    - !include software/production_software/novation_remote_sl_template_editor.yaml
-    - !include software/production_software/musescore.yaml
-    - !include software/production_software/ocenaudio.yaml
-    - !include software/production_software/steinberg_cubase_pro_9v5.yaml
-    - !include software/production_software/touchosc_editor.yaml
+    !include
+    path: software/production_software
+    extension: yaml
+    files:
+      - ableton_live_10_suite
+      # - celemony_melodyne_editor
+      - elicenser_control_center
+      - focusrite_control
+      - ilok_license_manager
+      - native_instruments_native_access
+      - novation_remote_sl_template_editor
+      - musescore
+      - ocenaudio
+      - steinberg_cubase_pro_9v5
+      - touchosc_editor
 
   Music Production Software / Plug-ins (Effect):
-    # ArtsAcoustic
-    - !include software/production_plugin_effects/artsacoustic_reverb.yaml
+    !include
+    path: software/production_plugin_effects
+    extension: yaml
+    files:
+      # ArtsAcoustic
+      - artsacoustic_reverb
 
-    # Audeze
-    - !include software/production_plugin_effects/audeze_reveal.yaml
+      # Audeze
+      - audeze_reveal
 
-    # Audio Damage
-    # - !include software/production_plugin_effects/audio_damage_eos.yaml
+      # Audio Damage
+      # - audio_damage_eos
 
-    # Cableguys
-    # - !include software/production_plugin_effects/cableguys_filtershaper.yaml
-    - !include software/production_plugin_effects/cableguys_shaperbox.yaml
-    - !include software/production_plugin_effects/cableguys_volumeshaper.yaml
+      # Cableguys
+      # - cableguys_filtershaper
+      - cableguys_shaperbox
+      - cableguys_volumeshaper
 
-    # Cytomic
-    - !include software/production_plugin_effects/cytomic_the_drop.yaml
-    - !include software/production_plugin_effects/cytomic_the_glue.yaml
+      # Cytomic
+      - cytomic_the_drop
+      - cytomic_the_glue
 
-    # Dada Life
-    # - !include software/production_plugin_effects/dada_life_sausage_fattener.yaml
+      # Dada Life
+      # - dada_life_sausage_fattener
 
-    # DMG Audio
-    # - !include software/production_plugin_effects/dmgaudio_compassion.yaml
-    - !include software/production_plugin_effects/dmgaudio_dualism.yaml
-    # - !include software/production_plugin_effects/dmgaudio_equality.yaml
-    # - !include software/production_plugin_effects/dmgaudio_equick.yaml
-    - !include software/production_plugin_effects/dmgaudio_equilibrium.yaml
-    - !include software/production_plugin_effects/dmgaudio_essence.yaml
-    - !include software/production_plugin_effects/dmgaudio_expurgate.yaml
-    - !include software/production_plugin_effects/dmgaudio_limitless.yaml
-    # - !include software/production_plugin_effects/dmgaudio_pitchfunk.yaml
-    - !include software/production_plugin_effects/dmgaudio_trackcomp.yaml
-    - !include software/production_plugin_effects/dmgaudio_trackcontrol.yaml
-    - !include software/production_plugin_effects/dmgaudio_trackds.yaml
-    - !include software/production_plugin_effects/dmgaudio_trackgate.yaml
-    - !include software/production_plugin_effects/dmgaudio_tracklimit.yaml
-    - !include software/production_plugin_effects/dmgaudio_trackmeter.yaml
+      # DMG Audio
+      # - dmgaudio_compassion
+      - dmgaudio_dualism
+      # - dmgaudio_equality
+      # - dmgaudio_equick
+      - dmgaudio_equilibrium
+      - dmgaudio_essence
+      - dmgaudio_expurgate
+      - dmgaudio_limitless
+      # - dmgaudio_pitchfunk
+      - dmgaudio_trackcomp
+      - dmgaudio_trackcontrol
+      - dmgaudio_trackds
+      - dmgaudio_trackgate
+      - dmgaudio_tracklimit
+      - dmgaudio_trackmeter
 
-    # Eventide
-    # - !include software/production_plugin_effects/eventide_2016_stereo_room.yaml
+      # Eventide
+      # - eventide_2016_stereo_room
 
-    # Exponential Audio
-    - !include software/production_plugin_effects/exponential_audio_r2_stereo_reverb.yaml
+      # Exponential Audio
+      - exponential_audio_r2_stereo_reverb
 
-    # Focusrite
-    # - !include software/production_plugin_effects/focusrite_red_plugin_suite.yaml
+      # Focusrite
+      # - focusrite_red_plugin_suite
 
-    # Goodhertz
-    # - !include software/production_plugin_effects/goodhertz_canopener_studio.yaml
+      # Goodhertz
+      # - goodhertz_canopener_studio
 
-    # Illformed
-    # BUGGY: Illformed Glitch crashes frequently when being inserted in Cubase
-    # - !include software/production_plugin_effects/illformed_glitch.yaml
+      # Illformed
+      # BUGGY: Illformed Glitch crashes frequently when being inserted in Cubase
+      # - illformed_glitch
 
-    # Klanghelm
-    - !include software/production_plugin_effects/klanghelm_vumt.yaml
+      # Klanghelm
+      - klanghelm_vumt
 
-    # Native Instruments
-    # - !include software/production_plugin_effects/native_instruments_driver.yaml
-    - !include software/production_plugin_effects/native_instruments_phasis.yaml
-    # - !include software/production_plugin_effects/native_instruments_premium_tube_series.yaml
-    - !include software/production_plugin_effects/native_instruments_replika_xt.yaml
-    # - !include software/production_plugin_effects/native_instruments_reverb_classics.yaml
-    # - !include software/production_plugin_effects/native_instruments_solid_mix_series.yaml
-    - !include software/production_plugin_effects/native_instruments_supercharger_gt.yaml
-    - !include software/production_plugin_effects/native_instruments_transient_master.yaml
-    - !include software/production_plugin_effects/native_instruments_vintage_compressors.yaml
+      # Native Instruments
+      # - native_instruments_driver
+      # - native_instruments_guitar_rig_5
+      - native_instruments_phasis
+      # - native_instruments_premium_tube_series
+      - native_instruments_replika_xt
+      # - native_instruments_reverb_classics
+      # - native_instruments_solid_mix_series
+      - native_instruments_supercharger_gt
+      - native_instruments_transient_master
+      - native_instruments_vintage_compressors
 
-    # Relab
-    - !include software/production_plugin_effects/relab_lx480_complete.yaml
+      # Relab
+      - relab_lx480_complete
 
-    # Softube
-    # - !include software/production_plugin_effects/softube_amp_room_essentials.yaml
-    # - !include software/production_plugin_effects/softube_drawmer_s73.yaml
-    # - !include software/production_plugin_effects/softube_fet_compressor.yaml
-    # - !include software/production_plugin_effects/softube_fix_flanger_and_doubler.yaml
-    # - !include software/production_plugin_effects/softube_saturation_knob.yaml
-    # - !include software/production_plugin_effects/softube_tsar_1r.yaml
-    # - !include software/production_plugin_effects/softube_tube_delay.yaml
+      # Softube
+      # - softube_amp_room_essentials
+      # - softube_drawmer_s73
+      # - softube_fet_compressor
+      # - softube_fix_flanger_and_doubler
+      # - softube_saturation_knob
+      # - softube_tsar_1r
+      # - softube_tube_delay
 
-    # Sonalksis
-    - !include software/production_plugin_effects/sonalksis_plugin_manager.yaml
-    - !include software/production_plugin_effects/sonalksis_creative_elements.yaml
-    # - !include software/production_plugin_effects/sonalksis_essentials.yaml
-    # - !include software/production_plugin_effects/sonalksis_freeg.yaml
-    # - !include software/production_plugin_effects/sonalksis_mastering_suite.yaml
-    # - !include software/production_plugin_effects/sonalksis_multiband_dynamics.yaml
+      # Sonalksis
+      - sonalksis_plugin_manager
+      - sonalksis_creative_elements
+      # - sonalksis_essentials
+      # - sonalksis_freeg
+      # - sonalksis_mastering_suite
+      # - sonalksis_multiband_dynamics
 
-    # Soundtoys
-    # BUGGY: Soundtoys plugins crash randomly when being inserted in Cubase
-    # - !include software/production_plugin_effects/soundtoys_echoboy_jr.yaml
-    # - !include software/production_plugin_effects/soundtoys_little_plate.yaml
-    # - !include software/production_plugin_effects/soundtoys_sie_q.yaml
+      # Soundtoys
+      # BUGGY: Soundtoys plugins crash randomly when being inserted in Cubase
+      # - soundtoys_echoboy_jr
+      # - soundtoys_little_plate
+      # - soundtoys_sie_q
 
-    # u-he
-    # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
-    # - !include software/production_plugin_effects/u_he_mfm2.yaml
-    # - !include software/production_plugin_effects/u_he_satin.yaml
-    # - !include software/production_plugin_effects/u_he_uhbik.yaml
+      # u-he
+      # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
+      # - u_he_mfm2
+      # - u_he_satin
+      # - u_he_uhbik
 
-    # ValhallaDSP
-    # - !include software/production_plugin_effects/valhalladsp_valhallaspacemodulator.yaml
-    # BUGGY: ValhallaVintageVerb crashes Cubase randomly when using multiple instances and popups
-    # - !include software/production_plugin_effects/valhalladsp_valhallavintageverb.yaml
+      # ValhallaDSP
+      # - valhalladsp_valhallaspacemodulator
+      # BUGGY: ValhallaVintageVerb crashes Cubase randomly when using multiple instances and popups
+      # - valhalladsp_valhallavintageverb
 
-    # Voxengo
-    # - !include software/production_plugin_effects/voxengo_deft_compressor.yaml
-    - !include software/production_plugin_effects/voxengo_elephant.yaml
-    # - !include software/production_plugin_effects/voxengo_glisseq.yaml
-    # - !include software/production_plugin_effects/voxengo_msed.yaml
-    # - !include software/production_plugin_effects/voxengo_span.yaml
-    # - !include software/production_plugin_effects/voxengo_voxformer.yaml
+      # Voxengo
+      # - voxengo_deft_compressor
+      - voxengo_elephant
+      # - voxengo_glisseq
+      # - voxengo_msed
+      # - voxengo_span
+      # - voxengo_voxformer
 
   # Music Production Software / Plug-ins (Guitar Rig Effects):
-  #   - !include software/production_plugin_effects/native_instruments_guitar_rig_5.yaml
-  #   - !include software/production_plugin_effects/native_instruments_guitar_rig_effects/native_instruments_rammfire.yaml
-  #   - !include software/production_plugin_effects/native_instruments_guitar_rig_effects/native_instruments_reflektor.yaml
-  #   - !include software/production_plugin_effects/native_instruments_guitar_rig_effects/native_instruments_traktors_12.yaml
+  #   !include
+  #   path: software/production_plugin_effects/native_instruments_guitar_rig_5
+  #   extension: yaml
+  #   files:
+  #     - native_instruments_rammfire
+  #     - native_instruments_reflektor
+  #     - native_instruments_traktors_12
 
   Music Production Software / Plug-ins (Instrument):
-    # LennarDigital
-    - !include software/production_plugin_instruments/lennardigital_sylenth1.yaml
+    !include
+    path: software/production_plugin_instruments
+    extension: yaml
+    files:
+      # LennarDigital
+      - lennardigital_sylenth1
 
-    # Modartt
-    - !include software/production_plugin_instruments/modartt_pianoteq.yaml
+      # Modartt
+      - modartt_pianoteq
 
-    # Native Instruments
-    # - !include software/production_plugin_instruments/native_instruments_absynth_5.yaml
-    - !include software/production_plugin_instruments/native_instruments_battery_4.yaml
-    # - !include software/production_plugin_instruments/native_instruments_fm8.yaml
-    # - !include software/production_plugin_instruments/native_instruments_komplete_kontrol.yaml
-    - !include software/production_plugin_instruments/native_instruments_kontakt_5.yaml
-    - !include software/production_plugin_instruments/native_instruments_massive.yaml
+      # Native Instruments
+      # - native_instruments_absynth_5
+      - native_instruments_battery_4
+      # - native_instruments_fm8
+      # - native_instruments_komplete_kontrol
+      - native_instruments_kontakt_5
+      - native_instruments_massive
+      # - native_instruments_reaktor_6
 
-    # Reveal Sound
-    - !include software/production_plugin_instruments/reveal_sound_spire.yaml
+      # Reveal Sound
+      - reveal_sound_spire
 
-    # Spectrasonics
-    - !include software/production_plugin_instruments/spectrasonics_omnisphere.yaml
+      # Spectrasonics
+      - spectrasonics_omnisphere
 
-    # Steinberg
-    # - !include software/production_plugin_instruments/steinberg_padshop.yaml
-    # - !include software/production_plugin_instruments/steinberg_retrologue.yaml
+      # Steinberg
+      # - steinberg_padshop
+      # - steinberg_retrologue
 
-    # Synapse Audio
-    - !include software/production_plugin_instruments/synapse_audio_dune.yaml
+      # Synapse Audio
+      - synapse_audio_dune
 
-    # u-he
-    # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
-    # - !include software/production_plugin_instruments/u_he_hive.yaml
-    # - !include software/production_plugin_instruments/u_he_zebra.yaml
+      # u-he
+      # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
+      # - u_he_hive
+      # - u_he_zebra
 
-    # Xfer Records
-    - !include software/production_plugin_instruments/xfer_records_serum.yaml
+      # Xfer Records
+      - xfer_records_serum
 
-  # Music Production Software / Plug-ins (Reaktor Instruments & Effects):
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_6.yaml
-  #   # Reaktor Effects
-  #   - !include software/production_plugin_effects/native_instruments_reaktor_effects/native_instruments_molekular.yaml
-  #   - !include software/production_plugin_effects/native_instruments_reaktor_effects/native_instruments_the_finger.yaml
-  #   - !include software/production_plugin_effects/native_instruments_reaktor_effects/native_instruments_the_mouth.yaml
-  #   # Reaktor Instruments
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_flesh.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_form.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_kontour.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_monark.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_polyplex.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_razor.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_reaktor_prism.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_reaktor_spark.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_rounds.yaml
-  #   - !include software/production_plugin_instruments/native_instruments_reaktor_instruments/native_instruments_skanner_xt.yaml
+  # Music Production Software / Plug-ins (Reaktor Instruments):
+  #   !include
+  #   path: software/production_plugin_instruments/native_instruments_reaktor_instruments
+  #   extension: yaml
+  #   files:
+  #     - native_instruments_flesh
+  #     - native_instruments_form
+  #     - native_instruments_kontour
+  #     - native_instruments_monark
+  #     - native_instruments_polyplex
+  #     - native_instruments_razor
+  #     - native_instruments_reaktor_prism
+  #     - native_instruments_reaktor_spark
+  #     - native_instruments_rounds
+  #     - native_instruments_skanner_xt
+
+  # Music Production Software / Plug-ins (Reaktor Effects):
+  #   !include
+  #   path: software/production_plugin_effects/native_instruments_reaktor_effects
+  #   extension: yaml
+  #   files:
+  #     - native_instruments_molekular
+  #     - native_instruments_the_finger
+  #     - native_instruments_the_mouth
 
 dock_layout: !include software/dock_layout.yaml
 launchpad_layout: !include software/launchpad_layout.yaml

@@ -1,5 +1,5 @@
 ---
-name: Fonts
+tap: homebrew/cask-fonts
 cask:
   - font-source-code-pro
   - font-lato

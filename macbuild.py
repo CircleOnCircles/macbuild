@@ -14,8 +14,15 @@ def main(elite, printer):
     printer.info('Homebrew Update')
     elite.brew_update()
 
-    elite.tap(name='homebrew/cask-fonts')
-    elite.cask(name='font-source-code-pro', state='latest')
+    fonts_config = Config('config/fonts.yaml')
+
+    # TODO: Improve this ugly thing
+    printer.info('Fonts')
+    for tap in software_config(fonts_config.config, 'tap'):
+        elite.tap(name=tap)
+
+    for cask in software_config(fonts_config.config, 'cask'):
+        elite.cask(name=cask, state='latest')
 
     config = Config('config/software.yaml')
 
@@ -146,7 +153,7 @@ def main(elite, printer):
             for json in software_config(software, 'json'):
                 elite.json(path=json.get('path'), values=json.get('values'))
 
-            # Application Specific Actions
+            # TODO: Remove all application specific actions
             if name == 'Spotify':
                 username = software.pop('username')
                 global_settings = software.pop('global_settings', {})

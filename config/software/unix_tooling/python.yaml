@@ -7,7 +7,7 @@ pip:
   - setuptools
   - pip
   - ipython
-  - flake8
+  - tox
   - yamllint
 file:
   # Preferences
