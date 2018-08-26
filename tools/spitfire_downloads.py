@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-from collections import defaultdict
 import os
 import sqlite3
 import sys
+from collections import defaultdict
 
 
 # Colours
@@ -46,12 +46,12 @@ def main():
 
         # Build the main SQL to obtain library details
         sql = ('''
-            SELECT l.zdisplaygroup AS 'Library Group',
-                   l.ztitle AS Library,
-                   lf.zfilename AS Filename,
-                   lf.zchecksum AS MD5,
-                   l.zinstallationfolder AS Folder,
-                   lf.zinstallationpath AS Path
+            SELECT l.zdisplaygroup AS library_group,
+                   l.ztitle AS library,
+                   lf.zfilename AS filename,
+                   lf.zchecksum AS md5,
+                   l.zinstallationfolder AS folder,
+                   lf.zinstallationpath AS path
             FROM zlibraryfile AS lf
             JOIN zlibrary AS l ON l.z_pk = lf.zlibrary
         ''')
@@ -59,7 +59,7 @@ def main():
 
         # Filter the SQL by the search term if provided
         if search:
-            sql += " WHERE l.zdisplaygroup LIKE ?"
+            sql += ' WHERE l.zdisplaygroup LIKE ?'
             args.append(f'%{search}%')
 
         cursor = conn.execute(sql, args)
@@ -85,7 +85,7 @@ def main():
 
     # Print MD5 checksums of all items grouped by library
     if md5sums:
-        for library, files in sorted(spitfire_files.items()):
+        for _library, files in sorted(spitfire_files.items()):
             for filename, md5, folder, path in sorted(files, key=lambda x: x[0]):
                 if path:
                     filepath = os.path.join(folder, path, filename)

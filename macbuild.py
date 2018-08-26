@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from elite import ActionError, Config, automate
+from elite import Config, automate
 
 
 def software_config(software, key):
@@ -219,4 +219,6 @@ def main(elite, printer):
 
 
 if __name__ == '__main__':
-    main()
+    # Disabling parameter checks as pylint has a bug with relation to decorators
+    # https://github.com/PyCQA/pylint/issues/259
+    main()  # pylint: disable=no-value-for-parameter
