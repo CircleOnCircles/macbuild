@@ -56,7 +56,8 @@ The following tasks must be performed manually.
 * **Wallpaper**: Choose your wallpaper
 * **Screen Saver**: Set the screen saver to 'Flurry'
 * **Audio Device**: Set the audio interface as the default Sound device
-* **Spell Checking**: System Preferences / Keyboard / Text / Disable 'Correct spelling automatically', 'Capitalize words automatically' and 'Add period with double-space'
+* **Spell Checking**: System Preferences / Keyboard / Text / Disable 'Correct spelling 
+  automatically', 'Capitalize words automatically' and 'Add period with double-space'
 * **Notification Centre**: Set the order of items and allow permission after starting iStat Mini
 * **Safari**: Install extensions (1Password and Adblock Plus)
 * **Keyboard Shortcuts**: Under System Preferences / Keyboard:
@@ -64,22 +65,25 @@ The following tasks must be performed manually.
     - Set 'Show Notification Center' to F15 under 'Mission Control'
     - Set 'Show Desktop' to F13 under 'Mission Control'
     - Disable 'Show Dashboard' under 'Mission Control'
-* **Time Machine**: Configure Time Machine backup drive ensuring that you add an exclusion for ~/Documents/Virtual Machines.localized
+* **Time Machine**: Configure Time Machine backup drive ensuring that you add an exclusion for 
+  ~/Documents/Virtual Machines.localized
 * **Dictation**: You may need to disable this as holding down Fn suggests it
-* **Automatic Updates**: System Preferences / App Store / Disable 'Download newly available updates in the background'
+* **Automatic Updates**: System Preferences / App Store / Disable 'Download newly available 
+  updates in the background'
 
 ### Installation & Configuration (General)
 
-* **Apple iWork**: Launch Pages, Keynote and Numbers and dismiss the welcome
-  screen
-* **Audio Hijack**: Start the app multiple times to dismiss welcome and mailing
-  list alerts and install Instant On
+* **Apple iWork**: Launch Pages, Keynote and Numbers and dismiss the welcome screen
+* **Audio Hijack**: Start the app multiple times to dismiss welcome and mailing list alerts and
+  install Instant On
 * **iTunes**; Start iTunes and set it up
 * **Dropbox**: Disable camera uploads and disable email integration
 * **Forklift**: Sidebar containing favourites and view settings
 * **Cog**: Disable notifications
-* **Textual**: Right click on freenode and select Server Properties; under Basic Settings / General, enter your Server Password (NickServ password)
-* **Messages**: Disable spell checking under Edit / Spelling and Grammar, and change the message receive sound under Preferences / General
+* **Textual**: Right click on freenode and select Server Properties; under Basic Settings / 
+  General, enter your Server Password (NickServ password)
+* **Messages**: Disable spell checking under Edit / Spelling and Grammar, and change the message 
+  receive sound under Preferences / General
 * **LennarDigital Sylenth1**: Set the default skin to Apox and Size to 110%
 * **DMG Audio EQuality**: Set defaults by switching knobs to input boxes
 * **DMG Audio EQuilibrium**: Set the default Cubase preset to the default for the plugin too
