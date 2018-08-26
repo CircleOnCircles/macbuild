@@ -1,6 +1,6 @@
-# Mac Build Elite
+# Mac Build (using Elite)
 
-![License](https://img.shields.io/badge/license-Proprietary-blue.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/fgimian/macbuild/blob/master/LICENSE)
 
 ![Mac Build Logo](https://raw.githubusercontent.com/fgimian/macbuild/master/images/macbuild-logo.png)
 
@@ -23,7 +23,7 @@ git clone git@github.com:fgimian/macbuild.git
 git clone git@github.com:fgimian/elite.git
 cd macbuild
 ln -s ../elite/elite
-./macbuild.sh
+sudo ./macbuild.py
 ```
 
 It is suggested that you reboot your Mac after the first run of this tool.
@@ -32,7 +32,6 @@ It is suggested that you reboot your Mac after the first run of this tool.
 
 * The iLok update state will need to be verified and updated if necessary
 * BetterSnapTool keyboard shortcut of Ctrl+Alt+Cmd+Up seems to mute conversations in Skype
-* Spotify settings should be improved to be like plist and JSON
 
 ## Manual Tasks
 
@@ -85,6 +84,7 @@ The following tasks must be performed manually.
 * **DMG Audio EQuality**: Set defaults by switching knobs to input boxes
 * **DMG Audio EQuilibrium**: Set the default Cubase preset to the default for the plugin too
 * **Native Instruments Kontakt**: Configure Quickload if you like
+* **Sonalksis**: Open Sonalksis Plugin Manager and sign in to register plugins
 
 ### Installation & Configuration (Music Production)
 
@@ -109,5 +109,5 @@ The following software should be deactivated before re-installing macOS:
 
 ## License
 
-Mac Build is proprietary software and may not be copied and/or distributed
-without the express written permission of Fotis Gimian.
+Mac Build is released under the MIT license.  Please see the
+[LICENSE](https://github.com/fgimian/macbuild/blob/master/LICENSE) file for more details.
