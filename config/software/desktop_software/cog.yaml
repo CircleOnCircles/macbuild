@@ -7,3 +7,15 @@ plist:
   values:
     # Check for updates automatically? / Check Automatically
     SUEnableAutomaticChecks: true
+handler:
+  # AIFF
+  - public.aifc-audio
+  - public.aiff-audio
+  # WAV
+  - com.microsoft.waveform-audio
+  # MP3
+  - public.mp3
+  # OGG
+  - public.ogg-audio
+  # M4A
+  - com.apple.m4a-audio
