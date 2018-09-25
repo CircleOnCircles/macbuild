@@ -26,6 +26,14 @@ def main(elite, printer):
 
     config = Config('config/software.yaml')
 
+    printer.info('App License Directory')
+    app_license_dir = path=config.globals['app_license_dir']
+    app_license_dir_health = elite.file_info(app_license_dir)
+    if app_license_dir_health.data['exists']:
+        elite.info(message=f'using app license directory {app_license_dir}')
+    else:
+        elite.fail(message='unable to find the app license directory')
+
     printer.info('Music Software Source')
     music_software_source = config.globals['music_software_source']
     if music_software_source:
@@ -80,10 +88,10 @@ def main(elite, printer):
 
             # App store apps
             for appstore in software_config(software, 'appstore'):
-                app_file = elite.file_info(
+                app_file_health = elite.file_info(
                     path=f'/Applications/{appstore}.app/Contents/_MASReceipt/receipt'
                 )
-                if not app_file.data['exists']:
+                if not app_file_health.data['exists']:
                     with elite.options(ignore_failed=True):
                         elite.fail(message=f'please install {appstore} from the App Store')
 
