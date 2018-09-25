@@ -237,7 +237,7 @@ def main(elite, printer):
 
     music_software_source = config.globals['music_software_source']
     if music_software_source:
-        elite.info(message=f'using music software software {music_software_source}')
+        elite.info(message=f'using music software source {music_software_source}')
     else:
         elite.fail(message='unable to find any suitable music software source')
 

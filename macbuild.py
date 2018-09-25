@@ -30,7 +30,7 @@ def main(elite, printer):
     music_software_source = config.globals['music_software_source']
     if music_software_source:
         env = {'HOMEBREW_CASK_MUSIC_SOFTWARE_BASEDIR': music_software_source}
-        elite.info(message=f'using music software software {music_software_source}')
+        elite.info(message=f'using music software source {music_software_source}')
     else:
         env = {}
         with elite.options(ignore_failed=True):
