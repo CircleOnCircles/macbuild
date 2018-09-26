@@ -79,7 +79,7 @@ apps:
           - Microsoft Outlook
           - Microsoft PowerPoint
     # General
-    - 1Password 6
+    - 1Password 7
     - DaisyDisk
     - Entropy
     # Social
