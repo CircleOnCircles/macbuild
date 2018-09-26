@@ -44,7 +44,6 @@ The following tasks must be performed manually.
 * **Finder**: Configure favourites in the sidebar as follows:
     - Recents
     - AirDrop
-    - iCloud Drive
     - Dropbox
     - Applications
     - fots
@@ -74,8 +73,6 @@ The following tasks must be performed manually.
 * **Time Machine**: Configure Time Machine backup drive ensuring that you add an exclusion for 
   ~/Documents/Virtual Machines.localized
 * **Dictation**: You may need to disable this as holding down Fn suggests it
-* **Automatic Updates**: System Preferences / App Store / Disable 'Download newly available 
-  updates in the background'
 
 ### Installation & Configuration (General)
 

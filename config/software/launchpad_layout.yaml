@@ -6,7 +6,7 @@ apps:
     - Calculator
     - Safari
     - iTunes
-    - iBooks
+    - Books
     - Terminal
     - App Store
     - System Preferences
@@ -29,10 +29,13 @@ apps:
           - Photo Booth
           - Photos
           - Preview
+          - Home
+          - Voice Memos
+          - News
+          - Stocks
           - Dictionary
           - Siri
           - Mission Control
-          - Dashboard
     # Other Utilities
     - folder_title: Other
       folder_layout:
@@ -40,7 +43,6 @@ apps:
           - QuickTime Player
           - TextEdit
           - Grapher
-          - DVD Player
           - Time Machine
           - Font Book
           - Chess
@@ -57,11 +59,12 @@ apps:
           - Script Editor
           - Disk Utility
           - Boot Camp Assistant
-          - Digital Color Meter
+          - Digital Colour Meter
           - ColorSync Utility
-          - Grab
           - Bluetooth File Exchange
           - Audio MIDI Setup
+          - Dashboard
+          - Screenshot
   # Page 2: Desktop Software
   -
     # Proudctivity

@@ -186,10 +186,11 @@ def main(elite, printer):
 
             # Login items
             login_item = software.pop('login_item', None)
-            if login_item is not None:
-                elite.login_item(
-                    path=f'/Applications/{app}.app', state='present' if login_item else 'absent'
-                )
+            # TODO: Determine what we will do about login items in Mojave
+            # if login_item is not None:
+            #     elite.login_item(
+            #         path=f'/Applications/{app}.app', state='present' if login_item else 'absent'
+            #     )
 
             # Verify that no extra keys remain after processing a piece of software
             if software:
