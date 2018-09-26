@@ -12,6 +12,9 @@ file:
     state: directory
 
   # SSH Configuration (Sierra specific)
+  - path: ~/.ssh
+    state: directory
+    mode: '0700'
   - source: files/dotfiles/.ssh/config
     path: ~/.ssh/config
 

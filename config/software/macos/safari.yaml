@@ -12,6 +12,8 @@ plist:
     AutoOpenSafeDownloads: false
     # Preferences / General / File download location / Ask for each download
     AlwaysPromptForDownloadFolder: true
+    # Preferences / Tabs / Show website icons in tabs
+    ShowIconsInTabs: true
     # Preferences / AutoFill / Disable 'User names and passwords'
     AutoFillPasswords: false
     # Preferences / Advanced / Show Develop menu in menu bar

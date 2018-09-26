@@ -23,6 +23,7 @@ git clone git@github.com:fgimian/macbuild.git
 git clone git@github.com:fgimian/elite.git
 cd macbuild
 ln -s ../elite/elite
+./setup.sh
 sudo ./macbuild.py
 ```
 
@@ -58,9 +59,14 @@ The following tasks must be performed manually.
 * **Audio Device**: Set the audio interface as the default Sound device
 * **Spell Checking**: System Preferences / Keyboard / Text / Disable 'Correct spelling 
   automatically', 'Capitalize words automatically' and 'Add period with double-space'
-* **Notification Centre**: Set the order of items and allow permission after starting iStat Mini
+* **Notification Centre**: Set the order of items and allow permission after starting iStat Mini and OTP Auth as follows:
+    - Weather
+    - iStat Mini
+    - OTP Auth
+    - Calendar
+    - Tomorrow
 * **Safari**: Install extensions (1Password and Adblock Plus)
-* **Keyboard Shortcuts**: Under System Preferences / Keyboard:
+* **Keyboard Shortcuts**: Under System Preferences / Keyboard / Shortcuts:
     - Set 'Show Launchpad' to F14 under 'Launchpad & Dock'
     - Set 'Show Notification Center' to F15 under 'Mission Control'
     - Set 'Show Desktop' to F13 under 'Mission Control'
@@ -75,15 +81,15 @@ The following tasks must be performed manually.
 
 * **Apple iWork**: Launch Pages, Keynote and Numbers and dismiss the welcome screen
 * **Audio Hijack**: Start the app multiple times to dismiss welcome and mailing list alerts and
-  install Instant On
+  install ACE
 * **iTunes**; Start iTunes and set it up
-* **Dropbox**: Disable camera uploads and disable email integration
+* **Dropbox**: Disable camera uploads
 * **Forklift**: Sidebar containing favourites and view settings
 * **Cog**: Disable notifications
 * **Textual**: Right click on freenode and select Server Properties; under Basic Settings / 
   General, enter your Server Password (NickServ password)
 * **Messages**: Disable spell checking under Edit / Spelling and Grammar, and change the message 
-  receive sound under Preferences / General
+  receive sound under Preferences / General to Chord
 * **LennarDigital Sylenth1**: Set the default skin to Apox and Size to 110%
 * **DMG Audio EQuality**: Set defaults by switching knobs to input boxes
 * **DMG Audio EQuilibrium**: Set the default Cubase preset to the default for the plugin too

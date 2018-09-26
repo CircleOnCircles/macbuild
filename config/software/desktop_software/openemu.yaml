@@ -2,7 +2,7 @@
 name: OpenEmu
 cask: openemu-experimental
 file:
-  - path: '~/Library/Application Support/OpenEmu'
+  - path: ~/Library/Application Support/OpenEmu
     state: directory
     mode: '0755'
 symlink:

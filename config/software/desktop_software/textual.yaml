@@ -24,7 +24,7 @@ plist:
     # Server / Server Properties...
     World Controller Client Configurations:
       - uniqueIdentifier: 17240721-0832-49A0-B64D-FE72E101810F
-        dictionaryVersion: 704
+        dictionaryVersion: 710
 
         # Basic Settings / Channel List
         channelList:
@@ -75,4 +75,5 @@ plist:
         proxyUsername: ''
 
         # Advanced / Network Socket
+        connectionPrefersIPv4: false
         connectionPrefersModernCiphers: true
