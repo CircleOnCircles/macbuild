@@ -1,21 +1,17 @@
 ---
 # Dock applications (in the left section)
 apps:
-  - ForkLift
-  - Siri
   - Launchpad
   - Safari
   - Sublime Text
   - Utilities/Terminal
   - Cubase 9.5
-  - MuseScore 2
   - XLD
   - Focusrite Control
   - Spotify
   - OpenEmu
   - Messages
   - Skype
-  - Textual
   - Things3
   - VMware Fusion
   - App Store
