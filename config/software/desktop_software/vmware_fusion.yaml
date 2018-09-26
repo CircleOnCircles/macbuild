@@ -9,8 +9,8 @@ file:
     group: wheel
     mode: '0755'
     sudo: true
-  - path: /Library/Preferences/VMware Fusion/license-fusion-80-e1-201505
-    source: !join_path [*app_license_dir, General/VMware Fusion/license-fusion-80-e1-201505]
+  - path: /Library/Preferences/VMware Fusion/license-fusion-110-e1-201804
+    source: !join_path [*app_license_dir, General/VMware Fusion/license-fusion-110-e1-201804]
     owner: root
     group: wheel
     mode: '0644'
