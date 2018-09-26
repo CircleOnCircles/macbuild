@@ -49,6 +49,7 @@ software:
     path: software/desktop_software
     extension: yaml
     files:
+      - adblock
       - cog
       - dropbox
       - flux
