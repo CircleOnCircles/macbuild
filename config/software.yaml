@@ -98,6 +98,7 @@ software:
       - novation_remote_sl_template_editor
       - musescore
       - ocenaudio
+      - steinberg_elicenser_control_center
       - steinberg_cubase_pro_9v5
       - touchosc_editor
 
