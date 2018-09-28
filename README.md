@@ -82,7 +82,7 @@ The following tasks must be performed manually.
 * **iTunes**; Start iTunes and set it up
 * **Dropbox**: Disable camera uploads
 * **Forklift**: Sidebar containing favourites and view settings
-* **Cog**: Disable notifications
+* **Cog & News**: Disable notifications
 * **Textual**: Right click on freenode and select Server Properties; under Basic Settings / 
   General, enter your Server Password (NickServ password)
 * **Messages**: Disable spell checking under Edit / Spelling and Grammar, and change the message 

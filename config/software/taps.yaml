@@ -2,7 +2,6 @@
 name: Taps
 tap:
   - homebrew/cask
-  - homebrew/cask-fonts
   - homebrew/cask-versions
   - fgimian/general
   - fgimian/music
