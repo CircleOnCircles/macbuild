@@ -1,0 +1,8 @@
+---
+name: RAR
+cask: rar
+file:
+  # License
+  - path: /usr/local/etc/rarreg.key
+    source: !join_path [*app_license_dir, General/WinRAR/rarreg.key]
+    mode: '0644'

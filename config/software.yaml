@@ -12,7 +12,6 @@ software:
     extension: yaml
     files:
       - bash
-      - crystal
       - python
 
   Essential Desktop Software:
@@ -42,6 +41,8 @@ software:
       - unix
       - git
       - hugo
+      - rar
+      - crystal
       - ruby
 
   Desktop Software / Freeware:
