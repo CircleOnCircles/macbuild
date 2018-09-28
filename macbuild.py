@@ -27,7 +27,7 @@ def main(elite, printer):
     config = Config('config/software.yaml')
 
     printer.info('App License Directory')
-    app_license_dir = path=config.globals['app_license_dir']
+    app_license_dir = config.globals['app_license_dir']
     app_license_dir_health = elite.file_info(app_license_dir)
     if app_license_dir_health.data['exists']:
         elite.info(message=f'using app license directory {app_license_dir}')
