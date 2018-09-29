@@ -182,7 +182,22 @@ def main(elite, printer):
 
             # File handlers
             for handler in software_config(software, 'handler'):
-                elite.handler(path=f'/Applications/{app}.app', content_type=handler)
+                if isinstance(handler, dict):
+                    try:
+                        if 'app' in handler:
+                            handler_app = handler['app']
+                            path = f'/Applications/{handler_app}.app'
+                        else:
+                            path = handler['path']
+
+                        content_type = handler['content_type']
+                    except KeyError:
+                        elite.fail(message=f'the handler for {app} is missing required data')
+                else:
+                    path = f'/Applications/{app}.app'
+                    content_type = handler
+
+                elite.handler(path=path, content_type=content_type)
 
             # Login items
             login_item = software.pop('login_item', None)

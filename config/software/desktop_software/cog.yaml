@@ -15,7 +15,5 @@ handler:
   - com.microsoft.waveform-audio
   # MP3
   - public.mp3
-  # OGG
-  - public.ogg-audio
   # M4A
   - com.apple.m4a-audio

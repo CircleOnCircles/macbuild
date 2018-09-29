@@ -101,3 +101,7 @@ plist:
     values:
       # Welcome to Outlook shown
       kSubUIAppCompletedFirstRunSetup1507: true
+handler:
+  # CSV
+  - app: Microsoft Excel
+    content_type: public.comma-separated-values-text
