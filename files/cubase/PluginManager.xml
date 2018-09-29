@@ -6,6 +6,7 @@
 				<plugin name="VUMT" cid="56535456554D5476756D740000000000"/>
 			</folder>
 			<folder name="Delay">
+				<plugin name="MFM2" cid="5653544D464D326D666D320000000000"/>
 				<plugin name="Replika XT" cid="5653544E6924437265706C696B612078"/>
 			</folder>
 			<folder name="Distortion">
@@ -41,6 +42,7 @@
 				<plugin name="Reveal" cid="56535452564C3172657665616C000000"/>
 			</folder>
 			<folder name="Filter">
+				<plugin name="Runciter" cid="5653545263313772756E636974657200"/>
 				<plugin name="Sonalksis Creative Filter Stereo" cid="56535454424B4E736F6E616C6B736973"/>
 				<plugin name="The Drop" cid="565354447270317468652064726F7000"/>
 			</folder>
@@ -50,11 +52,18 @@
 			<folder name="Modulation">
 				<plugin name="Phasis" cid="5653544E69244A706861736973000000"/>
 				<plugin name="ShaperBox" cid="56535443474C31736861706572626F78"/>
+				<plugin name="Uhbik-F" cid="56535455634631756862696B2D660000"/>
+				<plugin name="Uhbik-P" cid="56535455635031756862696B2D700000"/>
+				<plugin name="Uhbik-S" cid="56535455635331756862696B2D730000"/>
+				<plugin name="Uhbik-T" cid="56535455635431756862696B2D740000"/>
 				<plugin name="VolumeShaper4" cid="56535443475634766F6C756D65736861"/>
 			</folder>
 			<folder name="Other">
 				<plugin name="Dualism" cid="5653454475616C4475616C69736D0000"/>
 				<plugin name="SerumFX" cid="56535458667359736572756D66780000"/>
+			</folder>
+			<folder name="Pitch Shift">
+				<plugin name="Uhbik-G" cid="56535455634731756862696B2D670000"/>
 			</folder>
 			<folder name="Reverb">
 				<plugin name="ArtsAcousticReverb" cid="565354414152626172747361636F7573"/>
@@ -123,12 +132,14 @@
 			</folder>
 			<folder name="Synth">
 				<plugin name="DUNE2" cid="5653544455453264756E653200000000"/>
+				<plugin name="Hive" cid="56535468495645686976650000000000"/>
 				<plugin name="Massive" cid="5653544E694D616D6173736976650000"/>
 				<plugin name="Omnisphere" cid="565354416D62726F6D6E697370686572"/>
 				<plugin name="Pianoteq 6" cid="565354507436717069616E6F74657120"/>
 				<plugin name="Serum" cid="56535458667358736572756D00000000"/>
 				<plugin name="Spire-1.1" cid="5653545370723273706972652D312E31"/>
 				<plugin name="Sylenth1" cid="56535473796C3173796C656E74683100"/>
+				<plugin name="Zebra2" cid="D39D5B69D6AF42FA12345678534D4432"/>
 			</folder>
 		</PluginCollection>
 		<PluginCollection name="Vendor" type="Instrument">

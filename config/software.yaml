@@ -205,9 +205,9 @@ software:
 
       # u-he
       # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
-      # - u_he_mfm2
+      - u_he_mfm2
       # - u_he_satin
-      # - u_he_uhbik
+      - u_he_uhbik
 
       # ValhallaDSP
       # - valhalladsp_valhallaspacemodulator
@@ -266,8 +266,8 @@ software:
 
       # u-he
       # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
-      # - u_he_hive
-      # - u_he_zebra
+      - u_he_hive
+      - u_he_zebra
 
       # Xfer Records
       - xfer_records_serum
