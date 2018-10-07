@@ -42,7 +42,6 @@ software:
       - git
       - hugo
       - rar
-      - crystal
       - ruby
 
   Desktop Software / Freeware:

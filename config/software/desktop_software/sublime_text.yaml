@@ -27,9 +27,6 @@ file:
   - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap
     source: files/sublime_text/Default (OSX).sublime-keymap
     mode: '0644'
-  - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Crystal.sublime-settings
-    source: files/sublime_text/Crystal.sublime-settings
-    mode: '0644'
   - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings
     source: files/sublime_text/Markdown (Standard).sublime-settings
     mode: '0644'
@@ -112,8 +109,6 @@ json:
       installed_packages:
         # Autocompletes symbols using all open files
         - All Autocomplete
-        # Crystal syntax support
-        - Crystal
         # INI syntax support
         - INI
         # Markdown themes and syntax highlighting

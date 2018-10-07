@@ -1,7 +1,0 @@
----
-name: Crystal
-tap: veelenga/tap
-brew:
-  - crystal-lang
-  - crystal-icr
-  - ameba
