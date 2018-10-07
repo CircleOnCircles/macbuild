@@ -124,8 +124,7 @@ plist:
   - domain: com.apple.LaunchServices
     values:
       # Disable the '"<app>" is an application downloaded from the internet.
-      # Are you sure you want to open it?' dialog.  This affects many apps downloaded from the web
-      # such as MPlayerX (hidden setting)
+      # Are you sure you want to open it?' dialog.  This affects many apps downloaded from the web.
       LSQuarantine: false
 
   # Log Out

@@ -1,0 +1,12 @@
+---
+name: IINA
+cask: iina
+plist:
+  domain: com.colliderli.iina
+  mode: '0600'
+  values:
+    # Preferences / General / Disable 'Receive beta updates'
+    receiveBetaUpdate: false
+
+    # Preferences / General / Check for updates Daily
+    SUEnableAutomaticChecks: true

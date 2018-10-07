@@ -55,7 +55,7 @@ software:
       - dropbox
       - flux
       - gmail_notifier
-      - mplayerx
+      - iina
       - openemu
       - osxfuse
       - otp_auth

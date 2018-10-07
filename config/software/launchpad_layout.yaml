@@ -95,7 +95,7 @@ apps:
     # Virtualization
     - VMware Fusion
     # Media Playback & Entertainment
-    - MPlayerX
+    - IINA
     - Cog
     - Spotify
     # Games
