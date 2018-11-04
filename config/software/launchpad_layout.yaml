@@ -127,7 +127,6 @@ apps:
     # Audio Hardware
     - Focusrite Control
     - ReMOTESLEditor
-    - TouchOSC Editor
     # Audio Software Managers
     - folder_title: Software Managers
       folder_layout:

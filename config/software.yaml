@@ -100,7 +100,6 @@ software:
       - ocenaudio
       - steinberg_elicenser_control_center
       - steinberg_cubase_pro_9v5
-      - touchosc_editor
 
   Music Production Software / Plug-ins (Effect):
     !include

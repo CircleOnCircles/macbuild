@@ -1,5 +1,0 @@
----
-name: TouchOSC Editor
-cask:
-  - java6
-  - touchosc-editor
