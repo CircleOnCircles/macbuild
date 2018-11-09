@@ -84,7 +84,7 @@ apps:
     # General
     - 1Password 7
     - DaisyDisk
-    - Entropy
+    - BetterZip
     # Social
     - Textual
     - Skype

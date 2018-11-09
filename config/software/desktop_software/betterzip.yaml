@@ -1,0 +1,38 @@
+---
+name: BetterZip
+cask: betterzip
+plist:
+  domain: com.macitbetter.betterzip
+  source: !join_path [*app_license_dir, General/BetterZip/com.macitbetter.betterzip.plist]
+  mode: '0600'
+  values:
+    # Preferences / General / Opening an archive from the Finder immediately extracts it
+    MIBDirectExtractByDefault: true
+    # Preferences / Presets / Extract
+    MIBExtractPresets:
+    - favorite: true
+      folder: '1'
+      imageTint: !!binary |
+        BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARmZmZmAIMi
+        vxc/g5JvDT0Bhg==
+      isService: true
+      isToolbar: true
+      moveArchiveTo: '1'
+      name: Extract
+      openExtracted: false
+      overwriteWithoutWarning: false
+      shortName: Ex&Trash
+      tag: 9
+    - favorite: true
+      folder: ~/Applications
+      isService: false
+      isToolbar: false
+      moveArchiveTo: '1'
+      name: Install Application
+      openExtracted: false
+      reveal: true
+      tag: 8
+    # Preferences / Helpers / Path to the rar program:
+    rar: /usr/local/bin/rar
+    # Preferences / Advanced / Post status messages to the Notification Center
+    MIBPostNotifications: false

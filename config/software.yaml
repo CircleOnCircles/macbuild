@@ -73,8 +73,8 @@ software:
       - affinity_photo
       - audio_hijack
       - bettersnaptool
+      - betterzip
       - daisydisk
-      - entropy
       - forklift
       - handyprint
       - istat_mini
