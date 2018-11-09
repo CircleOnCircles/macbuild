@@ -29,6 +29,7 @@ plist:
     myPluginsPath: /Users/fots/Music/MuseScore2/Plugins
     mySoundfontsPath: /Users/fots/Music/MuseScore2/Soundfonts
     myImagesPath: /Users/fots/Music/MuseScore2/Images
+    myExtensionsPath: /Users/fots/Music/MuseScore2/Extensions
     # Preferences / General / Theme / Dark
     style: dark
     # Preferences / Canvas / Background
