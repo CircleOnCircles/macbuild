@@ -117,6 +117,7 @@ software:
 
       # Cableguys
       # - cableguys_filtershaper
+      - cableguys_halftime
       - cableguys_shaperbox
       - cableguys_volumeshaper
 
