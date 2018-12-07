@@ -60,6 +60,7 @@
 			</folder>
 			<folder name="Other">
 				<plugin name="Dualism" cid="5653454475616C4475616C69736D0000"/>
+				<plugin name="HalfTime" cid="5653544348543168616C6674696D6500"/>
 				<plugin name="SerumFX" cid="56535458667359736572756D66780000"/>
 			</folder>
 			<folder name="Pitch Shift">
@@ -75,6 +76,11 @@
 			</folder>
 		</PluginCollection>
 		<PluginCollection name="Vendor" type="FX">
+			<folder name="Cableguys">
+				<plugin name="HalfTime" cid="5653544348543168616C6674696D6500"/>
+				<plugin name="ShaperBox" cid="56535443474C31736861706572626F78"/>
+				<plugin name="VolumeShaper4" cid="56535443475634766F6C756D65736861"/>
+			</folder>
 			<folder name="Cytomic">
 				<plugin name="The Drop" cid="565354447270317468652064726F7000"/>
 				<plugin name="The Glue" cid="5653544379546774686520676C756500"/>
@@ -95,6 +101,7 @@
 				<plugin name="TrackMeter" cid="5653454447544D547261636B4D657465"/>
 			</folder>
 			<folder name="Native Instruments General">
+				<plugin name="Phasis" cid="5653544E69244A706861736973000000"/>
 				<plugin name="Replika XT" cid="5653544E6924437265706C696B612078"/>
 				<plugin name="Supercharger GT" cid="5653544E692441737570657263686172"/>
 				<plugin name="Transient Master" cid="5653544E6924357472616E7369656E74"/>
@@ -118,8 +125,8 @@
 			<plugin name="Elephant" cid="1C3A662167D347A99F7D797EA4911CDB"/>
 			<plugin name="LX480" cid="5653545F4C58346C7834383000000000"/>
 			<plugin name="R2" cid="5653544D437332723200000000000000"/>
+			<plugin name="Reveal" cid="56535452564C3172657665616C000000"/>
 			<plugin name="SerumFX" cid="56535458667359736572756D66780000"/>
-			<plugin name="VolumeShaper4" cid="56535443475634766F6C756D65736861"/>
 			<plugin name="VUMT" cid="56535456554D5476756D740000000000"/>
 		</PluginCollection>
 		<PluginCollection name="Category" type="Instrument">
@@ -131,6 +138,7 @@
 				<plugin name="Groove Agent SE" cid="91585860BA1748E581441ECD96B153ED"/>
 			</folder>
 			<folder name="Synth">
+				<plugin name="Pianoteq 6" cid="565354507436717069616E6F74657120"/>
 				<plugin name="DUNE2" cid="5653544455453264756E653200000000"/>
 				<plugin name="Hive" cid="56535468495645686976650000000000"/>
 				<plugin name="Massive" cid="5653544E694D616D6173736976650000"/>
