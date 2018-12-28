@@ -76,7 +76,7 @@ def get_downloaded_versions():
     try:
         iso_base_dir = next(iso_base_dirs)
     except StopIteration:
-        raise Error('none of te specified ISO base directories exist')
+        raise Error('none of the specified ISO base directories exist')
 
     isos = []
     for iso_subdir in ISO_SUBDIRS:
