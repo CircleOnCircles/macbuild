@@ -6,15 +6,15 @@ plist:
   mode: '0600'
   values:
     # Daytime
-    dayColorTemp: 4000.0
+    dayColorTemp: 5000.0
     # Sunset
-    nightColorTemp: 2800.0
+    nightColorTemp: 4400.0
     # Bedtime
-    lateColorTemp: 2400.0
+    lateColorTemp: 3400.0
     # Location
     locationTextField: Melbourne, Australia
     locationType: L
     location: '-37.814107,144.963280'
-    # 8:00 AM is when I wake up
-    wakeTime: 480
+    # 6:00 AM is when I wake up
+    wakeTime: 360
 login_item: true
