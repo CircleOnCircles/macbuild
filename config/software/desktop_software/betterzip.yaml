@@ -21,6 +21,7 @@ plist:
       name: Extract
       openExtracted: false
       overwriteWithoutWarning: false
+      reveal: true
       shortName: Ex&Trash
       tag: 9
     - favorite: true
