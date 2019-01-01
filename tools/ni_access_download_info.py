@@ -18,9 +18,6 @@ def main():
     shasums = set()
     namespaces = {'meta': 'urn:ietf:params:xml:ns:metalink'}
 
-    if not md5sums:
-        print()
-
     downloads = []
 
     for metadata_path in glob.glob('/var/folders/*/*/*/*.meta4'):
@@ -43,6 +40,9 @@ def main():
 
             # Add the dowload to our list
             downloads.append(NIDownload(metadata_path, filename, size, md5, sha256, url))
+
+    if not md5sums:
+        print()
 
     for metadata_path, filename, size, md5, sha256, url in sorted(
         downloads, key=lambda i: i.filename
