@@ -52,7 +52,9 @@ software:
     files:
       - adblock
       - cog
+      - dark_mode_for_safari
       - dropbox
+      - firefox
       - flux
       - gmail_notifier
       - iina
