@@ -70,8 +70,8 @@ apps:
     # Proudctivity
     - Affinity Designer
     - Affinity Photo
-    - Things
     - Sublime Text
+    - Visual Studio Code
     - Microsoft Excel
     - Microsoft Word
     - folder_title: Microsoft Office (Other)
@@ -83,6 +83,7 @@ apps:
           - Microsoft PowerPoint
     # General
     - 1Password 7
+    - Things
     - DaisyDisk
     - BetterZip
     # Social

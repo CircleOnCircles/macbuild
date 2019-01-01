@@ -1,0 +1,7 @@
+---
+name: Go
+brew: go
+file:
+  # Bash Profile Tab Spaces
+  - path: ~/.bash_profile.d/go.sh
+    source: files/dotfiles/.bash_profile.d/go.sh

@@ -1,0 +1,22 @@
+---
+name: Visual Studio Code
+cask: visual-studio-code
+file:
+  - path: ~/Library/Application Support/Code
+    state: directory
+    mode: '0755'
+  - path: ~/Library/Application Support/Code/User
+    state: directory
+    mode: '0755'
+
+  # Preferences
+  - path: ~/Library/Application Support/Code/User/settings.json
+    source: files/vscode/settings.json
+    mode: '0644'
+  - path: ~/Library/Application Support/Code/User/keybindings.json
+    source: files/vscode/keybindings.json
+    mode: '0644'
+
+  # Bash Profile Default Editor
+  - path: ~/.bash_profile.d/sublime_text.sh
+    source: files/dotfiles/.bash_profile.d/sublime_text.sh
