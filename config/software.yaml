@@ -93,6 +93,7 @@ software:
     path: software/production_software
     extension: yaml
     files:
+      - apple_logic_pro_x
       - ableton_live_10_suite
       # - celemony_melodyne_editor
       - elicenser_control_center
