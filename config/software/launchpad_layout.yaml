@@ -137,7 +137,6 @@ apps:
           - eLicenser Control Center
           - HALion Library Manager
           - Native Access
-          - Sonalksis Plugin Manager
     # Native Instruments
     - folder_title: Native Instruments (Other)
       folder_layout:

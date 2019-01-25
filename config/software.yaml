@@ -110,22 +110,22 @@ software:
     extension: yaml
     files:
       # ArtsAcoustic
-      - artsacoustic_reverb
+      # - artsacoustic_reverb
 
       # Audeze
-      - audeze_reveal
+      # - audeze_reveal
 
       # Audio Damage
       # - audio_damage_eos
 
       # Cableguys
       # - cableguys_filtershaper
-      - cableguys_halftime
+      # - cableguys_halftime
       - cableguys_shaperbox
-      - cableguys_volumeshaper
+      # - cableguys_volumeshaper
 
       # Cytomic
-      - cytomic_the_drop
+      # - cytomic_the_drop
       - cytomic_the_glue
 
       # Dada Life
@@ -133,18 +133,18 @@ software:
 
       # DMG Audio
       # - dmgaudio_compassion
-      - dmgaudio_dualism
+      # - dmgaudio_dualism
       # - dmgaudio_equality
       # - dmgaudio_equick
       - dmgaudio_equilibrium
-      - dmgaudio_essence
-      - dmgaudio_expurgate
-      - dmgaudio_limitless
+      # - dmgaudio_essence
+      # - dmgaudio_expurgate
+      # - dmgaudio_limitless
       # - dmgaudio_pitchfunk
-      - dmgaudio_trackcomp
-      - dmgaudio_trackcontrol
+      # - dmgaudio_trackcomp
+      # - dmgaudio_trackcontrol
       - dmgaudio_trackds
-      - dmgaudio_trackgate
+      # - dmgaudio_trackgate
       - dmgaudio_tracklimit
       - dmgaudio_trackmeter
 
@@ -152,7 +152,7 @@ software:
       # - eventide_2016_stereo_room
 
       # Exponential Audio
-      - exponential_audio_r2_stereo_reverb
+      # - exponential_audio_r2_stereo_reverb
 
       # Focusrite
       # - focusrite_red_plugin_suite
@@ -165,12 +165,12 @@ software:
       # - illformed_glitch
 
       # Klanghelm
-      - klanghelm_vumt
+      # - klanghelm_vumt
 
       # Native Instruments
       # - native_instruments_driver
       # - native_instruments_guitar_rig_5
-      - native_instruments_phasis
+      # - native_instruments_phasis
       # - native_instruments_premium_tube_series
       - native_instruments_replika_xt
       # - native_instruments_reverb_classics
@@ -180,7 +180,7 @@ software:
       - native_instruments_vintage_compressors
 
       # Relab
-      - relab_lx480_complete
+      # - relab_lx480_complete
 
       # Softube
       # - softube_amp_room_essentials
@@ -192,8 +192,8 @@ software:
       # - softube_tube_delay
 
       # Sonalksis
-      - sonalksis_plugin_manager
-      - sonalksis_creative_elements
+      # - sonalksis_plugin_manager
+      # - sonalksis_creative_elements
       # - sonalksis_essentials
       # - sonalksis_freeg
       # - sonalksis_mastering_suite
@@ -218,7 +218,7 @@ software:
 
       # Voxengo
       # - voxengo_deft_compressor
-      - voxengo_elephant
+      # - voxengo_elephant
       # - voxengo_glisseq
       # - voxengo_msed
       # - voxengo_span
@@ -264,12 +264,12 @@ software:
       # - steinberg_retrologue
 
       # Synapse Audio
-      - synapse_audio_dune
+      # - synapse_audio_dune
 
       # u-he
       # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser
       - u_he_hive
-      - u_he_zebra
+      # - u_he_zebra
 
       # Xfer Records
       - xfer_records_serum
