@@ -6,7 +6,6 @@ brew:
   - ffmpeg
   - findutils
   - gnu-sed
-  - md5sha1sum
   - p7zip
   - shellcheck
   - telnet
