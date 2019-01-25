@@ -107,7 +107,6 @@ apps:
       folder_layout:
         -
           - AdBlock
-          - Dark Mode for Safari
           - Dropbox
           - BetterSnapTool
           - Flux
