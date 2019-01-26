@@ -62,7 +62,6 @@ software:
       - otp_auth
       - skype
       - transmission
-      - visual_studio_code
       - waterfox
       - xld
 

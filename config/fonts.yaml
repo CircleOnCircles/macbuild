@@ -1,6 +1,5 @@
 ---
 tap: homebrew/cask-fonts
 cask:
-  - font-fira-code
   - font-source-code-pro
   - font-lato
