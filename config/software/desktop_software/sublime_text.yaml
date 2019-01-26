@@ -1,6 +1,13 @@
 ---
 name: Sublime Text
 cask: sublime-text
+pip:
+  - python-language-server
+  - rope
+  - flake8
+go:
+  - golang.org/x/tools/cmd/goimports
+  - github.com/sourcegraph/go-langserver
 file:
   - path: ~/Library/Application Support/Sublime Text 3
     state: directory
@@ -17,35 +24,25 @@ file:
   - path: ~/Library/Application Support/Sublime Text 3/Packages/User
     state: directory
     mode: '0700'
+  - path: ~/Library/Application Support/Sublime Text 3/Packages/Go
+    state: directory
+    mode: '0755'
 
   # Sublime Text License
   - path: ~/Library/Application Support/Sublime Text 3/Local/License.sublime_license
     source: !join_path [*app_license_dir, General/Sublime Text/License.sublime_license]
     mode: '0644'
 
-  # Preferences
-  - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap
-    source: files/sublime_text/Default (OSX).sublime-keymap
-    mode: '0644'
-  - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings
-    source: files/sublime_text/Markdown (Standard).sublime-settings
-    mode: '0644'
-  - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings
-    source: files/sublime_text/Markdown.sublime-settings
-    mode: '0644'
-  - path: ~/Library/Application Support/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings
-    source: files/sublime_text/MultiMarkdown.sublime-settings
-    mode: '0644'
-  - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-settings
-    source: files/sublime_text/Python.sublime-settings
-    mode: '0644'
-  - path: ~/Library/Application Support/Sublime Text 3/Packages/User/Soda Dark 3.sublime-theme
-    source: files/sublime_text/Soda Dark 3.sublime-theme
-    mode: '0644'
-
   # Bash Profile Default Editor
   - path: ~/.bash_profile.d/sublime_text.sh
     source: files/dotfiles/.bash_profile.d/sublime_text.sh
+
+rsync:
+  # Preferences
+  - path: ~/Library/Application Support/Sublime Text 3/Packages/User
+    source: files/sublime_text/User/
+  - path: ~/Library/Application Support/Sublime Text 3/Packages/Go
+    source: files/sublime_text/Go/
 
 download:
   # Package Control
@@ -59,13 +56,22 @@ json:
     mode: '0644'
     values:
       # Monokai Extended color scheme
-      color_scheme: Packages/Monokai Extended/Monokai Extended.tmTheme
+      color_scheme: Packages/Color Scheme - Default/Monokai.sublime-color-scheme
 
       # Soda Theme
       theme: Soda Dark 3.sublime-theme
 
       # Automatically search in selection when multiple lines are selected
       auto_find_in_selection: true
+
+      # Wrap autocomplete suggestions
+      auto_complete_cycle: true
+
+      # Ensure that auto-completion is triggered on period for Python and Go
+      auto_complete_triggers:
+        - {selector: text.html, characters: <}
+        - {selector: source.go, characters: .}
+        - {selector: source.python, characters: .}
 
       # Set a ruler at 100 characters to ensure we catch long lines
       rulers: [100]
@@ -82,7 +88,6 @@ json:
       # File Formatting Settings
       default_line_ending: unix
       ensure_newline_at_eof_on_save: true
-      tab_size: 2
       translate_tabs_to_spaces: true
       trim_trailing_white_space_on_save: true
 
@@ -109,12 +114,14 @@ json:
       installed_packages:
         # Autocompletes symbols using all open files
         - All Autocomplete
+        # Go formatting on save
+        - Gofmt
         # INI syntax support
         - INI
+        # Language Server Protocol support
+        - LSP
         # Markdown themes and syntax highlighting
         - MarkdownEditing
-        # An improved Soda-flavoured Monokai theme with Markdown support
-        - Monokai Extended
         # The package manager for Sublime Text
         - Package Control
         # Better title case implementation

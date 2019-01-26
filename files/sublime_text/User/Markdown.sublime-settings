@@ -1,6 +1,9 @@
 {
-    // Set the color schema to Monokai Extended
-    "color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+    // Only register markdown extensions
+    "extensions": ["md", "mdown"],
+
+    // Set the color schema to Monokai
+    "color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 
     // Re-enable line hightlighting
     "highlight_line": true,

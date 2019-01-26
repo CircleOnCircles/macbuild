@@ -1,0 +1,6 @@
+{
+    "cmds": [
+        // Switch to goimports for linting on save
+        ["goimports"]
+    ]
+}

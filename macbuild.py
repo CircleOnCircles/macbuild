@@ -118,6 +118,10 @@ def main(elite, printer):
             for gem in software_config(software, 'gem'):
                 elite.gem(name=gem, state='latest')
 
+            # Go packages
+            for go in software_config(software, 'go'):
+                elite.go(name=go, state='present')
+
             # Files
             for file in software_config(software, 'file'):
                 with elite.options(sudo=file.get('sudo', False)):
@@ -130,6 +134,13 @@ def main(elite, printer):
                         group=file.get('group'),
                         flags=file.get('flags')
                     )
+
+            # File Syncronisation
+            for rsync in software_config(software, 'rsync'):
+                elite.rsync(
+                    path=rsync['path'],
+                    source=rsync['source']
+                )
 
             # Dowlnoads
             for download in software_config(software, 'download'):

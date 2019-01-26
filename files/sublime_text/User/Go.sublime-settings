@@ -1,0 +1,10 @@
+{
+    // Set Go's tab size to 4 spaces as per the Go coding standard
+    "tab_size": 4,
+
+    // Indent using tabs as per the Go coding standard
+    "translate_tabs_to_spaces": false,
+
+    // Due to the fact that 4 spaces is a strong standard, disable auto-detection of indentation
+    "detect_indentation": false
+}

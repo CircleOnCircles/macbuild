@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[log.Printf("$1", ${2:var})]]></content>
+    <tabTrigger>lf</tabTrigger>
+    <scope>source.go</scope>
+    <description>log.Printf()</description>
+</snippet>

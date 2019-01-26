@@ -1,0 +1,37 @@
+{
+    "clients":
+    {
+        // Go
+        "golsp":
+        {
+            // Enable the Go Language Server
+            "enabled": true,
+
+            // Ensure that the server presents function completions and doesn't include
+            // arguments in functions (as these are covered by the docs that show up)
+            "command": ["go-langserver", "-gocodecompletion", "-func-snippet-enabled=false"]
+        },
+        // Python
+        "pyls":
+        {
+            // Enable the Python Language Server
+            "enabled": true,
+
+            // Pass various settings to pyls
+            "settings": {
+                "pyls": {
+                    // Use flake8 as the main source of configuration
+                    "configurationSources": ["flake8"],
+
+                    // Disable mccabe so it doesn't lint the code
+                    "plugins": {
+                        "mccabe": {"enabled": false}
+                    }
+                }
+            }
+        }
+    },
+
+    // Don't automatically show a panel when a linting error occurs
+    "auto_show_diagnostics_panel": false
+}

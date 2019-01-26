@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[new(${1:type})]]></content>
+    <tabTrigger>new</tabTrigger>
+    <scope>source.go</scope>
+    <description>new statement</description>
+</snippet>
