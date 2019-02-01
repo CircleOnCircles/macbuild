@@ -1,7 +1,7 @@
 ---
 name: Python
 brew:
-  - python3
+  - python
   - pip-completion
 pip:
   - setuptools
