@@ -60,7 +60,6 @@ software:
       - openemu
       - otp_auth
       - skype
-      - transmission
       - waterfox
       - xld
 

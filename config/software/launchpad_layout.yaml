@@ -70,7 +70,6 @@ apps:
     # Proudctivity
     - Affinity Designer
     - Affinity Photo
-    - Sublime Text
     - Microsoft Excel
     - Microsoft Word
     - folder_title: Microsoft Office (Other)
@@ -80,21 +79,21 @@ apps:
           - Microsoft OneNote
           - Microsoft Outlook
           - Microsoft PowerPoint
+    - Sublime Text
+    # Virtualization
+    - VMware Fusion
     # General
     - 1Password 7
     - Things
     - DaisyDisk
+    - ForkLift
     - BetterZip
     # Social
     - Textual
     - Skype
     # Internet
-    - Waterfox
     - Firefox
-    - ForkLift
-    - Transmission
-    # Virtualization
-    - VMware Fusion
+    - Waterfox
     # Media Playback & Entertainment
     - IINA
     - Cog
