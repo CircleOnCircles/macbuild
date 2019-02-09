@@ -13,6 +13,7 @@ software:
     files:
       - bash
       - python
+      - go
 
   Essential Desktop Software:
     !include
@@ -40,7 +41,6 @@ software:
     files:
       - unix
       - git
-      - go
       - hugo
       - rar
       - ruby
@@ -58,7 +58,6 @@ software:
       - gmail_notifier
       - iina
       - openemu
-      - osxfuse
       - otp_auth
       - skype
       - transmission
