@@ -116,7 +116,7 @@ def main(elite, printer):
 
             # Ruby gem packages
             for gem in software_config(software, 'gem'):
-                elite.gem(name=gem, state='latest')
+                elite.gem(name=gem, state='latest', executable='/usr/local/opt/ruby/bin/gem')
 
             # Go packages
             for go in software_config(software, 'go'):

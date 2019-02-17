@@ -5,3 +5,9 @@ brew:
   - ruby-completion
 gem:
   - pry
+file:
+  # Bash Profile Use Homebrew Ruby
+  - path: ~/.bash_profile.d
+    state: directory
+  - path: ~/.bash_profile.d/ruby.sh
+    source: files/dotfiles/.bash_profile.d/ruby.sh
