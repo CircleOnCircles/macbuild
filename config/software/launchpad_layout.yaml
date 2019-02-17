@@ -10,10 +10,6 @@ apps:
     - Terminal
     - App Store
     - System Preferences
-    # iWork
-    - Pages
-    - Numbers
-    - Keynote
     # Apps
     - folder_title: Apps
       folder_layout:

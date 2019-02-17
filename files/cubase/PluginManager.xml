@@ -3,7 +3,6 @@
 		<PluginCollection name="Category" type="FX">
 			<folder name="Analyzer">
 				<plugin name="TrackMeter" cid="5653454447544D547261636B4D657465"/>
-				<plugin name="VUMT" cid="56535456554D5476756D740000000000"/>
 			</folder>
 			<folder name="Delay">
 				<plugin name="MFM2" cid="5653544D464D326D666D320000000000"/>
@@ -127,7 +126,6 @@
 			<plugin name="R2" cid="5653544D437332723200000000000000"/>
 			<plugin name="Reveal" cid="56535452564C3172657665616C000000"/>
 			<plugin name="SerumFX" cid="56535458667359736572756D66780000"/>
-			<plugin name="VUMT" cid="56535456554D5476756D740000000000"/>
 		</PluginCollection>
 		<PluginCollection name="Category" type="Instrument">
 			<folder name="Sampler">
@@ -139,7 +137,6 @@
 			</folder>
 			<folder name="Synth">
 				<plugin name="Pianoteq 6" cid="565354507436717069616E6F74657120"/>
-				<plugin name="DUNE2" cid="5653544455453264756E653200000000"/>
 				<plugin name="Hive" cid="56535468495645686976650000000000"/>
 				<plugin name="Massive" cid="5653544E694D616D6173736976650000"/>
 				<plugin name="Omnisphere" cid="565354416D62726F6D6E697370686572"/>
@@ -158,7 +155,6 @@
 			</folder>
 			<plugin name="Groove Agent SE" cid="91585860BA1748E581441ECD96B153ED"/>
 			<plugin name="Omnisphere" cid="565354416D62726F6D6E697370686572"/>
-			<plugin name="DUNE2" cid="5653544455453264756E653200000000"/>
 			<plugin name="Serum" cid="56535458667358736572756D00000000"/>
 			<plugin name="Spire-1.1" cid="5653545370723273706972652D312E31"/>
 			<plugin name="Sylenth1" cid="56535473796C3173796C656E74683100"/>

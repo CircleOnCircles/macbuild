@@ -78,7 +78,7 @@ software:
       - forklift
       - handyprint
       - istat_mini
-      - iwork
+      # - iwork
       - microsoft_office
       - textual
       - things
@@ -162,7 +162,7 @@ software:
       # - illformed_glitch
 
       # Klanghelm
-      - klanghelm_vumt
+      # - klanghelm_vumt
 
       # Native Instruments
       # - native_instruments_driver
@@ -261,7 +261,7 @@ software:
       # - steinberg_retrologue
 
       # Synapse Audio
-      - synapse_audio_dune
+      # - synapse_audio_dune
 
       # u-he
       # BUGGY: u-he plugins crash Cubase randomly due to a bug with the preset browser

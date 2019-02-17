@@ -3,6 +3,7 @@
 apps:
   - Launchpad
   - Safari
+  - Things3
   - Sublime Text
   - Utilities/Terminal
   - Logic Pro X
@@ -12,7 +13,6 @@ apps:
   - OpenEmu
   - Messages
   - Skype
-  - Things3
   - VMware Fusion
   - App Store
   - System Preferences
