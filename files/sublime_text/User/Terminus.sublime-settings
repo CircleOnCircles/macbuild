@@ -1,0 +1,8 @@
+{
+    // Configure the appearance of text in the terminal
+    "view_settings": {
+        "block_caret": true,
+        "caret_style": "solid",
+        "font_size": 16
+    }
+}

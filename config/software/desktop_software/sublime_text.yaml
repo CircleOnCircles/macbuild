@@ -114,6 +114,8 @@ json:
       installed_packages:
         # Autocompletes symbols using all open files
         - All Autocomplete
+        # Conversion between snake case and camel case
+        - Case Conversion
         # Go formatting on save
         - Gofmt
         # INI syntax support
@@ -126,6 +128,8 @@ json:
         - Package Control
         # Better title case implementation
         - Smart Title Case
+        # Built in Terminal
+        - Terminus
         # The wonderful Soda theme
         - Theme - Soda
 
