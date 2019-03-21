@@ -6,16 +6,35 @@ from collections import namedtuple
 from elite import Config, automate
 
 
+KompleteLibraryConfig = namedtuple('KompleteLibraryConfig', ['local'])
+SampleLibraryConfig = namedtuple(
+    'SampleLibraryConfig', ['base_dir', 'base_dirs', 'installer', 'extract_subdirs', 'local']
+)
+
+
 def komplete_libraries(elite, config, printer, sample_library_source):
     printer.heading('Komplete Libraries')
 
     printer.info('Library Directories')
     for base_sample_dir in ['Native Instruments Kontakt', 'Native Instruments Battery']:
-        elite.file(
-            path=os.path.join(config.sample_library_dir, base_sample_dir), state='directory'
-        )
+        for sample_library_dir in [
+            config.local_sample_library_dir,
+            config.external_sample_library_dir
+        ]:
+            elite.file(path=os.path.join(sample_library_dir, base_sample_dir), state='directory')
 
-    for library in config.komplete_libraries:
+    komplete_libraries_config = {}
+    for komplete_library_config in config.komplete_libraries:
+        if isinstance(komplete_library_config, str):
+            name = komplete_library_config
+            local = False
+        else:
+            name = komplete_library_config['name']
+            local = komplete_library_config.get('local', False)
+
+        komplete_libraries_config[name] = KompleteLibraryConfig(local)
+
+    for library, library_config in komplete_libraries_config.items():
         printer.info(f'Native Instruments {library}')
 
         # Find the ISO for the library
@@ -33,9 +52,13 @@ def komplete_libraries(elite, config, printer, sample_library_source):
         iso = isos.data['paths'][0]
 
         # Build the destination base directory
+        if library_config.local:
+            sample_library_dir = config.local_sample_library_dir
+        else:
+            sample_library_dir = config.external_sample_library_dir
+
         destination = os.path.join(
-            config.sample_library_dir,
-            os.path.dirname(os.path.relpath(iso, sample_library_source))
+            sample_library_dir, os.path.dirname(os.path.relpath(iso, sample_library_source))
         )
 
         elite.file(path=destination, state='directory')
@@ -83,7 +106,7 @@ def komplete_libraries(elite, config, printer, sample_library_source):
             elite.run(command=['hdiutil', 'unmount', mountpoint])
 
     elite.file(
-        path=os.path.join(config.sample_library_dir, 'Library'),
+        path=os.path.join(config.external_sample_library_dir, 'Library'),
         state='directory', flags=['hidden']
     )
 
@@ -96,7 +119,7 @@ def omnisphere_steam_library(elite, config, printer, music_software_source):
     source = os.path.join(
         music_software_source, 'Spectrasonics/Spectrasonics Omnisphere v2/STEAM'
     )
-    destination = os.path.join(config.sample_library_dir, 'Spectrasonics Omnisphere')
+    destination = os.path.join(config.local_sample_library_dir, 'Spectrasonics Omnisphere')
     steam_symlink = '~/Library/Application Support/Spectrasonics/STEAM'
 
     elite.file(path=destination, state='directory')
@@ -123,32 +146,32 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
     # Build a data structure which we may use to determine sample library properties
     sample_libraries_config = {}
     for sample_library_config in config.sample_libraries:
-        SampleLibraryConfig = namedtuple(
-            'SampleLibraryConfig', ['base_dir', 'base_dirs', 'installer', 'extract_subdirs']
-        )
-
         if isinstance(sample_library_config, str):
             name = sample_library_config
             base_dir = None
             base_dirs = {}
             installer = None
             extract_subdirs = {}
+            local = False
         else:
             name = sample_library_config['name']
             base_dir = sample_library_config.get('base_dir')
             base_dirs = sample_library_config.get('base_dirs', {})
             installer = sample_library_config.get('installer')
             extract_subdirs = sample_library_config.get('extract_subdirs', {})
+            local = sample_library_config.get('local', False)
 
         sample_libraries_config[name] = SampleLibraryConfig(
-            base_dir, base_dirs, installer, extract_subdirs
+            base_dir, base_dirs, installer, extract_subdirs, local
         )
 
     printer.info('Base Directories')
     for base_sample_dir in ['Native Instruments Kontakt', 'Drum & Vocal Samples']:
-        elite.file(
-            path=os.path.join(config.sample_library_dir, base_sample_dir), state='directory'
-        )
+        for sample_library_dir in [
+            config.local_sample_library_dir,
+            config.external_sample_library_dir
+        ]:
+            elite.file(path=os.path.join(sample_library_dir, base_sample_dir), state='directory')
 
     for library, library_config in sample_libraries_config.items():
         printer.info(library)
@@ -173,8 +196,13 @@ def kontakt_libraries_and_drum_samples(elite, config, printer, sample_library_so
             elite.fail(message='no archives were found in the sample library source directory')
 
         # Build the destination base directory
+        if library_config.local:
+            sample_library_dir = config.local_sample_library_dir
+        else:
+            sample_library_dir = config.external_sample_library_dir
+
         destination_base_dir = os.path.join(
-            config.sample_library_dir, os.path.relpath(library_path, sample_library_source)
+            sample_library_dir, os.path.relpath(library_path, sample_library_source)
         )
 
         # Ensure that the parent / vendor directory exists

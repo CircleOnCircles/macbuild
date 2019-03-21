@@ -2,12 +2,14 @@
 globals: !include globals.yaml
 
 # Destination path to install all sample libraries to
-sample_library_dir: /Volumes/Sample Libraries
+local_sample_library_dir: ~/Music/Sample Libraries
+external_sample_library_dir: /Volumes/Sample Libraries
 
 # Komplete sample libraries to install
 komplete_libraries:
   # Battery Factory Library
-  - Battery 4 Factory Library
+  - name: Battery 4 Factory Library
+    local: true
 
   # Kontakt Factory Library
   - Kontakt Factory Library
@@ -168,27 +170,40 @@ sample_libraries:
   #   base_dir: Focusrite 2GB Loopmasters Content
 
   # Freshly Squeezed Samples
-  - Freshly Squeezed Samples Dave Parkinson Trance Essentials
+  - name: Freshly Squeezed Samples Dave Parkinson Trance Essentials
+    local: true
   - name: Freshly Squeezed Samples Sean Tyas Kick Essentials Volume 1
     base_dir: Sean Tyas - Kick Essentials Volume 1
+    local: true
 
   # Vengeance
-  - Vengeance Effects Vol 1
-  - Vengeance Effects Vol 2
-  - Vengeance Electro Essentials Vol 1
-  - Vengeance Essential Clubsounds Vol 1
-  - Vengeance Essential Clubsounds Vol 2
-  - Vengeance Essential Clubsounds Vol 3
+  - name: Vengeance Effects Vol 1
+    local: true
+  - name: Vengeance Effects Vol 2
+    local: true
+  - name: Vengeance Electro Essentials Vol 1
+    local: true
+  - name: Vengeance Essential Clubsounds Vol 1
+    local: true
+  - name: Vengeance Essential Clubsounds Vol 2
+    local: true
+  - name: Vengeance Essential Clubsounds Vol 3
+    local: true
 
   # Wave Alchemy
   - name: Wave Alchemy Drum Machine Collection
     base_dir: wa_drum_machine_collection
+    local: true
   - name: Wave Alchemy Drum Tools 01 Deluxe
     base_dir: wa_drum_tools_01_deluxe
+    local: true
   - name: Wave Alchemy Drum Tools 02
     base_dir: wa_drum_tools_02
+    local: true
   - name: Wave Alchemy Wired Electronics
     base_dir: wave_alchemy_wired_electronics
+    local: true
 
   # Vocals
-  - Sonic Element Vocal Trance Recordings
+  - name: Sonic Element Vocal Trance Recordings
+    local: true
