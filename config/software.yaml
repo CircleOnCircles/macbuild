@@ -50,7 +50,7 @@ software:
     path: software/desktop_software
     extension: yaml
     files:
-      - adblock
+      # - adblock
       - cog
       - dropbox
       - firefox

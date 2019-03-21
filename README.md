@@ -64,7 +64,7 @@ The following tasks must be performed manually.
     - OTP Auth
     - Calendar
     - Tomorrow
-* **Safari**: Install extensions (1Password and Adblock Plus)
+* **Safari**: Install extension 1Password
 * **Keyboard Shortcuts**: Under System Preferences / Keyboard / Shortcuts:
     - Set 'Show Launchpad' to F14 under 'Launchpad & Dock'
     - Set 'Show Notification Center' to F15 under 'Mission Control'
@@ -76,7 +76,6 @@ The following tasks must be performed manually.
 
 ### Installation & Configuration (General)
 
-* **Apple iWork**: Launch Pages, Keynote and Numbers and dismiss the welcome screen
 * **Audio Hijack**: Start the app multiple times to dismiss welcome and mailing list alerts and
   install ACE
 * **iTunes**; Start iTunes and set it up
@@ -85,6 +84,7 @@ The following tasks must be performed manually.
 * **Cog & News**: Disable notifications
 * **Textual**: Right click on freenode and select Server Properties; under Basic Settings / 
   General, enter your Server Password (NickServ password)
+* **FaceTime**: Change the ringtone in Preferences / General to Radiate
 * **Messages**: Disable spell checking under Edit / Spelling and Grammar, and change the message 
   receive sound under Preferences / General to Chord
 * **LennarDigital Sylenth1**: Set the default skin to Apox and Size to 110%

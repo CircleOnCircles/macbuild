@@ -215,7 +215,8 @@ def main(elite, printer):
             if login_item is not None:
                 with elite.options(ignore_failed=True):
                     elite.login_item(
-                        path=f'/Applications/{app}.app', state='present' if login_item else 'absent'
+                        path=f'/Applications/{app}.app',
+                        state='present' if login_item else 'absent'
                     )
 
             # Verify that no extra keys remain after processing a piece of software

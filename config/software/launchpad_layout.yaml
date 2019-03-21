@@ -100,7 +100,6 @@ apps:
     - folder_title: Utilities
       folder_layout:
         -
-          - AdBlock
           - Dropbox
           - BetterSnapTool
           - Flux
