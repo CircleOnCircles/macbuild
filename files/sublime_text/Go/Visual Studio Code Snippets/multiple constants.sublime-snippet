@@ -1,8 +1,0 @@
-<snippet>
-    <content><![CDATA[const (
-    ${1:name} = ${2:value}
-)]]></content>
-    <tabTrigger>cos</tabTrigger>
-    <scope>source.go</scope>
-    <description>constant block</description>
-</snippet>

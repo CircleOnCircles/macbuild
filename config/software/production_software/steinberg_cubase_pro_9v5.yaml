@@ -1,9 +1,0 @@
----
-name: Steinberg Cubase Pro 9.5
-cask:
-  - steinberg-cubase-pro-9v5
-  - steinberg-cubase-pro-9v5-update
-symlink:
-  # Plug-in Presets
-  - path: ~/Library/Audio/Presets
-    source: ~/Music/Presets & Sounds/Plug-in Presets

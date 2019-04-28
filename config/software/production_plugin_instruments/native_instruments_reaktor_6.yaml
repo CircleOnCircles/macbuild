@@ -1,6 +1,0 @@
----
-name: Native Instruments Reaktor 6
-cask:
-  - native-instruments-reaktor-6
-  - native-instruments-reaktor-factory-library
-  - native-instruments-reaktor-blocks

@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[t.Logf("$1", ${2:var})]]></content>
-    <tabTrigger>tlf</tabTrigger>
-    <scope>source.go</scope>
-    <description>t.Logf()</description>
-</snippet>

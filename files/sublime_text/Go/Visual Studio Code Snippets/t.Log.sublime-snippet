@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[t.Log("$1")]]></content>
-    <tabTrigger>tl</tabTrigger>
-    <scope>source.go</scope>
-    <description>t.Log()</description>
-</snippet>

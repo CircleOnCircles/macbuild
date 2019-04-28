@@ -1,8 +1,0 @@
----
-name: Cableguys HalfTime
-cask: cableguys-halftime
-file:
-  # License
-  - path: ~/Library/Preferences/de.cableguys.halftime.plist
-    source: !join_path [*app_license_dir, Music Production/Cableguys/Cableguys HalfTime/de.cableguys.halftime.plist]
-    mode: '0600'

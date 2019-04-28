@@ -1,8 +1,0 @@
----
-name: Cableguys FilterShaper
-cask: cableguys-filtershaper
-file:
-  # License
-  - path: ~/Library/Preferences/de.cableguys.filtershaper3.plist
-    source: !join_path [*app_license_dir, Music Production/Cableguys/Cableguys FilterShaper/de.cableguys.filtershaper3.plist]
-    mode: '0600'

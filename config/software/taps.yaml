@@ -1,7 +1,4 @@
 ---
 name: Taps
 tap:
-  - homebrew/cask
-  - homebrew/cask-versions
-  - fgimian/general
-  - fgimian/music
+  - circleoncircles/homebrew-tap

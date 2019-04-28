@@ -1,8 +1,0 @@
-<snippet>
-    <content><![CDATA[func init() {
-    $1
-}]]></content>
-    <tabTrigger>finit</tabTrigger>
-    <scope>source.go</scope>
-    <description>init function</description>
-</snippet>

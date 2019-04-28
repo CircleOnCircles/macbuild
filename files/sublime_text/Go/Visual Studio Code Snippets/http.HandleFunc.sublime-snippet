@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[${1:http}.HandleFunc("${2:/}", ${3:handler})]]></content>
-    <tabTrigger>hf</tabTrigger>
-    <scope>source.go</scope>
-    <description>http.HandleFunc()</description>
-</snippet>

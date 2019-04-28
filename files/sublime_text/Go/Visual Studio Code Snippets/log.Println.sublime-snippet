@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[log.Println("$1")]]></content>
-    <tabTrigger>lp</tabTrigger>
-    <scope>source.go</scope>
-    <description>log.Println()</description>
-</snippet>
